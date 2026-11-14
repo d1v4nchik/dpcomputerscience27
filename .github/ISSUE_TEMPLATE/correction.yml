@@ -1,0 +1,33 @@
+name: Correction
+description: Something in the notes, flashcards or practice questions is wrong or unclear
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where is it?
+      description: Topic code and section, or paste the page link
+      placeholder: "A1.1 · The CPU  (https://d1v4nchik.github.io/dpcomputerscience27/#A1-hardware)"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem?
+      options:
+        - Factual or technical error
+        - Doesn't match the 2027 syllabus or markscheme style
+        - Typo or wording
+        - Code example (Python or Java)
+        - Broken link, video or diagram
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What's wrong, and what should it say?
+      description: A source (syllabus, textbook, past paper) helps a lot.
+    validations:
+      required: true

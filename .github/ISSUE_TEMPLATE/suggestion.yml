@@ -1,0 +1,11 @@
+name: Suggestion
+description: Ideas for new content, features or improvements
+title: "[Suggestion] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would make the notes more useful?
+    validations:
+      required: true
