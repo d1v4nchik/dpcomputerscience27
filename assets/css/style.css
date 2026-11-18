@@ -905,3 +905,9 @@ body[data-tb="on"] .tb{display:flex;flex-direction:column;gap:12px;margin:2px 0 
 .px-bar .minibtn{background:transparent;color:var(--well-ink);border-color:var(--well-hair)}
 .px-bar .minibtn.pri{background:var(--well-ink);color:var(--well);border-color:var(--well-ink)}
 @media (max-width:560px){.pq{padding:12px 12px 14px}.pq-src{order:10;flex-basis:100%}.pq-q{font-size:15px}.px-sel label{flex-basis:calc(50% - 5px)}.px-sync{margin-left:0;width:100%}}
+/* answer hidden when arriving from a practice question */
+.ans-hid{display:none!important}
+.ans-ph{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;margin:6px 0;padding:10px 14px;border:1.5px dashed var(--bd2);border-radius:14px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.ans-ph b{color:var(--ink)}
+section#quiz .ans-ph{border-color:#5A606B;color:#C9CDD4}
+section#quiz .ans-ph b{color:#FFFFFF}

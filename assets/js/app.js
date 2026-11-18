@@ -17,6 +17,13 @@ function thOf(u){return u==='EX'?'IA':u}
 function codeOf(q){var p=PAGES[q.p];if(p)return p.code;if(q.u==='CS')return 'Case study';if(q.u==='EX')return 'Exam';return q.u}
 function titleOf(q){var m=CS.meta[q.p];return m?m.title:''}
 function href(q){var r=SPECIAL_R[q.p]||q.p;if(!CS.meta[q.p])return '';return '#'+r+(q.s?'.'+q.s:'')}
+/* "Open in the notes": the stop that teaches the idea (q.n), never the box holding this question's answer */
+function notesLink(q){
+  var h=href(q);if(!h)return '';
+  if(q.n){var ps=q.n.split('.');if(CS.meta[ps[0]])h='#'+(SPECIAL_R[ps[0]]||ps[0])+'.'+ps[1]}
+  var lab=q.f?(q.fg?q.f.split('|').join(' · '):'Key ideas for this question'):'';
+  return '<a class="minibtn" href="'+h+'" data-hide="'+esc(q.id)+'"'+(q.f?' data-find="'+esc(q.f)+'" data-multi="1" data-label="'+esc(lab)+'"':'')+' title="Opens the notes that teach this, with its own answer hidden">Open in the notes →</a>';
+}
 
 /* ---------- progress: {q:{id:[score,marks,time,star]}, papers:[[time,score,total,mins]]} ---------- */
 var P=lsGet('csPrac',null);if(!P||typeof P!=='object')P={q:{},papers:[]};if(!P.q)P.q={};if(!P.papers)P.papers=[];
@@ -140,7 +147,7 @@ function card(q,n,opt){
     '<div class="pq-q"><span class="pq-cmd">'+esc(q.c)+'</span> '+q.q+' <span class="pq-mk">['+q.m+']</span></div>'+
     (/Python/.test(q.q)?'<p class="lang-note">Sitting Paper 2 in Java? Answer in Java: the marking points are the same.</p>':'')+
     '<textarea class="pq-ans" rows="'+(q.m>=6?7:q.m>=3?4:2)+'" placeholder="'+(opt.paper?'Your answer':'Write your answer first (optional), then open the markscheme')+'" aria-label="Your answer">'+esc(V.ans[q.id]||'')+'</textarea>';
-  if(!opt.paper)out+='<div class="pq-act"><button type="button" class="minibtn pri" data-a="ms">Show markscheme</button><button type="button" class="minibtn pq-ai" data-a="ai"'+(SAMPLE?'':' hidden')+'><span aria-hidden="true">✦</span> Mark with Claude</button>'+(h?'<a class="minibtn" href="'+h+'" data-find="'+esc(strip(q.q).split(/\s+/).slice(0,9).join(' '))+'">Open in the notes →</a>':'')+'</div>';
+  if(!opt.paper)out+='<div class="pq-act"><button type="button" class="minibtn pri" data-a="ms">Show markscheme</button><button type="button" class="minibtn pq-ai" data-a="ai"'+(SAMPLE?'':' hidden')+'><span aria-hidden="true">✦</span> Mark with Claude</button>'+notesLink(q)+'</div>';
   out+='<div class="pq-ms"'+(opt.open?'':' hidden')+'>'+ms(q)+'</div></article>';
   return out;
 }
@@ -375,8 +382,25 @@ function showFindbar(n){
   fb.innerHTML='<span class="fb-q">“'+esc(String(FIND.label).slice(0,48))+'”</span>'+(n?'<b>'+(FIND.i+1)+' of '+n+'</b><span class="fb-where">on this stop</span><button type="button" data-f="prev" aria-label="Previous match">↑</button><button type="button" data-f="next" aria-label="Next match">↓</button>':'<span class="fb-where">is in this stop, but in a part hidden at this level or language</span>')+'<button type="button" data-f="x" aria-label="Clear highlights">✕</button>';
 }
 document.addEventListener('click',function(e){var b=e.target.closest('button[data-expand]');if(!b)return;var box=b.closest('section')||document;var ds=box.querySelectorAll('details.bk-row');var open=b.dataset.expand==='1';ds.forEach(function(d){d.open=open});b.dataset.expand=open?'0':'1';b.textContent=open?'Close all':'Open all'});
-document.addEventListener('click',function(e){var a=e.target.closest('a[data-find]');if(!a)return;
-  findReq({q:a.dataset.find,label:a.dataset.find});var h=a.getAttribute('href');if(location.hash===h){e.preventDefault();go(parse(h))}},true);
+document.addEventListener('click',function(e){var a=e.target.closest('a[data-find],a[data-hide]');if(!a)return;
+  findReq({q:a.dataset.find||'',label:a.dataset.label||a.dataset.find||'',multi:a.dataset.multi==='1',hide:a.dataset.hide||''});var h=a.getAttribute('href');if(location.hash===h){e.preventDefault();go(parse(h))}},true);
+/* coming from a practice question: hide that question's own answer (model answer, full-mark practice, test-yourself) */
+function nq(t){return String(t||'').toLowerCase().replace(/\[\d+\]/g,' ').replace(/[^a-z0-9]+/g,' ').trim()}
+function hideAnswer(id){
+  var art=$('view-page').querySelector('.pg'),q=null;if(!art)return;
+  for(var i=0;i<CS.prac.length;i++)if(CS.prac[i].id===id){q=CS.prac[i];break}
+  if(!q)return;var d=document.createElement('div');d.innerHTML=q.q;var want=nq(d.textContent);if(want.length<12)return;
+  var seen=[];
+  art.querySelectorAll('.secs summary, .secs p').forEach(function(el){
+    var t=nq(el.textContent);if(!t||(t!==want&&t.indexOf(want)<0))return;
+    var box=el.closest('details')||el.parentElement;if(!box||seen.indexOf(box)>-1||box.classList.contains('secs'))return;seen.push(box);
+    box.classList.add('ans-hid');
+    var ph=document.createElement('div');ph.className='ans-ph';
+    ph.innerHTML='<span><b>Answer hidden.</b> This is the question you are practising, so its answer stays hidden while you read the notes.</span><button type="button" class="minibtn">Show answer</button>';
+    ph.querySelector('button').onclick=function(){box.classList.remove('ans-hid');ph.remove()};
+    box.parentNode.insertBefore(ph,box);
+  });
+}
 
 /* ---------- router ---------- */
 var CUR={v:''};
@@ -399,7 +423,7 @@ function show(v){
 function go(r,noScroll){
   closeSheet(true);clearFind();
   CUR=r;
-  if(r.v==='page'){mountPage(r.p,r.s);show('page');if(FIND.pending){var f=FIND.pending;FIND.pending=null;setTimeout(function(){runFind(f)},40)}}
+  if(r.v==='page'){mountPage(r.p,r.s);show('page');if(FIND.pending){var f=FIND.pending;FIND.pending=null;setTimeout(function(){if(f.hide)hideAnswer(f.hide);if(f.q)runFind(f)},40)}}
   else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);}
   if(!noScroll&&!(r.v==='page'&&r.s))window.scrollTo(0,0);
   var t=r.v==='page'?(CS.meta[r.p]||{}).title:({map:'Home',flashcards:'Flashcards',practice:'Practice',glossary:'Glossary',resources:'Resources'})[r.v];

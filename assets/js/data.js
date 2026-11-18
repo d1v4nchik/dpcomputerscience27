@@ -90,8 +90,8 @@ window.CS = {
       "pages": [
         {
           "id": "A4-machine-learning",
-          "code": "A4.1 + 4.4",
-          "name": "ML and its ethics",
+          "code": "A4.1",
+          "name": "Machine learning fundamentals",
           "hl": 0
         },
         {
@@ -111,6 +111,12 @@ window.CS = {
           "code": "A4.3.6–10",
           "name": "Rewards, evolution, neurons",
           "hl": 1
+        },
+        {
+          "id": "A4-ethics",
+          "code": "A4.4",
+          "name": "Ethical considerations",
+          "hl": 0
         }
       ]
     },
@@ -696,7 +702,7 @@ window.CS = {
       ]
     },
     "A4-machine-learning": {
-      "title": "A4 Machine learning",
+      "title": "A4.1 Machine learning",
       "st": [
         [
           "what",
@@ -714,25 +720,15 @@ window.CS = {
           0
         ],
         [
-          "ethics",
-          "Ethics of ML",
-          0
-        ],
-        [
-          "daily",
-          "Tech in daily life",
-          0
-        ],
-        [
           "quiz",
-          "Test yourself: A4",
+          "Test yourself: A4.1",
           0
         ]
       ],
       "line": "A4",
       "hl": 0,
       "ma": [
-        15,
+        9,
         0
       ]
     },
@@ -847,6 +843,32 @@ window.CS = {
       "ma": [
         0,
         10
+      ]
+    },
+    "A4-ethics": {
+      "title": "A4.4 Ethical considerations",
+      "st": [
+        [
+          "ethics",
+          "Ethics of ML",
+          0
+        ],
+        [
+          "daily",
+          "Tech in daily life",
+          0
+        ],
+        [
+          "quiz",
+          "Test yourself: A4.4",
+          0
+        ]
+      ],
+      "line": "A4",
+      "hl": 0,
+      "ma": [
+        6,
+        0
       ]
     },
     "B1-computational-thinking": {
@@ -1871,23 +1893,9 @@ window.CS = {
     },
     {
       "p": "A4-machine-learning",
-      "s": "ethics",
-      "t": "Ethics of machine learning",
-      "c": "A4.4.1",
-      "h": 0
-    },
-    {
-      "p": "A4-machine-learning",
-      "s": "daily",
-      "t": "Technology in daily life",
-      "c": "A4.4.2",
-      "h": 0
-    },
-    {
-      "p": "A4-machine-learning",
       "s": "quiz",
       "t": "Test yourself",
-      "c": "END OF LINE A4",
+      "c": "END OF A4.1",
       "h": 0
     },
     {
@@ -2001,6 +2009,27 @@ window.CS = {
       "t": "Test yourself",
       "c": "END OF LINE A4.3 (6–10)",
       "h": 1
+    },
+    {
+      "p": "A4-ethics",
+      "s": "ethics",
+      "t": "Ethics of machine learning",
+      "c": "A4.4.1",
+      "h": 0
+    },
+    {
+      "p": "A4-ethics",
+      "s": "daily",
+      "t": "Technology in daily life",
+      "c": "A4.4.2",
+      "h": 0
+    },
+    {
+      "p": "A4-ethics",
+      "s": "quiz",
+      "t": "Test yourself",
+      "c": "END OF LINE A4",
+      "h": 0
     },
     {
       "p": "B1-computational-thinking",
@@ -5237,7 +5266,7 @@ window.CS = {
         "so the model learns to associate features of that group with success and unfairly rejects applicants from other groups."
       ],
       "h": 0,
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "fig": "bias",
       "k": "algorithmic bias|biased"
@@ -5254,7 +5283,7 @@ window.CS = {
         "explainable decisions build trust and help the bank meet legal requirements."
       ],
       "h": 0,
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "fig": "",
       "k": "black box|black boxes"
@@ -5272,7 +5301,7 @@ window.CS = {
         "conclusion: clear laws are needed that set out responsibility in advance, for example that the manufacturer is liable while the system is in control."
       ],
       "h": 0,
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "fig": "",
       "k": ""
@@ -5290,7 +5319,7 @@ window.CS = {
         "and the stored biometric data could be leaked or stolen, and unlike a password it cannot be changed."
       ],
       "h": 0,
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "fig": "",
       "k": ""
@@ -5307,7 +5336,7 @@ window.CS = {
         "so misleading content spreads faster and further than corrections, deceiving many people."
       ],
       "h": 0,
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "fig": "",
       "k": ""
@@ -5325,7 +5354,7 @@ window.CS = {
         "judgement: chatbots are best used for simple, routine questions, with an easy way to reach a human for anything else."
       ],
       "h": 0,
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "fig": "",
       "k": "automated"
@@ -5343,7 +5372,7 @@ window.CS = {
         "and specialised hardware is replaced frequently, creating electronic waste."
       ],
       "h": 0,
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "fig": "",
       "k": ""
@@ -5359,7 +5388,7 @@ window.CS = {
         "so people without these cannot benefit, and fall further behind in education and employment."
       ],
       "h": 0,
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "daily",
       "fig": "",
       "k": ""
@@ -5376,7 +5405,7 @@ window.CS = {
         "so a doctor should review the model's suggestion and make the final decision, remaining accountable for it."
       ],
       "h": 0,
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "fig": "",
       "k": "human in charge|human in the loop"
@@ -13896,7 +13925,7 @@ window.CS = {
         "u": "A4",
         "hl": 0,
         "pg": [
-          "A4-machine-learning"
+          "A4-ethics"
         ]
       },
       {
@@ -29275,7 +29304,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "821b7b5b8",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "address bus|data bus",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29290,7 +29322,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "aa9e9435e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "control unit",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29305,7 +29340,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "d75e76d3d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "program counter",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29321,7 +29359,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "2e950994c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "quad core|core processor|single core",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29338,7 +29379,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "2b0893f4d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "fetch stage|fetch decode|decode execute",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29354,7 +29398,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "ee379864c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "stag|decod|addres"
     },
     {
       "k": "fm",
@@ -29370,7 +29416,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "2bef41097",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.pipeline",
+      "f": "pipelin|increas|stag"
     },
     {
       "k": "model",
@@ -29386,7 +29434,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "50aa8e3f6",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.pipeline",
+      "f": "pipelining improves",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29402,7 +29453,10 @@ window.CS = {
       ],
       "c": "Calculate",
       "id": "a9c5c780b",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.pipeline",
+      "f": "clock cycles|stage pipeline|without pipelining",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29419,7 +29473,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "a1c2ed4ce",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.gpu",
+      "f": "graphic|thousand|sequential"
     },
     {
       "k": "model",
@@ -29435,7 +29491,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "fb8b39086",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.gpu",
+      "f": "parallel processing",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29452,7 +29511,10 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "a196de92e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpugpu",
+      "f": "design philosophies",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29469,7 +29531,9 @@ window.CS = {
       ],
       "c": "Compare and contrast",
       "id": "168ab7bbd",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpugpu",
+      "f": "cach|wherea|architecture"
     },
     {
       "k": "model",
@@ -29486,7 +29550,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "a77c49879",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpugpu",
+      "f": "machine learning",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29502,7 +29569,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "92c99cd4f",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "stor|recent|hit"
     },
     {
       "k": "model",
@@ -29519,7 +29588,9 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "3cbd64090",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "bios|boot|firmware"
     },
     {
       "k": "fm",
@@ -29535,7 +29606,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "94576abe5",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "knock|ssds|robust"
     },
     {
       "k": "model",
@@ -29552,7 +29625,10 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "35aa60814",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "hard disk",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29567,7 +29643,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "811d4cfea",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "lossless compression",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29583,7 +29662,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "cbbb66240",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "lossless compression",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29600,7 +29682,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "a75f4a12e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "lossy compression",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29617,7 +29702,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "19a663577",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "manag|updat|stor"
     },
     {
       "k": "model",
@@ -29634,7 +29721,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "f3c76752c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "service saas|service iaas",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29651,7 +29741,9 @@ window.CS = {
       ],
       "c": "Discuss",
       "id": "84d31962c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "acces|stor|provid"
     },
     {
       "k": "fm",
@@ -29667,7 +29759,9 @@ window.CS = {
       ],
       "c": "Determine",
       "id": "2d830b7e2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "easi|hexadecimal|hex"
     },
     {
       "k": "model",
@@ -29681,7 +29775,9 @@ window.CS = {
       ],
       "c": "Calculate",
       "id": "1a400a4dd",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "valu|represent|bits"
     },
     {
       "k": "model",
@@ -29696,7 +29792,9 @@ window.CS = {
       ],
       "c": "Calculate",
       "id": "482b45997",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "hexadecimal|denary|value"
     },
     {
       "k": "model",
@@ -29711,7 +29809,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "65de5eaff",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "easi|hexadecimal|stand"
     },
     {
       "k": "fm",
@@ -29727,7 +29827,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "d55698b52",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "alphabet|stor|unicode"
     },
     {
       "k": "model",
@@ -29744,7 +29846,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "ab75f777e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "stor|sampl|measur"
     },
     {
       "k": "model",
@@ -29760,7 +29864,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "5245c6c52",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "agre|chang|parity"
     },
     {
       "k": "fm",
@@ -29775,7 +29881,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "644ce2e8e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "xor gate",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29789,7 +29898,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "7d4e23af6",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "logic gate",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29804,7 +29916,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "ffa101812",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "logic gates",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29819,7 +29934,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "88d02a956",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.truth",
+      "f": "truth table",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29835,7 +29953,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "9bd3cd210",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.truth",
+      "f": "truth table",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29851,7 +29972,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "c9e5e6e08",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.kmap",
+      "f": "karnaugh map",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29867,7 +29991,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "cfa754344",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.diagrams",
+      "f": "logic diagram",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29884,7 +30011,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "0a5812eee",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.diagrams",
+      "f": "XNOR",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29901,7 +30031,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "02e96f883",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "operating system",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29917,7 +30050,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "f94ff837d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "operating system",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29932,7 +30068,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "682f4c16a",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "memory management|operating system",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29948,7 +30087,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "aeda60306",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "operating system|device drivers",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29963,7 +30105,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "c84533579",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "proces|resourc|thread"
     },
     {
       "k": "fm",
@@ -29979,7 +30123,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "20050088c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "priority scheduling",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29996,7 +30143,10 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "3ab59aef9",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "served fcfs|round robin",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30011,7 +30161,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "41dbfcba1",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "prevents starvation|priority scheduling",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30028,7 +30181,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "6ca143582",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.interrupts",
+      "f": "handl|execut|restor"
     },
     {
       "k": "model",
@@ -30045,7 +30200,10 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "757df7683",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.interrupts",
+      "f": "key presses",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30061,7 +30219,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "ddb0030a4",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.interrupts",
+      "f": "embedded system",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30077,7 +30238,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "2b8e3f546",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.contention",
+      "f": "resource contention",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30093,7 +30257,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "3361c4067",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.contention",
+      "f": "proces|allocat|proce"
     },
     {
       "k": "model",
@@ -30110,7 +30276,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "54ba1ee83",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.contention",
+      "f": "resourc|cycl|other"
     },
     {
       "k": "fm",
@@ -30126,7 +30294,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "c75115f36",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "closed loop|control system",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30143,7 +30314,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "c3876872f",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "closed loop|control system",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30160,7 +30334,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "060120baf",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "proximity|doorway|actuator"
     },
     {
       "k": "quiz",
@@ -30175,7 +30351,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "0c01e1cee",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "memory address register|memory data register",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30190,7 +30369,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "7580522af",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "secondary storage|volatile|RAM",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30205,7 +30387,9 @@ window.CS = {
       ],
       "c": "Determine",
       "id": "bda7fe9dd",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "hexadecimal|denary|binary"
     },
     {
       "k": "quiz",
@@ -30221,7 +30405,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "13e07c1ad",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.gpu",
+      "f": "graphics processing unit|CPU",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30235,7 +30422,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "8caae51cf",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.truth",
+      "f": "truth table",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30250,7 +30440,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "42a75d503",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.interrupts",
+      "f": "wast|poll|interrupt"
     },
     {
       "k": "quiz",
@@ -30267,7 +30459,10 @@ window.CS = {
       ],
       "c": "Suggest",
       "id": "b8435da84",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "Compression",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30282,7 +30477,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "a232aa78d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.contention",
+      "f": "Deadlock",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30297,7 +30495,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "4b5598428",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "open-loop|set point|Sensors",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30312,7 +30513,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "4edf433d9",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "Actuators",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30328,7 +30532,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "64878fcfc",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "compiler translates",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30345,7 +30552,9 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "c842edf94",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "execut|translat|wherea"
     },
     {
       "k": "fm",
@@ -30361,7 +30570,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "0e5972847",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "time jit|jit compilation",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30377,7 +30589,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "81a3f0465",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "compil|bytecode|jit"
     },
     {
       "k": "model",
@@ -30393,7 +30607,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "2aa8b2218",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "jit compilation",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30408,7 +30625,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "419abd56e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.scenarios",
+      "f": "execut|translat|immediate"
     },
     {
       "k": "model",
@@ -30425,7 +30644,9 @@ window.CS = {
       ],
       "c": "Discuss",
       "id": "e86e6f529",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.scenarios",
+      "f": "phon|compil|chang"
     },
     {
       "k": "quiz",
@@ -30439,7 +30660,10 @@ window.CS = {
       ],
       "c": "Define",
       "id": "039ba4251",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "machine code|source code",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30454,7 +30678,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "314c620a2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "compiler",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30469,7 +30696,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "14423df74",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "CPU",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30485,7 +30715,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "6780ad618",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "bytecode|just-in-time|virtual machine",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30500,7 +30733,9 @@ window.CS = {
       ],
       "c": "Suggest",
       "id": "e4f795ce9",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.scenarios",
+      "f": "ahead|timing|predictable"
     },
     {
       "k": "quiz",
@@ -30515,7 +30750,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "24e39238e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "jit compilation|time compilation",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30531,7 +30769,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "072a838bc",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "creat|acros|acces"
     },
     {
       "k": "model",
@@ -30546,7 +30786,9 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "47094e8e4",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "devic|campu|citi"
     },
     {
       "k": "model",
@@ -30562,7 +30804,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "de2549fb1",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "acces|resourc|creat"
     },
     {
       "k": "fm",
@@ -30578,7 +30822,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "644953af5",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "edge computing|self driving|driving cars",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30595,7 +30842,10 @@ window.CS = {
       ],
       "c": "Discuss",
       "id": "a5d223528",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "self driving|driving car|edge computing",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30611,7 +30861,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "b72bcf314",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "distributed systems|cryptocurrency blockchain",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30627,7 +30880,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "fd8edf4bb",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "switch forwards|forwards data",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30643,7 +30899,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "1ce4062a2",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "addres|rout|acros"
     },
     {
       "k": "model",
@@ -30658,7 +30916,9 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "0c8e4f645",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "devic|fram|mac"
     },
     {
       "k": "model",
@@ -30673,7 +30933,9 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "37d13b2ed",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "fram|tcp|mac"
     },
     {
       "k": "fm",
@@ -30689,7 +30951,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "95c99a08f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.tcp",
+      "f": "web pages",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30706,7 +30971,9 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "4b9770da2",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.tcp",
+      "f": "orient|connectionles|guarante"
     },
     {
       "k": "model",
@@ -30721,7 +30988,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "83aa67b97",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.tcp",
+      "f": "packets",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30737,7 +31007,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "f0c9c2635",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "addres|cach|dns"
     },
     {
       "k": "model",
@@ -30754,7 +31026,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "4f5dd8437",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "subnet mask|DNS|gateway",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30770,7 +31045,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "c5d78facc",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "websit|intercept|encrypt"
     },
     {
       "k": "fm",
@@ -30787,7 +31064,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "385be9a08",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.layers",
+      "f": "encapsulat|checksum|segment"
     },
     {
       "k": "model",
@@ -30804,7 +31083,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "e4f71750b",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.layers",
+      "f": "Application layer|Transport layer",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30819,7 +31101,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "0b6d67930",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.layers",
+      "f": "communicat|other|interfac"
     },
     {
       "k": "fm",
@@ -30836,7 +31120,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "5ec82681f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "star topology",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30852,7 +31139,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "d0369055f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "star topology",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30868,7 +31158,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "f0d545eb7",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "mesh topology",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30885,7 +31178,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "239dbf41e",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.servers",
+      "f": "proxy server",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30901,7 +31197,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "40528a47e",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.servers",
+      "f": "proxy server",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30917,7 +31216,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "28ef2fd3f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.servers",
+      "f": "dns server",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30934,7 +31236,10 @@ window.CS = {
       ],
       "c": "Compare and contrast",
       "id": "65ad8730f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "client server",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30949,7 +31254,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "00f59c251",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "online banking",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30966,7 +31274,10 @@ window.CS = {
       ],
       "c": "Compare and contrast",
       "id": "00331a62f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "clients",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30981,7 +31292,10 @@ window.CS = {
       ],
       "c": "Determine",
       "id": "96e2d5ce3",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.subnetting",
+      "f": "address 192|192 168",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30998,7 +31312,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "fa3a3794b",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.subnetting",
+      "f": "servers|malware",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31013,7 +31330,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "5a636d83d",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.vlans",
+      "f": "devic|cabl|vlan"
     },
     {
       "k": "model",
@@ -31029,7 +31348,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "4a86e0b80",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.vlans",
+      "f": "LAN",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31046,7 +31368,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "b92bb97ec",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.ip",
+      "f": "devic|addres|nat"
     },
     {
       "k": "model",
@@ -31063,7 +31387,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "6154b227c",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.ip",
+      "f": "denary",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31079,7 +31406,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "bad2af251",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.ip",
+      "f": "port numbers",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31096,7 +31426,10 @@ window.CS = {
       ],
       "c": "Compare and contrast",
       "id": "900244a14",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.media",
+      "f": "copper cable|fibre optic|optic cable",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31113,7 +31446,10 @@ window.CS = {
       ],
       "c": "Justify",
       "id": "0f9363880",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.media",
+      "f": "fibre optic|optic cable|twisted pair",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31130,7 +31466,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "b1f627a02",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "packet switching",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31147,7 +31486,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "a45e5351f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "internet",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31163,7 +31505,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "a91bcac8b",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.routing",
+      "f": "dynamic routing",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31180,7 +31525,10 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "df03a11eb",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.routing",
+      "f": "dynamic routing",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31195,7 +31543,10 @@ window.CS = {
       ],
       "c": "Justify",
       "id": "1324d20f9",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.routing",
+      "f": "static routing",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31211,7 +31562,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "364afaa1a",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.firewalls",
+      "f": "firewall protects",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31230,7 +31584,10 @@ window.CS = {
       ],
       "c": "Discuss",
       "id": "fde4f0190",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.firewalls",
+      "f": "phishing|internet",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31246,7 +31603,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "4be3205a7",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "distributed denial|service ddos|ddos attack",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31262,7 +31622,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "9fa3c1dbd",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "processing power|bandwidth",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31278,7 +31641,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "276057af7",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "sql injection",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31293,7 +31659,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "83f2f36fe",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.defences",
+      "f": "multi factor|factor authentication|password alone",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31308,7 +31677,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "2f0b27acd",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.defences",
+      "f": "intrusion detection|detection system|intrusion prevention",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31325,7 +31697,10 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "dcb4466e5",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.defences",
+      "f": "multi factor|factor authentication|authentication mfa",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31341,7 +31716,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "ae950a130",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.defences",
+      "f": "sql injection",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31357,7 +31735,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "b2cb98742",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "asymmetric encryption|secret key",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31373,7 +31754,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "d02389045",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "internet",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31390,7 +31774,10 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "4e630c81c",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "intercepted",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31405,7 +31792,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "acbe28e62",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.tcp",
+      "f": "ACK|UDP|latency",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31422,7 +31812,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "7c1c86ff0",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "subnet mask|DNS|gateway",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31437,7 +31830,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "989e6d6ef",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "single point of failure",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31452,7 +31848,10 @@ window.CS = {
       ],
       "c": "Calculate",
       "id": "15bd6c98c",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.subnetting",
+      "f": "host",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31467,7 +31866,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "0381d185b",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "sequence number",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31482,7 +31884,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "3b1b1fd18",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.firewalls",
+      "f": "phishing|malware",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31497,7 +31902,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "b173726c8",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "Asymmetric|Encryption",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31512,7 +31920,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "0a902de26",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.layers",
+      "f": "Application layer|port numbers|TCP",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31527,7 +31938,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "0b7078e46",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "dhcp server",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31542,7 +31956,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "36aa1cd74",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.routing",
+      "f": "static routing|large network",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -31558,7 +31975,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "b1512ff2e",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "phish|attacker|username"
     },
     {
       "k": "quiz",
@@ -31573,7 +31992,10 @@ window.CS = {
       ],
       "c": "Suggest",
       "id": "39c795fb8",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.defences",
+      "f": "multi-factor authentication",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31590,7 +32012,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "61c6b36f0",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "relational database",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31607,7 +32032,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "fad5dfb93",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "relational database",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31622,7 +32050,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "7ede44383",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "foreign key|relational database",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31636,7 +32067,10 @@ window.CS = {
       ],
       "c": "Define",
       "id": "8521e4ad9",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "primary key",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31652,7 +32086,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "691e7c827",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "referential integrity",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31668,7 +32105,10 @@ window.CS = {
       ],
       "c": "Compare and contrast",
       "id": "29635ffbf",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.schemas",
+      "f": "conceptual schema|logical schema",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31684,7 +32124,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "e30b90fd5",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.schemas",
+      "f": "foreign keys",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31700,7 +32143,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "d7f82b390",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.erd",
+      "f": "many courses|many students",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31715,7 +32161,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "d056d50c3",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.erd",
+      "f": "fields",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31730,7 +32179,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "dd5df58d2",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.erd",
+      "f": "entity relationship|relationship diagram",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31745,7 +32197,10 @@ window.CS = {
       ],
       "c": "Suggest",
       "id": "697dfbb66",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.types",
+      "f": "data type|phone number",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31760,7 +32215,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "bc5c85deb",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.types",
+      "f": "data integrity",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31776,7 +32234,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "b1ed98dac",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.normalisation",
+      "f": "order orderid|orderid date",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31792,7 +32253,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "c4d5f781d",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.normalisation",
+      "f": "organis|relat|tabl"
     },
     {
       "k": "model",
@@ -31807,7 +32270,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "3b67a8fc4",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.normalisation",
+      "f": "composite key",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31824,7 +32290,9 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "c46c3df4a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.denormalisation",
+      "f": "queri|updat|anomali"
     },
     {
       "k": "model",
@@ -31841,7 +32309,10 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "4671f8205",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.denormalisation",
+      "f": "update anomaly",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31857,7 +32328,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "67133a7ba",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.ddl",
+      "f": "primary key",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31872,7 +32346,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "b7c3b57f2",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.ddl",
+      "f": "data definition|definition language|language ddl",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31887,7 +32364,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "275c1f75a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.ddl",
+      "f": "creat|chang|dbms"
     },
     {
       "k": "fm",
@@ -31903,7 +32382,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "6d1b8e91d",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "sql query|student studentid|studentid name",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31918,7 +32400,9 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "bc9a2f053",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.change",
+      "f": "studentid|sql|year"
     },
     {
       "k": "model",
@@ -31934,7 +32418,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "4f3936375",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.change",
+      "f": "SQL",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31951,7 +32438,9 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "8c46a3076",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.aggregates",
+      "f": "desc|avg|highest"
     },
     {
       "k": "model",
@@ -31968,7 +32457,9 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "b3f6bfeb9",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.aggregates",
+      "f": "list|show|having"
     },
     {
       "k": "fm",
@@ -31985,7 +32476,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "2c4cc300f",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.views",
+      "f": "queri|acces|tabl"
     },
     {
       "k": "model",
@@ -32001,7 +32494,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "5f06c840e",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.views",
+      "f": "DBMS",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32018,7 +32514,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "45a43584a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.transactions",
+      "f": "acid properties",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32035,7 +32534,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "507d61aef",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.transactions",
+      "f": "acid properties",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32050,7 +32552,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "7ffe36fdf",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "primary key|foreign key|field",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32065,7 +32570,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "e359b134d",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.erd",
+      "f": "link table|Cardinality|composite key",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32080,7 +32588,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "2f9c3d469",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.normalisation",
+      "f": "update anomaly",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32096,7 +32607,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "fadce58c2",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "ORDER BY|SELECT|WHERE",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32111,7 +32625,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "7848dc06b",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.ddl",
+      "f": "DDL",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32127,7 +32644,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "ff6eed916",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.denormalisation",
+      "f": "Denormalisation|update anomaly",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32143,7 +32663,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "30665ca80",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.aggregates",
+      "f": "GROUP BY|Aggregate functions",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32158,7 +32681,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "57904acae",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.views",
+      "f": "view|materialised view",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32173,7 +32699,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "04b018b4c",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.transactions",
+      "f": "TCL|transaction",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32188,7 +32717,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "e5b22bb05",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.transactions",
+      "f": "ACID",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32204,7 +32736,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "d127a7c20",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "social media|relational database",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32220,7 +32755,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "40e524e7b",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "ride hailing|spatial database",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32237,7 +32775,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "6f71e0be1",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "data warehouse",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32254,7 +32795,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "fcab9fb98",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "data warehouse",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32271,7 +32815,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "b5706bd69",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.olap",
+      "f": "data mining",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32288,7 +32835,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "aec8e70d4",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.olap",
+      "f": "data mining",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32305,7 +32855,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "f22c63b0f",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.distributed",
+      "f": "distributed database",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32322,7 +32875,10 @@ window.CS = {
       ],
       "c": "Discuss",
       "id": "fab2481c9",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.distributed",
+      "f": "distributed database",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32337,7 +32893,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "b20e603ff",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "Time-variant|Subject-oriented|append-only",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32353,7 +32912,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "042c8e8f1",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "data warehouse",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32368,7 +32930,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "3d23cd38e",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.olap",
+      "f": "OLAP|data mining|Pivot",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32382,7 +32947,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "e27aaed40",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.olap",
+      "f": "Anomaly detection",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32398,7 +32966,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "ee7394c57",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.distributed",
+      "f": "transactions",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32414,7 +32985,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "c2892d6cd",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "social media|graph database",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32430,7 +33004,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "fc99662c8",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.what",
+      "f": "machine learning",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32445,7 +33022,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "25a9782a7",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.what",
+      "f": "artificial intelligence|machine learning",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32461,7 +33041,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "6db8ef54a",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "supervised learning|email spam",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32477,7 +33060,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "366e8acb1",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "supervised learning",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32493,7 +33079,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "55d6ebef6",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "reinforcement learning",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32508,7 +33097,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "a2f038cdf",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "Transfer learning",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32524,7 +33116,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "887149a02",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "machine learning|market basket|basket analysis",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32541,7 +33136,10 @@ window.CS = {
       ],
       "c": "Compare and contrast",
       "id": "b6fa0debe",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "large language|language model",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32558,11 +33156,13 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "2825d7151",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "runn|give|massive"
     },
     {
       "k": "fm",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 3,
@@ -32574,11 +33174,14 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "46d11f488",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "machine learning",
+      "fg": 1
     },
     {
       "k": "model",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 4,
@@ -32591,11 +33194,14 @@ window.CS = {
       ],
       "c": "To what extent",
       "id": "c887c04a0",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "feedback loop",
+      "fg": 1
     },
     {
       "k": "model",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 6,
@@ -32610,11 +33216,14 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "f3202b913",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "Surveillance",
+      "fg": 1
     },
     {
       "k": "model",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 4,
@@ -32627,11 +33236,14 @@ window.CS = {
       ],
       "c": "Discuss",
       "id": "9dac5433d",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "human review",
+      "fg": 1
     },
     {
       "k": "fm",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "daily",
       "h": 0,
       "m": 2,
@@ -32642,11 +33254,14 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "7c5c46fe0",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.daily",
+      "f": "machine learning|digital divide",
+      "fg": 1
     },
     {
       "k": "model",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "daily",
       "h": 0,
       "m": 4,
@@ -32659,7 +33274,10 @@ window.CS = {
       ],
       "c": "Discuss",
       "id": "e42a0c42a",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.daily",
+      "f": "Privacy",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32674,7 +33292,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "f85b6741e",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "unlabelled data|labelled data|supervised learning",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32690,7 +33311,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "5e29557c6",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "reinforcement learning|training data",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32705,7 +33329,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "64e13204a",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "regression",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32721,11 +33348,14 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "3949e6d6d",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "TPUs|privacy|latency",
+      "fg": 1
     },
     {
       "k": "quiz",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "quiz",
       "h": 0,
       "m": 2,
@@ -32736,7 +33366,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "90056378c",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "machine learning",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32751,7 +33384,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "f7be3fe41",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "transfer learning",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32767,7 +33403,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "44ff035ac",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "data cleaning|machine learning",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32786,7 +33425,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "11ecf5b9c",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "Duplicate records",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32802,7 +33444,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "6eb4702c8",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.features",
+      "f": "embedded methods|feature selection",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32819,7 +33464,10 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "d10e67ef5",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.features",
+      "f": "wrapper methods|feature selection",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32836,7 +33484,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "ed8663342",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.dimensions",
+      "f": "featur|sampl|becom"
     },
     {
       "k": "model",
@@ -32852,7 +33502,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "9c063ceb8",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.dimensions",
+      "f": "distanc|featur|increas"
     },
     {
       "k": "quiz",
@@ -32866,7 +33518,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "e5d52bbf5",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "missing values|Outliers",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32881,7 +33536,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "29ab7f338",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "impute|bias|training data",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32896,7 +33554,10 @@ window.CS = {
       ],
       "c": "Calculate",
       "id": "12068c909",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "min max",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32911,7 +33572,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "96d518d79",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.features",
+      "f": "Feature selection|decision tree",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32928,7 +33592,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "256990b7c",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.dimensions",
+      "f": "KNN|Overfitting|clustering",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32945,7 +33612,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "d611a43f1",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.regression",
+      "f": "linear regression",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32962,7 +33632,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "9095cb0f9",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.regression",
+      "f": "linear regression|floor area",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -32978,7 +33651,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "954465a9e",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.classify",
+      "f": "nearest neighbours",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32995,7 +33671,10 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "f7b143d76",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.classify",
+      "f": "supervised learning",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33011,7 +33690,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "765d91687",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "hyperparameter tuning",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33028,7 +33710,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "4b176f283",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "training data|data but|test data",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33045,7 +33730,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "1e8587fb7",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.clustering",
+      "f": "means clustering|groups data",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33062,7 +33750,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "da47ed594",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.clustering",
+      "f": "featur|label|spender"
     },
     {
       "k": "fm",
@@ -33078,7 +33768,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "c289d7916",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.association",
+      "f": "association rule|rule learning|crime analysis",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33094,7 +33787,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "3106da278",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.association",
+      "f": "association rule|rule learning|large data",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33108,7 +33804,10 @@ window.CS = {
       ],
       "c": "Define",
       "id": "1419ce33a",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.regression",
+      "f": "dependent variable|linear regression",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33122,7 +33821,9 @@ window.CS = {
       ],
       "c": "Predict",
       "id": "e79d4aa29",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.regression",
+      "f": "equation|regression|model"
     },
     {
       "k": "quiz",
@@ -33137,7 +33838,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "f26eeaa00",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.classify",
+      "f": "outlier|overfitting",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33152,7 +33856,9 @@ window.CS = {
       ],
       "c": "Calculate",
       "id": "e2a6a0d58",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "give|recall|precision"
     },
     {
       "k": "quiz",
@@ -33167,7 +33873,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "b48c6e1c4",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "tree depth|Hyperparameters|learning rate",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33182,7 +33891,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "736045025",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.clustering",
+      "f": "unsupervised learning",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33197,7 +33909,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "0a22ce702",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.association",
+      "f": "feedback loop|bias",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33214,7 +33929,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "66ccc6d0f",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.reinforcement",
+      "f": "agent learns|reinforcement learning",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33231,7 +33949,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "33fe0395a",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.reinforcement",
+      "f": "exploitation",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33249,7 +33970,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "f9f6827fd",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.genetic",
+      "f": "genetic algorithm|delivery route|travelling salesperson",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33264,7 +33988,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "ebba778c7",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.genetic",
+      "f": "genetic algorithm",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33280,7 +34007,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "8067f2aa1",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.ann",
+      "f": "multi layer|artificial neural|neural network",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33296,7 +34026,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "83de77301",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.ann",
+      "f": "deep learning",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33314,7 +34047,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "ec6dcaf43",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.cnn",
+      "f": "convolutional neural|neural network",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33331,7 +34067,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "a058553d5",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.cnn",
+      "f": "convolutional neural|neural networks",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33348,7 +34087,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "320aa62d4",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.choosing",
+      "f": "model selection",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33365,7 +34107,10 @@ window.CS = {
       ],
       "c": "Discuss",
       "id": "438193393",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.choosing",
+      "f": "accountability|transparency",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33379,7 +34124,10 @@ window.CS = {
       ],
       "c": "Define",
       "id": "9f7669cf7",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.reinforcement",
+      "f": "reinforcement learning",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33394,7 +34142,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "41a9a36a6",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.reinforcement",
+      "f": "choos|exploit|cumulative"
     },
     {
       "k": "quiz",
@@ -33409,7 +34159,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "7a408c5ac",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.genetic",
+      "f": "fitness function|genetic algorithm",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33426,7 +34179,10 @@ window.CS = {
       ],
       "c": "Sketch",
       "id": "5bfde7ec3",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.ann",
+      "f": "activation function|bias",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33441,7 +34197,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "f77c7676b",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.cnn",
+      "f": "feature map|pooling",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33458,7 +34217,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "9a28ce013",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.choosing",
+      "f": "linear regression|decision trees|regression",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33474,7 +34236,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "331a42264",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.spec",
+      "f": "problem specification",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33493,7 +34258,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "859b34afe",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.spec",
+      "f": "Constraints",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33510,7 +34278,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "d4180c5c0",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "computational thinking",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33525,7 +34296,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "dfea8467b",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "solv|combin|manageable"
     },
     {
       "k": "model",
@@ -33540,7 +34313,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "aadc825ff",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "pattern recognition",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33555,7 +34331,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "78b2775f4",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.applying",
+      "f": "pattern recognition",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33572,7 +34351,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "7e5f83cfa",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.applying",
+      "f": "computational thinking",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33587,7 +34369,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "15fcf4f64",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.flowcharts",
+      "f": "flowchart|symbol|exit",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33603,7 +34388,10 @@ window.CS = {
       ],
       "c": "Trace",
       "id": "6c992626a",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.flowcharts",
+      "f": "iteration",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33618,7 +34406,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "936cd06fd",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "remov|abstraction|relevant"
     },
     {
       "k": "quiz",
@@ -33634,7 +34424,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "ffe20925e",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "Decomposition",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33649,7 +34442,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "b71d1aacd",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.spec",
+      "f": "problem specification",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33664,7 +34460,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "a686c0d46",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.flowcharts",
+      "f": "flowchart|diamond|symbol",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33679,7 +34478,10 @@ window.CS = {
       ],
       "c": "Trace",
       "id": "2d2c11e91",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.flowcharts",
+      "f": "flowchart|count|input",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33694,7 +34496,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "1afac87d6",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.spec",
+      "f": "evaluation criteria|problem specification",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33709,7 +34514,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "3b9a18ca0",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.variables",
+      "f": "converted before",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33726,7 +34534,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "782630b99",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.variables",
+      "f": "data type",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33741,7 +34552,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "78db351f8",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.variables",
+      "f": "data type",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33756,7 +34570,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "791dd678b",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.scope",
+      "f": "local variables|global variables",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33771,7 +34588,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "06c1d9219",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.scope",
+      "f": "local variable|global variable",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33786,7 +34606,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "0448b44e2",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.scope",
+      "f": "global variables",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33800,7 +34623,9 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "2e48e3000",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.strings",
+      "f": "extract|character|string"
     },
     {
       "k": "model",
@@ -33817,7 +34642,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "d14f55a17",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.strings",
+      "f": "count char|char text|many times",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33833,7 +34661,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "e22d13a86",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.exceptions",
+      "f": "try except",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33849,7 +34680,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "e5e42cf84",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.exceptions",
+      "f": "exception handling",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33864,7 +34698,10 @@ window.CS = {
       ],
       "c": "Define",
       "id": "6dd90d37c",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.exceptions",
+      "f": "exception handling",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33879,7 +34716,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "5d2672de9",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.debugging",
+      "f": "syntax error|logic error",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33896,7 +34736,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "18ef613ad",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.debugging",
+      "f": "breakpoint|paus|valu"
     },
     {
       "k": "fm",
@@ -33913,7 +34755,10 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "bf1903edb",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.static",
+      "f": "dynamic data|data structures",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33928,7 +34773,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "45c5bd9db",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.lists",
+      "f": "every element",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33945,7 +34793,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "5a73d25c5",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.lists",
+      "f": "loop",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33961,7 +34812,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "6988c23ad",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.grids",
+      "f": "seating plan",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33976,7 +34830,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "f32357d32",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.stacks",
+      "f": "data structure",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33992,7 +34849,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "a0aff743d",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.stacks",
+      "f": "empty stack|stack push|pop pop",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34008,7 +34868,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "b297123ba",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.stacks",
+      "f": "back button",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34023,7 +34886,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "3f0a2d94d",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.queues",
+      "f": "remov|rear|document"
     },
     {
       "k": "model",
@@ -34038,7 +34903,9 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "da7b121c2",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.queues",
+      "f": "remov|rear|fifo"
     },
     {
       "k": "model",
@@ -34054,7 +34921,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "a660c3f85",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.queues",
+      "f": "CPU",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34069,7 +34939,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "6064d532e",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.sequence",
+      "f": "proces|deadlock|forever"
     },
     {
       "k": "model",
@@ -34084,7 +34956,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "58c339859",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.sequence",
+      "f": "execut|valu|overwrit"
     },
     {
       "k": "model",
@@ -34100,7 +34974,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "0085c4560",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.sequence",
+      "f": "proces|deadlock|release"
     },
     {
       "k": "fm",
@@ -34115,7 +34991,9 @@ window.CS = {
       ],
       "c": "State",
       "id": "c98494532",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.selection",
+      "f": "expression|age|false"
     },
     {
       "k": "model",
@@ -34131,7 +35009,9 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "7c4911bb6",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.selection",
+      "f": "valu|elif|equal"
     },
     {
       "k": "fm",
@@ -34146,7 +35026,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "d94a0e546",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "while loop",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34163,7 +35046,10 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "46f8a5df5",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "validation",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34179,7 +35065,9 @@ window.CS = {
       ],
       "c": "State",
       "id": "aea798c25",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "inner|empty|loop"
     },
     {
       "k": "fm",
@@ -34194,7 +35082,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "ba90632b2",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.functions",
+      "f": "list|receiv|argument",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34211,7 +35102,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "eb84e8db5",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.functions",
+      "f": "debugg|modul|reus"
     },
     {
       "k": "fm",
@@ -34227,7 +35120,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "75efb791e",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.bigo",
+      "f": "time complexity|linear search|binary search",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34242,7 +35138,10 @@ window.CS = {
       ],
       "c": "Deduce",
       "id": "e5a052dee",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.bigo",
+      "f": "time complexity",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34258,7 +35157,9 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "2878da285",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.bigo",
+      "f": "alway|ignor|constant"
     },
     {
       "k": "fm",
@@ -34273,7 +35174,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "72fdc7f85",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.search",
+      "f": "binary search",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34289,7 +35193,10 @@ window.CS = {
       ],
       "c": "Justify",
       "id": "89c729d85",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.search",
+      "f": "binary search|linear search",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34305,7 +35212,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "c1c7c3ed2",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.sort",
+      "f": "bubble sort",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34322,7 +35232,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "c2e1f1292",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.sort",
+      "f": "bubble sort",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34337,7 +35250,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "3289807d9",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.sort",
+      "f": "selection sort",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34353,7 +35269,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "1f0e0b525",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "solv|toward|recursive"
     },
     {
       "k": "model",
@@ -34370,7 +35288,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "c377a1417",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "recursive function",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34387,7 +35308,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "158a52e00",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "loops|stack",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34402,7 +35326,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "b42279ca4",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.files",
+      "f": "text file|write mode",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34419,7 +35346,9 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "3ae4ac596",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.files",
+      "f": "clos|updat|txt"
     },
     {
       "k": "quiz",
@@ -34433,7 +35362,9 @@ window.CS = {
       ],
       "c": "State",
       "id": "98fbb1004",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.strings",
+      "f": "computer|print|output"
     },
     {
       "k": "quiz",
@@ -34448,7 +35379,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "5390f88c0",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-data-structures.stacks",
+      "f": "stack",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34465,7 +35399,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "2fdb3c6c0",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.sort",
+      "f": "lists",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34479,7 +35416,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "6e6b5e8a4",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.search",
+      "f": "binary search",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34494,7 +35434,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "a77afdd81",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.sort",
+      "f": "Bubble sort|Selection sort",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34509,7 +35452,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "6f7973942",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.files",
+      "f": "File processing",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34525,7 +35471,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "b422217a8",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.exceptions",
+      "f": "exception",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34541,7 +35490,10 @@ window.CS = {
       ],
       "c": "Trace",
       "id": "9df3c5289",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "base case",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34557,7 +35509,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "9f6c7890b",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "recursive function",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34572,7 +35527,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "7b8ed62fc",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "quicksort",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34589,7 +35547,10 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "aa9b0766e",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.oop",
+      "f": "object oriented|oriented programming",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34606,7 +35567,10 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "5960906cd",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.oop",
+      "f": "object oriented|oriented programming",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34621,7 +35585,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "3891fa1cd",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.oop",
+      "f": "attribut|clas|automatical"
     },
     {
       "k": "fm",
@@ -34638,7 +35604,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "854353cd1",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.design",
+      "f": "uml class|class diagram|public methods",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34656,7 +35625,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "bb017f070",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.design",
+      "f": "accessor",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34670,7 +35642,9 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "cf3568bdb",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.classes",
+      "f": "instantiat|object|python"
     },
     {
       "k": "model",
@@ -34685,7 +35659,9 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "aef44287c",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.classes",
+      "f": "proces|instantiat|allocat"
     },
     {
       "k": "fm",
@@ -34700,7 +35676,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "362d49f63",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.static",
+      "f": "instance variable",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34715,7 +35694,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "14c7ff56c",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.static",
+      "f": "static method|instance non|non static",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34732,7 +35714,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "1a5223be9",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.static",
+      "f": "instance variable",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34748,7 +35733,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "e187b24cc",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.encapsulation",
+      "f": "clas|chang|reject"
     },
     {
       "k": "model",
@@ -34765,7 +35752,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "41ed4027e",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.encapsulation",
+      "f": "attribut|chang|valu"
     },
     {
       "k": "quiz",
@@ -34780,7 +35769,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "f9a68dd73",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.oop",
+      "f": "attributes|methods|objects",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34794,7 +35786,9 @@ window.CS = {
       ],
       "c": "State",
       "id": "5898a352c",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.classes",
+      "f": "attribut|creat|initialise"
     },
     {
       "k": "quiz",
@@ -34809,7 +35803,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "f0ad0461d",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.encapsulation",
+      "f": "accessor",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34824,7 +35821,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "a08e35c1c",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.static",
+      "f": "non-static",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34841,7 +35841,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "207e9759d",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.classes",
+      "f": "python class",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34856,7 +35859,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "c4dc46cc2",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.design",
+      "f": "uml class|class diagram",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34871,7 +35877,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "aab3234c4",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.oop",
+      "f": "Modular",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34887,7 +35896,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "5964791be",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.inheritance",
+      "f": "code reuse",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34902,7 +35914,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "0368ffb50",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.inheritance",
+      "f": "declar|unrelat|extend"
     },
     {
       "k": "fm",
@@ -34917,7 +35931,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "38684217b",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.polymorphism",
+      "f": "method overloading|method overriding",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34933,7 +35950,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "7f81036a7",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.polymorphism",
+      "f": "lists",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34949,7 +35969,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "967a36de9",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.abstraction",
+      "f": "abstract class",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34965,7 +35988,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "80cd4d91c",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.abstraction",
+      "f": "abstract class",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34980,7 +36006,9 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "85e402d79",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.composition",
+      "f": "creat|destroy|outlive"
     },
     {
       "k": "model",
@@ -34997,7 +36025,9 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "895a8f531",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.composition",
+      "f": "exampl|other|creat"
     },
     {
       "k": "fm",
@@ -35013,7 +36043,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "0b3143395",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.patterns",
+      "f": "observer pattern|weather app",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35030,7 +36063,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "bc13ac916",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.patterns",
+      "f": "method|list",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35044,7 +36080,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "95ded0753",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.inheritance",
+      "f": "protected attribute",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35059,7 +36098,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "820de7689",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.inheritance",
+      "f": "attributes|classes",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35074,7 +36116,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "59cbedcd5",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.polymorphism",
+      "f": "override|Overloading|method",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35089,7 +36134,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "853ebf0fb",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.abstraction",
+      "f": "abstract class|class cannot",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35104,7 +36152,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "c7b1ba2b5",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.composition",
+      "f": "object contains",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35119,7 +36170,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "e14d2232d",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.patterns",
+      "f": "design pattern",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35135,7 +36189,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "3e620435a",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.adt",
+      "f": "abstract data|data types",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35151,7 +36208,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "b3c3d4fc1",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.adt",
+      "f": "data structure",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35168,7 +36228,9 @@ window.CS = {
       ],
       "c": "Compare",
       "id": "ed6bd18df",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.linked",
+      "f": "contiguou|acces|travers"
     },
     {
       "k": "model",
@@ -35185,7 +36247,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "ab058153c",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.linked",
+      "f": "singly linked",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35201,7 +36266,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "0e7c5b63c",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.bst",
+      "f": "binary search|search tree",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35218,7 +36286,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "ae43fabbb",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.bst",
+      "f": "binary search|search tree|order traversal",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35233,7 +36304,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "1f656d358",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.sets",
+      "f": "already taken",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35249,7 +36323,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "287eaf891",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.sets",
+      "f": "list|hash table",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35266,7 +36343,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "e2ae536f0",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.hash",
+      "f": "hash table",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35282,7 +36362,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "22ae2de94",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.hash",
+      "f": "hash table|hash function|key mod",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35297,7 +36380,10 @@ window.CS = {
       ],
       "c": "Define",
       "id": "534ade43b",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.adt",
+      "f": "abstract data|data type",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35311,7 +36397,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "fefad2a18",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.linked",
+      "f": "doubly linked|singly linked",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35326,7 +36415,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "37fe54315",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.linked",
+      "f": "linked list|binary",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35340,7 +36432,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "ad79ca08c",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.bst",
+      "f": "pre order|order traversal",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35355,7 +36450,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "1cfafff76",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.bst",
+      "f": "binary search|search tree|inserting values",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35371,7 +36469,9 @@ window.CS = {
       ],
       "c": "State",
       "id": "904f7f674",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.sets",
+      "f": "intersection|union|difference"
     },
     {
       "k": "quiz",
@@ -35387,7 +36487,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "0a3734a72",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.hash",
+      "f": "collision|hash table|list",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35402,7 +36505,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "79d367e86",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "image generation",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35419,7 +36525,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "4de5f6b18",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "image generation|visionary studios",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35436,7 +36545,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "c37922358",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "computational cost|diffusion model",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35455,7 +36567,10 @@ window.CS = {
       ],
       "c": "To what extent",
       "id": "92dda3b9d",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "diffusion models|visionary studios",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35472,7 +36587,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "77c9eead9",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "curat|imag|licens"
     },
     {
       "k": "model",
@@ -35489,7 +36606,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "01563386a",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "internet",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35508,7 +36628,10 @@ window.CS = {
       ],
       "c": "Discuss",
       "id": "aade24e36",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "visionary studios|models trained",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35524,7 +36647,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "e146b4295",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "mode collapse",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35541,7 +36667,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "a5c8a5ea8",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "balanc|imag|improv"
     },
     {
       "k": "fm",
@@ -35558,7 +36686,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "6ab0294a0",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "weaknes|organis|imag"
     },
     {
       "k": "model",
@@ -35579,7 +36709,10 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "0ab40e11c",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "stable training",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35594,7 +36727,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "7a1fba64e",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "character consistency",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35610,7 +36746,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "1db892444",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "visionary studios",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35629,7 +36768,10 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "8b38c4afa",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "diffusion",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35645,7 +36787,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "74448afe8",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "needs gpus|diffusion models",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35661,7 +36806,10 @@ window.CS = {
       ],
       "c": "Suggest",
       "id": "befc34069",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "intellectual property",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35677,7 +36825,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "38d4f2d39",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "sampling steps|prompt",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35692,7 +36843,10 @@ window.CS = {
       ],
       "c": "Identify",
       "id": "f5ac371fc",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "Distillation|Latent diffusion|GPUs",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35707,7 +36861,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "eca2c1d64",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "neural network",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35722,7 +36879,10 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "256c55df5",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "Segmentation maps|Conditional generation|label",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35737,7 +36897,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "56a0838b3",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "embedding",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35754,7 +36917,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "82ef694e1",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "provenance|intellectual property|bias",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35773,7 +36939,10 @@ window.CS = {
       ],
       "c": "To what extent",
       "id": "f63aee39f",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.brief",
+      "f": "clients|diffusion models",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35790,7 +36959,10 @@ window.CS = {
       ],
       "c": "Describe",
       "id": "30680d91e",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "noise vector|generator",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35807,7 +36979,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "9f80174db",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "mode collapse",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35822,7 +36997,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "d6f0de083",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "weaknes|organis|autoencoder"
     },
     {
       "k": "quiz",
@@ -35838,7 +37015,10 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "d18a215af",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "VAEs",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35857,7 +37037,10 @@ window.CS = {
       ],
       "c": "Evaluate",
       "id": "feca1f841",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.extended",
+      "f": "GAN",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35872,7 +37055,10 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "6553e3259",
-      "u": "B1"
+      "u": "B1",
+      "n": "Pseudocode.status",
+      "f": "before coding",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35887,7 +37073,9 @@ window.CS = {
       ],
       "c": "Explain",
       "id": "240868ff0",
-      "u": "B1"
+      "u": "B1",
+      "n": "Pseudocode.tracing",
+      "f": "valu|record|logic"
     },
     {
       "k": "model",
@@ -35901,7 +37089,10 @@ window.CS = {
       ],
       "c": "State",
       "id": "2a3291e84",
-      "u": "B1"
+      "u": "B1",
+      "n": "Pseudocode.tracing",
+      "f": "digit sum",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35918,7 +37109,10 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "950446a5e",
-      "u": "B1"
+      "u": "B1",
+      "n": "Pseudocode.try-it",
+      "f": "pseudocode",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35935,7 +37129,8 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "3c6e720e2",
-      "u": "B1"
+      "u": "B1",
+      "n": "Pseudocode.try-it"
     },
     {
       "k": "model",
@@ -35952,7 +37147,8 @@ window.CS = {
       ],
       "c": "Construct",
       "id": "6ae036137",
-      "u": "B1"
+      "u": "B1",
+      "n": "Pseudocode.try-it"
     },
     {
       "k": "model",
@@ -35967,7 +37163,9 @@ window.CS = {
       ],
       "c": "Distinguish",
       "id": "04e382505",
-      "u": "B1"
+      "u": "B1",
+      "n": "Pseudocode.try-it",
+      "f": "writ|pseudocode|language"
     },
     {
       "k": "model",
@@ -35982,7 +37180,9 @@ window.CS = {
       ],
       "c": "Outline",
       "id": "0a9dba23b",
-      "u": "B1"
+      "u": "B1",
+      "n": "Pseudocode.try-it",
+      "f": "writ|pseudocode|write"
     },
     {
       "k": "case",
@@ -35998,7 +37198,10 @@ window.CS = {
       "g": "tech",
       "c": "Define",
       "id": "4e1314acd",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "image generation",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36015,7 +37218,10 @@ window.CS = {
       "g": "tech",
       "c": "Identify",
       "id": "a6fe81fca",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "image generation",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36032,7 +37238,10 @@ window.CS = {
       "g": "tech",
       "c": "Describe",
       "id": "960b49a18",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "image translation",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36048,7 +37257,10 @@ window.CS = {
       "g": "tech",
       "c": "Outline",
       "id": "cdff81d6a",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "segmentation map|image generation",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36064,7 +37276,10 @@ window.CS = {
       "g": "tech",
       "c": "Outline",
       "id": "96a2e3d09",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "image generation|visionary studios|concept art",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36080,7 +37295,10 @@ window.CS = {
       "g": "tech",
       "c": "Outline",
       "id": "646f71a82",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "image generation",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36097,7 +37315,9 @@ window.CS = {
       "g": "tech",
       "c": "Explain",
       "id": "f2c657e3b",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "ambiguou|specify|reflect"
     },
     {
       "k": "case",
@@ -36114,7 +37334,10 @@ window.CS = {
       "g": "tech",
       "c": "Describe",
       "id": "70978b714",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "text prompt",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36130,7 +37353,10 @@ window.CS = {
       "g": "diff",
       "c": "Define",
       "id": "eca2a353d",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "noise injection",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36146,7 +37372,10 @@ window.CS = {
       "g": "diff",
       "c": "Define",
       "id": "6fe1c41c8",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "diffusion models",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36164,7 +37393,9 @@ window.CS = {
       "g": "diff",
       "c": "Describe",
       "id": "5a60c8d43",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "denois|proces|predict"
     },
     {
       "k": "case",
@@ -36180,7 +37411,10 @@ window.CS = {
       "g": "diff",
       "c": "Outline",
       "id": "5eb343a74",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "convolutional neural|neural network|diffusion model",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36197,7 +37431,10 @@ window.CS = {
       "g": "diff",
       "c": "Explain",
       "id": "a76ebdaa0",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "during training|during generation",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36214,7 +37451,10 @@ window.CS = {
       "g": "diff",
       "c": "Explain",
       "id": "711228f6b",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "diffusion model",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36232,7 +37472,10 @@ window.CS = {
       "g": "diff",
       "c": "Explain",
       "id": "d6d1aa87d",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "diffusion models|computationally expensive",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36249,7 +37492,10 @@ window.CS = {
       "g": "diff",
       "c": "Explain",
       "id": "044bc547f",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "denoising steps",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36267,7 +37513,10 @@ window.CS = {
       "g": "diff",
       "c": "Suggest",
       "id": "2ab8b6ecd",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "visionary studios|diffusion models",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36283,7 +37532,10 @@ window.CS = {
       "g": "diff",
       "c": "Explain",
       "id": "83e9e9cfb",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "few steps",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36300,7 +37552,10 @@ window.CS = {
       "g": "diff",
       "c": "Calculate",
       "id": "9f0da7355",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "diffusion model|denoising step",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36317,7 +37572,10 @@ window.CS = {
       "g": "diff",
       "c": "Explain",
       "id": "3facf0e77",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "diffusion models",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36337,7 +37595,10 @@ window.CS = {
       "g": "diff",
       "c": "Discuss",
       "id": "0d3e90a34",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "visionary studios|diffusion model",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36354,7 +37615,10 @@ window.CS = {
       "g": "diff",
       "c": "Explain",
       "id": "648ba2594",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "training noise",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36370,7 +37634,9 @@ window.CS = {
       "g": "gan",
       "c": "Outline",
       "id": "4e139d956",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "imag|dimensional|vector"
     },
     {
       "k": "case",
@@ -36386,7 +37652,9 @@ window.CS = {
       "g": "gan",
       "c": "Outline",
       "id": "f40ed641c",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "receiv|imag|generat"
     },
     {
       "k": "case",
@@ -36404,7 +37672,9 @@ window.CS = {
       "g": "gan",
       "c": "Describe",
       "id": "2f79363d4",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "produc|imag|predict"
     },
     {
       "k": "case",
@@ -36420,7 +37690,10 @@ window.CS = {
       "g": "gan",
       "c": "Define",
       "id": "a5af6f234",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "mode collapse",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36437,7 +37710,10 @@ window.CS = {
       "g": "gan",
       "c": "Explain",
       "id": "2512314cc",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "dimensional noise|noise vector",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36455,7 +37731,10 @@ window.CS = {
       "g": "gan",
       "c": "Explain",
       "id": "5b5429922",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "adversarial dynamic",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36475,7 +37754,10 @@ window.CS = {
       "g": "gan",
       "c": "Explain",
       "id": "e816d9aaa",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "mode collapse",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36493,7 +37775,10 @@ window.CS = {
       "g": "gan",
       "c": "Suggest",
       "id": "bb9de45c6",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "mode collapse",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36511,7 +37796,10 @@ window.CS = {
       "g": "gan",
       "c": "Compare",
       "id": "6a542863f",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "generating images",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36527,7 +37815,10 @@ window.CS = {
       "g": "gan",
       "c": "Outline",
       "id": "9d5bb3fd9",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "diffusion model",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36543,7 +37834,10 @@ window.CS = {
       "g": "hyb",
       "c": "Define",
       "id": "d89fd00bd",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "latent space",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36560,7 +37854,9 @@ window.CS = {
       "g": "hyb",
       "c": "Describe",
       "id": "58b26cdf0",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "generat|imag|modifi"
     },
     {
       "k": "case",
@@ -36577,7 +37873,10 @@ window.CS = {
       "g": "hyb",
       "c": "Explain",
       "id": "f8e37def4",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "similar images|close together|latent space",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36594,7 +37893,10 @@ window.CS = {
       "g": "hyb",
       "c": "Describe",
       "id": "933b42525",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "flow based|generative model",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36611,7 +37913,10 @@ window.CS = {
       "g": "hyb",
       "c": "Explain",
       "id": "9bcc3e3c8",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "flow based|based models",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36627,7 +37932,10 @@ window.CS = {
       "g": "hyb",
       "c": "Outline",
       "id": "7e4b6610e",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "visionary studios",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36645,7 +37953,10 @@ window.CS = {
       "g": "hyb",
       "c": "Outline",
       "id": "c5acf05de",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "hybrid model",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36661,7 +37972,10 @@ window.CS = {
       "g": "eval",
       "c": "Identify",
       "id": "4430290ce",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "visionary studios",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36677,7 +37991,10 @@ window.CS = {
       "g": "eval",
       "c": "Outline",
       "id": "af714b921",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "output quality",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36694,7 +38011,10 @@ window.CS = {
       "g": "eval",
       "c": "Explain",
       "id": "fc6924d74",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "computational efficiency",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36711,7 +38031,10 @@ window.CS = {
       "g": "eval",
       "c": "Explain",
       "id": "aeaefbfe9",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "training stability",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36728,7 +38051,10 @@ window.CS = {
       "g": "eval",
       "c": "Explain",
       "id": "c851a28d2",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "visionary studios",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36745,7 +38071,9 @@ window.CS = {
       "g": "eval",
       "c": "Explain",
       "id": "f4eedc2df",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "reli|acros|generat"
     },
     {
       "k": "case",
@@ -36762,7 +38090,10 @@ window.CS = {
       "g": "eval",
       "c": "Describe",
       "id": "73d7ff934",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "character consistency|embedding based|based approaches",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36778,7 +38109,10 @@ window.CS = {
       "g": "eval",
       "c": "Outline",
       "id": "1bf57864b",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "style adherence",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36795,7 +38129,9 @@ window.CS = {
       "g": "eval",
       "c": "Deduce",
       "id": "4bcf9ea1c",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "give|scor|imag"
     },
     {
       "k": "case",
@@ -36815,7 +38151,10 @@ window.CS = {
       "g": "eval",
       "c": "Evaluate",
       "id": "6aa8fb7c0",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "diffusion",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36832,7 +38171,10 @@ window.CS = {
       "g": "eth",
       "c": "Explain",
       "id": "077ea7061",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "dataset curation",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36849,7 +38191,10 @@ window.CS = {
       "g": "eth",
       "c": "Explain",
       "id": "8e2cbf209",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "intellectual property",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36866,7 +38211,10 @@ window.CS = {
       "g": "eth",
       "c": "Describe",
       "id": "e911a5097",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "inaccurate images",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36884,7 +38232,10 @@ window.CS = {
       "g": "eth",
       "c": "Suggest",
       "id": "38b1350cc",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "visionary studios|generated images",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36901,7 +38252,9 @@ window.CS = {
       "g": "eth",
       "c": "Explain",
       "id": "eacb9cbf5",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "generat|audienc|label"
     },
     {
       "k": "case",
@@ -36921,7 +38274,10 @@ window.CS = {
       "g": "eth",
       "c": "Discuss",
       "id": "65c757f47",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "visionary studios|images collected",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36937,7 +38293,9 @@ window.CS = {
       "g": "eth",
       "c": "Outline",
       "id": "2988e0e7c",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "concern|train|diffusion"
     },
     {
       "k": "case",
@@ -36953,7 +38311,10 @@ window.CS = {
       "g": "eth",
       "c": "Outline",
       "id": "c493568b2",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "generated images",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36970,7 +38331,10 @@ window.CS = {
       "g": "link",
       "c": "Explain",
       "id": "45c1bbdb3",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "needs gpus|diffusion models",
+      "fg": 1
     },
     {
       "k": "case",
@@ -36987,7 +38351,10 @@ window.CS = {
       "g": "link",
       "c": "Calculate",
       "id": "1420f7fd3",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "000 images|2048 2048|2048 pixels",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37004,7 +38371,9 @@ window.CS = {
       "g": "link",
       "c": "Suggest",
       "id": "d17bcc752",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "licens|scal|iaas"
     },
     {
       "k": "case",
@@ -37021,7 +38390,10 @@ window.CS = {
       "g": "link",
       "c": "Explain",
       "id": "66d51f63e",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "latent space|lossy compression",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37038,7 +38410,9 @@ window.CS = {
       "g": "link",
       "c": "Describe",
       "id": "2b0ea04ac",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "featur|textur|restor"
     },
     {
       "k": "case",
@@ -37055,7 +38429,10 @@ window.CS = {
       "g": "link",
       "c": "Calculate",
       "id": "76f0ad346",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "000 images",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37073,7 +38450,10 @@ window.CS = {
       "g": "link",
       "c": "Construct",
       "id": "06a0def45",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "every image|been disclosed|table generatedimage",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37089,7 +38469,10 @@ window.CS = {
       "g": "link",
       "c": "Identify",
       "id": "ad4375fa1",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "machine learning",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37106,7 +38489,10 @@ window.CS = {
       "g": "link",
       "c": "Suggest",
       "id": "9d676223d",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.links",
+      "f": "studio needs|000 images",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37126,7 +38512,10 @@ window.CS = {
       "g": "ext",
       "c": "To what extent",
       "id": "192850b93",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.extended",
+      "f": "visionary studios|studios manage|computational demands",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37146,7 +38535,10 @@ window.CS = {
       "g": "ext",
       "c": "Discuss",
       "id": "14052af8c",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.extended",
+      "f": "visionary studios|ethical considerations|intellectual property",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37170,7 +38562,10 @@ window.CS = {
       "g": "ext",
       "c": "To what extent",
       "id": "08e7da687",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.extended",
+      "f": "visionary studios|studios balance|discriminator networks",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37191,7 +38586,10 @@ window.CS = {
       "g": "ext",
       "c": "Evaluate",
       "id": "a6dd08303",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.extended",
+      "f": "hybrid model|vaes gans|gans flow",
+      "fg": 1
     },
     {
       "k": "essay",
@@ -37214,7 +38612,10 @@ window.CS = {
       "g": "ext",
       "c": "To what extent",
       "id": "01aed8551",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.extended",
+      "f": "visionary studios|studios manage|computational demands",
+      "fg": 1
     },
     {
       "k": "essay",
@@ -37237,7 +38638,10 @@ window.CS = {
       "g": "ext",
       "c": "Discuss",
       "id": "5ff081c56",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.extended",
+      "f": "visionary studios|ethical considerations|large datasets",
+      "fg": 1
     },
     {
       "k": "essay",
@@ -37264,7 +38668,10 @@ window.CS = {
       "g": "ext",
       "c": "To what extent",
       "id": "28f9d4fc2",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.extended",
+      "f": "visionary studios|studios balance|discriminator networks",
+      "fg": 1
     },
     {
       "k": "essay",
@@ -37289,7 +38696,10 @@ window.CS = {
       "g": "ext",
       "c": "Evaluate",
       "id": "dec82f1f7",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.extended",
+      "f": "hybrid model|vaes gans|gans flow",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37305,7 +38715,10 @@ window.CS = {
       "t": "cpu",
       "c": "Outline",
       "id": "aa0e5fea2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "central processing unit",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37322,7 +38735,10 @@ window.CS = {
       "t": "cu",
       "c": "Describe",
       "id": "4057b8dbb",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "control unit",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37338,7 +38754,10 @@ window.CS = {
       "t": "alu",
       "c": "State",
       "id": "b4b206599",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "ALU",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37354,7 +38773,10 @@ window.CS = {
       "t": "register",
       "c": "Explain",
       "id": "d2ebd5274",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "Registers",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37369,7 +38791,10 @@ window.CS = {
       "t": "pc",
       "c": "State",
       "id": "f76ede217",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "program counter",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37385,7 +38810,10 @@ window.CS = {
       "t": "mar",
       "c": "Outline",
       "id": "9da6fc2d8",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "memory address register",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37400,7 +38828,10 @@ window.CS = {
       "t": "ir",
       "c": "State",
       "id": "3adc3b51c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "instruction register",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37415,7 +38846,10 @@ window.CS = {
       "t": "acc",
       "c": "State",
       "id": "5e1217721",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "accumulator",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37432,7 +38866,10 @@ window.CS = {
       "t": "core",
       "c": "Explain",
       "id": "e9641df59",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "single-core",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37448,7 +38885,10 @@ window.CS = {
       "t": "coprocessor",
       "c": "Outline",
       "id": "7205245b2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "Co-processors",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37464,7 +38904,10 @@ window.CS = {
       "t": "clock",
       "c": "Explain",
       "id": "a07e70448",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "Clock speed",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37480,7 +38923,10 @@ window.CS = {
       "t": "ram",
       "c": "Explain",
       "id": "755c545f9",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "RAM",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37496,7 +38942,10 @@ window.CS = {
       "t": "rom",
       "c": "Explain",
       "id": "005eb9256",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "ROM",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37512,7 +38961,10 @@ window.CS = {
       "t": "volatile",
       "c": "Distinguish",
       "id": "47e5d2c19",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "volatile",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37528,7 +38980,10 @@ window.CS = {
       "t": "hdd",
       "c": "Outline",
       "id": "bc82f994d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "hard disk",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37544,7 +38999,10 @@ window.CS = {
       "t": "emmc",
       "c": "Outline",
       "id": "c941fc210",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "eMMC",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37560,7 +39018,10 @@ window.CS = {
       "t": "optical",
       "c": "State",
       "id": "6bfeb87d2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "Optical discs",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37576,7 +39037,10 @@ window.CS = {
       "t": "flash",
       "c": "Suggest",
       "id": "5b0dd6633",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "flash memory",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37594,7 +39058,10 @@ window.CS = {
       "t": "nas",
       "c": "Outline",
       "id": "915038646",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "Network-attached storage",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37610,7 +39077,10 @@ window.CS = {
       "t": "rle",
       "c": "Explain",
       "id": "f851b5f4a",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "run-length encoding",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37626,7 +39096,10 @@ window.CS = {
       "t": "transform-coding",
       "c": "Explain",
       "id": "37902372a",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "transform coding",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37642,7 +39115,10 @@ window.CS = {
       "t": "paas",
       "c": "Describe",
       "id": "fe589069d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "PaaS",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37658,7 +39134,10 @@ window.CS = {
       "t": "iaas",
       "c": "Distinguish",
       "id": "23ed22a89",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "IaaS",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37674,7 +39153,10 @@ window.CS = {
       "t": "binary",
       "c": "Determine",
       "id": "959b60228",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "binary",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37690,7 +39172,10 @@ window.CS = {
       "t": "denary",
       "c": "Calculate",
       "id": "32e59d1e5",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "denary",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37705,7 +39190,10 @@ window.CS = {
       "t": "bit-byte",
       "c": "Calculate",
       "id": "494fa9ff7",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "bit",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37721,7 +39209,10 @@ window.CS = {
       "t": "image",
       "c": "Calculate",
       "id": "166744f2e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "pixel",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37737,7 +39228,10 @@ window.CS = {
       "t": "sound",
       "c": "Explain",
       "id": "469dc33be",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "sample rate",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37753,7 +39247,10 @@ window.CS = {
       "t": "video",
       "c": "Explain",
       "id": "0f9c435aa",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "frames",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37768,7 +39265,10 @@ window.CS = {
       "t": "logic-gate",
       "c": "Define",
       "id": "7e9e5de7f",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "logic gates",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37784,7 +39284,10 @@ window.CS = {
       "t": "and",
       "c": "Construct",
       "id": "3f29e4cd7",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "AND",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37800,7 +39303,10 @@ window.CS = {
       "t": "or",
       "c": "State",
       "id": "a0ebee066",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "OR",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37815,7 +39321,10 @@ window.CS = {
       "t": "not",
       "c": "Construct",
       "id": "288ec4158",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "NOT",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37831,7 +39340,10 @@ window.CS = {
       "t": "nand",
       "c": "Explain",
       "id": "0efa5b122",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "NAND",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37847,7 +39359,10 @@ window.CS = {
       "t": "nor",
       "c": "Construct",
       "id": "a3e34719e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "NOR",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37863,7 +39378,10 @@ window.CS = {
       "t": "xnor",
       "c": "Outline",
       "id": "9b476a3d4",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "XNOR",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37878,7 +39396,10 @@ window.CS = {
       "t": "boolean",
       "c": "Deduce",
       "id": "df868e43c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.truth",
+      "f": "Boolean expression",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37894,7 +39415,10 @@ window.CS = {
       "t": "abstraction",
       "c": "Explain",
       "id": "71c416bc0",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "abstraction",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37911,7 +39435,10 @@ window.CS = {
       "t": "memory-management",
       "c": "Explain",
       "id": "31fe51585",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "Memory management",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37927,7 +39454,10 @@ window.CS = {
       "t": "file-system",
       "c": "Outline",
       "id": "a36f7134d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "File system",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37943,7 +39473,10 @@ window.CS = {
       "t": "device-driver",
       "c": "Explain",
       "id": "419aa0009",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "device drivers",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37961,7 +39494,10 @@ window.CS = {
       "t": "virtualisation",
       "c": "Outline",
       "id": "a4ded2f27",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "Virtualisation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37977,7 +39513,10 @@ window.CS = {
       "t": "scheduling",
       "c": "State",
       "id": "faaf68be8",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "Scheduling",
+      "fg": 1
     },
     {
       "k": "term",
@@ -37993,7 +39532,10 @@ window.CS = {
       "t": "fcfs",
       "c": "Outline",
       "id": "a315488e6",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "FCFS",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38009,7 +39551,10 @@ window.CS = {
       "t": "round-robin",
       "c": "Explain",
       "id": "093e615e2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "Round robin",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38026,7 +39571,10 @@ window.CS = {
       "t": "multilevel",
       "c": "Describe",
       "id": "44bfea0e1",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "Multilevel queues",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38042,7 +39590,10 @@ window.CS = {
       "t": "polling",
       "c": "Outline",
       "id": "2ceb51881",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.interrupts",
+      "f": "polling",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38060,7 +39611,9 @@ window.CS = {
       "t": "network",
       "c": "Outline",
       "id": "89cb8d453",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "resourc|shar|messag"
     },
     {
       "k": "term",
@@ -38076,7 +39629,10 @@ window.CS = {
       "t": "pan",
       "c": "Distinguish",
       "id": "42b20aa1b",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "PAN",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38092,7 +39648,10 @@ window.CS = {
       "t": "lan",
       "c": "State",
       "id": "3bcec47d6",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "LAN",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38107,7 +39666,10 @@ window.CS = {
       "t": "man",
       "c": "Identify",
       "id": "bbe352b50",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "MAN",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38123,7 +39685,10 @@ window.CS = {
       "t": "bandwidth",
       "c": "Distinguish",
       "id": "24078a6f1",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "bandwidth",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38139,7 +39704,10 @@ window.CS = {
       "t": "latency",
       "c": "Explain",
       "id": "a6b30a656",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "latency",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38155,7 +39723,10 @@ window.CS = {
       "t": "internet",
       "c": "Distinguish",
       "id": "2b15b81aa",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "internet",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38173,7 +39744,10 @@ window.CS = {
       "t": "cloud",
       "c": "Discuss",
       "id": "f95f89340",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "Cloud",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38191,7 +39765,10 @@ window.CS = {
       "t": "distributed",
       "c": "Outline",
       "id": "2a15d25b4",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "distributed system",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38207,7 +39784,10 @@ window.CS = {
       "t": "mobile",
       "c": "Outline",
       "id": "ac4ec5185",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "Mobile networks",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38222,7 +39802,10 @@ window.CS = {
       "t": "nic",
       "c": "State",
       "id": "4e490dff4",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "network interface card",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38238,7 +39821,10 @@ window.CS = {
       "t": "gateway",
       "c": "Outline",
       "id": "fa78ca82a",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "gateway",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38254,7 +39840,10 @@ window.CS = {
       "t": "wap",
       "c": "Explain",
       "id": "fb7035286",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "wireless access point",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38270,7 +39859,10 @@ window.CS = {
       "t": "modem",
       "c": "State",
       "id": "92b2836d0",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "modem",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38286,7 +39878,10 @@ window.CS = {
       "t": "mac-address",
       "c": "Distinguish",
       "id": "d4a050ca5",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "MAC address",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38302,7 +39897,10 @@ window.CS = {
       "t": "protocol",
       "c": "Explain",
       "id": "d41ec1c40",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.tcp",
+      "f": "protocol",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38318,7 +39916,10 @@ window.CS = {
       "t": "udp",
       "c": "Explain",
       "id": "09530a117",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.tcp",
+      "f": "UDP",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38334,7 +39935,10 @@ window.CS = {
       "t": "http",
       "c": "Outline",
       "id": "b89427c67",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "HTTP",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38351,7 +39955,10 @@ window.CS = {
       "t": "https",
       "c": "Explain",
       "id": "07b23704e",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "HTTPS",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38367,7 +39974,10 @@ window.CS = {
       "t": "dhcp",
       "c": "Outline",
       "id": "8355a4e9f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "DHCP",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38383,7 +39993,10 @@ window.CS = {
       "t": "port",
       "c": "Explain",
       "id": "c9e744b94",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.firewalls",
+      "f": "Port numbers",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38399,7 +40012,10 @@ window.CS = {
       "t": "topology",
       "c": "Distinguish",
       "id": "02f365690",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "topology",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38415,7 +40031,10 @@ window.CS = {
       "t": "mesh",
       "c": "Explain",
       "id": "158ced3cd",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "mesh",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38431,7 +40050,10 @@ window.CS = {
       "t": "hybrid",
       "c": "Suggest",
       "id": "1e92c5e72",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "hybrid",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38447,7 +40069,10 @@ window.CS = {
       "t": "spof",
       "c": "Explain",
       "id": "d0222acc9",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "single point of failure",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38463,7 +40088,10 @@ window.CS = {
       "t": "p2p",
       "c": "Outline",
       "id": "3d57f8b8d",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "peer-to-peer",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38481,7 +40109,10 @@ window.CS = {
       "t": "segmentation",
       "c": "Explain",
       "id": "ae21ea0a2",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.subnetting",
+      "f": "Network segmentation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38496,7 +40127,10 @@ window.CS = {
       "t": "subnetting",
       "c": "State",
       "id": "fce90d9e4",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.subnetting",
+      "f": "Subnetting",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38512,7 +40146,10 @@ window.CS = {
       "t": "acl",
       "c": "Describe",
       "id": "1a5901155",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.vlans",
+      "f": "access control lists",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38528,7 +40165,10 @@ window.CS = {
       "t": "ip-address",
       "c": "Explain",
       "id": "a9b2d82e1",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.ip",
+      "f": "IP address",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38544,7 +40184,9 @@ window.CS = {
       "t": "static-dynamic",
       "c": "Explain",
       "id": "1eee29bf7",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.ip",
+      "f": "addres|chang|server"
     },
     {
       "k": "term",
@@ -38560,7 +40202,10 @@ window.CS = {
       "t": "public-private",
       "c": "Distinguish",
       "id": "df30cf4ff",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.ip",
+      "f": "Private",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38578,7 +40223,10 @@ window.CS = {
       "t": "copper",
       "c": "Outline",
       "id": "0313eac09",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.media",
+      "f": "copper",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38596,7 +40244,10 @@ window.CS = {
       "t": "wireless",
       "c": "Outline",
       "id": "c9f0febbb",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.media",
+      "f": "Wireless",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38612,7 +40263,10 @@ window.CS = {
       "t": "allowlist",
       "c": "Explain",
       "id": "df13ceefc",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.firewalls",
+      "f": "allowlist",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38628,7 +40282,10 @@ window.CS = {
       "t": "encryption",
       "c": "Explain",
       "id": "7cbf9b6a2",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "Encryption",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38644,7 +40301,10 @@ window.CS = {
       "t": "symmetric",
       "c": "Outline",
       "id": "9ba0ee69e",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "symmetric",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38661,7 +40321,10 @@ window.CS = {
       "t": "certificate",
       "c": "Explain",
       "id": "7c095ffaa",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "digital certificate",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38679,7 +40342,10 @@ window.CS = {
       "t": "key-management",
       "c": "Outline",
       "id": "763d3ca21",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "Key management",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38695,7 +40361,10 @@ window.CS = {
       "t": "relational",
       "c": "Define",
       "id": "0eadae9ca",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "relational databases",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38711,7 +40380,10 @@ window.CS = {
       "t": "flat-file",
       "c": "Explain",
       "id": "fc476b500",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "flat-file database",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38727,7 +40399,10 @@ window.CS = {
       "t": "primary-key",
       "c": "State",
       "id": "6f87dee87",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "primary key",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38743,7 +40418,10 @@ window.CS = {
       "t": "composite-key",
       "c": "Identify",
       "id": "c545c4358",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "composite key",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38759,7 +40437,10 @@ window.CS = {
       "t": "candidate-key",
       "c": "Distinguish",
       "id": "ce1995f0c",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "candidate key",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38775,7 +40456,10 @@ window.CS = {
       "t": "data-integrity",
       "c": "Describe",
       "id": "c31917d7a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "referential integrity",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38790,7 +40474,10 @@ window.CS = {
       "t": "cardinality",
       "c": "Identify",
       "id": "dcc768fe1",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.erd",
+      "f": "Cardinality",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38807,7 +40494,10 @@ window.CS = {
       "t": "normalisation",
       "c": "Explain",
       "id": "eb0005f16",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.normalisation",
+      "f": "Normalisation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38823,7 +40513,10 @@ window.CS = {
       "t": "anomaly",
       "c": "Describe",
       "id": "5e4c88be7",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.normalisation",
+      "f": "anomalies",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38839,7 +40532,10 @@ window.CS = {
       "t": "1nf",
       "c": "State",
       "id": "d51751c05",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.normalisation",
+      "f": "1NF",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38855,7 +40551,10 @@ window.CS = {
       "t": "2nf",
       "c": "Explain",
       "id": "c663a1705",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.normalisation",
+      "f": "2NF",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38871,7 +40570,10 @@ window.CS = {
       "t": "sql",
       "c": "Distinguish",
       "id": "b1a86d19a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.ddl",
+      "f": "SQL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38887,7 +40589,10 @@ window.CS = {
       "t": "dml",
       "c": "State",
       "id": "763531e62",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.ddl",
+      "f": "DML",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38904,7 +40609,10 @@ window.CS = {
       "t": "select",
       "c": "Construct",
       "id": "0c341ccd7",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "SELECT",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38920,7 +40628,10 @@ window.CS = {
       "t": "where",
       "c": "Construct",
       "id": "7733cd3f5",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "WHERE",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38936,7 +40647,10 @@ window.CS = {
       "t": "order-by",
       "c": "Construct",
       "id": "54c5a2335",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "ORDER BY",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38953,7 +40667,10 @@ window.CS = {
       "t": "ai",
       "c": "Outline",
       "id": "e2bb0cc21",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.what",
+      "f": "Artificial intelligence",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38969,7 +40686,10 @@ window.CS = {
       "t": "model",
       "c": "Distinguish",
       "id": "a218387a7",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.what",
+      "f": "training",
+      "fg": 1
     },
     {
       "k": "term",
@@ -38985,7 +40705,10 @@ window.CS = {
       "t": "training-data",
       "c": "Explain",
       "id": "92cd9a766",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.what",
+      "f": "training data",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39002,7 +40725,10 @@ window.CS = {
       "t": "unsupervised",
       "c": "Identify",
       "id": "cb6244e41",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "unsupervised learning",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39020,7 +40746,10 @@ window.CS = {
       "t": "reinforcement",
       "c": "Explain",
       "id": "cd9cba1cc",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "reinforcement learning",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39038,7 +40767,10 @@ window.CS = {
       "t": "deep-learning",
       "c": "Outline",
       "id": "8e6e78649",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "Deep learning",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39054,7 +40786,10 @@ window.CS = {
       "t": "transfer-learning",
       "c": "Explain",
       "id": "65ec72a55",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "Transfer learning",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39070,7 +40805,10 @@ window.CS = {
       "t": "classification",
       "c": "Distinguish",
       "id": "3868943cd",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "Classification",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39086,7 +40824,10 @@ window.CS = {
       "t": "regression",
       "c": "Identify",
       "id": "a9273e257",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "regression",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39103,7 +40844,10 @@ window.CS = {
       "t": "ml-applications",
       "c": "Describe",
       "id": "8792f2725",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "natural language processing",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39119,7 +40863,10 @@ window.CS = {
       "t": "tpu-npu",
       "c": "Explain",
       "id": "691f0055c",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "TPUs",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39135,11 +40882,14 @@ window.CS = {
       "t": "fpga-asic",
       "c": "Distinguish",
       "id": "55a8452d2",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "FPGAs",
+      "fg": 1
     },
     {
       "k": "term",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 3,
@@ -39152,11 +40902,14 @@ window.CS = {
       "t": "transparency",
       "c": "Explain",
       "id": "0cab0a0e0",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "Transparency",
+      "fg": 1
     },
     {
       "k": "term",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 4,
@@ -39170,11 +40923,14 @@ window.CS = {
       "t": "accountability",
       "c": "Discuss",
       "id": "42f47cd13",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "Accountability",
+      "fg": 1
     },
     {
       "k": "term",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 4,
@@ -39188,11 +40944,14 @@ window.CS = {
       "t": "privacy-consent",
       "c": "Outline",
       "id": "d0402ab49",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "Privacy",
+      "fg": 1
     },
     {
       "k": "term",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 3,
@@ -39205,11 +40964,14 @@ window.CS = {
       "t": "misinformation",
       "c": "Explain",
       "id": "6f9d8921d",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "Misinformation",
+      "fg": 1
     },
     {
       "k": "term",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 4,
@@ -39223,11 +40985,14 @@ window.CS = {
       "t": "automation",
       "c": "Evaluate",
       "id": "268073deb",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "automated",
+      "fg": 1
     },
     {
       "k": "term",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 4,
@@ -39241,11 +41006,14 @@ window.CS = {
       "t": "environmental-impact",
       "c": "Outline",
       "id": "219e7874c",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "Environmental impact",
+      "fg": 1
     },
     {
       "k": "term",
-      "p": "A4-machine-learning",
+      "p": "A4-ethics",
       "s": "ethics",
       "h": 0,
       "m": 3,
@@ -39258,7 +41026,64 @@ window.CS = {
       "t": "human-oversight",
       "c": "Explain",
       "id": "0598b349f",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "human oversight",
+      "fg": 1
+    },
+    {
+      "k": "quiz",
+      "p": "A4-ethics",
+      "s": "quiz",
+      "h": 0,
+      "m": 2,
+      "q": "Outline why a lack of transparency in a machine learning system is an ethical concern.",
+      "a": [
+        "Many models are “black boxes”, so even their developers cannot explain why a particular decision (such as a refused loan) was made;",
+        "so the people affected cannot understand, challenge or appeal the decision, and errors or bias can go unnoticed."
+      ],
+      "c": "Outline",
+      "id": "9237d8d12",
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "Transparency|Bias",
+      "fg": 1
+    },
+    {
+      "k": "quiz",
+      "p": "A4-ethics",
+      "s": "quiz",
+      "h": 0,
+      "m": 2,
+      "q": "Identify two ways to reduce the risk of harm from a machine learning system that makes important decisions about people.",
+      "a": [
+        "Train it on varied, checked training data and test it for bias before and after it is deployed;",
+        "keep human oversight, so a person reviews, and can overrule, important decisions such as hiring or medical ones."
+      ],
+      "c": "Identify",
+      "id": "a405b6c8f",
+      "u": "A4",
+      "n": "A4-ethics.ethics",
+      "f": "human oversight|training data",
+      "fg": 1
+    },
+    {
+      "k": "quiz",
+      "p": "A4-ethics",
+      "s": "quiz",
+      "h": 0,
+      "m": 2,
+      "q": "Describe one benefit and one risk of recommendation algorithms that choose the content people see online.",
+      "a": [
+        "Benefit: people quickly find news, videos and products that match their interests;",
+        "Risk: they show more of what people already engage with, creating echo chambers that narrow views and can polarise opinion."
+      ],
+      "c": "Describe",
+      "id": "f80842af6",
+      "u": "A4",
+      "n": "A4-ethics.daily",
+      "f": "people see",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39275,7 +41100,10 @@ window.CS = {
       "t": "decomposition",
       "c": "Describe",
       "id": "ae4d54651",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "Decomposition",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39293,7 +41121,10 @@ window.CS = {
       "t": "ct-abstraction",
       "c": "Identify",
       "id": "fc1d35434",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "Abstraction",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39310,7 +41141,10 @@ window.CS = {
       "t": "algorithmic-design",
       "c": "State",
       "id": "8a7b8cd46",
-      "u": "B1"
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "Algorithmic design",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39326,7 +41160,10 @@ window.CS = {
       "t": "variable",
       "c": "Distinguish",
       "id": "42783cedf",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.variables",
+      "f": "variable",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39343,7 +41180,10 @@ window.CS = {
       "t": "b-data-type",
       "c": "State",
       "id": "2861398aa",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.variables",
+      "f": "data type",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39361,7 +41201,10 @@ window.CS = {
       "t": "debugging",
       "c": "Describe",
       "id": "25abaf050",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-fundamentals.debugging",
+      "f": "Debugging",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39377,7 +41220,10 @@ window.CS = {
       "t": "sequence",
       "c": "Explain",
       "id": "ac443a59b",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.sequence",
+      "f": "sequence",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39393,7 +41239,10 @@ window.CS = {
       "t": "infinite-loop",
       "c": "Identify",
       "id": "8042cff25",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.sequence",
+      "f": "infinite loop",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39409,7 +41258,10 @@ window.CS = {
       "t": "selection",
       "c": "Construct",
       "id": "e8a727999",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.selection",
+      "f": "Selection",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39425,7 +41277,10 @@ window.CS = {
       "t": "relational-boolean",
       "c": "State",
       "id": "1fd0164a6",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.selection",
+      "f": "Logical operators",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39443,7 +41298,10 @@ window.CS = {
       "t": "modularization",
       "c": "Explain",
       "id": "5b738e608",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-control.functions",
+      "f": "Modularization",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39460,7 +41318,10 @@ window.CS = {
       "t": "linear-search",
       "c": "Describe",
       "id": "df25f344d",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.search",
+      "f": "Linear search",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39477,7 +41338,10 @@ window.CS = {
       "t": "selection-sort",
       "c": "Compare",
       "id": "861257a91",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.sort",
+      "f": "Selection sort",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39494,7 +41358,10 @@ window.CS = {
       "t": "attribute",
       "c": "Identify",
       "id": "62cdb64ad",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.design",
+      "f": "attribute",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39510,7 +41377,10 @@ window.CS = {
       "t": "method",
       "c": "Outline",
       "id": "0d8020af4",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.design",
+      "f": "method",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39526,7 +41396,10 @@ window.CS = {
       "t": "information-hiding",
       "c": "Explain",
       "id": "00d003dc3",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.encapsulation",
+      "f": "information hiding",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39542,7 +41415,10 @@ window.CS = {
       "t": "accessor-mutator",
       "c": "Explain",
       "id": "9b4d2d5d3",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-oop.encapsulation",
+      "f": "accessor",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39558,7 +41434,10 @@ window.CS = {
       "t": "vram",
       "c": "Explain",
       "id": "3a81e09a1",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpugpu",
+      "f": "VRAM",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39574,7 +41453,10 @@ window.CS = {
       "t": "throughput",
       "c": "Distinguish",
       "id": "78c3f606a",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpugpu",
+      "f": "throughput",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39589,7 +41471,10 @@ window.CS = {
       "t": "write-back",
       "c": "State",
       "id": "37eb1370d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.pipeline",
+      "f": "write-back",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39605,7 +41490,10 @@ window.CS = {
       "t": "hazard",
       "c": "Explain",
       "id": "3cfed2c79",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.pipeline",
+      "f": "hazard",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39621,7 +41509,10 @@ window.CS = {
       "t": "multitasking",
       "c": "Outline",
       "id": "690c7270b",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.contention",
+      "f": "Multitasking",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39637,7 +41528,10 @@ window.CS = {
       "t": "mutual-exclusion",
       "c": "Explain",
       "id": "3c1c4823b",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.contention",
+      "f": "mutual exclusion",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39653,7 +41547,10 @@ window.CS = {
       "t": "semaphore",
       "c": "Outline",
       "id": "e6203242f",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.contention",
+      "f": "semaphores",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39671,7 +41568,10 @@ window.CS = {
       "t": "control-system",
       "c": "Describe",
       "id": "71ea8a3c8",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "control system",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39687,7 +41587,10 @@ window.CS = {
       "t": "sensor",
       "c": "Identify",
       "id": "a755e4968",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "Sensors",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39703,7 +41606,10 @@ window.CS = {
       "t": "actuator",
       "c": "Outline",
       "id": "2f5321d37",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "Actuators",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39718,7 +41624,10 @@ window.CS = {
       "t": "transducer",
       "c": "Define",
       "id": "ccca73993",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "transducer",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39734,7 +41643,10 @@ window.CS = {
       "t": "open-closed-loop",
       "c": "Distinguish",
       "id": "8251025c1",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "open-loop|set point|Sensors",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39752,7 +41664,10 @@ window.CS = {
       "t": "control-algorithm",
       "c": "Construct",
       "id": "4fddf2e1b",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "set point",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39768,7 +41683,10 @@ window.CS = {
       "t": "translator",
       "c": "Explain",
       "id": "f37d3aece",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "high level",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39785,7 +41703,10 @@ window.CS = {
       "t": "bytecode",
       "c": "Explain",
       "id": "6d4129f0d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "bytecode",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39802,7 +41723,10 @@ window.CS = {
       "t": "tcpip-model",
       "c": "Describe",
       "id": "654734984",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.layers",
+      "f": "TCP/IP model",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39818,7 +41742,10 @@ window.CS = {
       "t": "application-layer",
       "c": "State",
       "id": "54447ed2f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.layers",
+      "f": "Application layer",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39835,7 +41762,10 @@ window.CS = {
       "t": "transport-layer",
       "c": "Describe",
       "id": "6c553ef5b",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.layers",
+      "f": "Transport layer",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39851,7 +41781,10 @@ window.CS = {
       "t": "internet-layer",
       "c": "Outline",
       "id": "0dccd5848",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.layers",
+      "f": "Internet layer",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39867,7 +41800,10 @@ window.CS = {
       "t": "network-interface-layer",
       "c": "Outline",
       "id": "f65a17355",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.layers",
+      "f": "Network interface layer",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39883,7 +41819,10 @@ window.CS = {
       "t": "server",
       "c": "Describe",
       "id": "3adaeedbf",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.servers",
+      "f": "server",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39900,7 +41839,10 @@ window.CS = {
       "t": "web-server",
       "c": "Explain",
       "id": "ef0bd199c",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.servers",
+      "f": "Web server",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39916,7 +41858,10 @@ window.CS = {
       "t": "mail-server",
       "c": "Outline",
       "id": "46ff670a7",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.servers",
+      "f": "Mail server",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39932,7 +41877,10 @@ window.CS = {
       "t": "routing-table",
       "c": "Outline",
       "id": "f7db108c3",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.routing",
+      "f": "routing table",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39948,7 +41896,10 @@ window.CS = {
       "t": "static-routing",
       "c": "Describe",
       "id": "309812bc6",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.routing",
+      "f": "static routing",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39964,7 +41915,10 @@ window.CS = {
       "t": "convergence",
       "c": "Explain",
       "id": "1fdb6921c",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.routing",
+      "f": "convergence",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39980,7 +41934,10 @@ window.CS = {
       "t": "malware",
       "c": "Distinguish",
       "id": "6281efc69",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "malware",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39997,7 +41954,10 @@ window.CS = {
       "t": "mitm",
       "c": "Explain",
       "id": "e0c31fd1a",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "man-in-the-middle",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40013,7 +41973,10 @@ window.CS = {
       "t": "phishing",
       "c": "Suggest",
       "id": "93222ae48",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "Phishing",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40030,7 +41993,10 @@ window.CS = {
       "t": "sql-injection",
       "c": "Explain",
       "id": "bf86ca1a1",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "SQL injection",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40047,7 +42013,10 @@ window.CS = {
       "t": "xss",
       "c": "Describe",
       "id": "e4aeb52bb",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "Cross-site scripting",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40063,7 +42032,10 @@ window.CS = {
       "t": "zero-day",
       "c": "Explain",
       "id": "90d4bba38",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "zero-day",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40079,7 +42051,10 @@ window.CS = {
       "t": "ids-ips",
       "c": "Distinguish",
       "id": "19fdde5ef",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.defences",
+      "f": "IDS",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40095,7 +42070,10 @@ window.CS = {
       "t": "input-validation",
       "c": "Outline",
       "id": "b45ab36a0",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.defences",
+      "f": "input validation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40111,7 +42089,10 @@ window.CS = {
       "t": "csp",
       "c": "Explain",
       "id": "1d4ea48d9",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.defences",
+      "f": "content security policy",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40127,7 +42108,10 @@ window.CS = {
       "t": "penetration-testing",
       "c": "Outline",
       "id": "9d200a677",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.defences",
+      "f": "penetration testing",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40144,7 +42128,10 @@ window.CS = {
       "t": "transaction",
       "c": "Explain",
       "id": "542b768a8",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.transactions",
+      "f": "transaction",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40160,7 +42147,10 @@ window.CS = {
       "t": "tcl",
       "c": "Outline",
       "id": "388b0dec0",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.transactions",
+      "f": "TCL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40176,7 +42166,10 @@ window.CS = {
       "t": "cloud-db",
       "c": "Outline",
       "id": "c5f25cf49",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "Cloud databases",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40192,7 +42185,10 @@ window.CS = {
       "t": "spatial-db",
       "c": "Explain",
       "id": "7139ff053",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "Spatial databases",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40209,7 +42205,10 @@ window.CS = {
       "t": "in-memory-db",
       "c": "Evaluate",
       "id": "735fb771f",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "In-memory databases",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40226,7 +42225,10 @@ window.CS = {
       "t": "etl",
       "c": "Outline",
       "id": "85f36c35e",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "ETL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40243,7 +42245,10 @@ window.CS = {
       "t": "olap",
       "c": "Explain",
       "id": "7044306c0",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.olap",
+      "f": "OLAP",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40259,7 +42264,10 @@ window.CS = {
       "t": "replication",
       "c": "Explain",
       "id": "fdcc0ba53",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.distributed",
+      "f": "Replication",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40275,7 +42283,10 @@ window.CS = {
       "t": "partitioning",
       "c": "Outline",
       "id": "f1ac039ee",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.distributed",
+      "f": "Partitioning",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40291,7 +42302,10 @@ window.CS = {
       "t": "outlier",
       "c": "Outline",
       "id": "bdaae6995",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "Outliers",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40308,7 +42322,10 @@ window.CS = {
       "t": "imputation",
       "c": "Compare",
       "id": "908c8278b",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "impute",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40324,7 +42341,10 @@ window.CS = {
       "t": "normalisation-ml",
       "c": "Explain",
       "id": "8f14857be",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "before training",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40340,7 +42360,9 @@ window.CS = {
       "t": "standardisation",
       "c": "Distinguish",
       "id": "4ed039910",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "scal|rescal|valu"
     },
     {
       "k": "term",
@@ -40355,7 +42377,10 @@ window.CS = {
       "t": "r-squared",
       "c": "State",
       "id": "c15e45e18",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.regression",
+      "f": "coefficient of determination",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40372,7 +42397,10 @@ window.CS = {
       "t": "collaborative-filtering",
       "c": "Explain",
       "id": "60fbaab92",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.classify",
+      "f": "collaborative filtering",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40389,7 +42417,10 @@ window.CS = {
       "t": "decision-tree",
       "c": "Explain",
       "id": "c06481390",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.classify",
+      "f": "decision tree",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40405,7 +42436,10 @@ window.CS = {
       "t": "confusion-matrix",
       "c": "Distinguish",
       "id": "791de3d4e",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "confusion matrix",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40421,7 +42455,9 @@ window.CS = {
       "t": "precision-recall",
       "c": "Explain",
       "id": "313214e0a",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "measur|recall|disease"
     },
     {
       "k": "term",
@@ -40439,7 +42475,10 @@ window.CS = {
       "t": "overfitting",
       "c": "Explain",
       "id": "619024086",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "Overfitting",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40456,7 +42495,10 @@ window.CS = {
       "t": "customer-segmentation",
       "c": "Explain",
       "id": "dcdbdc23a",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.clustering",
+      "f": "customer segmentation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40474,7 +42516,10 @@ window.CS = {
       "t": "predictive-policing",
       "c": "Discuss",
       "id": "3ceab4594",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.association",
+      "f": "predictive policing",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40491,7 +42536,10 @@ window.CS = {
       "t": "exploration-exploitation",
       "c": "Explain",
       "id": "a4d4b47fd",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.reinforcement",
+      "f": "exploitation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40509,7 +42557,10 @@ window.CS = {
       "t": "perceptron",
       "c": "Sketch",
       "id": "25f09c1d4",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.ann",
+      "f": "single perceptron",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40525,7 +42576,10 @@ window.CS = {
       "t": "kernel-stride",
       "c": "Explain",
       "id": "3204ec731",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.cnn",
+      "f": "convolutional layer",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40541,7 +42595,10 @@ window.CS = {
       "t": "base-case",
       "c": "Explain",
       "id": "f0a8be400",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "base case",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40558,7 +42615,10 @@ window.CS = {
       "t": "call-stack",
       "c": "Describe",
       "id": "42352460e",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "call stack",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40576,7 +42636,10 @@ window.CS = {
       "t": "quicksort",
       "c": "Explain",
       "id": "dfbde3601",
-      "u": "B2"
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "quicksort",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40592,7 +42655,9 @@ window.CS = {
       "t": "access-modifier",
       "c": "Distinguish",
       "id": "3d4f54788",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.inheritance",
+      "f": "attribut|clas|declar"
     },
     {
       "k": "term",
@@ -40609,7 +42674,10 @@ window.CS = {
       "t": "overriding",
       "c": "Explain",
       "id": "c73f08054",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.polymorphism",
+      "f": "override",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40625,7 +42693,10 @@ window.CS = {
       "t": "aggregation",
       "c": "Explain",
       "id": "b482127a6",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.composition",
+      "f": "aggregation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40641,7 +42712,10 @@ window.CS = {
       "t": "design-pattern",
       "c": "Outline",
       "id": "c2256e705",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.patterns",
+      "f": "design pattern",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40657,7 +42731,10 @@ window.CS = {
       "t": "singleton",
       "c": "Explain",
       "id": "0b10343f6",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.patterns",
+      "f": "singleton",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40674,7 +42751,10 @@ window.CS = {
       "t": "factory",
       "c": "Describe",
       "id": "a03cfd47a",
-      "u": "B3"
+      "u": "B3",
+      "n": "B3-advanced.patterns",
+      "f": "factory",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40691,7 +42771,10 @@ window.CS = {
       "t": "node-pointer",
       "c": "Describe",
       "id": "693dce3d7",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.linked",
+      "f": "new node|singly linked",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40706,7 +42789,9 @@ window.CS = {
       "t": "tree-terms",
       "c": "State",
       "id": "2ec7583e3",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.bst",
+      "f": "leav|children|node"
     },
     {
       "k": "term",
@@ -40721,7 +42806,10 @@ window.CS = {
       "t": "traversal",
       "c": "State",
       "id": "3d891a8b1",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.bst",
+      "f": "order traversal|binary search|search tree",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40738,7 +42826,10 @@ window.CS = {
       "t": "hash-table",
       "c": "Explain",
       "id": "3c366053d",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.hash",
+      "f": "hash table",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40754,7 +42845,10 @@ window.CS = {
       "t": "load-factor",
       "c": "Explain",
       "id": "e97244ce3",
-      "u": "B4"
+      "u": "B4",
+      "n": "B4-adt.hash",
+      "f": "load factor",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40772,7 +42866,10 @@ window.CS = {
       "t": "denoising",
       "c": "Describe",
       "id": "f8a3f3eef",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "denoising",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40788,7 +42885,10 @@ window.CS = {
       "t": "ddpm",
       "c": "Explain",
       "id": "bc3407d44",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "DDPM",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40804,7 +42904,10 @@ window.CS = {
       "t": "sampling-steps",
       "c": "Outline",
       "id": "8e3b05a28",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.diffusion",
+      "f": "sampling steps",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40820,7 +42923,10 @@ window.CS = {
       "t": "image-generation",
       "c": "Identify",
       "id": "7230ff712",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "Generative AI",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40837,7 +42943,10 @@ window.CS = {
       "t": "prompt-engineering",
       "c": "Describe",
       "id": "b71f89b18",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "Prompt engineering",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40854,7 +42963,10 @@ window.CS = {
       "t": "text-encoder",
       "c": "Describe",
       "id": "44428f18b",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "text encoder",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40871,7 +42983,10 @@ window.CS = {
       "t": "synthetic-data",
       "c": "Explain",
       "id": "bcc749722",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "synthetic datasets",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40887,7 +43002,10 @@ window.CS = {
       "t": "model-collapse",
       "c": "Outline",
       "id": "916ab1e22",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "model collapse",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40903,7 +43021,10 @@ window.CS = {
       "t": "class-conditional",
       "c": "Outline",
       "id": "329b4f0b6",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "Class-conditional",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40919,7 +43040,10 @@ window.CS = {
       "t": "image-to-image",
       "c": "Outline",
       "id": "1339e4506",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "Image-to-image",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40935,7 +43059,10 @@ window.CS = {
       "t": "segmentation-map",
       "c": "Explain",
       "id": "ce320fce8",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.techniques",
+      "f": "Segmentation maps",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40952,7 +43079,10 @@ window.CS = {
       "t": "embedding-approach",
       "c": "Describe",
       "id": "46ae89f01",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "embeddings",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40972,7 +43102,10 @@ window.CS = {
       "t": "ip-copyright",
       "c": "Discuss",
       "id": "2c6d13848",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "intellectual property",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40988,7 +43121,10 @@ window.CS = {
       "t": "bias-mitigation",
       "c": "Outline",
       "id": "a664cac75",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.ethics",
+      "f": "stereotypes",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41004,7 +43140,10 @@ window.CS = {
       "t": "training-stability",
       "c": "Compare",
       "id": "a52b09ba8",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.evaluate",
+      "f": "Training stability",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41022,7 +43161,10 @@ window.CS = {
       "t": "gan",
       "c": "Describe",
       "id": "b5db34474",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "generative adversarial network",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41039,7 +43181,10 @@ window.CS = {
       "t": "generator-discriminator",
       "c": "Explain",
       "id": "855e2f548",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "generator",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41056,7 +43201,10 @@ window.CS = {
       "t": "adversarial-dynamic",
       "c": "Explain",
       "id": "328ddb7e1",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.gan",
+      "f": "adversarial dynamic",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41072,7 +43220,10 @@ window.CS = {
       "t": "flow-model",
       "c": "Outline",
       "id": "d5ac003d6",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "Flow-based models",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41088,7 +43239,10 @@ window.CS = {
       "t": "latent-space",
       "c": "Explain",
       "id": "1043b3cf5",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "latent space",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41108,7 +43262,10 @@ window.CS = {
       "t": "hybrid-model",
       "c": "Evaluate",
       "id": "b4a79d298",
-      "u": "CS"
+      "u": "CS",
+      "n": "Case-study.hybrid",
+      "f": "hybrid model",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41125,7 +43282,10 @@ window.CS = {
       "t": "virtual-memory",
       "c": "Explain",
       "id": "5e32ab793",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "virtual memory",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41141,7 +43301,10 @@ window.CS = {
       "t": "context-switch",
       "c": "Outline",
       "id": "23618791e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "context switch",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41158,7 +43321,10 @@ window.CS = {
       "t": "starvation",
       "c": "Explain",
       "id": "15194a0a8",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "starvation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41174,7 +43340,10 @@ window.CS = {
       "t": "kernel",
       "c": "Outline",
       "id": "2dc3df738",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "operating system",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41209,7 +43378,10 @@ window.CS = {
       "t": "checksum",
       "c": "Explain",
       "id": "0e4f888e3",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "checksum",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41225,7 +43397,10 @@ window.CS = {
       "t": "jitter",
       "c": "Explain",
       "id": "9f6c7f7cf",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.tcp",
+      "f": "video call",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41275,7 +43450,10 @@ window.CS = {
       "t": "dbms",
       "c": "Outline",
       "id": "67dfaefaf",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "database management system",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41291,7 +43469,10 @@ window.CS = {
       "t": "referential-integrity",
       "c": "Explain",
       "id": "912d82ca6",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "referential integrity",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41309,7 +43490,9 @@ window.CS = {
       "t": "db-index",
       "c": "Discuss",
       "id": "9f267d276",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.ddl",
+      "f": "updat|writ|dbms"
     },
     {
       "k": "term",
@@ -41326,7 +43509,10 @@ window.CS = {
       "t": "sql-like",
       "c": "Construct",
       "id": "15983dc4c",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "sql query",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41343,7 +43529,10 @@ window.CS = {
       "t": "sql-distinct",
       "c": "Construct",
       "id": "cbee21ebf",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "sql query|alphabetical order",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41359,7 +43548,9 @@ window.CS = {
       "t": "validation-set",
       "c": "Distinguish",
       "id": "8bdaf7d05",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.what",
+      "f": "unseen|perform|during"
     },
     {
       "k": "term",
@@ -41375,7 +43566,9 @@ window.CS = {
       "t": "one-hot-encoding",
       "c": "Explain",
       "id": "d265726bf",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.dimensions",
+      "f": "distanc|equal|separate"
     },
     {
       "k": "term",
@@ -41391,7 +43584,10 @@ window.CS = {
       "t": "pca",
       "c": "Explain",
       "id": "ffd92d651",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.dimensions",
+      "f": "Principal component analysis",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41407,7 +43603,10 @@ window.CS = {
       "t": "activation-function",
       "c": "Outline",
       "id": "1007bba40",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.ann",
+      "f": "activation function",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41423,7 +43622,10 @@ window.CS = {
       "t": "pooling",
       "c": "Explain",
       "id": "525fc1010",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.cnn",
+      "f": "pooling",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41439,7 +43641,10 @@ window.CS = {
       "t": "feature-map",
       "c": "Outline",
       "id": "0f60224e5",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.cnn",
+      "f": "feature map",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41455,7 +43660,10 @@ window.CS = {
       "t": "opcode",
       "c": "Define",
       "id": "463d63c95",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "opcode",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41471,7 +43679,10 @@ window.CS = {
       "t": "operand",
       "c": "Define",
       "id": "a67f7b32d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "operand",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41487,7 +43698,10 @@ window.CS = {
       "t": "machine-instruction",
       "c": "Define",
       "id": "41fddab40",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "machine instruction",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41503,7 +43717,10 @@ window.CS = {
       "t": "single-core",
       "c": "Define",
       "id": "69a2e2fe8",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "single core|core processor",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41519,7 +43736,10 @@ window.CS = {
       "t": "multi-core",
       "c": "Define",
       "id": "b80a7e411",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "multi core|core processor",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41535,7 +43755,10 @@ window.CS = {
       "t": "parallel-processing",
       "c": "Define",
       "id": "385e74184",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.gpu",
+      "f": "parallel processing",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41551,7 +43774,10 @@ window.CS = {
       "t": "core-architecture",
       "c": "Define",
       "id": "aa47a421b",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpugpu",
+      "f": "Core architecture",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41567,7 +43793,10 @@ window.CS = {
       "t": "cpu-gpu-division",
       "c": "Outline",
       "id": "fc3a7d0fd",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpugpu",
+      "f": "Task division",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41583,7 +43812,10 @@ window.CS = {
       "t": "processing-power",
       "c": "Define",
       "id": "7308d9dd9",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "processing power",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41599,7 +43831,9 @@ window.CS = {
       "t": "power-efficiency",
       "c": "Define",
       "id": "c8727230b",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "devic|centr|battery"
     },
     {
       "k": "term",
@@ -41615,7 +43849,9 @@ window.CS = {
       "t": "heat-generation",
       "c": "Define",
       "id": "8343c2d10",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "clock|core|processor"
     },
     {
       "k": "term",
@@ -41631,7 +43867,9 @@ window.CS = {
       "t": "cooling-system",
       "c": "Define",
       "id": "3a3872f12",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "component|processor|stay"
     },
     {
       "k": "term",
@@ -41647,7 +43885,9 @@ window.CS = {
       "t": "embedded-processor",
       "c": "Define",
       "id": "e80464605",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "dedicat|usual|car"
     },
     {
       "k": "term",
@@ -41663,7 +43903,10 @@ window.CS = {
       "t": "low-power-processor",
       "c": "Define",
       "id": "b356398e0",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.gpu",
+      "f": "low power",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41679,7 +43922,10 @@ window.CS = {
       "t": "fetch-stage",
       "c": "Define",
       "id": "5f5b61ee4",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "fetch stage",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41695,7 +43941,10 @@ window.CS = {
       "t": "decode-stage",
       "c": "Define",
       "id": "f809c6e19",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "opcode|operand|decode",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41711,7 +43960,10 @@ window.CS = {
       "t": "execute-stage",
       "c": "Define",
       "id": "7e8f0209c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.fde",
+      "f": "execute stage",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41727,7 +43979,9 @@ window.CS = {
       "t": "sequential-execution",
       "c": "Define",
       "id": "4d060edb2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "execut|stor|increment"
     },
     {
       "k": "term",
@@ -41743,7 +43997,10 @@ window.CS = {
       "t": "branch-instruction",
       "c": "Define",
       "id": "204353771",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "branch instruction",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41759,7 +44016,9 @@ window.CS = {
       "t": "conditional-branch",
       "c": "Define",
       "id": "2a442406b",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "chang|branch|instruction"
     },
     {
       "k": "term",
@@ -41775,7 +44034,9 @@ window.CS = {
       "t": "target-address",
       "c": "Define",
       "id": "35e78bcc0",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "addres|jump|fetch"
     },
     {
       "k": "term",
@@ -41791,7 +44052,9 @@ window.CS = {
       "t": "independent-cores",
       "c": "Define",
       "id": "543958c83",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "other|alu|register"
     },
     {
       "k": "term",
@@ -41807,7 +44070,10 @@ window.CS = {
       "t": "primary-memory",
       "c": "Define",
       "id": "b85b64ff2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "Primary memory",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41823,7 +44089,9 @@ window.CS = {
       "t": "cache-levels",
       "c": "Outline",
       "id": "d13e62867",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "differenc|slight|shar"
     },
     {
       "k": "term",
@@ -41839,7 +44107,10 @@ window.CS = {
       "t": "cache-hit-miss",
       "c": "Distinguish",
       "id": "6c323bec6",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "cache hits",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41855,7 +44126,10 @@ window.CS = {
       "t": "non-volatile",
       "c": "Define",
       "id": "c4504aab5",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "non volatile|volatile memory",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41871,7 +44145,9 @@ window.CS = {
       "t": "swapping",
       "c": "Define",
       "id": "9cfb48b5d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "secondary|virtual|ram"
     },
     {
       "k": "term",
@@ -41887,7 +44163,10 @@ window.CS = {
       "t": "firmware",
       "c": "Define",
       "id": "8c0e7dc12",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "firmware",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41903,7 +44182,10 @@ window.CS = {
       "t": "bios",
       "c": "Define",
       "id": "c3bc6f05d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "BIOS",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41919,7 +44201,9 @@ window.CS = {
       "t": "bootstrap",
       "c": "Define",
       "id": "49738d2d4",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "operat|bootstrap|boot"
     },
     {
       "k": "term",
@@ -41935,7 +44219,10 @@ window.CS = {
       "t": "secondary-storage",
       "c": "Define",
       "id": "e8213fc85",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "secondary storage",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41951,7 +44238,10 @@ window.CS = {
       "t": "internal-storage",
       "c": "Define",
       "id": "8e7053a11",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "internal storage",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41967,7 +44257,10 @@ window.CS = {
       "t": "external-storage",
       "c": "Define",
       "id": "c78f07464",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "external storage",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41983,7 +44276,10 @@ window.CS = {
       "t": "magnetic-tape",
       "c": "Define",
       "id": "e94e55b32",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "Magnetic tape",
+      "fg": 1
     },
     {
       "k": "term",
@@ -41999,7 +44295,10 @@ window.CS = {
       "t": "direct-access",
       "c": "Define",
       "id": "12bad2c1f",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "random access",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42015,7 +44314,10 @@ window.CS = {
       "t": "sequential-access",
       "c": "Define",
       "id": "bdf42c2d6",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "sequential access",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42031,7 +44333,9 @@ window.CS = {
       "t": "access-time",
       "c": "Define",
       "id": "361cd26da",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "acces|ssds|hdds"
     },
     {
       "k": "term",
@@ -42047,7 +44351,9 @@ window.CS = {
       "t": "capacity",
       "c": "Define",
       "id": "84b87a9df",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "capacity|amount|hold"
     },
     {
       "k": "term",
@@ -42063,7 +44369,10 @@ window.CS = {
       "t": "cost-per-gb",
       "c": "Define",
       "id": "3def0b4fb",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "cost per GB",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42079,7 +44388,9 @@ window.CS = {
       "t": "backup",
       "c": "Define",
       "id": "49cba11e5",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.memory",
+      "f": "stor|lost|copy"
     },
     {
       "k": "term",
@@ -42095,7 +44406,9 @@ window.CS = {
       "t": "off-site-backup",
       "c": "Define",
       "id": "b7a20ac30",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "original|kept|off"
     },
     {
       "k": "term",
@@ -42111,7 +44424,10 @@ window.CS = {
       "t": "lossless",
       "c": "Define",
       "id": "f488f813c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "lossless compression",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42127,7 +44443,10 @@ window.CS = {
       "t": "lossy",
       "c": "Define",
       "id": "6addb6c72",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "lossy compression",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42143,7 +44462,9 @@ window.CS = {
       "t": "compression-ratio",
       "c": "Define",
       "id": "0f54a8fd5",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "divid|ratio|compress"
     },
     {
       "k": "term",
@@ -42159,7 +44480,10 @@ window.CS = {
       "t": "file-size",
       "c": "Define",
       "id": "8786448a0",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "File size",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42175,7 +44499,9 @@ window.CS = {
       "t": "transmission-time",
       "c": "Define",
       "id": "141f590fd",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "divid|reduc|compression"
     },
     {
       "k": "term",
@@ -42191,7 +44517,9 @@ window.CS = {
       "t": "bandwidth-saving",
       "c": "Define",
       "id": "d156b356d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "compress|saving|transfer"
     },
     {
       "k": "term",
@@ -42207,7 +44535,10 @@ window.CS = {
       "t": "cloud-storage",
       "c": "Define",
       "id": "cd5829200",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.storage",
+      "f": "cloud storage",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42223,7 +44554,9 @@ window.CS = {
       "t": "synchronization",
       "c": "Define",
       "id": "ec088e6c2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.compression",
+      "f": "chang|identical|phone"
     },
     {
       "k": "term",
@@ -42239,7 +44572,9 @@ window.CS = {
       "t": "outage",
       "c": "Define",
       "id": "7bd7391ff",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "provider|service|application"
     },
     {
       "k": "term",
@@ -42255,7 +44590,9 @@ window.CS = {
       "t": "provider-dependence",
       "c": "Define",
       "id": "e28142d6d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "dependence|provider|service"
     },
     {
       "k": "term",
@@ -42271,7 +44608,10 @@ window.CS = {
       "t": "vendor-lock-in",
       "c": "Define",
       "id": "b0f53c6ec",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "vendor lock-in",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42287,7 +44627,9 @@ window.CS = {
       "t": "resilience",
       "c": "Define",
       "id": "336c8dc9c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "backup|quick|server"
     },
     {
       "k": "term",
@@ -42303,7 +44645,10 @@ window.CS = {
       "t": "scalability",
       "c": "Define",
       "id": "fac1267ab",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cloud",
+      "f": "scalability",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42319,7 +44664,10 @@ window.CS = {
       "t": "nibble",
       "c": "Define",
       "id": "4272ac179",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "nibble",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42335,7 +44683,9 @@ window.CS = {
       "t": "base-radix",
       "c": "Define",
       "id": "a287a1de2",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "valu|hexadecimal|denary"
     },
     {
       "k": "term",
@@ -42351,7 +44701,10 @@ window.CS = {
       "t": "place-value",
       "c": "Define",
       "id": "94930f24f",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "place values",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42367,7 +44720,9 @@ window.CS = {
       "t": "base-conversion",
       "c": "Outline",
       "id": "94fc20b7e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "valu|nibbl|hexadecimal"
     },
     {
       "k": "term",
@@ -42383,7 +44738,9 @@ window.CS = {
       "t": "nibble-grouping",
       "c": "Define",
       "id": "4ccb38b90",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "nibbl|becom|nibble"
     },
     {
       "k": "term",
@@ -42399,7 +44756,10 @@ window.CS = {
       "t": "msb",
       "c": "Define",
       "id": "eb530bb36",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "most significant bit",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42415,7 +44775,10 @@ window.CS = {
       "t": "lsb",
       "c": "Define",
       "id": "39126f3ac",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.binary",
+      "f": "least significant bit",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42431,7 +44794,9 @@ window.CS = {
       "t": "overflow",
       "c": "Define",
       "id": "46927ccab",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "stor|calculation|available"
     },
     {
       "k": "term",
@@ -42447,7 +44812,9 @@ window.CS = {
       "t": "data-encoding",
       "c": "Define",
       "id": "47fc56198",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "encod|imag|agre"
     },
     {
       "k": "term",
@@ -42463,7 +44830,9 @@ window.CS = {
       "t": "vector-image",
       "c": "Define",
       "id": "b55034112",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "stor|colour|quality"
     },
     {
       "k": "term",
@@ -42479,7 +44848,9 @@ window.CS = {
       "t": "pixel",
       "c": "Define",
       "id": "72f45ab57",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "stor|bitmap|represent"
     },
     {
       "k": "term",
@@ -42495,7 +44866,9 @@ window.CS = {
       "t": "resolution",
       "c": "Define",
       "id": "1dbf740d7",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "give|width|resolution"
     },
     {
       "k": "term",
@@ -42511,7 +44884,10 @@ window.CS = {
       "t": "colour-depth",
       "c": "Define",
       "id": "793a79cd4",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "colour depth",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42527,7 +44903,10 @@ window.CS = {
       "t": "bit-depth",
       "c": "Define",
       "id": "64a72bdc1",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "bit depth",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42543,7 +44922,10 @@ window.CS = {
       "t": "sample-rate",
       "c": "Define",
       "id": "b20a03272",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "sample rate",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42559,7 +44941,9 @@ window.CS = {
       "t": "mono-stereo",
       "c": "Distinguish",
       "id": "4e46f5545",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "give|doubl|mono"
     },
     {
       "k": "term",
@@ -42575,7 +44959,10 @@ window.CS = {
       "t": "uncompressed-size",
       "c": "Outline",
       "id": "7315d19dd",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "image file",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42591,7 +44978,10 @@ window.CS = {
       "t": "metadata",
       "c": "Define",
       "id": "82f93538f",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "metadata",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42607,7 +44997,10 @@ window.CS = {
       "t": "boolean-value",
       "c": "Define",
       "id": "38fae0e59",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.truth",
+      "f": "binary|boolean|false",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42623,7 +45016,10 @@ window.CS = {
       "t": "logic-io",
       "c": "Outline",
       "id": "3d3d1497f",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.diagrams",
+      "f": "logic gate",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42639,7 +45035,9 @@ window.CS = {
       "t": "logic-expression",
       "c": "Define",
       "id": "2e7048852",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.truth",
+      "f": "describ|operator|circuit"
     },
     {
       "k": "term",
@@ -42655,7 +45053,9 @@ window.CS = {
       "t": "intermediate-column",
       "c": "Define",
       "id": "9bea5a30d",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.truth",
+      "f": "intermediate|truth|circuit"
     },
     {
       "k": "term",
@@ -42671,7 +45071,9 @@ window.CS = {
       "t": "boolean-circuit",
       "c": "Define",
       "id": "7dac8f292",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-data-logic.gates",
+      "f": "produc|circuit|gate"
     },
     {
       "k": "term",
@@ -42687,7 +45089,9 @@ window.CS = {
       "t": "process",
       "c": "Define",
       "id": "2ab39f8c4",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "proces|execut|resourc"
     },
     {
       "k": "term",
@@ -42703,7 +45107,9 @@ window.CS = {
       "t": "thread",
       "c": "Define",
       "id": "755eafb35",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "proces|shar|thread"
     },
     {
       "k": "term",
@@ -42719,7 +45125,9 @@ window.CS = {
       "t": "resource-management",
       "c": "Define",
       "id": "095326e8a",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "allocat|controll|resourc"
     },
     {
       "k": "term",
@@ -42735,7 +45143,9 @@ window.CS = {
       "t": "processor-management",
       "c": "Define",
       "id": "7ecd72677",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "decid|proces|schedul"
     },
     {
       "k": "term",
@@ -42751,7 +45161,10 @@ window.CS = {
       "t": "file-management",
       "c": "Define",
       "id": "21c071427",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "file management",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42767,7 +45180,10 @@ window.CS = {
       "t": "device-management",
       "c": "Define",
       "id": "6fab8e32c",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "Device management",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42783,7 +45199,10 @@ window.CS = {
       "t": "io-management",
       "c": "Define",
       "id": "737e76fd5",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-hardware.cpu",
+      "f": "input output",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42799,7 +45218,10 @@ window.CS = {
       "t": "permissions",
       "c": "Define",
       "id": "c73009804",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "file permissions",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42815,7 +45237,10 @@ window.CS = {
       "t": "directory",
       "c": "Define",
       "id": "87ef09b49",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "directories",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42831,7 +45256,9 @@ window.CS = {
       "t": "file-path",
       "c": "Define",
       "id": "cf20a5545",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.os",
+      "f": "folder|note|sequence"
     },
     {
       "k": "term",
@@ -42847,7 +45274,10 @@ window.CS = {
       "t": "ready-queue",
       "c": "Define",
       "id": "292134487",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "ready queue",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42863,7 +45293,10 @@ window.CS = {
       "t": "time-slice",
       "c": "Define",
       "id": "ffa906f01",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.scheduling",
+      "f": "time slice",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42879,7 +45312,10 @@ window.CS = {
       "t": "interrupt-handler",
       "c": "Define",
       "id": "a19dba019",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.interrupts",
+      "f": "ISR",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42895,7 +45331,10 @@ window.CS = {
       "t": "response-time",
       "c": "Define",
       "id": "1273720ae",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.interrupts",
+      "f": "response times",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42911,7 +45350,9 @@ window.CS = {
       "t": "controller",
       "c": "Define",
       "id": "11b471e68",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "compar|actuator|controller"
     },
     {
       "k": "term",
@@ -42927,7 +45368,9 @@ window.CS = {
       "t": "input-signal",
       "c": "Define",
       "id": "bc3af14f5",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "measur|controller|convert"
     },
     {
       "k": "term",
@@ -42943,7 +45386,9 @@ window.CS = {
       "t": "output-signal",
       "c": "Define",
       "id": "5867f13a7",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "heater|valve|actuator"
     },
     {
       "k": "term",
@@ -42959,7 +45404,9 @@ window.CS = {
       "t": "control-loop",
       "c": "Define",
       "id": "31f931fe6",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "sens|compar|continu"
     },
     {
       "k": "term",
@@ -42975,7 +45422,10 @@ window.CS = {
       "t": "set-point",
       "c": "Define",
       "id": "03b3d0c09",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "set point",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42991,7 +45441,9 @@ window.CS = {
       "t": "threshold",
       "c": "Define",
       "id": "213c6bbe8",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "chang|heater|above"
     },
     {
       "k": "term",
@@ -43007,7 +45459,9 @@ window.CS = {
       "t": "safe-limit",
       "c": "Define",
       "id": "81506350f",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "controll|pressure|temperature"
     },
     {
       "k": "term",
@@ -43023,7 +45477,9 @@ window.CS = {
       "t": "automated-response",
       "c": "Define",
       "id": "a58dae8fa",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "automat|door|sensor"
     },
     {
       "k": "term",
@@ -43039,7 +45495,9 @@ window.CS = {
       "t": "fail-safe",
       "c": "Define",
       "id": "ca5fc6e8b",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "brak|safe|component"
     },
     {
       "k": "term",
@@ -43055,7 +45513,9 @@ window.CS = {
       "t": "human-oversight-cs",
       "c": "Define",
       "id": "986e2f750",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-os.control",
+      "f": "automat|able|safe"
     },
     {
       "k": "term",
@@ -43071,7 +45531,10 @@ window.CS = {
       "t": "source-code",
       "c": "Define",
       "id": "9ff995a4a",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "source code",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43087,7 +45550,9 @@ window.CS = {
       "t": "object-code",
       "c": "Define",
       "id": "7d463e317",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "produc|compiler|source"
     },
     {
       "k": "term",
@@ -43103,7 +45568,10 @@ window.CS = {
       "t": "executable-code",
       "c": "Define",
       "id": "25ebb035e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "executable file",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43119,7 +45587,10 @@ window.CS = {
       "t": "machine-code",
       "c": "Define",
       "id": "7dd3146de",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "machine code",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43135,7 +45606,10 @@ window.CS = {
       "t": "native-code",
       "c": "Define",
       "id": "3e2c9b875",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.scenarios",
+      "f": "native code",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43151,7 +45625,10 @@ window.CS = {
       "t": "runtime-environment",
       "c": "Define",
       "id": "128e35808",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "bytecode|runtime|virtual",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43167,7 +45644,10 @@ window.CS = {
       "t": "virtual-machine",
       "c": "Define",
       "id": "ce47287a1",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "virtual machine",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43183,7 +45663,9 @@ window.CS = {
       "t": "linking",
       "c": "Define",
       "id": "448ffc984",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "executable|done|produce"
     },
     {
       "k": "term",
@@ -43199,7 +45681,9 @@ window.CS = {
       "t": "translation-error",
       "c": "Define",
       "id": "621ac9ec7",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.compilers",
+      "f": "translat|runn|interpreter"
     },
     {
       "k": "term",
@@ -43215,7 +45699,10 @@ window.CS = {
       "t": "cross-platform",
       "c": "Define",
       "id": "0bb2b873e",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.scenarios",
+      "f": "Cross-platform",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43231,7 +45718,10 @@ window.CS = {
       "t": "portability",
       "c": "Define",
       "id": "e3524ad66",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.jit",
+      "f": "portability",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43247,7 +45737,10 @@ window.CS = {
       "t": "performance-critical",
       "c": "Define",
       "id": "e30168794",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.scenarios",
+      "f": "Performance-critical",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43263,7 +45756,10 @@ window.CS = {
       "t": "rapid-dev",
       "c": "Define",
       "id": "56c22852b",
-      "u": "A1"
+      "u": "A1",
+      "n": "A1-translation.scenarios",
+      "f": "Rapid development",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43279,7 +45775,10 @@ window.CS = {
       "t": "www",
       "c": "Define",
       "id": "a6cf1bdca",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "World Wide Web",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43295,7 +45794,10 @@ window.CS = {
       "t": "digital-infrastructure",
       "c": "Define",
       "id": "e242b5271",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "digital infrastructure",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43311,7 +45813,10 @@ window.CS = {
       "t": "blockchain",
       "c": "Define",
       "id": "db0704940",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "blockchain",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43327,7 +45832,10 @@ window.CS = {
       "t": "smart-traffic",
       "c": "Define",
       "id": "ec1d9b8e9",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "smart traffic system",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43343,7 +45851,10 @@ window.CS = {
       "t": "client",
       "c": "Define",
       "id": "85e22ffae",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "clients",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43359,7 +45870,10 @@ window.CS = {
       "t": "host",
       "c": "Define",
       "id": "cb8158a77",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "Host",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43375,7 +45889,9 @@ window.CS = {
       "t": "node",
       "c": "Define",
       "id": "9d740b986",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "receive|node|connect"
     },
     {
       "k": "term",
@@ -43391,7 +45907,10 @@ window.CS = {
       "t": "acknowledgement",
       "c": "Define",
       "id": "e150c6c9e",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.tcp",
+      "f": "ACK",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43407,7 +45926,9 @@ window.CS = {
       "t": "centralized-management",
       "c": "Define",
       "id": "07ce55089",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "controll|resourc|updat"
     },
     {
       "k": "term",
@@ -43423,7 +45944,9 @@ window.CS = {
       "t": "decentralized-sharing",
       "c": "Define",
       "id": "214fd1b96",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "shar|resourc|peer"
     },
     {
       "k": "term",
@@ -43439,7 +45962,10 @@ window.CS = {
       "t": "reliability",
       "c": "Define",
       "id": "608e454dc",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "mesh|topology|reliability",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43455,7 +45981,9 @@ window.CS = {
       "t": "transmission-speed",
       "c": "Define",
       "id": "3c2e0b1bd",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "acros|measur|mbps"
     },
     {
       "k": "term",
@@ -43471,7 +45999,9 @@ window.CS = {
       "t": "data-collision",
       "c": "Define",
       "id": "d521099c4",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "devic|shar|switch"
     },
     {
       "k": "term",
@@ -43487,7 +46017,9 @@ window.CS = {
       "t": "network-cost",
       "c": "Define",
       "id": "f8e1f9eac",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.topologies",
+      "f": "cabl|devic|choos"
     },
     {
       "k": "term",
@@ -43503,7 +46035,9 @@ window.CS = {
       "t": "network-segment",
       "c": "Define",
       "id": "6dd080f81",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.subnetting",
+      "f": "separat|other|controll"
     },
     {
       "k": "term",
@@ -43519,7 +46053,9 @@ window.CS = {
       "t": "subnet",
       "c": "Define",
       "id": "8884b0e72",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.subnetting",
+      "f": "devic|addres|subnett"
     },
     {
       "k": "term",
@@ -43535,7 +46071,9 @@ window.CS = {
       "t": "guest-network",
       "c": "Define",
       "id": "639885ac4",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.vlans",
+      "f": "acces|devic|segment"
     },
     {
       "k": "term",
@@ -43551,7 +46089,10 @@ window.CS = {
       "t": "layer3-switch",
       "c": "Define",
       "id": "9992479b1",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.vlans",
+      "f": "layer-3 switch",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43567,7 +46108,9 @@ window.CS = {
       "t": "file-server",
       "c": "Define",
       "id": "d362889e6",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "stor|central|connect"
     },
     {
       "k": "term",
@@ -43583,7 +46126,9 @@ window.CS = {
       "t": "application-server",
       "c": "Define",
       "id": "133eaa0f8",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "client|server|software"
     },
     {
       "k": "term",
@@ -43599,7 +46144,9 @@ window.CS = {
       "t": "database-server",
       "c": "Define",
       "id": "91770f361",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-architecture.models",
+      "f": "stor|client|server"
     },
     {
       "k": "term",
@@ -43615,7 +46162,9 @@ window.CS = {
       "t": "routing",
       "c": "Define",
       "id": "794082b9d",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "rout|choos|acros"
     },
     {
       "k": "term",
@@ -43631,7 +46180,9 @@ window.CS = {
       "t": "header",
       "c": "Define",
       "id": "cfca3d4c7",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "deliver|reassemble|destination"
     },
     {
       "k": "term",
@@ -43647,7 +46198,10 @@ window.CS = {
       "t": "payload",
       "c": "Define",
       "id": "ec29853e5",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "payload",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43663,7 +46217,10 @@ window.CS = {
       "t": "sequence-number",
       "c": "Define",
       "id": "505f61e53",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "sequence number",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43679,7 +46236,10 @@ window.CS = {
       "t": "reassembly",
       "c": "Define",
       "id": "5380f7338",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "reassembly",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43695,7 +46255,10 @@ window.CS = {
       "t": "different-routes",
       "c": "Explain",
       "id": "97d9576c8",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "same message",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43711,7 +46274,9 @@ window.CS = {
       "t": "bit-rate",
       "c": "Define",
       "id": "69dc4411b",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "stream|video|process"
     },
     {
       "k": "term",
@@ -43727,7 +46292,9 @@ window.CS = {
       "t": "packet-loss",
       "c": "Define",
       "id": "1f650b940",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "congestion|retransmission|gaps"
     },
     {
       "k": "term",
@@ -43743,7 +46310,10 @@ window.CS = {
       "t": "mbps",
       "c": "Define",
       "id": "82d0ddd6f",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "Mbps",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43759,7 +46329,9 @@ window.CS = {
       "t": "mb-vs-mb",
       "c": "Distinguish",
       "id": "a5d2c2e0a",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.types",
+      "f": "mbps|connection|bits"
     },
     {
       "k": "term",
@@ -43775,7 +46347,9 @@ window.CS = {
       "t": "wired",
       "c": "Define",
       "id": "c62302dae",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-transmission-security.media",
+      "f": "cabl|wireles|copper"
     },
     {
       "k": "term",
@@ -43791,7 +46365,9 @@ window.CS = {
       "t": "ethernet",
       "c": "Define",
       "id": "aef399aa4",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "cabl|fram|devic"
     },
     {
       "k": "term",
@@ -43807,7 +46383,9 @@ window.CS = {
       "t": "wifi",
       "c": "Define",
       "id": "411784cd0",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "wireles|devic|acces"
     },
     {
       "k": "term",
@@ -43823,7 +46401,9 @@ window.CS = {
       "t": "cellular",
       "c": "Define",
       "id": "9e7d8c10b",
-      "u": "A2"
+      "u": "A2",
+      "n": "A2-basics.infrastructure",
+      "f": "acces|devic|coverage"
     },
     {
       "k": "term",
@@ -44079,7 +46659,9 @@ window.CS = {
       "t": "table",
       "c": "Define",
       "id": "50801084a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "relat|entity|relational"
     },
     {
       "k": "term",
@@ -44095,7 +46677,10 @@ window.CS = {
       "t": "entity",
       "c": "Define",
       "id": "8fe269504",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.erd",
+      "f": "entities",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44111,7 +46696,9 @@ window.CS = {
       "t": "relationship",
       "c": "Define",
       "id": "7c5ad9c5d",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "tabl|creat|foreign"
     },
     {
       "k": "term",
@@ -44127,7 +46714,9 @@ window.CS = {
       "t": "data-consistency",
       "c": "Define",
       "id": "4df5e8510",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "valu|databas|stor"
     },
     {
       "k": "term",
@@ -44143,7 +46732,10 @@ window.CS = {
       "t": "concurrency",
       "c": "Define",
       "id": "4ef317af5",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "Concurrency control",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44159,7 +46751,10 @@ window.CS = {
       "t": "redundancy",
       "c": "Define",
       "id": "3dffd9357",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "data redundancy",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44175,7 +46770,10 @@ window.CS = {
       "t": "data-independence",
       "c": "Define",
       "id": "19aa99400",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.schemas",
+      "f": "data independence",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44191,7 +46789,9 @@ window.CS = {
       "t": "community-support",
       "c": "Define",
       "id": "404408387",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "databas|tool|support"
     },
     {
       "k": "term",
@@ -44207,7 +46807,9 @@ window.CS = {
       "t": "constraint",
       "c": "Define",
       "id": "ca8617aea",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.keys",
+      "f": "enforc|dbms|foreign"
     },
     {
       "k": "term",
@@ -44223,7 +46825,10 @@ window.CS = {
       "t": "validation",
       "c": "Define",
       "id": "6c8bd5bcf",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "validation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44239,7 +46844,9 @@ window.CS = {
       "t": "query-performance",
       "c": "Define",
       "id": "71ffd806a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.schemas",
+      "f": "quick|performance|index"
     },
     {
       "k": "term",
@@ -44255,7 +46862,10 @@ window.CS = {
       "t": "rigid-schema",
       "c": "Define",
       "id": "a55e12d0a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "Rigid schema",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44271,7 +46881,9 @@ window.CS = {
       "t": "join-complexity",
       "c": "Define",
       "id": "dccb3b35d",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.denormalisation",
+      "f": "tabl|databas|join"
     },
     {
       "k": "term",
@@ -44447,7 +47059,9 @@ window.CS = {
       "t": "query",
       "c": "Define",
       "id": "18d65572a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.ddl",
+      "f": "retriev|query|sql"
     },
     {
       "k": "term",
@@ -44463,7 +47077,9 @@ window.CS = {
       "t": "statement",
       "c": "Define",
       "id": "25625a563",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.ddl",
+      "f": "command|dbms|select"
     },
     {
       "k": "term",
@@ -44479,7 +47095,9 @@ window.CS = {
       "t": "clause",
       "c": "Define",
       "id": "9483f5d22",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "tabl|clause|statement"
     },
     {
       "k": "term",
@@ -44495,7 +47113,9 @@ window.CS = {
       "t": "relational-operator",
       "c": "Define",
       "id": "2c0dad10f",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "relational|row"
     },
     {
       "k": "term",
@@ -44511,7 +47131,9 @@ window.CS = {
       "t": "pattern-matching",
       "c": "Define",
       "id": "afcd33787",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "sql|pattern|match"
     },
     {
       "k": "term",
@@ -44527,7 +47149,9 @@ window.CS = {
       "t": "wildcard",
       "c": "Define",
       "id": "aa816e2ae",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "mean|sql|pattern"
     },
     {
       "k": "term",
@@ -44543,7 +47167,9 @@ window.CS = {
       "t": "sql-from",
       "c": "Define",
       "id": "7c23dc15f",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "tabl|clause|select"
     },
     {
       "k": "term",
@@ -44559,7 +47185,9 @@ window.CS = {
       "t": "sql-between",
       "c": "Define",
       "id": "2af6e8926",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.change",
+      "f": "valu|select|sql"
     },
     {
       "k": "term",
@@ -44575,7 +47203,10 @@ window.CS = {
       "t": "group-by",
       "c": "Define",
       "id": "38fa2a65a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.aggregates",
+      "f": "GROUP BY",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44591,7 +47222,10 @@ window.CS = {
       "t": "having",
       "c": "Define",
       "id": "7ab317d7f",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.aggregates",
+      "f": "HAVING",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44607,7 +47241,10 @@ window.CS = {
       "t": "asc-desc",
       "c": "State",
       "id": "707b08a2e",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.select",
+      "f": "sql query",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44623,7 +47260,10 @@ window.CS = {
       "t": "virtual-view",
       "c": "Define",
       "id": "b4588078e",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.views",
+      "f": "virtual view",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44639,7 +47279,9 @@ window.CS = {
       "t": "commit-rollback",
       "c": "Outline",
       "id": "d1bf9d139",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.transactions",
+      "f": "chang|rollback|tcl"
     },
     {
       "k": "term",
@@ -44655,7 +47297,9 @@ window.CS = {
       "t": "acid-consistency",
       "c": "Define",
       "id": "ca3e5dcfb",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-sql.transactions",
+      "f": "acid|constraint|transaction"
     },
     {
       "k": "term",
@@ -44671,7 +47315,10 @@ window.CS = {
       "t": "document-db",
       "c": "Define",
       "id": "a88c103a8",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "Document databases",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44687,7 +47334,10 @@ window.CS = {
       "t": "key-value-db",
       "c": "Define",
       "id": "d1e8f5418",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "key value",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44703,7 +47353,10 @@ window.CS = {
       "t": "graph-db",
       "c": "Define",
       "id": "c18e37540",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "Graph databases",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44719,7 +47372,10 @@ window.CS = {
       "t": "managed-service",
       "c": "Define",
       "id": "a39a1709e",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "managed service",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44735,7 +47391,10 @@ window.CS = {
       "t": "real-time-analytics",
       "c": "Define",
       "id": "501e10fb1",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "real-time analytics",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44751,7 +47410,10 @@ window.CS = {
       "t": "ecommerce-platform",
       "c": "Define",
       "id": "7da035e20",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "E-commerce",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44767,7 +47429,10 @@ window.CS = {
       "t": "social-media-platform",
       "c": "Define",
       "id": "de7c63c85",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.types",
+      "f": "social media",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44783,7 +47448,10 @@ window.CS = {
       "t": "bi",
       "c": "Define",
       "id": "3dd2b6f8a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "business intelligence",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44799,7 +47467,10 @@ window.CS = {
       "t": "append-only",
       "c": "Define",
       "id": "bbc054ea2",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "append-only",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44815,7 +47486,10 @@ window.CS = {
       "t": "subject-oriented",
       "c": "Define",
       "id": "7648c0674",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "Subject-oriented",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44831,7 +47505,10 @@ window.CS = {
       "t": "integrated-data",
       "c": "Define",
       "id": "69dff1609",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "integrated data",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44847,7 +47524,10 @@ window.CS = {
       "t": "time-variant",
       "c": "Define",
       "id": "5584c6023",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "Time-variant",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44863,7 +47543,10 @@ window.CS = {
       "t": "non-volatile-warehouse",
       "c": "Define",
       "id": "4b2919c45",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "non volatile",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44879,7 +47562,9 @@ window.CS = {
       "t": "query-optimized",
       "c": "Define",
       "id": "b20f81fd6",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.warehouse",
+      "f": "queri|updat|characteristic"
     },
     {
       "k": "term",
@@ -44895,7 +47580,10 @@ window.CS = {
       "t": "sequential-pattern",
       "c": "Define",
       "id": "58a68d578",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.olap",
+      "f": "pattern discovery",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44911,7 +47599,10 @@ window.CS = {
       "t": "anomaly-detection",
       "c": "Define",
       "id": "2edc1ed88",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.olap",
+      "f": "Anomaly detection",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44927,7 +47618,10 @@ window.CS = {
       "t": "fault-tolerance",
       "c": "Define",
       "id": "ae307dafe",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.distributed",
+      "f": "Fault tolerance",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44943,7 +47637,10 @@ window.CS = {
       "t": "global-query",
       "c": "Define",
       "id": "d935f3a6a",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.distributed",
+      "f": "Global query processing",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44959,7 +47656,10 @@ window.CS = {
       "t": "location-transparency",
       "c": "Define",
       "id": "d96bed8c8",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.distributed",
+      "f": "location transparency",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44975,7 +47675,10 @@ window.CS = {
       "t": "distribution-transparency",
       "c": "Define",
       "id": "606301d8d",
-      "u": "A3"
+      "u": "A3",
+      "n": "A3-alternative.distributed",
+      "f": "distribution transparency",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44991,7 +47694,10 @@ window.CS = {
       "t": "labelled-data",
       "c": "Define",
       "id": "dccce21ee",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "labelled data",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45007,7 +47713,10 @@ window.CS = {
       "t": "unlabelled-data",
       "c": "Define",
       "id": "4583ec035",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "unlabelled data",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45023,7 +47732,9 @@ window.CS = {
       "t": "feature",
       "c": "Define",
       "id": "8840be2e1",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "predict|measurable|feature"
     },
     {
       "k": "term",
@@ -45039,7 +47750,9 @@ window.CS = {
       "t": "label",
       "c": "Define",
       "id": "d1c6a29a3",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "spam|train|house"
     },
     {
       "k": "term",
@@ -45055,7 +47768,10 @@ window.CS = {
       "t": "algorithm-ml",
       "c": "Define",
       "id": "d1b5322f7",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.what",
+      "f": "regression|tree|train",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45071,7 +47787,9 @@ window.CS = {
       "t": "prediction",
       "c": "Define",
       "id": "9e6423977",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "give|clas|spam"
     },
     {
       "k": "term",
@@ -45087,7 +47805,9 @@ window.CS = {
       "t": "inference",
       "c": "Define",
       "id": "b6600175f",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "comput|inference|train"
     },
     {
       "k": "term",
@@ -45103,7 +47823,10 @@ window.CS = {
       "t": "medical-imaging",
       "c": "Define",
       "id": "e2e3d4c5d",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "medical imaging",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45119,7 +47842,9 @@ window.CS = {
       "t": "object-classification",
       "c": "Define",
       "id": "2b602d3ea",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "labell|category|detection"
     },
     {
       "k": "term",
@@ -45135,7 +47860,10 @@ window.CS = {
       "t": "object-detection",
       "c": "Define",
       "id": "0e25238f5",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "object detection",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45151,7 +47879,10 @@ window.CS = {
       "t": "robotics-navigation",
       "c": "Define",
       "id": "556c72dc9",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "Robotics navigation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45167,7 +47898,10 @@ window.CS = {
       "t": "nlp",
       "c": "Define",
       "id": "00e21085f",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "NLP",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45183,7 +47917,10 @@ window.CS = {
       "t": "sentiment",
       "c": "Define",
       "id": "6337640b8",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "sentiment analysis",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45199,7 +47936,10 @@ window.CS = {
       "t": "market-basket",
       "c": "Define",
       "id": "5c0734261",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.types",
+      "f": "market basket|basket analysis",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45215,7 +47955,10 @@ window.CS = {
       "t": "cpu-ml",
       "c": "Outline",
       "id": "1be69eb9b",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "machine learning",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45231,7 +47974,10 @@ window.CS = {
       "t": "gpu-ml",
       "c": "Explain",
       "id": "6f30a48b4",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "machine learning",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45247,7 +47993,10 @@ window.CS = {
       "t": "matrix-operation",
       "c": "Define",
       "id": "d9062eeb5",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "matrix operations",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45263,7 +48012,9 @@ window.CS = {
       "t": "cloud-processing",
       "c": "Define",
       "id": "554ab27fa",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "runn|acces|concern"
     },
     {
       "k": "term",
@@ -45279,7 +48030,9 @@ window.CS = {
       "t": "edge-deployment",
       "c": "Define",
       "id": "110305153",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "runn|respons|offline"
     },
     {
       "k": "term",
@@ -45295,7 +48048,9 @@ window.CS = {
       "t": "storage-requirement",
       "c": "Define",
       "id": "de5309510",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "train|storage|model"
     },
     {
       "k": "term",
@@ -45311,7 +48066,9 @@ window.CS = {
       "t": "scalability-requirement",
       "c": "Define",
       "id": "0514522cc",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-machine-learning.hardware",
+      "f": "comput|cloud|size"
     },
     {
       "k": "term",
@@ -45327,7 +48084,10 @@ window.CS = {
       "t": "data-preprocessing",
       "c": "Define",
       "id": "d0d883e9b",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "data preprocessing",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45343,7 +48103,10 @@ window.CS = {
       "t": "duplicate-record",
       "c": "Define",
       "id": "929590d58",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "Duplicate records",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45359,7 +48122,10 @@ window.CS = {
       "t": "missing-value",
       "c": "Define",
       "id": "ef72a17e2",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "missing values",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45375,7 +48141,9 @@ window.CS = {
       "t": "noisy-data",
       "c": "Define",
       "id": "67429594b",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "mistak|typing|clean"
     },
     {
       "k": "term",
@@ -45391,7 +48159,9 @@ window.CS = {
       "t": "categorical-encoding",
       "c": "Define",
       "id": "6756f4622",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.cleaning",
+      "f": "valu|convert|red"
     },
     {
       "k": "term",
@@ -45407,7 +48177,10 @@ window.CS = {
       "t": "irrelevant-feature",
       "c": "Define",
       "id": "b5c8138b9",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.features",
+      "f": "irrelevant features",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45423,7 +48196,9 @@ window.CS = {
       "t": "redundant-feature",
       "c": "Define",
       "id": "b12ae72bc",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.features",
+      "f": "correlat|redundant|feature"
     },
     {
       "k": "term",
@@ -45439,7 +48214,10 @@ window.CS = {
       "t": "dimensionality-reduction",
       "c": "Define",
       "id": "8571706d3",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-data.dimensions",
+      "f": "dimensionality reduction",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45455,7 +48233,10 @@ window.CS = {
       "t": "training-set",
       "c": "Define",
       "id": "3c6ec2d17",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "training set",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45471,7 +48252,10 @@ window.CS = {
       "t": "test-set",
       "c": "Define",
       "id": "f61fdab7e",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "test set",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45487,7 +48271,10 @@ window.CS = {
       "t": "neural-network",
       "c": "Define",
       "id": "26292bed2",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.ann",
+      "f": "neural network",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45503,7 +48290,10 @@ window.CS = {
       "t": "layer",
       "c": "Define",
       "id": "c2d188c98",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.ann",
+      "f": "input layer",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45519,7 +48309,9 @@ window.CS = {
       "t": "convolution-filter",
       "c": "Define",
       "id": "e2727cf8b",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.cnn",
+      "f": "slid|acros|produc"
     },
     {
       "k": "term",
@@ -45535,7 +48327,10 @@ window.CS = {
       "t": "output-layer",
       "c": "Define",
       "id": "5b0987b60",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-advanced.ann",
+      "f": "output layer",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45551,7 +48346,10 @@ window.CS = {
       "t": "learning-rate",
       "c": "Define",
       "id": "acb446839",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "learning rate",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45567,7 +48365,10 @@ window.CS = {
       "t": "tree-depth",
       "c": "Define",
       "id": "c73a71fd9",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "tree depth",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45583,7 +48384,10 @@ window.CS = {
       "t": "tuning",
       "c": "Define",
       "id": "ee4c84ffe",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "hyperparameter tuning",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45599,7 +48403,9 @@ window.CS = {
       "t": "generalization",
       "c": "Define",
       "id": "5a39743fb",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "overfitt|unseen|poor"
     },
     {
       "k": "term",
@@ -45615,7 +48421,9 @@ window.CS = {
       "t": "model-comparison",
       "c": "Define",
       "id": "f10b3357c",
-      "u": "A4"
+      "u": "A4",
+      "n": "A4-models.metrics",
+      "f": "evaluat|metric|recall"
     },
     {
       "k": "term",

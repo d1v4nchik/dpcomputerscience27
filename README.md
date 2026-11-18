@@ -28,9 +28,9 @@ Every topic in plain words, with flashcards, exam-style practice, a glossary and
 
 |                             | Standard Level | Higher Level |
 | --------------------------- | -------------: | -----------: |
-| Topic pages                 |             15 |           22 |
+| Topic pages                 |             16 |           23 |
 | Flashcards                  |            732 |        1,170 |
-| Exam-style questions        |            310 |          496 |
+| Exam-style questions        |            313 |          499 |
 | Glossary terms              |            466 |          683 |
 
 Plus 83 diagrams, 27 videos, and guides for the exams, the IA, pseudocode and the 2027 case study.
@@ -59,7 +59,7 @@ HL-only pages are marked **HL**.
 | ![A1](https://img.shields.io/badge/A1-2E5CCB) | Computer fundamentals | A1.1 Hardware and operation · A1.2 Data and logic · A1.3 Operating and control systems · A1.4 Translation **HL** |
 | ![A2](https://img.shields.io/badge/A2-13866B) | Networks | A2.1 Network fundamentals · A2.2 Network architecture · A2.3–4 Transmission and security |
 | ![A3](https://img.shields.io/badge/A3-E37B2B) | Databases | A3.1–2 Relational design · A3.3 SQL · A3.4 Beyond relational **HL** |
-| ![A4](https://img.shields.io/badge/A4-B23A86) | Machine learning | A4.1 + 4.4 ML and its ethics · A4.2 Preparing data **HL** · A4.3.1–5 Learning from data **HL** · A4.3.6–10 Rewards, evolution, neurons **HL** |
+| ![A4](https://img.shields.io/badge/A4-B23A86) | Machine learning | A4.1 Machine learning fundamentals · A4.2 Preparing data **HL** · A4.3.1–5 Learning from data **HL** · A4.3.6–10 Rewards, evolution, neurons **HL** · A4.4 Ethical considerations |
 
 **Theme B: Computational thinking and programming (Paper 2)**
 
