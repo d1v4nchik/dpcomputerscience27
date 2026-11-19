@@ -29,7 +29,7 @@ Every topic in plain words, with flashcards, exam-style practice, a glossary and
 |                             | Standard Level | Higher Level |
 | --------------------------- | -------------: | -----------: |
 | Topic pages                 |             16 |           23 |
-| Flashcards                  |            763 |        1,206 |
+| Flashcards                  |            907 |        1,394 |
 | Exam-style questions        |            346 |          546 |
 | Glossary terms              |            497 |          719 |
 

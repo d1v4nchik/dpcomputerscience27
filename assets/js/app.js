@@ -1641,6 +1641,8 @@ window.csFc={
   level:function(){if(this.ready){renderDeck();resetMode()}},
   isSL:isSL,lvl:lvl,setBest:setBest,best:function(k){return P.best[k]},selTopics:function(){return S.topics.slice()},head:head,esc:esc
 };
+/* opened straight at #flashcards: the router ran before this module existed, so start it now */
+var fv=$('view-flashcards');if(fv&&fv.classList.contains('on'))window.csFc.init();
 })();
 /* ================= Number drill: fresh Paper 1 / Paper 2 calculations with worked answers ================= */
 (function(){
