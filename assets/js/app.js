@@ -1,4 +1,6 @@
 /* ================= Practice tab: every exam-style question on the site, filters, self-marking, mini papers ================= */
+/* definition flashcards are stored as '@termId' to avoid repeating the glossary text */
+(function(){var C=window.CS;if(C&&C.fc)C.fc.cards.forEach(function(c){if(c.b&&c.b.charAt(0)==='@'){var t=C.terms[c.b.slice(1)];if(t)c.b=t.ib}})})();
 (function(){
 var CS=window.CS,$=function(id){return document.getElementById(id)};
 function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
@@ -449,7 +451,7 @@ function show(v){
 function go(r,noScroll){
   closeSheet(true);clearFind();
   CUR=r;
-  if(r.v==='page'){mountPage(r.p,r.s);show('page');if(FIND.pending){var f=FIND.pending;FIND.pending=null;setTimeout(function(){if(f.hide)hideAnswer(f.hide);if(f.q)runFind(f)},40)}}
+  if(r.v==='page'){mountPage(r.p,r.s);show('page');if(FIND.pending&&!WAITING){var f=FIND.pending;FIND.pending=null;setTimeout(function(){if(f.hide)hideAnswer(f.hide);if(f.q)runFind(f)},40)}}
   else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);}
   if(!noScroll&&!(r.v==='page'&&r.s))window.scrollTo(0,0);
   var t=r.v==='page'?(CS.meta[r.p]||{}).title:({map:'Home',flashcards:'Flashcards',practice:'Practice',glossary:'Glossary',resources:'Resources'})[r.v];
@@ -537,13 +539,23 @@ function renderHome(){
   var sb=$('hm-search');if(sb)sb.addEventListener('click',openSearch);
 }
 
+/* ---------- page notes: fetched after the first screen, each page parsed only when opened ---------- */
+var VER=((document.currentScript&&document.currentScript.src)||'').split('?')[1]||'';
+var TPL={},TPL_READY=false,WAITING=false;
+function tplOf(id){var el=document.getElementById(id);if(el)return el;var src=TPL[id];if(src==null)return null;
+  var t=document.createElement('template');t.id=id;t.innerHTML=src;document.body.appendChild(t);delete TPL[id];return t}
+function loadTpl(tries){
+  fetch('assets/pages.html'+(VER?'?'+VER:'')).then(function(r){if(!r.ok)throw r.status;return r.text()}).then(function(src){
+    var re=/<template id="([^"]+)">([\s\S]*?)<\/template>/g,m;while((m=re.exec(src)))TPL[m[1]]=m[2];
+    TPL_READY=true;IDX=null;if(CUR.v==='page'&&WAITING)go(CUR,true);
+  }).catch(function(){if((tries||0)<3)setTimeout(function(){loadTpl((tries||0)+1)},1500*((tries||0)+1));else if(WAITING)$('view-page').innerHTML='<div class="wrap"><p class="note">The notes could not be loaded. Check your connection and reload the page.</p></div>'});
+}
 /* ---------- line pages ---------- */
 var MODE=lsGet('csMode','step'),LASTSEC=lsGet('csLast',{});
 function visibleSecs(art){return [].filter.call(art.querySelectorAll('.secs>section'),function(s){return !(isSL()&&s.hasAttribute('data-hl'))})}
 function mountPage(p,sec){
-  var view=$('view-page'),tpl=$('pg-'+p);
-  if(tpl&&document.readyState==='loading'&&!tpl.nextElementSibling)tpl=null;   /* still downloading */
-  if(!tpl){if(document.readyState==='loading'){view.innerHTML='';clearTimeout(mountPage.w);mountPage.w=setTimeout(function(){if(CUR.v==='page'&&CUR.p===p&&!view.firstChild)go(CUR,true)},150);return}nav('map');return}
+  var view=$('view-page'),tpl=tplOf('pg-'+p);WAITING=false;
+  if(!tpl){if(!TPL_READY){WAITING=true;view.innerHTML='<div class="wrap"><p class="note">Loading the notes…</p></div>';return}nav('map');return}
   var meta=CS.meta[p]||{};
   view.innerHTML='';
   if(meta.hl&&isSL()){
@@ -655,11 +667,11 @@ function openTerm(tid,from){
   var h='<div class="sh-top th-'+line+'"><span class="sh-code">'+esc(t.g)+' · '+esc(topicName(t.g))+(t.h?' <span class="hltag">HL</span>':'')+'</span><button type="button" class="sh-close" id="sh-close" aria-label="Close">✕</button></div>'+
     '<div class="th-'+line+'" style="display:flex;flex-direction:column;gap:14px"><h2 id="sheet-title">'+esc(t.t)+'</h2>'+(t.f?'<p class="full">'+esc(t.f)+'</p>':'')+
     '<div class="sh-def"><span class="lab">Exam definition · learn it word for word</span><p>'+esc(t.ib)+'</p></div>';
-  if(t.fig&&$('fig-'+t.fig))h+='<div class="sh-fig"><span class="lab">Picture it</span><div id="sh-figbox"></div></div>';
+  if(t.fig&&tplOf('fig-'+t.fig))h+='<div class="sh-fig"><span class="lab">Picture it</span><div id="sh-figbox"></div></div>';
   if(t.q)h+='<div class="sh-prac"><b class="q">Full-mark practice: '+esc(q)+(mk?' <span class="mono" style="font-size:12px;color:var(--well-muted)">['+mk+']</span>':'')+'</b><details><summary>Show the marking points</summary><ul style="margin-top:8px">'+t.a.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></details></div>';
   h+='<div class="sh-links">'+(t.p?'<a class="minibtn" href="#'+routeOf(t.p)+(t.s?'.'+t.s:'')+'">Open in the notes →</a>':'')+'<button type="button" class="minibtn" id="sh-fc">Flashcards for '+esc(t.g)+'</button></div></div>';
   $('sheet-in').innerHTML=h;
-  if(t.fig){var fb=$('sh-figbox'),tp=$('fig-'+t.fig);if(fb&&tp)fb.appendChild(tp.content.cloneNode(true))}
+  if(t.fig){var fb=$('sh-figbox'),tp=tplOf('fig-'+t.fig);if(fb&&tp)fb.appendChild(tp.content.cloneNode(true))}
   $('sheet').hidden=false;$('sheet-scrim').hidden=false;SHEET.open=true;
   $('sh-close').onclick=function(){closeSheet()};
   $('sh-fc').onclick=function(){closeSheet(true);if(window.csFc)window.csFc.openTopics([t.g],'flash');nav('flashcards')};
@@ -742,13 +754,13 @@ var HEADSEL='h3,p>b:first-child,div[style*="text-transform: uppercase"],tr:first
 function buildIdx(){
   if(IDX)return IDX;IDX=[];
   CS.index.forEach(function(e){
-    var tpl=$('pg-'+e.p),txt='',heads=[];
+    var tpl=tplOf('pg-'+e.p),txt='',heads=[];
     if(tpl){var s=tpl.content.querySelector('section[id="'+e.s+'"]');if(s){txt=txtOf(s);
       var from=0;s.querySelectorAll(HEADSEL).forEach(function(h){var t=txtOf(h);if(t.length<4||t.length>90||/^(in short|what it means|exam angle|exam definition|the idea|think of it like|tip|trap|why it scores|model answer)\b/i.test(t))return;var at=txt.indexOf(t,from);if(at<0)at=txt.indexOf(t);if(at>-1){var clean=t.replace(/(Python|Java|Pseudocode)$/,'').replace(/[.:]$/,'');heads.push([at,clean,nrm(clean),h.tagName==='H3'||h.tagName==='DIV']);from=at+1}});
       heads.sort(function(a,b){return a[0]-b[0]})}}
     IDX.push({e:e,title:nrm(e.t||''),txt:txt,n:' '+nrm(txt)+' ',heads:heads,hn:nrm(heads.map(function(h){return h[1]}).join(' | '))});
   });
-  if(document.readyState==='loading'){var tmp=IDX;IDX=null;return tmp}
+  if(!TPL_READY){var tmp=IDX;IDX=null;return tmp}
   return IDX;
 }
 function parseQ(q){
@@ -831,7 +843,7 @@ tbh();window.addEventListener('resize',tbh);
 setTB(TB);
 renderHome();
 go(parse(location.hash),true);
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){IDX=null;if(CUR.v==='page'&&!$('view-page').firstChild)go(CUR,true)});
+loadTpl(0);
 })();
 
 (function(){
