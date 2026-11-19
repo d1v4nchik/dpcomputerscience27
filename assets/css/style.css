@@ -992,3 +992,23 @@ body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 #fc-deck .fbody .deck-units{margin-top:12px}
 .gl-filters{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
 .gl-filters:not(.open) .fbody{display:none}
+/* one Practice tab: the shared "Choose a way to study" bar replaces the old mode buttons */
+#fc-modes,.px-modes .seg{display:none!important}
+.studybar{margin:0 0 16px}
+.sb-h{font:700 18px var(--f-disp);margin:0 0 10px}
+.sb-groups{display:flex;flex-direction:column;gap:10px}
+.sb-g{display:flex;flex-direction:column;gap:6px}
+.sb-l{font:600 10.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sb-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.studybar button{display:flex;flex-direction:column;gap:2px;text-align:left;border:1.5px solid var(--bd);background:var(--bg2);border-radius:12px;padding:9px 11px;color:var(--ink);font:inherit;cursor:pointer;min-width:0}
+.studybar button b{font-size:13.5px}
+.studybar button span{font-size:11.5px;color:var(--muted);line-height:1.3}
+.studybar button:hover{border-color:var(--ink)}
+.studybar button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.studybar button[aria-pressed="true"] span{color:var(--bg);opacity:.8}
+#view-flashcards.fc-focus .studybar,#view-practice.px-focus .studybar{display:none}
+@media (max-width:700px){
+  .sb-row{display:flex;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 2px}
+  .sb-row::-webkit-scrollbar{display:none}
+  .studybar button{flex:0 0 auto;max-width:180px}
+}

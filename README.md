@@ -42,6 +42,7 @@ Plus 83 diagrams, 136 linked videos (one for almost every syllabus point), and g
 - **Videos on every stop.** A short video for that exact syllabus point, plus links that jump to the right minute of longer topic lectures.
 - **SL / HL toggle.** HL-only content is hidden until you need it.
 - **Python / Java toggle.** All Theme B code examples come in both languages.
+- **One Practice tab.** Exam questions, timed papers and every flashcard mode sit together under *Choose a way to study*.
 - **Flashcards.** Flip, *Learn* (four mastery levels), *Write* (mark yourself like an examiner), *Test*, and four games: Match, Memory, Gravity and Blitz. *Number drill* generates fresh Paper 1 calculations. Quick-answer cards explain *why* the answer is right, and a chosen mode opens on its own until you leave it.
 - **Practice.** Filter by one or several units, Paper 1 or Paper 2, command term, marks or status, including questions that mix units. Write an answer, open the markscheme and tick the points you made, or sit a timed paper with Paper 1’s Section A / Section B split. Code questions follow the Python / Java switch, with example answers. *Open in the notes* goes to the stop that teaches the idea (its own answer stays hidden), with a button straight back.
 - **Glossary.** Every term with a full-mark definition, filterable by several units at once, with *Learn these* and *Test me* for each topic. Underlined words in the notes open their definition in place.

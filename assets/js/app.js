@@ -104,8 +104,8 @@ function render(u){
   if(u&&UNITS.some(function(x){return x[0]===u})){F.us=[u];F.cmd='';saveF();V.shown=15;V.order=null}
   var el=$('view-practice');
   if(!V.ready){
-    el.innerHTML='<div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Exam practice</div><h1>Practice</h1><p>Every exam-style question on the site in one place: the end-of-line tests, the model answers from the notes, full-mark practice, the case-study bank and the extended responses. Write an answer, open the markscheme, tick the points you made and record your mark. Or sit a timed <b>mini paper</b> at exam pace (about 1.5 minutes a mark, the same as Paper 1).</p></div></div>'+
-      '<div class="vbody"><div class="px-head" id="px-head"></div>'+
+    el.innerHTML='<div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Practise</div><h1>Practice</h1><p>Exam-style questions with markschemes, timed papers and flashcards, all in one place. Choose a way to study, pick your topics, and your progress is saved as you go.</p></div></div>'+
+      '<div class="vbody"><div class="studybar" id="sb-practice"></div><div class="px-head" id="px-head"></div>'+
       '<div class="px-modes"><span class="seg" role="group" aria-label="Mode"><button type="button" data-m="bank">Question bank</button><button type="button" data-m="paper">Mini paper</button></span><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></div>'+
       '<div class="px-filters" id="px-filters"><div class="gl-bar"><input type="search" id="px-q" placeholder="Search questions, e.g. “cache” or “normalise”" aria-label="Search questions" autocomplete="off"><span class="gl-count" id="px-count"></span><button type="button" class="ftog" id="px-ftog" aria-expanded="false" aria-controls="px-fbody">Filters</button></div><div class="fsum" id="px-fsum"></div><div class="fbody" id="px-fbody">'+
       '<div class="chips" id="px-units" role="group" aria-label="Topic"></div>'+
@@ -333,7 +333,7 @@ function askClaude(q,c,btn){
   });
 }
 function stopName(n){var ps=n.split('.'),m=CS.meta[ps[0]],st=m&&m.st.filter(function(x){return x[0]===ps[1]})[0];return (PAGES[ps[0]]?PAGES[ps[0]].code+' · ':'')+(st?st[1]:ps[1])}
-window.csPrac={render:render,stop:function(n){STOPF=n;V.shown=15;V.order=null;V.mode='bank';if(location.hash==='#practice'&&V.ready)draw();else window.csNav('practice')},level:function(){if(V.ready){V.order=null;V.shown=15;if(V.paper&&!V.paper.done){}else draw()}},count:function(sl){return Q.filter(function(q){return !(sl&&q.h)&&q.k!=='term'}).length}};
+window.csPrac={render:render,mode:function(){return V.mode},setMode:function(m){V.mode=m;if(V.ready)draw()},stop:function(n){STOPF=n;V.shown=15;V.order=null;V.mode='bank';if(location.hash==='#practice'&&V.ready)draw();else window.csNav('practice')},level:function(){if(V.ready){V.order=null;V.shown=15;if(V.paper&&!V.paper.done){}else draw()}},count:function(sl){return Q.filter(function(q){return !(sl&&q.h)&&q.k!=='term'}).length}};
 })();
 
 /* ================= IB CS Cheat Sheet: router, line pages, glossary, search, resources ================= */
@@ -470,11 +470,27 @@ function parse(h){
 }
 function show(v){
   document.querySelectorAll('.view').forEach(function(el){el.classList.toggle('on',el.id==='view-'+v)});
-  var tab=v==='page'?(SPECIAL_R[CUR.p]||'map'):v;
+  var tab=v==='page'?(SPECIAL_R[CUR.p]||'map'):(v==='flashcards'?'practice':v);
   document.querySelectorAll('#tabs a').forEach(function(a){a.classList.toggle('on',a.dataset.v===tab)});
 }
+/* one Practice tab: exam questions and flashcards share a "Choose a way to study" bar (as in the BM notes) */
+var QMODES=[['bank','Question bank','Write answers, tick the markscheme'],['paper','Mini paper','Timed, Paper 1 or Paper 2']];
+function studyBar(){
+  var fcm=window.csFc&&window.csFc.modes?window.csFc.modes():[],cur=CUR.v==='flashcards'?'f:'+(window.csFc?window.csFc.mode():''):'q:'+(window.csPrac?window.csPrac.mode():'bank');
+  var b=function(g,m){var k=g+':'+m[0];return '<button type="button" data-sm="'+k+'" aria-pressed="'+(k===cur)+'"><b>'+esc(g==='f'&&m[0]==='flash'?'Flip cards':m[1])+'</b><span>'+esc(m[2])+'</span></button>'};
+  var h='<div class="sb-h">Choose a way to study</div><div class="sb-groups"><div class="sb-g"><span class="sb-l">Exam questions</span><div class="sb-row">'+QMODES.map(function(m){return b('q',m)}).join('')+'</div></div>'+
+    '<div class="sb-g"><span class="sb-l">Flashcards</span><div class="sb-row">'+fcm.map(function(m){return b('f',m)}).join('')+'</div></div></div>';
+  document.querySelectorAll('.studybar').forEach(function(el){el.innerHTML=h});
+}
+window.csStudyBar=studyBar;
+document.addEventListener('click',function(e){
+  var bt=e.target.closest('.studybar button[data-sm]');if(!bt)return;
+  var k=bt.dataset.sm.split(':');
+  if(k[0]==='q'){if(window.csPrac)window.csPrac.setMode(k[1]);if(CUR.v!=='practice')nav('practice');else studyBar()}
+  else{if(window.csFc)window.csFc.start(k[1]);if(CUR.v!=='flashcards')nav('flashcards');else studyBar()}
+});
 /* "Back to Practice": opening the notes from Practice, Flashcards or the Glossary keeps a way straight back */
-var RET=null,RETNAME={practice:'Practice',flashcards:'Flashcards',glossary:'Glossary'};
+var RET=null,RETNAME={practice:'Practice',flashcards:'Practice',glossary:'Glossary'};
 function retPill(){
   var b=$('retpill');
   if(!b){b=document.createElement('button');b.type='button';b.id='retpill';b.className='retpill';document.body.appendChild(b);
@@ -489,7 +505,7 @@ function go(r,noScroll){
   else RET=null;
   CUR=r;retPill();
   if(r.v==='page'){mountPage(r.p,r.s);show('page');if(FIND.pending&&!WAITING){var f=FIND.pending;FIND.pending=null;setTimeout(function(){if(f.hide)hideAnswer(f.hide);if(f.q)runFind(f)},40)}}
-  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);}
+  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='flashcards'||r.v==='practice')setTimeout(studyBar,0);if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);}
   if(!noScroll&&!(r.v==='page'&&r.s))window.scrollTo(0,0);
   var t=r.v==='page'?(CS.meta[r.p]||{}).title:({map:'Home',flashcards:'Flashcards',practice:'Practice',glossary:'Glossary',resources:'Resources'})[r.v];
   document.title=window.CS_STATIC?(r.v==='map'?'IB Computer Science notes 2027 · SL and HL':(t?t+' · ':'')+'IB Computer Science notes'):(t?t+' · ':'')+'IB CS Cheat Sheet';
@@ -1066,14 +1082,14 @@ function renderModes(){
   var r=$('fc-modes');if(!r)return;
   r.innerHTML=MODES.map(function(m){return '<button data-m="'+m[0]+'" class="'+(S.mode===m[0]?'on':'')+'"><b>'+m[1]+'</b><span>'+m[2]+'</span></button>'}).join('');
 }
-function setMode(m){S.mode=m;saveSel();renderModes();focus(true);resetMode()}
+function setMode(m){S.mode=m;saveSel();renderModes();focus(true);resetMode();if(window.csStudyBar)window.csStudyBar()}
 var FOCUS_NEXT=false;
 /* focus mode: once a mode is chosen, only that mode shows until you leave with the arrow (or Esc) */
 function focus(on){
   var v=$('view-flashcards'),bar=$('fc-focusbar');if(!v||!bar)return;
   v.classList.toggle('fc-focus',!!on);
   if(on){var mm=MODES.filter(function(x){return x[0]===S.mode})[0]||MODES[0],n=selCards({keepMastered:true}).length;
-    bar.innerHTML='<button type="button" class="pill fb-back" id="fc-leave">← All modes</button><b>'+esc(mm[1])+'</b><span>'+n+' card'+(n===1?'':'s')+(S.topics.length?' · '+S.topics.length+' topic'+(S.topics.length>1?'s':''):' · whole course')+'</span>';
+    bar.innerHTML='<button type="button" class="pill fb-back" id="fc-leave">← Back to Practice</button><b>'+esc(mm[1])+'</b><span>'+n+' card'+(n===1?'':'s')+(S.topics.length?' · '+S.topics.length+' topic'+(S.topics.length>1?'s':''):' · whole course')+'</span>';
     $('fc-leave').onclick=function(){focus(false)};
     var top=v.getBoundingClientRect().top+window.scrollY-((parseInt(getComputedStyle(document.documentElement).getPropertyValue('--tbh'))||0));if(window.scrollY>top)window.scrollTo(0,top);
   }else{bar.innerHTML='';var mo=$('fc-modes');if(mo)mo.scrollIntoView({block:'center'})}
@@ -1665,6 +1681,8 @@ window.csFc={
   },
   openUnit:function(u){var sl=isSL();S.unit=String(u);S.topics=BM.topics.filter(function(t){return String(t.u)===String(u)&&!(sl&&t.hl)}).map(function(t){return t.id});S.collapsed=false;saveSel();if(this.ready){renderDeck();resetMode()}},
   openMode:function(m){S.mode=m;saveSel();if(this.ready){renderModes();resetMode()}},
+  start:function(m){S.mode=m;saveSel();if(this.ready){renderModes();focus(true);resetMode()}else FOCUS_NEXT=true},
+  mode:function(){return S.mode},modes:function(){return MODES},
   openTopics:function(ids,mode){FOCUS_NEXT=true;S.topics=ids.filter(function(id){return TOP[id]});var t=TOP[S.topics[0]];S.unit=S.topics.length===1&&t?String(t.u):(S.topics.length&&t&&S.topics.every(function(id){return TOP[id].u===t.u})?String(t.u):'all');if(mode)S.mode=mode;saveSel();if(this.ready){renderDeck();renderModes();resetMode();FOCUS_NEXT=false;focus(true)}},
   openTopic:function(tid,mode){S.topics=[tid];var t=TOP[tid];if(t)S.unit=String(t.u);if(mode)S.mode=mode;saveSel();if(this.ready){renderDeck();renderModes();resetMode()}},
   level:function(){if(this.ready){renderDeck();resetMode()}},

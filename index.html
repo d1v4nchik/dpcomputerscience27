@@ -3,7 +3,7 @@
 <meta name="description" content="Free IB Diploma Computer Science notes for the 2027 syllabus, SL and HL: every topic in plain words with diagrams, a glossary of definitions, flashcards, exam-style practice questions, Python and Java code, pseudocode help and the 2027 case study.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
-<link rel="stylesheet" href="assets/css/style.css?v=20261119i"><meta property="og:type" content="website"><meta property="og:title" content="IB Computer Science notes (2027)"><meta property="og:description" content="Free IB Diploma Computer Science notes for the 2027 syllabus, SL and HL: every topic in plain words with diagrams, a glossary of definitions, flashcards, exam-style practice questions, Python and Java code, pseudocode help and the 2027 case study."><meta name="theme-color" content="#15171C"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://d1v4nchik.github.io/dpcomputerscience27/"><meta property="og:url" content="https://d1v4nchik.github.io/dpcomputerscience27/"><meta property="og:image" content="https://d1v4nchik.github.io/dpcomputerscience27/assets/img/social-preview.png"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="640"><meta property="og:image:alt" content="IB Computer Science notes: home page with the topic line map"><meta name="twitter:card" content="summary_large_image"><script>window.CS_STATIC=1</script></head><body><noscript><div style="padding:16px;font-family:sans-serif">Please turn on JavaScript to use these notes.</div></noscript>
+<link rel="stylesheet" href="assets/css/style.css?v=20261119k"><meta property="og:type" content="website"><meta property="og:title" content="IB Computer Science notes (2027)"><meta property="og:description" content="Free IB Diploma Computer Science notes for the 2027 syllabus, SL and HL: every topic in plain words with diagrams, a glossary of definitions, flashcards, exam-style practice questions, Python and Java code, pseudocode help and the 2027 case study."><meta name="theme-color" content="#15171C"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://d1v4nchik.github.io/dpcomputerscience27/"><meta property="og:url" content="https://d1v4nchik.github.io/dpcomputerscience27/"><meta property="og:image" content="https://d1v4nchik.github.io/dpcomputerscience27/assets/img/social-preview.png"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="640"><meta property="og:image:alt" content="IB Computer Science notes: home page with the topic line map"><meta name="twitter:card" content="summary_large_image"><script>window.CS_STATIC=1</script></head><body><noscript><div style="padding:16px;font-family:sans-serif">Please turn on JavaScript to use these notes.</div></noscript>
 <div class="topbar" id="topbar">
   <div class="tb-in">
     <a class="brand" href="#map" aria-label="IB CS Cheat Sheet: line map">
@@ -12,7 +12,6 @@
     </a>
     <nav class="tabs" id="tabs" aria-label="Sections">
       <a href="#map" data-v="map">Home</a>
-      <a href="#flashcards" data-v="flashcards">Flashcards</a>
       <a href="#practice" data-v="practice">Practice</a>
       <a href="#glossary" data-v="glossary">Glossary</a>
       <a href="#exam" data-v="exam">Exam</a>
@@ -40,9 +39,10 @@
   <section class="view" id="view-map" aria-label="Home"></section>
   <section class="view" id="view-page" aria-live="polite"></section>
   <section class="view" id="view-flashcards" aria-label="Flashcards">
-    <div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Practise</div><h1>Flashcards</h1>
-      <p id="fc-intro">Pick topics, then choose a way to study. <b>Learn</b> moves each card through four levels: New, Learning, Familiar and Mastered. Multiple choice moves a card up to Familiar; typing it correctly makes it Mastered; a wrong answer drops it back to Learning. <b>Write</b> asks you to define a term and mark it like an examiner. Games: <b>Match</b> races the clock, <b>Memory</b> hides the tiles, <b>Gravity</b> makes you type the answer before the card lands, <b>Blitz</b> is 60 seconds of true or false. <b>Number drill</b> generates fresh Paper 1 calculations.</p></div></div>
+    <div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Practise</div><h1>Practice</h1>
+      <p id="fc-intro">Exam-style questions with markschemes, timed papers and flashcards, all in one place. Choose a way to study, pick your topics, and your progress is saved as you go.</p></div></div>
     <div class="vbody">
+      <div class="studybar" id="sb-flashcards"></div>
       <div class="fcx-head"><div class="fcx-stat"><b id="fcx-sel">0</b><span>cards selected</span></div><div class="fcx-stat"><b id="fcx-selm">0%</b><span>of them mastered</span></div><div class="fcx-stat"><b id="fcx-mast">0</b><span>mastered of <span id="fcx-total">0</span> in the course</span></div><div class="fcx-sync" id="fcx-sync"><i></i><span>Progress saved on this device</span></div></div>
       <div class="deck" id="fc-deck"></div>
       <div class="modes" id="fc-modes" role="group" aria-label="Study mode"></div>
@@ -70,6 +70,6 @@
 </div>
 
 
-<script src="assets/js/data.js?v=20261119i"></script>
-<script src="assets/js/app.js?v=20261119i"></script>
+<script src="assets/js/data.js?v=20261119k"></script>
+<script src="assets/js/app.js?v=20261119k"></script>
 </body></html>
