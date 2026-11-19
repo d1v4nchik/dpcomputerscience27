@@ -9,12 +9,14 @@ function strip(h){var d=document.createElement('div');d.innerHTML=h;return d.tex
 var PAGES={};CS.lines.forEach(function(l){l.pages.forEach(function(p){p.line=l.id;PAGES[p.id]=p})});
 var SPECIAL_R={'Exam':'exam','IA-assessment':'ia','Case-study':'case-study','Pseudocode':'pseudocode'};
 var Q=CS.prac,BYID={};Q.forEach(function(q,i){q.i=i;BYID[q.id]=q});
-var KIND={quiz:'Test yourself',model:'Model answer in the notes',fm:'Full-mark practice',term:'Definition',case:'Case-study bank',essay:'Extended response'};
-var HAS={};Q.forEach(function(q){HAS[q.u]=1});
+var KIND={quiz:'Test yourself',model:'Model answer in the notes',fm:'Full-mark practice',term:'Definition',case:'Case-study bank',essay:'Extended response',mix:'Mixed topics',xs:'Exam-style'};
+function unitsOf(q){return q.us||[q.u]}
+function paperOf(q){if(q.pp)return q.pp;var u=q.u||'';return u==='CS'||u.charAt(0)==='A'?1:(u.charAt(0)==='B'?2:0)}
+var HAS={};Q.forEach(function(q){unitsOf(q).forEach(function(u){HAS[u]=1})});
 var UNITS=[['all','All']].concat(CS.lines.map(function(l){return [l.id,l.id]})).concat([['CS','Case study'],['EX','Exam']]).filter(function(u){return u[0]==='all'||HAS[u[0]]});
 function unitName(u){if(u==='CS')return 'Case study';if(u==='EX')return 'Exam and IA';var l=CS.lines.filter(function(x){return x.id===u})[0];return l?l.name:u}
 function thOf(u){return u==='EX'?'IA':u}
-function codeOf(q){var p=PAGES[q.p];if(p)return p.code;if(q.u==='CS')return 'Case study';if(q.u==='EX')return 'Exam';return q.u}
+function codeOf(q){if(q.us)return q.us.join(' + ');var p=PAGES[q.p];if(p)return p.code;if(q.u==='CS')return 'Case study';if(q.u==='EX')return 'Exam';return q.u}
 function titleOf(q){var m=CS.meta[q.p];return m?m.title:''}
 function href(q){var r=SPECIAL_R[q.p]||q.p;if(!CS.meta[q.p])return '';return '#'+r+(q.s?'.'+q.s:'')}
 /* "Open in the notes": the stop that teaches the idea (q.n), never the box holding this question's answer */
@@ -62,11 +64,15 @@ function samp(){try{if(window.claude&&window.claude.use)window.claude.use('sampl
 
 /* ---------- filters ---------- */
 var F=lsGet('csPracF',{u:'all',src:'exam',cmd:'',mk:'',st:'',q:'',shuffle:false});
+if(!Array.isArray(F.us))F.us=F.u&&F.u!=='all'?[F.u]:[];if(F.pp==null)F.pp='';
+function unitsLabel(){return F.us.map(unitName).join(' + ')}
+function unitOk(q){return !F.us.length||unitsOf(q).every(function(u){return F.us.indexOf(u)>-1})}
 var V={ready:false,mode:'bank',shown:15,order:null,paper:null};
 function saveF(){lsSet('csPracF',F)}
 function srcOk(q,src){
   if(src==='exam')return q.k!=='term';
-  if(src==='quiz')return q.k==='quiz'||q.k==='fm'||q.k==='case';
+  if(src==='quiz')return q.k==='quiz'||q.k==='fm'||q.k==='case'||q.k==='xs'||q.k==='mix';
+  if(src==='mix')return q.k==='mix';
   if(src==='model')return q.k==='model';
   if(src==='term')return q.k==='term';
   if(src==='long')return q.k==='essay'||q.m>=5;
@@ -77,7 +83,8 @@ function pool(ignore){
   var sl=isSL(),ql=(F.q||'').trim().toLowerCase();
   return Q.filter(function(q){
     if(sl&&q.h)return false;
-    if(ignore!=='u'&&F.u!=='all'&&q.u!==F.u)return false;
+    if(ignore!=='u'&&!unitOk(q))return false;
+    if(F.pp&&paperOf(q)!==+F.pp)return false;
     if(!srcOk(q,F.src))return false;
     if(ignore!=='cmd'&&F.cmd&&q.c!==F.cmd)return false;
     if(F.mk&&!mkOk(q.m,F.mk))return false;
@@ -90,7 +97,7 @@ function shuffled(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(
 
 /* ---------- render ---------- */
 function render(u){
-  if(u&&UNITS.some(function(x){return x[0]===u})){F.u=u;F.cmd='';saveF();V.shown=15;V.order=null}
+  if(u&&UNITS.some(function(x){return x[0]===u})){F.us=[u];F.cmd='';saveF();V.shown=15;V.order=null}
   var el=$('view-practice');
   if(!V.ready){
     el.innerHTML='<div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Exam practice</div><h1>Practice</h1><p>Every exam-style question on the site in one place: the end-of-line tests, the model answers from the notes, full-mark practice, the case-study bank and the extended responses. Write an answer, open the markscheme, tick the points you made and record your mark. Or sit a timed <b>mini paper</b> at exam pace (about 1.5 minutes a mark, the same as Paper 1).</p></div></div>'+
@@ -98,15 +105,18 @@ function render(u){
       '<div class="px-modes"><span class="seg" role="group" aria-label="Mode"><button type="button" data-m="bank">Question bank</button><button type="button" data-m="paper">Mini paper</button></span><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></div>'+
       '<div class="px-filters" id="px-filters"><div class="gl-bar"><input type="search" id="px-q" placeholder="Search questions, e.g. “cache” or “normalise”" aria-label="Search questions" autocomplete="off"><span class="gl-count" id="px-count"></span></div>'+
       '<div class="chips" id="px-units" role="group" aria-label="Topic"></div>'+
-      '<div class="px-sel"><label><span>Questions</span><select id="px-src"><option value="exam">All exam-style</option><option value="quiz">Test-yourself and bank only</option><option value="model">Model answers from the notes</option><option value="long">Long answers (5+ marks)</option><option value="term">Definitions (glossary)</option><option value="all">Everything incl. definitions</option></select></label>'+
+      '<div class="px-sel"><label><span>Questions</span><select id="px-src"><option value="exam">All exam-style</option><option value="quiz">Test-yourself and bank only</option><option value="model">Model answers from the notes</option><option value="mix">Mixed-topic questions</option><option value="long">Long answers (5+ marks)</option><option value="term">Definitions (glossary)</option><option value="all">Everything incl. definitions</option></select></label>'+
+      '<label><span>Paper</span><select id="px-pp"><option value="">Both papers</option><option value="1">Paper 1 · Theme A + case study</option><option value="2">Paper 2 · Theme B</option></select></label>'+
       '<label><span>Command term</span><select id="px-cmd"></select></label>'+
       '<label><span>Marks</span><select id="px-mk"><option value="">Any</option><option value="1">1–2</option><option value="3">3–4</option><option value="5">5–6</option><option value="7">7 or more</option></select></label>'+
       '<label><span>Status</span><select id="px-st"><option value="">Any</option><option value="new">Not tried yet</option><option value="lost">Lost marks</option><option value="full">Full marks</option><option value="star">Starred</option></select></label>'+
       '<button type="button" class="minibtn" id="px-shuf" aria-pressed="false">Shuffle</button></div></div>'+
       '<div id="px-body"></div></div>';
     $('px-q').addEventListener('input',function(){F.q=this.value;saveF();V.shown=15;V.order=null;drawList()});
-    $('px-units').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;F.u=b.dataset.u;F.cmd='';saveF();V.shown=15;V.order=null;draw()});
-    ['src','cmd','mk','st'].forEach(function(k){$('px-'+k).addEventListener('change',function(){F[k]=this.value;saveF();V.shown=15;V.order=null;draw()})});
+    $('px-units').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var u=b.dataset.u;
+      if(u==='all')F.us=[];else{var k=F.us.indexOf(u);if(k>-1)F.us.splice(k,1);else F.us.push(u)}
+      F.cmd='';saveF();V.shown=15;V.order=null;draw()});
+    ['src','cmd','mk','st','pp'].forEach(function(k){$('px-'+k).addEventListener('change',function(){F[k]=this.value;saveF();V.shown=15;V.order=null;draw()})});
     $('px-shuf').addEventListener('click',function(){F.shuffle=!F.shuffle;saveF();V.order=null;V.shown=15;draw()});
     el.querySelector('.px-modes .seg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;V.mode=b.dataset.m;draw()});
     $('px-body').addEventListener('click',onClick);
@@ -126,12 +136,12 @@ function draw(){
   document.querySelectorAll('.px-modes .seg button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.m===V.mode))});
   var sl=isSL();
   $('px-units').innerHTML=UNITS.filter(function(u){if(u[0]==='all'||u[0]==='CS'||u[0]==='EX')return true;var l=CS.lines.filter(function(x){return x.id===u[0]})[0];return !(sl&&l&&l.pages.every(function(p){return p.hl}))}).map(function(u){
-    var n=u[0]==='all'?0:pool('u').filter(function(q){return q.u===u[0]}).length;
-    return '<button type="button" class="chip'+(u[0]!=='all'?' th-'+thOf(u[0]):'')+'" data-u="'+u[0]+'" aria-pressed="'+(F.u===u[0])+'"'+(u[0]!=='all'&&!n?' disabled':'')+'>'+(u[0]!=='all'?'<i></i>':'')+esc(u[1])+(u[0]!=='all'?' <small>'+n+'</small>':'')+'</button>'}).join('');
+    var n=u[0]==='all'?0:pool('u').filter(function(q){return unitsOf(q).indexOf(u[0])>-1}).length;
+    return '<button type="button" class="chip'+(u[0]!=='all'?' th-'+thOf(u[0]):'')+'" data-u="'+u[0]+'" aria-pressed="'+(u[0]==='all'?!F.us.length:F.us.indexOf(u[0])>-1)+'"'+(u[0]!=='all'&&!n?' disabled':'')+'>'+(u[0]!=='all'?'<i></i>':'')+esc(u[1])+(u[0]!=='all'?' <small>'+n+'</small>':'')+'</button>'}).join('');
   var cm={};pool('cmd').forEach(function(q){cm[q.c]=(cm[q.c]||0)+1});
   if(F.cmd&&!cm[F.cmd])F.cmd='';
   $('px-cmd').innerHTML='<option value="">Any</option>'+Object.keys(cm).sort(function(a,b){return cm[b]-cm[a]}).map(function(c){return '<option value="'+esc(c)+'"'+(F.cmd===c?' selected':'')+'>'+esc(c)+' ('+cm[c]+')</option>'}).join('');
-  $('px-src').value=F.src;$('px-mk').value=F.mk||'';$('px-st').value=F.st||'';
+  $('px-src').value=F.src;$('px-pp').value=F.pp||'';$('px-mk').value=F.mk||'';$('px-st').value=F.st||'';
   if($('px-q').value!==F.q)$('px-q').value=F.q||'';
   $('px-shuf').setAttribute('aria-pressed',String(!!F.shuffle));
   $('px-filters').classList.toggle('paper',V.mode==='paper');
@@ -141,7 +151,7 @@ function card(q,n,opt){
   opt=opt||{};
   var r=rec(q.id),s=status(q.id),h=href(q),th=thOf(q.u);
   var out='<article class="pq th-'+th+'" data-id="'+q.id+'">'+
-    '<header class="pq-h">'+(n?'<span class="pq-n">'+n+'</span>':'')+'<span class="pq-code">'+esc(codeOf(q))+'</span><span class="pq-src">'+esc(KIND[q.k]||'')+(titleOf(q)&&q.u!=='CS'?' · '+esc(titleOf(q)):'')+'</span>'+(q.h?'<span class="hltag">HL</span>':'')+
+    '<header class="pq-h">'+(n?'<span class="pq-n">'+n+'</span>':'')+'<span class="pq-code">'+esc(codeOf(q))+'</span><span class="pq-src">'+esc(KIND[q.k]||'')+(titleOf(q)&&q.u!=='CS'&&!q.us?' · '+esc(titleOf(q)):'')+'</span>'+(q.h?'<span class="hltag">HL</span>':'')+
     '<span class="pq-sp"></span>'+(opt.paper?'':'<span class="pq-st st-'+s+'">'+(s==='new'?'Not tried':s==='full'?'Full marks':'Scored '+r[0]+'/'+r[1])+'</span>')+
     '<button type="button" class="pq-star" data-a="star" aria-pressed="'+starred(q.id)+'" aria-label="Star this question">'+(starred(q.id)?'★':'☆')+'</button></header>'+
     '<div class="pq-q"><span class="pq-cmd">'+esc(q.c)+'</span> '+q.q+' <span class="pq-mk">['+q.m+']</span></div>'+
@@ -155,6 +165,7 @@ function ms(q){
   var r=rec(q.id),cur=r&&r[0]!=null?r[0]:null,essay=q.k==='essay';
   return '<div class="pq-lab">'+(essay?'Model response · read it, then judge your own answer against the markband':'Markscheme · tick each point you made (one mark each, up to '+q.m+')')+'</div>'+
     '<ul class="pq-pts">'+q.a.map(function(a,i){return '<li>'+(essay?'<span class="pq-dot" aria-hidden="true"></span><span>'+a+'</span>':'<label><input type="checkbox" data-pt="'+i+'"><span>'+a+'</span></label>')+'</li>'}).join('')+'</ul>'+
+    (q.ex?'<div class="pq-ex"><div class="pq-lab">Example answer · other correct answers earn the same marks</div><pre class="lang-py">'+esc(q.ex.py)+'</pre><pre class="lang-java">'+esc(q.ex.java)+'</pre></div>':'')+
     (essay?'<p class="pq-band">'+(q.m===12?'HL markbands: 1–3 basic · 4–6 adequate · 7–9 competent · 10–12 proficient.':'SL markbands: 1–2 basic · 3–4 adequate · 5–6 competent.')+' Top band: a clear position, accurate case-study terms, both sides with specific mechanisms, and a justified conclusion.</p>':'')+
     '<div class="pq-score"><span>Your mark</span><span class="pq-btns">'+Array.apply(null,Array(q.m+1)).map(function(_,i){return '<button type="button" data-mk="'+i+'" aria-pressed="'+(cur===i)+'">'+i+'</button>'}).join('')+'</span><span class="pq-of">/ '+q.m+'</span></div><div class="pq-aiout" aria-live="polite"></div>';
 }
@@ -172,7 +183,7 @@ function drawList(){
   var body=$('px-body');if(V.mode!=='bank')return;
   if(!list.length){body.innerHTML='<p class="note">No questions match. Clear the search or pick “Any” in the filters.'+(isSL()?' Some questions are HL only: switch to HL to see them.':'')+'</p>';return}
   var marks=list.reduce(function(s,q){return s+q.m},0);
-  var h='<div class="px-sum"><b>'+list.length+'</b> questions · <b>'+marks+'</b> marks'+(F.u!=='all'?' in '+esc(unitName(F.u)):'')+'</div><div class="pq-list">'+list.slice(0,V.shown).map(function(q){return card(q)}).join('')+'</div>';
+  var h='<div class="px-sum"><b>'+list.length+'</b> questions · <b>'+marks+'</b> marks'+(F.us.length?' in '+esc(unitsLabel()):'')+(F.pp?' · Paper '+F.pp:'')+(F.us.length>1&&F.src!=='mix'?' · includes questions that mix these units':'')+'</div><div class="pq-list">'+list.slice(0,V.shown).map(function(q){return card(q)}).join('')+'</div>';
   if(list.length>V.shown)h+='<div class="px-more"><button type="button" class="pill" data-a="more">Show '+Math.min(15,list.length-V.shown)+' more · '+(list.length-V.shown)+' left</button></div>';
   body.innerHTML=h;
 }
@@ -184,9 +195,14 @@ function drawPaper(){
   $('px-count').textContent=pool().filter(function(q){return q.k!=='term'}).length+' questions to draw from';
   if(!P0){
     var avail=pool().filter(function(q){return q.k!=='term'}),am=avail.reduce(function(s,q){return s+q.m},0);
-    var o=lsGet('csPracPaper',{marks:20});
-    body.innerHTML='<div class="px-paper-setup mapcard"><h2>Mini paper</h2><p>A random set of questions from your filters'+(F.u!=='all'?' (<b>'+esc(unitName(F.u))+'</b>)':'')+', timed at exam pace. Markschemes stay hidden until you finish. Then mark each answer and the total is saved.</p>'+
-      '<div class="px-len" role="radiogroup" aria-label="Length">'+[[12,'Quick','18 min'],[20,'Standard','30 min'],[30,'Long','45 min'],[50,'Section A size (SL)','75 min']].map(function(x){return '<label class="wdir'+(o.marks===x[0]?' on':'')+'"><input type="radio" name="pxlen" value="'+x[0]+'"'+(o.marks===x[0]?' checked':'')+'><b>'+x[1]+'</b><span>'+x[0]+' marks · '+x[2]+'</span></label>'}).join('')+'</div>'+
+    var full=isSL()?50:80,cur=paperTarget();
+    var intro=F.pp==='1'?'<b>Section A</b>: Theme A questions (lines A1–A4). <b>Section B</b>: case-study questions, '+(isSL()?'about 12 of the 50 marks':'about 24 of the 80 marks')+', the same split as the real Paper 1.'
+      :F.pp==='2'?'Theme B only: computational thinking, programming and OOP'+(isSL()?'':', plus ADTs at HL')+'. Write your code and trace tables by hand, as in the exam.'
+      :'A random set of questions from your filters.';
+    body.innerHTML='<div class="px-paper-setup mapcard"><h2>'+(F.pp?'Paper '+F.pp+' practice':'Mini paper')+'</h2>'+
+      '<div class="seg px-pp" role="group" aria-label="Which paper"><button type="button" data-pp="" aria-pressed="'+(!F.pp)+'">Any topics</button><button type="button" data-pp="1" aria-pressed="'+(F.pp==='1')+'">Paper 1</button><button type="button" data-pp="2" aria-pressed="'+(F.pp==='2')+'">Paper 2</button></div>'+
+      '<p>'+intro+(F.us.length?' Units: <b>'+esc(unitsLabel())+'</b>.':'')+' Timed at exam pace (about 1.5 minutes a mark). Markschemes stay hidden until you finish, then you mark each answer and the total is saved.</p>'+
+      '<div class="px-len" role="radiogroup" aria-label="Length">'+[[12,'Quick','18 min'],[20,'Standard','30 min'],[30,'Long','45 min'],[full,'Full paper length',isSL()?'1 h 15 min':'2 h']].map(function(x){return '<label class="wdir'+(cur===x[0]?' on':'')+'"><input type="radio" name="pxlen" value="'+x[0]+'"'+(cur===x[0]?' checked':'')+'><b>'+x[1]+'</b><span>'+x[0]+' marks · '+x[2]+'</span></label>'}).join('')+'</div>'+
       '<p class="px-avail">'+avail.length+' questions ('+am+' marks) match your filters.'+(am<12?' Widen the filters to build a paper.':'')+'</p>'+
       '<div><button type="button" class="pill pri" data-a="start"'+(am<12?' disabled':'')+'>Start the paper</button></div>'+
       (P.papers.length?'<div class="px-hist"><h3>Your last papers</h3>'+P.papers.slice(-6).reverse().map(function(p){var d=new Date(p[0]);return '<div><span>'+d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})+'</span><b>'+p[1]+' / '+p[2]+'</b><span>'+Math.round(100*p[1]/p[2])+'% · '+p[3]+' min</span></div>'}).join('')+'</div>':'')+'</div>';
@@ -194,7 +210,8 @@ function drawPaper(){
   }
   var qs=P0.ids.map(function(id){return BYID[id]}),total=qs.reduce(function(s,q){return s+q.m},0);
   var h='<div class="px-bar" id="px-bar"><span class="px-time" id="px-time"></span><span class="px-tot" id="px-tot"></span><span class="pq-sp"></span>'+(P0.done?'<button type="button" class="minibtn" data-a="quit">New paper</button>':'<button type="button" class="minibtn" data-a="quit">Abandon</button><button type="button" class="minibtn pri" data-a="finish">Finish and mark</button>')+'</div>';
-  h+='<div class="pq-list">'+qs.map(function(q,i){return card(q,i+1,{paper:true,open:P0.done})}).join('')+'</div>';
+  var secs=P0.pp==='1'&&P0.secB!=null&&P0.secB<qs.length;
+  h+='<div class="pq-list">'+qs.map(function(q,i){return (secs&&i===0?'<h3 class="px-sec">Section A · Theme A</h3>':'')+(secs&&i===P0.secB?'<h3 class="px-sec">Section B · Case study</h3>':'')+card(q,i+1,{paper:true,open:P0.done})}).join('')+'</div>';
   if(P0.done)h+='<div class="px-more"><button type="button" class="pill pri" data-a="save">Save this paper</button></div>';
   body.innerHTML=h;
   if(P0.done){qs.forEach(function(q){var b=P0.marks[q.id];if(b!=null)pressMark(q.id,b)})}
@@ -208,14 +225,22 @@ function tick(){
   el.textContent=(neg?'Over time by ':'')+Math.floor(a/60)+':'+('0'+a%60).slice(-2)+(neg?'':' left');
   el.classList.toggle('over',neg);$('px-tot').textContent=qs.length+' questions · '+total+' marks';
 }
+function paperTarget(){var o=lsGet('csPracPaper',{marks:20}),m=+o.marks||20;return (m===50||m===80)?(isSL()?50:80):m}
 function build(target){
-  var avail=shuffled(pool().filter(function(q){return q.k!=='term'})),pick=[],sum=0;
+  var avail=shuffled(pool().filter(function(q){return q.k!=='term'}));
   // prefer questions not yet at full marks
   avail.sort(function(a,b){return (status(a.id)==='full'?1:0)-(status(b.id)==='full'?1:0)});
-  for(var i=0;i<avail.length&&sum<target;i++){var q=avail[i];if(sum+q.m<=target||(pick.length===0)){pick.push(q);sum+=q.m}}
-  // keep course order inside the paper
-  pick.sort(function(a,b){return a.i-b.i});
-  return {ids:pick.map(function(q){return q.id}),start:Date.now(),end:Date.now()+Math.round(sum*1.5*60)*1000,mins:Math.round(sum*1.5),marks:{},done:false};
+  function take(list,t){var pick=[],sum=0;for(var i=0;i<list.length&&sum<t;i++){var q=list[i];if(sum+q.m<=t||!pick.length){pick.push(q);sum+=q.m}}return [pick,sum]}
+  function byI(a,b){return a.i-b.i}
+  var pick,secB=null;
+  if(F.pp==='1'){   // Paper 1: Section A (Theme A) then Section B (case study), in the real paper's proportions
+    var cs=avail.filter(function(q){return q.u==='CS'}),th=avail.filter(function(q){return q.u!=='CS'});
+    var rb=take(cs,Math.round(target*(isSL()?12/50:24/80))),ra=take(th,target-rb[1]);
+    if(!ra[0].length){ra=[[],0];rb=take(cs,target)}
+    pick=ra[0].sort(byI).concat(rb[0].sort(byI));secB=ra[0].length;
+  }else{pick=take(avail,target)[0].sort(byI)}
+  var sum=pick.reduce(function(s,q){return s+q.m},0);
+  return {ids:pick.map(function(q){return q.id}),start:Date.now(),end:Date.now()+Math.round(sum*1.5*60)*1000,mins:Math.round(sum*1.5),marks:{},done:false,pp:F.pp,secB:secB};
 }
 function pressMark(id,mk){var c=document.querySelector('.pq[data-id="'+id+'"]');if(!c)return;c.querySelectorAll('.pq-btns button').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.mk===mk))})}
 
@@ -245,7 +270,8 @@ function onClick(e){
   if(a==='ms'&&q){var m=c.querySelector('.pq-ms');m.hidden=!m.hidden;b.textContent=m.hidden?'Show markscheme':'Hide markscheme';return}
   if(a==='ai'&&q){askClaude(q,c,b);return}
   if(a==='more'){V.shown+=15;drawList();return}
-  if(a==='start'){var o=lsGet('csPracPaper',{marks:20});V.paper=build(o.marks);drawPaper();window.scrollTo(0,$('px-body').getBoundingClientRect().top+window.scrollY-80);return}
+  if(b.dataset.pp!=null&&!c){F.pp=b.dataset.pp;saveF();V.order=null;draw();return}
+  if(a==='start'){V.paper=build(paperTarget());drawPaper();window.scrollTo(0,$('px-body').getBoundingClientRect().top+window.scrollY-80);return}
   if(a==='finish'){V.paper.done=true;V.paper.took=Math.max(1,Math.round((Date.now()-V.paper.start)/60000));clearInterval(TIMER);drawPaper();return}
   if(a==='quit'){clearInterval(TIMER);V.paper=null;drawPaper();return}
   if(a==='save'){
@@ -529,7 +555,7 @@ function mountPage(p,sec){
   if(!secs){return}
   var tools=document.createElement('div');tools.className='pgtools';
   tools.innerHTML='<span class="steplabel" id="steplabel"></span><span style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="seg" role="group" aria-label="Layout"><button type="button" data-mode="step" aria-pressed="'+(MODE==='step')+'">One stop</button><button type="button" data-mode="all" aria-pressed="'+(MODE!=='step')+'">Whole line</button></span>'+
-    '<span class="seg tbsw" role="group" aria-label="Notes style"><button type="button" data-tb="0" aria-pressed="'+!TB+'" title="Short revision notes">Cheat sheet</button><button type="button" data-tb="1" aria-pressed="'+TB+'" title="A full written explanation at the start of every stop, plus its key terms">Textbook</button></span>'+
+    '<span class="seg tbsw" role="group" aria-label="Notes style"><button type="button" data-tb="0" aria-pressed="'+!TB+'" title="Short revision notes">Cheat sheet</button><button type="button" data-tb="1" aria-pressed="'+TB+'" title="Every stop explained in full sentences, with the diagrams and worked examples; the short definition boxes are left to Cheat sheet">Textbook</button></span>'+
     (PAGES[p]?'<a class="minibtn" href="#practice.'+PAGES[p].line+'">Practice '+esc(PAGES[p].line)+'</a><button type="button" class="minibtn" id="pg-fc">Flashcards for '+esc(PAGES[p].code)+'</button>':(p==='Case-study'?'<a class="minibtn" href="#practice.CS">Case-study practice</a>':''))+'</span>';
   secs.parentNode.insertBefore(tools,secs);
   if(PAGES[p]&&PAGES[p].line.charAt(0)==='B'){var lh=document.createElement('div');lh.className='langhint';lh.innerHTML='<span aria-hidden="true">☕</span><span><b>Java mode.</b> Every code example on this page is shown in Java, compiled and run to give the real output, with a “Java vs Python” note where they differ. The explanations still name Python features in places; the <a href="#pseudocode">pseudocode page</a> has a full Python ⇄ Java ⇄ pseudocode table.</span>';secs.parentNode.insertBefore(lh,secs)}
@@ -556,9 +582,10 @@ function keyTerms(art){
     var seen={},ids=[];
     sec.querySelectorAll('button.gl[data-t]').forEach(function(b){if(b.closest('.tb'))return;var id=b.dataset.t,t=CS.terms[id];if(!t||seen[id]||(isSL()&&t.h))return;seen[id]=1;ids.push(id)});
     if(!ids.length)return;
-    var box=document.createElement('aside');box.className='kt';box.setAttribute('aria-label','Key terms');
-    box.innerHTML='<div class="kt-h">Key terms in this stop</div><dl>'+ids.map(function(id){var t=CS.terms[id],f=t.f&&t.f.toLowerCase()!==t.t.toLowerCase()?'<span class="kt-f">'+esc(t.f)+'</span>':'';
-      return '<div><dt><button type="button" class="gl kt-t" data-t="'+esc(id)+'">'+esc(t.t)+'</button>'+f+'</dt><dd>'+esc(t.ib)+'</dd></div>'}).join('')+'</dl>';
+    /* names only: the explanation above already defines them, and a tap opens the full definition */
+    var box=document.createElement('aside');box.className='kt kt-chips';box.setAttribute('aria-label','Terms in this stop');
+    box.innerHTML='<span class="kt-h">Terms in this stop</span>'+ids.map(function(id){var t=CS.terms[id];
+      return '<button type="button" class="gl kt-t" data-t="'+esc(id)+'">'+esc(t.t)+'</button>'}).join('<span aria-hidden="true">·</span>');
     sec.appendChild(box);
   });
 }

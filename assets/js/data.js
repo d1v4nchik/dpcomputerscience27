@@ -3241,7 +3241,7 @@ window.CS = {
       "p": "A1-data-logic",
       "s": "storing",
       "fig": "video",
-      "k": "frame rate|frames"
+      "k": ""
     },
     "logic-gate": {
       "t": "Logic gate",
@@ -4256,7 +4256,7 @@ window.CS = {
       "p": "A2-architecture",
       "s": "subnetting",
       "fig": "mask",
-      "k": "subnet mask|subnets"
+      "k": "subnets"
     },
     "cidr": {
       "t": "CIDR notation",
@@ -4442,7 +4442,7 @@ window.CS = {
       "p": "A2-transmission-security",
       "s": "packets",
       "fig": "packets",
-      "k": "packets"
+      "k": ""
     },
     "firewall": {
       "t": "Firewall",
@@ -4593,7 +4593,7 @@ window.CS = {
       "p": "A3-design",
       "s": "what",
       "fig": "flat",
-      "k": "attribute|field|fields|record|records|relational databases|tuple"
+      "k": "attribute|relational databases"
     },
     "flat-file": {
       "t": "Flat-file database",
@@ -5511,7 +5511,7 @@ window.CS = {
       "p": "B1-computational-thinking",
       "s": "concepts",
       "fig": "bflow",
-      "k": "algorithms"
+      "k": ""
     },
     "flowchart": {
       "t": "Flowchart",
@@ -5869,7 +5869,7 @@ window.CS = {
       "p": "B2-control",
       "s": "functions",
       "fig": "bcall",
-      "k": "argument|arguments|functions|parameter|parameters|procedure|procedures|return value|subroutine|subroutines"
+      "k": "functions|procedure|procedures|subroutine|subroutines"
     },
     "modularization": {
       "t": "Modularization",
@@ -8107,7 +8107,7 @@ window.CS = {
       "p": "B4-adt",
       "s": "hash",
       "fig": "",
-      "k": "hash function|hash tables|hashing"
+      "k": "hash function|hash tables|hashing|HashMap|dictionary|dictionaries"
     },
     "collision": {
       "t": "Collision",
@@ -13763,6 +13763,585 @@ window.CS = {
       "s": "",
       "fig": "",
       "k": ""
+    },
+    "frame-video": {
+      "t": "Frame (video)",
+      "f": "Frame rate",
+      "g": "A1.2",
+      "ib": "One still image in a video. A video is a sequence of frames shown quickly one after another; the frame rate is the number of frames shown each second (fps), e.g. 30 fps.",
+      "q": "Explain how increasing the frame rate of a video affects its file size.",
+      "a": [
+        "More frames are stored for every second of video;",
+        "so, with the same resolution and colour depth, the uncompressed file size increases in proportion to the frame rate."
+      ],
+      "h": 0,
+      "p": "A1-data-logic",
+      "s": "storing",
+      "fig": "",
+      "k": "frames|video frame|video frames|frame rate|frames per second|fps"
+    },
+    "packet": {
+      "t": "Packet",
+      "f": "Header, payload, trailer",
+      "g": "A2.3",
+      "ib": "A small unit of data sent across a network. Each packet has a header (source and destination IP addresses, sequence number, protocol, TTL), a payload (one piece of the actual data) and often a trailer (error-checking data such as a checksum).",
+      "q": "Describe the structure of a data packet.",
+      "a": [
+        "A header holding the source and destination IP addresses and a sequence number (plus control data such as the protocol and TTL);",
+        "a payload holding one piece of the actual data being sent;",
+        "a trailer holding error-checking data such as a checksum."
+      ],
+      "h": 0,
+      "p": "A2-transmission-security",
+      "s": "packets",
+      "fig": "",
+      "k": "packets|data packet|data packets"
+    },
+    "frame-net": {
+      "t": "Frame (network)",
+      "f": "Link-layer unit",
+      "g": "A2.1",
+      "ib": "The unit of data sent across one link inside a network. A frame wraps a packet with the source and destination MAC addresses in its header and error-checking data in its trailer; switches read the MAC addresses to forward frames within a LAN.",
+      "q": "Distinguish between a frame and a packet.",
+      "a": [
+        "A frame is the unit sent across one link inside a network, addressed by MAC addresses and forwarded by switches;",
+        "whereas a packet is the unit routed between networks, addressed by IP addresses and forwarded by routers (on each link the packet travels inside a frame)."
+      ],
+      "h": 0,
+      "p": "A2-basics",
+      "s": "devices",
+      "fig": "",
+      "k": "frames|Ethernet frame|Ethernet frames"
+    },
+    "handshake": {
+      "t": "Three-way handshake",
+      "f": "SYN, SYN-ACK, ACK",
+      "g": "A2.1",
+      "ib": "The exchange TCP uses to set up a connection before any data is sent: the client sends SYN, the server replies SYN-ACK and the client answers ACK. It agrees the starting sequence numbers so that delivery can be checked and put in order.",
+      "q": "Outline the purpose of the TCP three-way handshake.",
+      "a": [
+        "It sets up a connection between the two devices before data is sent (SYN, SYN-ACK, ACK);",
+        "so both sides know the other is ready and agree starting sequence numbers, which allows reliable, ordered delivery."
+      ],
+      "h": 0,
+      "p": "A2-basics",
+      "s": "tcp",
+      "fig": "",
+      "k": "handshake|SYN|SYN-ACK"
+    },
+    "ttl": {
+      "t": "Time to live (TTL)",
+      "f": "Hop limit",
+      "g": "A2.3",
+      "ib": "A value in a packet header that sets the maximum number of hops (routers) the packet may pass through. Each router reduces it by 1 and discards the packet at 0, so packets caught in a routing loop do not circulate for ever.",
+      "q": "Explain the purpose of the time to live (TTL) field in a packet header.",
+      "a": [
+        "Each router that forwards the packet decreases the TTL by one, and the packet is discarded when it reaches zero;",
+        "this stops packets that cannot reach their destination (for example in a routing loop) circulating for ever and wasting bandwidth."
+      ],
+      "h": 0,
+      "p": "A2-transmission-security",
+      "s": "packets",
+      "fig": "",
+      "k": "TTL|hop limit|hop count|hops"
+    },
+    "url": {
+      "t": "URL",
+      "f": "Uniform resource locator",
+      "g": "A2.1",
+      "ib": "The full address of a resource on the web, made of the protocol (e.g. https), the domain name (e.g. www.example.org) and the path to the resource (e.g. /notes/index.html).",
+      "q": "Identify the three main parts of the URL https://www.school.org/timetable.html.",
+      "a": [
+        "Protocol: https;",
+        "domain name: www.school.org;",
+        "path to the resource: /timetable.html."
+      ],
+      "h": 0,
+      "p": "A2-basics",
+      "s": "http",
+      "fig": "",
+      "k": "URLs|web address|web addresses"
+    },
+    "domain-name": {
+      "t": "Domain name",
+      "f": "",
+      "g": "A2.1",
+      "ib": "A human-readable name for a server or website (e.g. example.org) that is easier to remember than an IP address. DNS translates it into the IP address that computers use to connect.",
+      "q": "Explain why DNS is needed when a user types a domain name into a browser.",
+      "a": [
+        "Computers connect to servers using IP addresses, not names;",
+        "so a DNS server must translate (resolve) the domain name into the server’s IP address before the browser can request the page."
+      ],
+      "h": 0,
+      "p": "A2-basics",
+      "s": "http",
+      "fig": "",
+      "k": "domain names"
+    },
+    "subnet-mask": {
+      "t": "Subnet mask",
+      "f": "e.g. 255.255.255.0 or /24",
+      "g": "A2.2",
+      "ib": "A 32-bit number that shows which part of an IPv4 address identifies the network and which part identifies the host: 1 bits mark the network part and 0 bits the host part, e.g. 255.255.255.0 (/24).",
+      "q": "Outline the purpose of a subnet mask.",
+      "a": [
+        "It separates an IP address into its network part and its host part (the 1 bits mark the network part);",
+        "so a device can tell whether a destination is on its own subnet (send directly) or on another network (send to the gateway)."
+      ],
+      "h": 0,
+      "p": "A2-architecture",
+      "s": "subnetting",
+      "fig": "",
+      "k": "subnet masks|netmask"
+    },
+    "digital-signature": {
+      "t": "Digital signature",
+      "f": "",
+      "g": "A2.4",
+      "ib": "A value made by encrypting a hash (digest) of a message with the sender’s private key. Anyone can check it with the sender’s public key, which proves who sent the message (authentication) and that it was not changed on the way (integrity).",
+      "q": "Explain how a digital signature shows that a message has not been altered.",
+      "a": [
+        "The sender encrypts a hash of the message with their private key; the receiver decrypts it with the sender’s public key and hashes the received message again;",
+        "if the two hashes match the message is unchanged, and only the holder of the private key could have produced the signature."
+      ],
+      "h": 0,
+      "p": "A2-transmission-security",
+      "s": "encryption",
+      "fig": "",
+      "k": "digital signatures"
+    },
+    "botnet": {
+      "t": "Botnet",
+      "f": "",
+      "g": "A2.4",
+      "ib": "A network of devices infected with malware and controlled remotely by an attacker, usually without the owners knowing. Botnets are used to send spam and to launch DDoS attacks.",
+      "q": "Explain how a botnet is used in a DDoS attack.",
+      "a": [
+        "The attacker commands thousands of infected devices to send requests to the target at the same time;",
+        "the flood of traffic overwhelms the server or its bandwidth so genuine users cannot get through, and it is hard to block because it comes from many addresses."
+      ],
+      "h": 1,
+      "p": "A2-transmission-security",
+      "s": "threats",
+      "fig": "",
+      "k": "botnets"
+    },
+    "virus-worm": {
+      "t": "Virus and worm",
+      "f": "",
+      "g": "A2.4",
+      "ib": "Two kinds of malware that spread. A virus attaches itself to a file or program and spreads when that file is run or shared; a worm is a standalone program that copies itself across a network by itself, exploiting vulnerabilities.",
+      "q": "Distinguish between a virus and a worm.",
+      "a": [
+        "A virus needs a host file or program and spreads only when a user runs or shares it;",
+        "whereas a worm is standalone and replicates itself across the network automatically, without any user action."
+      ],
+      "h": 1,
+      "p": "A2-transmission-security",
+      "s": "threats",
+      "fig": "",
+      "k": "virus|viruses|worm|worms"
+    },
+    "brute-force": {
+      "t": "Brute-force attack",
+      "f": "",
+      "g": "A2.4",
+      "ib": "An attack that tries every possible password or key until the right one is found. Long, complex passwords, locking accounts after failed attempts and multi-factor authentication make it impractical.",
+      "q": "Suggest two measures that protect user accounts against brute-force attacks.",
+      "a": [
+        "Lock the account, or add a growing delay, after several failed login attempts;",
+        "require long, complex passwords together with multi-factor authentication, so guessing the password alone is not enough."
+      ],
+      "h": 1,
+      "p": "A2-transmission-security",
+      "s": "threats",
+      "fig": "",
+      "k": "brute force|brute-force attacks"
+    },
+    "record": {
+      "t": "Record",
+      "f": "Row / tuple",
+      "g": "A3.1",
+      "ib": "One row of a table, holding all the data about a single item (one instance of the entity), e.g. one student. Each record is identified by its primary key.",
+      "q": "Distinguish between a record and a field in a relational database.",
+      "a": [
+        "A record is one row of a table, holding all the data about one item (e.g. one student);",
+        "whereas a field is one column, holding one attribute (e.g. date of birth) for every record."
+      ],
+      "h": 0,
+      "p": "A3-design",
+      "s": "what",
+      "fig": "",
+      "k": "records|tuple|tuples"
+    },
+    "field": {
+      "t": "Field",
+      "f": "Column / attribute",
+      "g": "A3.1",
+      "ib": "One column of a table, holding one attribute of the entity (e.g. DateOfBirth) for every record. Each field has a name and a data type.",
+      "q": "Identify the primary key and one other field in the table Student(StudentID, Name, DateOfBirth).",
+      "a": [
+        "Primary key: StudentID, because it uniquely identifies each record;",
+        "another field: Name or DateOfBirth (an attribute stored for every student)."
+      ],
+      "h": 0,
+      "p": "A3-design",
+      "s": "what",
+      "fig": "",
+      "k": "fields|column|columns"
+    },
+    "algorithm": {
+      "t": "Algorithm",
+      "f": "",
+      "g": "B1.1",
+      "ib": "A finite, ordered sequence of precise, unambiguous steps that solves a problem or completes a task. It can be written as a flowchart, in pseudocode or in a programming language.",
+      "q": "Outline two characteristics of a well-designed algorithm.",
+      "a": [
+        "It is finite: it always finishes after a limited number of steps;",
+        "every step is precise and unambiguous, so it gives the correct output for every valid input."
+      ],
+      "h": 0,
+      "p": "B1-computational-thinking",
+      "s": "concepts",
+      "fig": "",
+      "k": "algorithms"
+    },
+    "constant": {
+      "t": "Constant",
+      "f": "",
+      "g": "B2.1",
+      "ib": "A named value that is set once and cannot change while the program runs, e.g. VAT_RATE = 0.2. Using a constant makes code easier to read and lets the value be updated in one place.",
+      "q": "Explain one advantage of using a named constant instead of typing the value each time it is needed.",
+      "a": [
+        "The value is changed in one place only, where the constant is declared;",
+        "so every use updates consistently (no copy is missed) and the name makes the code easier to understand."
+      ],
+      "h": 0,
+      "p": "B2-fundamentals",
+      "s": "variables",
+      "fig": "",
+      "k": "constants"
+    },
+    "identifier": {
+      "t": "Identifier",
+      "f": "",
+      "g": "B2.1",
+      "ib": "The name given to a variable, constant, function or class so it can be referred to in the code. Good identifiers are meaningful (e.g. totalScore) and follow the language’s rules: no spaces, not starting with a digit, not a reserved word.",
+      "q": "State two rules or conventions for choosing a good identifier.",
+      "a": [
+        "It must follow the language’s rules: no spaces, must not start with a digit, must not be a reserved word;",
+        "it should be meaningful and describe what it stores (e.g. averageMark rather than x)."
+      ],
+      "h": 0,
+      "p": "B2-fundamentals",
+      "s": "variables",
+      "fig": "",
+      "k": "identifiers"
+    },
+    "assignment": {
+      "t": "Assignment",
+      "f": "",
+      "g": "B2.1",
+      "ib": "Storing a value in a variable, e.g. total ← total + mark in pseudocode or total = total + mark in Python and Java. The expression on the right is evaluated first, then its value replaces the variable’s old value.",
+      "q": "Explain what happens when the statement count = count + 1 is executed.",
+      "a": [
+        "The expression on the right is evaluated first, using the current value of count;",
+        "the result is then stored back in count, replacing the old value, so count increases by 1."
+      ],
+      "h": 0,
+      "p": "B2-fundamentals",
+      "s": "variables",
+      "fig": "",
+      "k": "assignment statement|assignment statements"
+    },
+    "div-mod": {
+      "t": "Integer division and modulo",
+      "f": "DIV and MOD",
+      "g": "B2.1",
+      "ib": "Integer division (DIV; // in Python; / between two ints in Java) gives how many whole times one number goes into another; modulo (MOD; % in both) gives the remainder. For example 17 DIV 5 = 3 and 17 MOD 5 = 2.",
+      "q": "State the values of 23 DIV 4 and 23 MOD 4.",
+      "a": [
+        "23 DIV 4 = 5;",
+        "23 MOD 4 = 3."
+      ],
+      "h": 0,
+      "p": "B2-fundamentals",
+      "s": "variables",
+      "fig": "",
+      "k": "DIV|MOD|modulo|modulus|integer division|floor division"
+    },
+    "mutable": {
+      "t": "Mutable and immutable",
+      "f": "",
+      "g": "B2.1",
+      "ib": "A mutable object can be changed after it is created (e.g. a Python list or a Java ArrayList); an immutable one cannot (e.g. strings in Python and Java), so “changing” a string really creates a new string.",
+      "q": "Explain why the Python statement s[0] = \"J\" causes an error when s is a string.",
+      "a": [
+        "Strings are immutable, so their characters cannot be changed in place;",
+        "a new string must be built instead, e.g. s = \"J\" + s[1:]."
+      ],
+      "h": 0,
+      "p": "B2-fundamentals",
+      "s": "strings",
+      "fig": "",
+      "k": "mutable|immutable|immutability"
+    },
+    "test-data": {
+      "t": "Test data",
+      "f": "Normal, boundary, erroneous",
+      "g": "B2.1",
+      "ib": "Inputs chosen to check that a program works: normal data (typical valid values), boundary data (values at the edges of the valid range, just inside and just outside) and erroneous data (invalid values that should be rejected).",
+      "q": "A program accepts ages from 11 to 18 inclusive. Identify one example each of normal, boundary and erroneous test data.",
+      "a": [
+        "Normal: e.g. 15;",
+        "boundary: e.g. 11 or 18 (or 10 and 19, just outside the range);",
+        "erroneous: e.g. 25, −3 or “twelve”."
+      ],
+      "h": 0,
+      "p": "B2-fundamentals",
+      "s": "debugging",
+      "fig": "",
+      "k": "normal data|boundary data|erroneous data|boundary values|extreme data|invalid data"
+    },
+    "index": {
+      "t": "Index",
+      "f": "Position in a list or string",
+      "g": "B2.2",
+      "ib": "The number that identifies the position of an element in an array, list or string. Indexes usually start at 0, so the last element of a list of length n is at index n − 1.",
+      "q": "A list scores holds 8 values. State the index of its last element and explain your answer.",
+      "a": [
+        "7;",
+        "because indexing starts at 0, the indexes run from 0 to length − 1."
+      ],
+      "h": 0,
+      "p": "B2-data-structures",
+      "s": "lists",
+      "fig": "",
+      "k": "indexes|indices|zero-based"
+    },
+    "push-pop": {
+      "t": "Push, pop and peek",
+      "f": "Stack operations",
+      "g": "B2.2",
+      "ib": "The stack operations: push adds an item to the top, pop removes and returns the top item, and peek returns the top item without removing it. isEmpty checks whether the stack has no items.",
+      "q": "A stack is empty. After push(4), push(9), pop(), push(2), state the value returned by peek() and the number of items on the stack.",
+      "a": [
+        "peek() returns 2;",
+        "there are 2 items on the stack (4 at the bottom, 2 on top)."
+      ],
+      "h": 0,
+      "p": "B2-data-structures",
+      "s": "stacks",
+      "fig": "",
+      "k": "push|pop|peek|isEmpty"
+    },
+    "enqueue": {
+      "t": "Enqueue and dequeue",
+      "f": "Queue operations",
+      "g": "B2.2",
+      "ib": "The queue operations: enqueue adds an item at the back (rear) and dequeue removes and returns the item at the front, so items leave in the order they arrived (FIFO).",
+      "q": "An empty queue has enqueue(A), enqueue(B), enqueue(C) and then dequeue() applied. State the item removed and the item now at the front.",
+      "a": [
+        "A is removed (first in, first out);",
+        "B is now at the front."
+      ],
+      "h": 0,
+      "p": "B2-data-structures",
+      "s": "queues",
+      "fig": "",
+      "k": "enqueue|dequeue"
+    },
+    "parameter": {
+      "t": "Parameter",
+      "f": "",
+      "g": "B2.3",
+      "ib": "A variable named in a function’s definition that receives a value when the function is called, e.g. width and height in def area(width, height).",
+      "q": "Distinguish between a parameter and an argument.",
+      "a": [
+        "A parameter is the variable listed in the function definition, e.g. def area(w, h);",
+        "whereas an argument is the actual value passed in the call, e.g. area(4, 5)."
+      ],
+      "h": 0,
+      "p": "B2-control",
+      "s": "functions",
+      "fig": "",
+      "k": "parameters|formal parameter"
+    },
+    "argument": {
+      "t": "Argument",
+      "f": "",
+      "g": "B2.3",
+      "ib": "The actual value passed to a function when it is called, e.g. 4 and 5 in area(4, 5). Each argument is copied into the matching parameter, in order.",
+      "q": "In the call total = add(3, x), identify the arguments and state what happens to them.",
+      "a": [
+        "The arguments are 3 and the current value of x;",
+        "they are assigned to the function’s parameters in order, and the value the function returns is stored in total."
+      ],
+      "h": 0,
+      "p": "B2-control",
+      "s": "functions",
+      "fig": "",
+      "k": "arguments|actual parameter"
+    },
+    "return-value": {
+      "t": "Return value",
+      "f": "",
+      "g": "B2.3",
+      "ib": "The value a function sends back to the code that called it, using return; the call can then be used in an expression, e.g. total = add(3, 4). A procedure (a void method in Java) returns no value.",
+      "q": "Distinguish between a function that returns a value and one that only prints it.",
+      "a": [
+        "A returned value is sent back to the caller, which can store it or use it in further calculations;",
+        "whereas a printed value is only shown on screen, so the calling code cannot use it."
+      ],
+      "h": 0,
+      "p": "B2-control",
+      "s": "functions",
+      "fig": "",
+      "k": "return values|return statement"
+    },
+    "nested-loop": {
+      "t": "Nested loop",
+      "f": "",
+      "g": "B2.3",
+      "ib": "A loop inside another loop. The inner loop runs completely for every single pass of the outer loop, so n outer passes with m inner passes run the inner body n × m times (e.g. visiting every cell of a 2D array).",
+      "q": "An outer loop runs 4 times and its inner loop runs 6 times. State how many times the inner loop body executes and explain why.",
+      "a": [
+        "24 times;",
+        "because the inner loop runs all 6 of its passes for each of the 4 passes of the outer loop."
+      ],
+      "h": 0,
+      "p": "B2-control",
+      "s": "loops",
+      "fig": "",
+      "k": "nested loops|inner loop|outer loop"
+    },
+    "counter": {
+      "t": "Counter and running total",
+      "f": "Accumulator variable",
+      "g": "B2.3",
+      "ib": "Two common loop variables, both set to 0 before the loop: a counter goes up by 1 each time something happens (count = count + 1), while a running total, or accumulator, adds each value to a sum (total = total + value).",
+      "q": "Outline the difference between a counter and a running total.",
+      "a": [
+        "A counter increases by 1 each time an event happens, e.g. count = count + 1;",
+        "whereas a running total adds each value to a sum, e.g. total = total + mark (both start at 0 before the loop)."
+      ],
+      "h": 0,
+      "p": "B2-control",
+      "s": "loops",
+      "fig": "",
+      "k": "counter|counters|running total|running totals|accumulator variable"
+    },
+    "sentinel": {
+      "t": "Sentinel value",
+      "f": "Rogue value",
+      "g": "B2.3",
+      "ib": "A special input value that signals the end of the data and stops a loop, e.g. entering −1 to stop entering marks. It must be a value that can never be genuine data.",
+      "q": "Explain why 0 would be an unsuitable sentinel value for a loop that reads the prices of items in a shop.",
+      "a": [
+        "A sentinel must be a value that can never be genuine data;",
+        "an item could have a price of 0 (free), so the loop would stop early; a value such as −1 should be used instead."
+      ],
+      "h": 0,
+      "p": "B2-control",
+      "s": "loops",
+      "fig": "",
+      "k": "sentinel|rogue value"
+    },
+    "flag": {
+      "t": "Flag",
+      "f": "Boolean flag",
+      "g": "B2.3",
+      "ib": "A Boolean variable that records whether something has happened, e.g. found = False before a search and found = True when the item is found. It is checked during or after a loop to decide what to do next.",
+      "q": "Outline the purpose of a Boolean flag in a linear search.",
+      "a": [
+        "It records whether the target has been found: it starts as False and is set to True on a match;",
+        "after the loop it is checked to output “found” or “not found” (and it can be used to stop the loop early)."
+      ],
+      "h": 0,
+      "p": "B2-control",
+      "s": "loops",
+      "fig": "",
+      "k": "flags|Boolean flag|found flag"
+    },
+    "pre-post-loop": {
+      "t": "Pre-condition and post-condition loops",
+      "f": "while vs do … while",
+      "g": "B2.3",
+      "ib": "A pre-condition loop (while) tests its condition before each pass, so its body may run zero times. A post-condition loop (do … while in Java, REPEAT … UNTIL in pseudocode) tests after each pass, so its body always runs at least once.",
+      "q": "Explain why a post-condition loop suits asking a user to enter a password until it is correct.",
+      "a": [
+        "A post-condition loop always runs its body at least once;",
+        "the user has to enter the password at least once before it can be checked, and the loop repeats until the entry is correct."
+      ],
+      "h": 0,
+      "p": "B2-control",
+      "s": "loops",
+      "fig": "",
+      "k": "pre-condition loop|post-condition loop|pre-condition loops|post-condition loops|do-while|repeat until"
+    },
+    "self-this": {
+      "t": "self / this",
+      "f": "Reference to the current object",
+      "g": "B3.1",
+      "ib": "A reference to the current object inside its own methods (self in Python, this in Java), used to reach that object’s attributes and methods, e.g. self.name = name in a constructor.",
+      "q": "Explain why self.balance is used instead of balance inside a method of a BankAccount class.",
+      "a": [
+        "self refers to the particular object the method was called on;",
+        "so self.balance reaches that object’s attribute, whereas balance on its own would be a separate local variable that disappears when the method ends."
+      ],
+      "h": 0,
+      "p": "B3-oop",
+      "s": "classes",
+      "fig": "",
+      "k": "self|this keyword"
+    },
+    "public-private-oop": {
+      "t": "Public and private",
+      "f": "Access modifiers",
+      "g": "B3.1",
+      "ib": "Access modifiers that control where an attribute or method can be used: public members can be used from any class, private members only inside their own class (shown as + and − in UML). Making attributes private enforces encapsulation.",
+      "q": "Explain why attributes are usually declared private.",
+      "a": [
+        "Private attributes cannot be read or changed directly from outside the class;",
+        "so all access goes through methods that can validate changes, protecting the object’s data (encapsulation)."
+      ],
+      "h": 0,
+      "p": "B3-oop",
+      "s": "encapsulation",
+      "fig": "",
+      "k": "private attribute|private attributes|public method|public methods|private method"
+    },
+    "inheritance": {
+      "t": "Inheritance",
+      "f": "",
+      "g": "B3.2",
+      "ib": "An OOP feature where a subclass (child class) automatically gets the attributes and methods of its superclass (parent class) and can add new ones or override existing ones, which reduces duplicated code.",
+      "q": "Outline one advantage of inheritance.",
+      "a": [
+        "Shared attributes and methods are written once in the superclass and reused by every subclass;",
+        "so there is less duplicated code, and a change in the superclass applies to all its subclasses."
+      ],
+      "h": 1,
+      "p": "B3-advanced",
+      "s": "inheritance",
+      "fig": "",
+      "k": "inherit|inherits|inherited"
+    },
+    "polymorphism": {
+      "t": "Polymorphism",
+      "f": "",
+      "g": "B3.2",
+      "ib": "The ability of the same method call to behave differently depending on the object or the arguments: overriding gives each subclass its own version of a method (dynamic), and overloading gives a class several methods with the same name but different parameters (static).",
+      "q": "Explain how polymorphism lets a program call area() on a list containing different kinds of shape.",
+      "a": [
+        "Each subclass (Circle, Square, …) overrides area() with its own formula;",
+        "so the program can call shape.area() on every object and the correct version runs for each object’s class at run time, without checking its type."
+      ],
+      "h": 1,
+      "p": "B3-advanced",
+      "s": "polymorphism",
+      "fig": "",
+      "k": "polymorphic"
     }
   },
   "fc": {
@@ -28913,6 +29492,417 @@ window.CS = {
           "Diffusion model",
           "GAN (one pass)"
         ]
+      },
+      {
+        "i": "A12-22cb58e",
+        "t": "A1.2",
+        "h": 0,
+        "f": "Frame (video) (Frame rate)",
+        "b": "One still image in a video. A video is a sequence of frames shown quickly one after another; the frame rate is the number of frames shown each second (fps), e.g. 30 fps.",
+        "k": "d",
+        "ta": [
+          "Frame",
+          "Frame rate"
+        ]
+      },
+      {
+        "i": "A23-d42b9f8",
+        "t": "A2.3",
+        "h": 0,
+        "f": "Packet (Header, payload, trailer)",
+        "b": "A small unit of data sent across a network. Each packet has a header (source and destination IP addresses, sequence number, protocol, TTL), a payload (one piece of the actual data) and often a trailer (error-checking data such as a checksum).",
+        "k": "d",
+        "ta": [
+          "Packet"
+        ]
+      },
+      {
+        "i": "A21-5fdc5c2",
+        "t": "A2.1",
+        "h": 0,
+        "f": "Frame (network) (Link-layer unit)",
+        "b": "The unit of data sent across one link inside a network. A frame wraps a packet with the source and destination MAC addresses in its header and error-checking data in its trailer; switches read the MAC addresses to forward frames within a LAN.",
+        "k": "d",
+        "ta": [
+          "Frame",
+          "Link-layer unit"
+        ]
+      },
+      {
+        "i": "A21-267740f",
+        "t": "A2.1",
+        "h": 0,
+        "f": "Three-way handshake (SYN, SYN-ACK, ACK)",
+        "b": "The exchange TCP uses to set up a connection before any data is sent: the client sends SYN, the server replies SYN-ACK and the client answers ACK. It agrees the starting sequence numbers so that delivery can be checked and put in order.",
+        "k": "d",
+        "ta": [
+          "Three-way handshake"
+        ]
+      },
+      {
+        "i": "A23-40c597c",
+        "t": "A2.3",
+        "h": 0,
+        "f": "Time to live (TTL) (Hop limit)",
+        "b": "A value in a packet header that sets the maximum number of hops (routers) the packet may pass through. Each router reduces it by 1 and discards the packet at 0, so packets caught in a routing loop do not circulate for ever.",
+        "k": "d",
+        "ta": [
+          "Time to live",
+          "Hop limit"
+        ]
+      },
+      {
+        "i": "A21-5e4e6bc",
+        "t": "A2.1",
+        "h": 0,
+        "f": "URL (Uniform resource locator)",
+        "b": "The full address of a resource on the web, made of the protocol (e.g. https), the domain name (e.g. www.example.org) and the path to the resource (e.g. /notes/index.html).",
+        "k": "d",
+        "ta": [
+          "URL",
+          "Uniform resource locator"
+        ]
+      },
+      {
+        "i": "A21-6060b76",
+        "t": "A2.1",
+        "h": 0,
+        "f": "Domain name",
+        "b": "A human-readable name for a server or website (e.g. example.org) that is easier to remember than an IP address. DNS translates it into the IP address that computers use to connect.",
+        "k": "d",
+        "ta": [
+          "Domain name"
+        ]
+      },
+      {
+        "i": "A22-8a66a80",
+        "t": "A2.2",
+        "h": 0,
+        "f": "Subnet mask (e.g. 255.255.255.0 or /24)",
+        "b": "A 32-bit number that shows which part of an IPv4 address identifies the network and which part identifies the host: 1 bits mark the network part and 0 bits the host part, e.g. 255.255.255.0 (/24).",
+        "k": "d",
+        "ta": [
+          "Subnet mask"
+        ]
+      },
+      {
+        "i": "A24-fb771f6",
+        "t": "A2.4",
+        "h": 0,
+        "f": "Digital signature",
+        "b": "A value made by encrypting a hash (digest) of a message with the sender’s private key. Anyone can check it with the sender’s public key, which proves who sent the message (authentication) and that it was not changed on the way (integrity).",
+        "k": "d",
+        "ta": [
+          "Digital signature"
+        ]
+      },
+      {
+        "i": "A24-29a099a",
+        "t": "A2.4",
+        "h": 1,
+        "f": "Botnet",
+        "b": "A network of devices infected with malware and controlled remotely by an attacker, usually without the owners knowing. Botnets are used to send spam and to launch DDoS attacks.",
+        "k": "d",
+        "ta": [
+          "Botnet"
+        ]
+      },
+      {
+        "i": "A24-abb1e7a",
+        "t": "A2.4",
+        "h": 1,
+        "f": "Virus and worm",
+        "b": "Two kinds of malware that spread. A virus attaches itself to a file or program and spreads when that file is run or shared; a worm is a standalone program that copies itself across a network by itself, exploiting vulnerabilities.",
+        "k": "d",
+        "ta": [
+          "Virus and worm"
+        ]
+      },
+      {
+        "i": "A24-1f49f58",
+        "t": "A2.4",
+        "h": 1,
+        "f": "Brute-force attack",
+        "b": "An attack that tries every possible password or key until the right one is found. Long, complex passwords, locking accounts after failed attempts and multi-factor authentication make it impractical.",
+        "k": "d",
+        "ta": [
+          "Brute-force attack"
+        ]
+      },
+      {
+        "i": "A31-0473131",
+        "t": "A3.1",
+        "h": 0,
+        "f": "Record (Row / tuple)",
+        "b": "One row of a table, holding all the data about a single item (one instance of the entity), e.g. one student. Each record is identified by its primary key.",
+        "k": "d",
+        "ta": [
+          "Record",
+          "Row / tuple"
+        ]
+      },
+      {
+        "i": "A31-26d9439",
+        "t": "A3.1",
+        "h": 0,
+        "f": "Field (Column / attribute)",
+        "b": "One column of a table, holding one attribute of the entity (e.g. DateOfBirth) for every record. Each field has a name and a data type.",
+        "k": "d",
+        "ta": [
+          "Field",
+          "Column / attribute"
+        ]
+      },
+      {
+        "i": "B11-9123b2e",
+        "t": "B1.1",
+        "h": 0,
+        "f": "Algorithm",
+        "b": "A finite, ordered sequence of precise, unambiguous steps that solves a problem or completes a task. It can be written as a flowchart, in pseudocode or in a programming language.",
+        "k": "d",
+        "ta": [
+          "Algorithm"
+        ]
+      },
+      {
+        "i": "B21-10695fe",
+        "t": "B2.1",
+        "h": 0,
+        "f": "Constant",
+        "b": "A named value that is set once and cannot change while the program runs, e.g. VAT_RATE = 0.2. Using a constant makes code easier to read and lets the value be updated in one place.",
+        "k": "d",
+        "ta": [
+          "Constant"
+        ]
+      },
+      {
+        "i": "B21-c8b3f79",
+        "t": "B2.1",
+        "h": 0,
+        "f": "Identifier",
+        "b": "The name given to a variable, constant, function or class so it can be referred to in the code. Good identifiers are meaningful (e.g. totalScore) and follow the language’s rules: no spaces, not starting with a digit, not a reserved word.",
+        "k": "d",
+        "ta": [
+          "Identifier"
+        ]
+      },
+      {
+        "i": "B21-2060e9c",
+        "t": "B2.1",
+        "h": 0,
+        "f": "Assignment",
+        "b": "Storing a value in a variable, e.g. total ← total + mark in pseudocode or total = total + mark in Python and Java. The expression on the right is evaluated first, then its value replaces the variable’s old value.",
+        "k": "d",
+        "ta": [
+          "Assignment"
+        ]
+      },
+      {
+        "i": "B21-5744e35",
+        "t": "B2.1",
+        "h": 0,
+        "f": "Integer division and modulo (DIV and MOD)",
+        "b": "Integer division (DIV; // in Python; / between two ints in Java) gives how many whole times one number goes into another; modulo (MOD; % in both) gives the remainder. For example 17 DIV 5 = 3 and 17 MOD 5 = 2.",
+        "k": "d",
+        "ta": [
+          "Integer division and modulo",
+          "DIV and MOD"
+        ]
+      },
+      {
+        "i": "B21-2c99436",
+        "t": "B2.1",
+        "h": 0,
+        "f": "Mutable and immutable",
+        "b": "A mutable object can be changed after it is created (e.g. a Python list or a Java ArrayList); an immutable one cannot (e.g. strings in Python and Java), so “changing” a string really creates a new string.",
+        "k": "d",
+        "ta": [
+          "Mutable and immutable"
+        ]
+      },
+      {
+        "i": "B21-9d719d6",
+        "t": "B2.1",
+        "h": 0,
+        "f": "Test data (Normal, boundary, erroneous)",
+        "b": "Inputs chosen to check that a program works: normal data (typical valid values), boundary data (values at the edges of the valid range, just inside and just outside) and erroneous data (invalid values that should be rejected).",
+        "k": "d",
+        "ta": [
+          "Test data"
+        ]
+      },
+      {
+        "i": "B22-c9024d0",
+        "t": "B2.2",
+        "h": 0,
+        "f": "Index (Position in a list or string)",
+        "b": "The number that identifies the position of an element in an array, list or string. Indexes usually start at 0, so the last element of a list of length n is at index n − 1.",
+        "k": "d",
+        "ta": [
+          "Index",
+          "Position in a list or string"
+        ]
+      },
+      {
+        "i": "B22-8676184",
+        "t": "B2.2",
+        "h": 0,
+        "f": "Push, pop and peek (Stack operations)",
+        "b": "The stack operations: push adds an item to the top, pop removes and returns the top item, and peek returns the top item without removing it. isEmpty checks whether the stack has no items.",
+        "k": "d",
+        "ta": [
+          "Push, pop and peek",
+          "Stack operations"
+        ]
+      },
+      {
+        "i": "B22-9ba2b47",
+        "t": "B2.2",
+        "h": 0,
+        "f": "Enqueue and dequeue (Queue operations)",
+        "b": "The queue operations: enqueue adds an item at the back (rear) and dequeue removes and returns the item at the front, so items leave in the order they arrived (FIFO).",
+        "k": "d",
+        "ta": [
+          "Enqueue and dequeue",
+          "Queue operations"
+        ]
+      },
+      {
+        "i": "B23-8b6cda4",
+        "t": "B2.3",
+        "h": 0,
+        "f": "Parameter",
+        "b": "A variable named in a function’s definition that receives a value when the function is called, e.g. width and height in def area(width, height).",
+        "k": "d",
+        "ta": [
+          "Parameter"
+        ]
+      },
+      {
+        "i": "B23-d40aa1b",
+        "t": "B2.3",
+        "h": 0,
+        "f": "Argument",
+        "b": "The actual value passed to a function when it is called, e.g. 4 and 5 in area(4, 5). Each argument is copied into the matching parameter, in order.",
+        "k": "d",
+        "ta": [
+          "Argument"
+        ]
+      },
+      {
+        "i": "B23-bf55740",
+        "t": "B2.3",
+        "h": 0,
+        "f": "Return value",
+        "b": "The value a function sends back to the code that called it, using return; the call can then be used in an expression, e.g. total = add(3, 4). A procedure (a void method in Java) returns no value.",
+        "k": "d",
+        "ta": [
+          "Return value"
+        ]
+      },
+      {
+        "i": "B23-a6fd399",
+        "t": "B2.3",
+        "h": 0,
+        "f": "Nested loop",
+        "b": "A loop inside another loop. The inner loop runs completely for every single pass of the outer loop, so n outer passes with m inner passes run the inner body n × m times (e.g. visiting every cell of a 2D array).",
+        "k": "d",
+        "ta": [
+          "Nested loop"
+        ]
+      },
+      {
+        "i": "B23-2551224",
+        "t": "B2.3",
+        "h": 0,
+        "f": "Counter and running total (Accumulator variable)",
+        "b": "Two common loop variables, both set to 0 before the loop: a counter goes up by 1 each time something happens (count = count + 1), while a running total, or accumulator, adds each value to a sum (total = total + value).",
+        "k": "d",
+        "ta": [
+          "Counter and running total",
+          "Accumulator variable"
+        ]
+      },
+      {
+        "i": "B23-c7386e5",
+        "t": "B2.3",
+        "h": 0,
+        "f": "Sentinel value (Rogue value)",
+        "b": "A special input value that signals the end of the data and stops a loop, e.g. entering −1 to stop entering marks. It must be a value that can never be genuine data.",
+        "k": "d",
+        "ta": [
+          "Sentinel value",
+          "Rogue value"
+        ]
+      },
+      {
+        "i": "B23-d7ae643",
+        "t": "B2.3",
+        "h": 0,
+        "f": "Flag (Boolean flag)",
+        "b": "A Boolean variable that records whether something has happened, e.g. found = False before a search and found = True when the item is found. It is checked during or after a loop to decide what to do next.",
+        "k": "d",
+        "ta": [
+          "Flag",
+          "Boolean flag"
+        ]
+      },
+      {
+        "i": "B23-1347b02",
+        "t": "B2.3",
+        "h": 0,
+        "f": "Pre-condition and post-condition loops (while vs do … while)",
+        "b": "A pre-condition loop (while) tests its condition before each pass, so its body may run zero times. A post-condition loop (do … while in Java, REPEAT … UNTIL in pseudocode) tests after each pass, so its body always runs at least once.",
+        "k": "d",
+        "ta": [
+          "Pre-condition and post-condition loops"
+        ]
+      },
+      {
+        "i": "B31-f8b7cfb",
+        "t": "B3.1",
+        "h": 0,
+        "f": "self / this (Reference to the current object)",
+        "b": "A reference to the current object inside its own methods (self in Python, this in Java), used to reach that object’s attributes and methods, e.g. self.name = name in a constructor.",
+        "k": "d",
+        "ta": [
+          "self",
+          "this"
+        ]
+      },
+      {
+        "i": "B31-4ff85a3",
+        "t": "B3.1",
+        "h": 0,
+        "f": "Public and private (Access modifiers)",
+        "b": "Access modifiers that control where an attribute or method can be used: public members can be used from any class, private members only inside their own class (shown as + and − in UML). Making attributes private enforces encapsulation.",
+        "k": "d",
+        "ta": [
+          "Public and private",
+          "Access modifiers"
+        ]
+      },
+      {
+        "i": "B32-88244f7",
+        "t": "B3.2",
+        "h": 1,
+        "f": "Inheritance",
+        "b": "An OOP feature where a subclass (child class) automatically gets the attributes and methods of its superclass (parent class) and can add new ones or override existing ones, which reduces duplicated code.",
+        "k": "d",
+        "ta": [
+          "Inheritance"
+        ]
+      },
+      {
+        "i": "B32-161c43b",
+        "t": "B3.2",
+        "h": 1,
+        "f": "Polymorphism",
+        "b": "The ability of the same method call to behave differently depending on the object or the arguments: overriding gives each subclass its own version of a method (dynamic), and overloading gives a class several methods with the same name but different parameters (static).",
+        "k": "d",
+        "ta": [
+          "Polymorphism"
+        ]
       }
     ]
   },
@@ -29306,7 +30296,7 @@ window.CS = {
       "id": "821b7b5b8",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "address bus|data bus",
+      "f": "buses|memory address register|memory data register",
       "fg": 1
     },
     {
@@ -29324,7 +30314,7 @@ window.CS = {
       "id": "aa9e9435e",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "control unit",
+      "f": "control unit|buses|fetch–decode–execute cycle",
       "fg": 1
     },
     {
@@ -29381,7 +30371,7 @@ window.CS = {
       "id": "2b0893f4d",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "fetch stage|fetch decode|decode execute",
+      "f": "fetch–decode–execute cycle|fetch stage|memory address register",
       "fg": 1
     },
     {
@@ -29400,7 +30390,8 @@ window.CS = {
       "id": "ee379864c",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "stag|decod|addres"
+      "f": "opcode|accumulator|memory address register",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29418,7 +30409,8 @@ window.CS = {
       "id": "2bef41097",
       "u": "A1",
       "n": "A1-hardware.pipeline",
-      "f": "pipelin|increas|stag"
+      "f": "Pipelining|write-back|throughput",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29455,7 +30447,7 @@ window.CS = {
       "id": "a9c5c780b",
       "u": "A1",
       "n": "A1-hardware.pipeline",
-      "f": "clock cycles|stage pipeline|without pipelining",
+      "f": "Pipelining",
       "fg": 1
     },
     {
@@ -29475,7 +30467,8 @@ window.CS = {
       "id": "a1c2ed4ce",
       "u": "A1",
       "n": "A1-hardware.gpu",
-      "f": "graphic|thousand|sequential"
+      "f": "CPU|graphics processing unit|parallel processing",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29513,7 +30506,7 @@ window.CS = {
       "id": "a196de92e",
       "u": "A1",
       "n": "A1-hardware.cpugpu",
-      "f": "design philosophies",
+      "f": "CPU|GPU|throughput",
       "fg": 1
     },
     {
@@ -29552,7 +30545,7 @@ window.CS = {
       "id": "a77c49879",
       "u": "A1",
       "n": "A1-hardware.cpugpu",
-      "f": "machine learning",
+      "f": "CPU|GPU|machine learning",
       "fg": 1
     },
     {
@@ -29571,7 +30564,8 @@ window.CS = {
       "id": "92c99cd4f",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "stor|recent|hit"
+      "f": "CPU|cache|RAM",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29590,7 +30584,8 @@ window.CS = {
       "id": "3cbd64090",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "bios|boot|firmware"
+      "f": "RAM|ROM|BIOS",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29608,7 +30603,8 @@ window.CS = {
       "id": "94576abe5",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "knock|ssds|robust"
+      "f": "SSD",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29627,7 +30623,7 @@ window.CS = {
       "id": "35aa60814",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "hard disk",
+      "f": "hard disk|SSD|flash memory",
       "fg": 1
     },
     {
@@ -29645,7 +30641,7 @@ window.CS = {
       "id": "811d4cfea",
       "u": "A1",
       "n": "A1-hardware.compression",
-      "f": "lossless compression",
+      "f": "Compression|lossless compression|lossy compression",
       "fg": 1
     },
     {
@@ -29684,7 +30680,7 @@ window.CS = {
       "id": "a75f4a12e",
       "u": "A1",
       "n": "A1-hardware.compression",
-      "f": "lossy compression",
+      "f": "Compression|lossy compression|lossless compression",
       "fg": 1
     },
     {
@@ -29704,7 +30700,8 @@ window.CS = {
       "id": "19a663577",
       "u": "A1",
       "n": "A1-hardware.cloud",
-      "f": "manag|updat|stor"
+      "f": "SaaS|internet",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29723,7 +30720,7 @@ window.CS = {
       "id": "f3c76752c",
       "u": "A1",
       "n": "A1-hardware.cloud",
-      "f": "service saas|service iaas",
+      "f": "SaaS|IaaS|operating system",
       "fg": 1
     },
     {
@@ -29761,7 +30758,8 @@ window.CS = {
       "id": "2d830b7e2",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "easi|hexadecimal|hex"
+      "f": "binary|Hexadecimal|bit",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29777,7 +30775,8 @@ window.CS = {
       "id": "1a400a4dd",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "valu|represent|bits"
+      "f": "bit",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29794,7 +30793,8 @@ window.CS = {
       "id": "482b45997",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "hexadecimal|denary|value"
+      "f": "denary|Hexadecimal",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29811,7 +30811,8 @@ window.CS = {
       "id": "65de5eaff",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "easi|hexadecimal|stand"
+      "f": "Hexadecimal|MAC addresses|bit",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29829,7 +30830,8 @@ window.CS = {
       "id": "d55698b52",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "alphabet|stor|unicode"
+      "f": "character set|bits",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29848,7 +30850,8 @@ window.CS = {
       "id": "ab75f777e",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "stor|sampl|measur"
+      "f": "binary|sample rate|bits",
+      "fg": 1
     },
     {
       "k": "model",
@@ -29866,7 +30869,8 @@ window.CS = {
       "id": "5245c6c52",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "agre|chang|parity"
+      "f": "bits",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -29883,7 +30887,7 @@ window.CS = {
       "id": "644ce2e8e",
       "u": "A1",
       "n": "A1-data-logic.gates",
-      "f": "xor gate",
+      "f": "OR|XOR",
       "fg": 1
     },
     {
@@ -29900,7 +30904,7 @@ window.CS = {
       "id": "7d4e23af6",
       "u": "A1",
       "n": "A1-data-logic.gates",
-      "f": "logic gate",
+      "f": "logic gates",
       "fg": 1
     },
     {
@@ -29918,7 +30922,7 @@ window.CS = {
       "id": "ffa101812",
       "u": "A1",
       "n": "A1-data-logic.gates",
-      "f": "logic gates",
+      "f": "logic gates|ALU|bits",
       "fg": 1
     },
     {
@@ -29974,7 +30978,7 @@ window.CS = {
       "id": "c9e5e6e08",
       "u": "A1",
       "n": "A1-data-logic.kmap",
-      "f": "karnaugh map",
+      "f": "Karnaugh map|Boolean expressions|truth table",
       "fg": 1
     },
     {
@@ -29993,7 +30997,7 @@ window.CS = {
       "id": "cfa754344",
       "u": "A1",
       "n": "A1-data-logic.diagrams",
-      "f": "logic diagram",
+      "f": "logic diagram|AND|OR",
       "fg": 1
     },
     {
@@ -30033,7 +31037,7 @@ window.CS = {
       "id": "02e96f883",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "operating system",
+      "f": "operating system|device drivers|Device management",
       "fg": 1
     },
     {
@@ -30052,7 +31056,7 @@ window.CS = {
       "id": "f94ff837d",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "operating system",
+      "f": "operating system|abstraction|CPU",
       "fg": 1
     },
     {
@@ -30070,7 +31074,7 @@ window.CS = {
       "id": "682f4c16a",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "memory management|operating system",
+      "f": "operating system|Memory management",
       "fg": 1
     },
     {
@@ -30125,7 +31129,7 @@ window.CS = {
       "id": "20050088c",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "priority scheduling",
+      "f": "Scheduling|Priority scheduling|starvation",
       "fg": 1
     },
     {
@@ -30145,7 +31149,7 @@ window.CS = {
       "id": "3ab59aef9",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "served fcfs|round robin",
+      "f": "Scheduling|FCFS|Round robin",
       "fg": 1
     },
     {
@@ -30163,7 +31167,7 @@ window.CS = {
       "id": "41dbfcba1",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "prevents starvation|priority scheduling",
+      "f": "Scheduling|Priority scheduling|starvation",
       "fg": 1
     },
     {
@@ -30183,7 +31187,8 @@ window.CS = {
       "id": "6ca143582",
       "u": "A1",
       "n": "A1-os.interrupts",
-      "f": "handl|execut|restor"
+      "f": "CPU|interrupts|ISR",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30202,7 +31207,7 @@ window.CS = {
       "id": "757df7683",
       "u": "A1",
       "n": "A1-os.interrupts",
-      "f": "key presses",
+      "f": "polling|interrupts|CPU",
       "fg": 1
     },
     {
@@ -30221,7 +31226,7 @@ window.CS = {
       "id": "ddb0030a4",
       "u": "A1",
       "n": "A1-os.interrupts",
-      "f": "embedded system",
+      "f": "polling|interrupts|Embedded system",
       "fg": 1
     },
     {
@@ -30240,7 +31245,7 @@ window.CS = {
       "id": "2b8e3f546",
       "u": "A1",
       "n": "A1-os.contention",
-      "f": "resource contention",
+      "f": "OS|resource contention|mutual exclusion",
       "fg": 1
     },
     {
@@ -30259,7 +31264,8 @@ window.CS = {
       "id": "3361c4067",
       "u": "A1",
       "n": "A1-os.contention",
-      "f": "proces|allocat|proce"
+      "f": "Deadlock",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30278,7 +31284,8 @@ window.CS = {
       "id": "54ba1ee83",
       "u": "A1",
       "n": "A1-os.contention",
-      "f": "resourc|cycl|other"
+      "f": "OS|Deadlock",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30296,7 +31303,7 @@ window.CS = {
       "id": "c75115f36",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "closed loop|control system",
+      "f": "control system|Feedback|open-loop",
       "fg": 1
     },
     {
@@ -30316,7 +31323,7 @@ window.CS = {
       "id": "c3876872f",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "closed loop|control system",
+      "f": "control system|open-loop|Actuators",
       "fg": 1
     },
     {
@@ -30336,7 +31343,8 @@ window.CS = {
       "id": "060120baf",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "proximity|doorway|actuator"
+      "f": "Sensors|Actuators",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30389,7 +31397,8 @@ window.CS = {
       "id": "bda7fe9dd",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "hexadecimal|denary|binary"
+      "f": "binary|denary|Hexadecimal",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30442,7 +31451,8 @@ window.CS = {
       "id": "42a75d503",
       "u": "A1",
       "n": "A1-os.interrupts",
-      "f": "wast|poll|interrupt"
+      "f": "polling|interrupts|CPU",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30534,7 +31544,7 @@ window.CS = {
       "id": "64878fcfc",
       "u": "A1",
       "n": "A1-translation.compilers",
-      "f": "compiler translates",
+      "f": "compiler|machine code|source code",
       "fg": 1
     },
     {
@@ -30554,7 +31564,8 @@ window.CS = {
       "id": "c842edf94",
       "u": "A1",
       "n": "A1-translation.compilers",
-      "f": "execut|translat|wherea"
+      "f": "compiler|machine code|source code",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30572,7 +31583,7 @@ window.CS = {
       "id": "0e5972847",
       "u": "A1",
       "n": "A1-translation.jit",
-      "f": "time jit|jit compilation",
+      "f": "just-in-time|bytecode|Compilers",
       "fg": 1
     },
     {
@@ -30609,7 +31620,7 @@ window.CS = {
       "id": "2aa8b2218",
       "u": "A1",
       "n": "A1-translation.jit",
-      "f": "jit compilation",
+      "f": "just-in-time|Compilers|machine code",
       "fg": 1
     },
     {
@@ -30627,7 +31638,8 @@ window.CS = {
       "id": "419abd56e",
       "u": "A1",
       "n": "A1-translation.scenarios",
-      "f": "execut|translat|immediate"
+      "f": "source code",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30646,7 +31658,8 @@ window.CS = {
       "id": "e86e6f529",
       "u": "A1",
       "n": "A1-translation.scenarios",
-      "f": "phon|compil|chang"
+      "f": "compilers|bytecode|machine code",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30734,8 +31747,9 @@ window.CS = {
       "c": "Suggest",
       "id": "e4f795ce9",
       "u": "A1",
-      "n": "A1-translation.scenarios",
-      "f": "ahead|timing|predictable"
+      "n": "A1-translation.compilers",
+      "f": "compiler|machine code",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -30752,7 +31766,7 @@ window.CS = {
       "id": "24e39238e",
       "u": "A1",
       "n": "A1-translation.jit",
-      "f": "jit compilation|time compilation",
+      "f": "just-in-time|bytecode|machine code",
       "fg": 1
     },
     {
@@ -30771,7 +31785,8 @@ window.CS = {
       "id": "072a838bc",
       "u": "A2",
       "n": "A2-basics.types",
-      "f": "creat|acros|acces"
+      "f": "VPN|LAN|encrypted",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30788,7 +31803,8 @@ window.CS = {
       "id": "47094e8e4",
       "u": "A2",
       "n": "A2-basics.types",
-      "f": "devic|campu|citi"
+      "f": "LAN|WAN|internet",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30824,7 +31840,7 @@ window.CS = {
       "id": "644953af5",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "edge computing|self driving|driving cars",
+      "f": "Edge computing|latency",
       "fg": 1
     },
     {
@@ -30844,7 +31860,7 @@ window.CS = {
       "id": "a5d223528",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "self driving|driving car|edge computing",
+      "f": "Cloud|Edge computing|processing power",
       "fg": 1
     },
     {
@@ -30863,7 +31879,7 @@ window.CS = {
       "id": "b72bcf314",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "distributed systems|cryptocurrency blockchain",
+      "f": "distributed system|single point of failure",
       "fg": 1
     },
     {
@@ -30882,7 +31898,7 @@ window.CS = {
       "id": "fd8edf4bb",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "switch forwards|forwards data",
+      "f": "LAN|switch|MAC address",
       "fg": 1
     },
     {
@@ -30901,7 +31917,8 @@ window.CS = {
       "id": "1ce4062a2",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "addres|rout|acros"
+      "f": "router|routing table|LAN",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30918,7 +31935,8 @@ window.CS = {
       "id": "0c8e4f645",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "devic|fram|mac"
+      "f": "switch|router|frames",
+      "fg": 1
     },
     {
       "k": "model",
@@ -30935,7 +31953,8 @@ window.CS = {
       "id": "37d13b2ed",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "fram|tcp|mac"
+      "f": "switch|router|TCP",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -30953,7 +31972,7 @@ window.CS = {
       "id": "95c99a08f",
       "u": "A2",
       "n": "A2-basics.tcp",
-      "f": "web pages",
+      "f": "TCP|ACK|latency",
       "fg": 1
     },
     {
@@ -30973,7 +31992,8 @@ window.CS = {
       "id": "4b9770da2",
       "u": "A2",
       "n": "A2-basics.tcp",
-      "f": "orient|connectionles|guarante"
+      "f": "TCP|UDP|handshake",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31009,7 +32029,8 @@ window.CS = {
       "id": "f0c9c2635",
       "u": "A2",
       "n": "A2-basics.http",
-      "f": "addres|cach|dns"
+      "f": "DNS|domain names|web servers",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31066,7 +32087,8 @@ window.CS = {
       "id": "385be9a08",
       "u": "A2",
       "n": "A2-basics.layers",
-      "f": "encapsulat|checksum|segment"
+      "f": "TCP|TCP/IP model|encapsulation",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31103,7 +32125,8 @@ window.CS = {
       "id": "0b6d67930",
       "u": "A2",
       "n": "A2-basics.layers",
-      "f": "communicat|other|interfac"
+      "f": "Ethernet|Wi-Fi|protocols",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -31122,7 +32145,7 @@ window.CS = {
       "id": "5ec82681f",
       "u": "A2",
       "n": "A2-architecture.topologies",
-      "f": "star topology",
+      "f": "topology|star|single point of failure",
       "fg": 1
     },
     {
@@ -31141,7 +32164,7 @@ window.CS = {
       "id": "d0369055f",
       "u": "A2",
       "n": "A2-architecture.topologies",
-      "f": "star topology",
+      "f": "topology|star|switch",
       "fg": 1
     },
     {
@@ -31160,7 +32183,7 @@ window.CS = {
       "id": "f0d545eb7",
       "u": "A2",
       "n": "A2-architecture.topologies",
-      "f": "mesh topology",
+      "f": "topology|mesh|single point of failure",
       "fg": 1
     },
     {
@@ -31180,7 +32203,7 @@ window.CS = {
       "id": "239dbf41e",
       "u": "A2",
       "n": "A2-architecture.servers",
-      "f": "proxy server",
+      "f": "server|Proxy server|cache",
       "fg": 1
     },
     {
@@ -31199,7 +32222,7 @@ window.CS = {
       "id": "40528a47e",
       "u": "A2",
       "n": "A2-architecture.servers",
-      "f": "proxy server",
+      "f": "server|Proxy server|Web server",
       "fg": 1
     },
     {
@@ -31238,7 +32261,7 @@ window.CS = {
       "id": "65ad8730f",
       "u": "A2",
       "n": "A2-architecture.models",
-      "f": "client server",
+      "f": "client–server|peer-to-peer|server",
       "fg": 1
     },
     {
@@ -31256,7 +32279,7 @@ window.CS = {
       "id": "00f59c251",
       "u": "A2",
       "n": "A2-architecture.models",
-      "f": "online banking",
+      "f": "peer-to-peer|server",
       "fg": 1
     },
     {
@@ -31294,7 +32317,7 @@ window.CS = {
       "id": "96e2d5ce3",
       "u": "A2",
       "n": "A2-architecture.subnetting",
-      "f": "address 192|192 168",
+      "f": "host",
       "fg": 1
     },
     {
@@ -31332,7 +32355,8 @@ window.CS = {
       "id": "5a636d83d",
       "u": "A2",
       "n": "A2-architecture.vlans",
-      "f": "devic|cabl|vlan"
+      "f": "VLANs|switches",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31370,7 +32394,8 @@ window.CS = {
       "id": "b92bb97ec",
       "u": "A2",
       "n": "A2-transmission-security.ip",
-      "f": "devic|addres|nat"
+      "f": "NAT|Private|IP address",
+      "fg": 1
     },
     {
       "k": "model",
@@ -31428,7 +32453,7 @@ window.CS = {
       "id": "900244a14",
       "u": "A2",
       "n": "A2-transmission-security.media",
-      "f": "copper cable|fibre optic|optic cable",
+      "f": "copper|Fibre-optic cable|bandwidth",
       "fg": 1
     },
     {
@@ -31448,7 +32473,7 @@ window.CS = {
       "id": "0f9363880",
       "u": "A2",
       "n": "A2-transmission-security.media",
-      "f": "fibre optic|optic cable|twisted pair",
+      "f": "copper|Fibre-optic cable|bandwidth",
       "fg": 1
     },
     {
@@ -31468,7 +32493,7 @@ window.CS = {
       "id": "b1f627a02",
       "u": "A2",
       "n": "A2-transmission-security.packets",
-      "f": "packet switching",
+      "f": "internet|Packet switching|packets",
       "fg": 1
     },
     {
@@ -31507,7 +32532,7 @@ window.CS = {
       "id": "a91bcac8b",
       "u": "A2",
       "n": "A2-transmission-security.routing",
-      "f": "dynamic routing",
+      "f": "internet|dynamic routing|Routers",
       "fg": 1
     },
     {
@@ -31545,7 +32570,7 @@ window.CS = {
       "id": "1324d20f9",
       "u": "A2",
       "n": "A2-transmission-security.routing",
-      "f": "static routing",
+      "f": "static routing|dynamic routing|bandwidth",
       "fg": 1
     },
     {
@@ -31564,7 +32589,7 @@ window.CS = {
       "id": "364afaa1a",
       "u": "A2",
       "n": "A2-transmission-security.firewalls",
-      "f": "firewall protects",
+      "f": "firewall|packet|protocols",
       "fg": 1
     },
     {
@@ -31605,7 +32630,7 @@ window.CS = {
       "id": "4be3205a7",
       "u": "A2",
       "n": "A2-transmission-security.threats",
-      "f": "distributed denial|service ddos|ddos attack",
+      "f": "DDoS|botnet|malware",
       "fg": 1
     },
     {
@@ -31643,7 +32668,7 @@ window.CS = {
       "id": "276057af7",
       "u": "A2",
       "n": "A2-transmission-security.threats",
-      "f": "sql injection",
+      "f": "SQL|SQL injection|database query",
       "fg": 1
     },
     {
@@ -31661,7 +32686,7 @@ window.CS = {
       "id": "83f2f36fe",
       "u": "A2",
       "n": "A2-transmission-security.defences",
-      "f": "multi factor|factor authentication|password alone",
+      "f": "multi-factor authentication|authentication",
       "fg": 1
     },
     {
@@ -31679,7 +32704,7 @@ window.CS = {
       "id": "2f0b27acd",
       "u": "A2",
       "n": "A2-transmission-security.defences",
-      "f": "intrusion detection|detection system|intrusion prevention",
+      "f": "IDS",
       "fg": 1
     },
     {
@@ -31699,7 +32724,7 @@ window.CS = {
       "id": "dcb4466e5",
       "u": "A2",
       "n": "A2-transmission-security.defences",
-      "f": "multi factor|factor authentication|authentication mfa",
+      "f": "multi-factor authentication|authentication|Phishing",
       "fg": 1
     },
     {
@@ -31737,7 +32762,7 @@ window.CS = {
       "id": "b2cb98742",
       "u": "A2",
       "n": "A2-transmission-security.encryption",
-      "f": "asymmetric encryption|secret key",
+      "f": "Encryption|Asymmetric|private keys",
       "fg": 1
     },
     {
@@ -31940,7 +32965,7 @@ window.CS = {
       "id": "0b7078e46",
       "u": "A2",
       "n": "A2-basics.http",
-      "f": "dhcp server",
+      "f": "DHCP|subnet mask|DNS",
       "fg": 1
     },
     {
@@ -31958,7 +32983,7 @@ window.CS = {
       "id": "36aa1cd74",
       "u": "A2",
       "n": "A2-transmission-security.routing",
-      "f": "static routing|large network",
+      "f": "static routing|Routers",
       "fg": 1
     },
     {
@@ -31977,7 +33002,8 @@ window.CS = {
       "id": "b1512ff2e",
       "u": "A2",
       "n": "A2-transmission-security.threats",
-      "f": "phish|attacker|username"
+      "f": "Phishing",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -32014,7 +33040,7 @@ window.CS = {
       "id": "61c6b36f0",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "relational database",
+      "f": "database|relational databases|database management system",
       "fg": 1
     },
     {
@@ -32034,7 +33060,7 @@ window.CS = {
       "id": "fad5dfb93",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "relational database",
+      "f": "database|relational databases|records",
       "fg": 1
     },
     {
@@ -32052,7 +33078,7 @@ window.CS = {
       "id": "7ede44383",
       "u": "A3",
       "n": "A3-design.keys",
-      "f": "foreign key|relational database",
+      "f": "databases|foreign key|primary key",
       "fg": 1
     },
     {
@@ -32069,7 +33095,7 @@ window.CS = {
       "id": "8521e4ad9",
       "u": "A3",
       "n": "A3-design.keys",
-      "f": "primary key",
+      "f": "primary key|field",
       "fg": 1
     },
     {
@@ -32107,7 +33133,7 @@ window.CS = {
       "id": "29635ffbf",
       "u": "A3",
       "n": "A3-design.schemas",
-      "f": "conceptual schema|logical schema",
+      "f": "database|ERD|data types",
       "fg": 1
     },
     {
@@ -32145,7 +33171,7 @@ window.CS = {
       "id": "d7f82b390",
       "u": "A3",
       "n": "A3-design.erd",
-      "f": "many courses|many students",
+      "f": "entity relationship diagram|many-to-many relationship|Cardinality",
       "fg": 1
     },
     {
@@ -32163,7 +33189,7 @@ window.CS = {
       "id": "d056d50c3",
       "u": "A3",
       "n": "A3-design.erd",
-      "f": "fields",
+      "f": "many relationship|relational database",
       "fg": 1
     },
     {
@@ -32181,7 +33207,7 @@ window.CS = {
       "id": "dd5df58d2",
       "u": "A3",
       "n": "A3-design.erd",
-      "f": "entity relationship|relationship diagram",
+      "f": "entity relationship diagram|Cardinality|entities",
       "fg": 1
     },
     {
@@ -32199,7 +33225,7 @@ window.CS = {
       "id": "697dfbb66",
       "u": "A3",
       "n": "A3-design.types",
-      "f": "data type|phone number",
+      "f": "data type|field",
       "fg": 1
     },
     {
@@ -32236,7 +33262,7 @@ window.CS = {
       "id": "b1ed98dac",
       "u": "A3",
       "n": "A3-design.normalisation",
-      "f": "order orderid|orderid date",
+      "f": "3NF|transitive dependency|foreign key",
       "fg": 1
     },
     {
@@ -32292,7 +33318,8 @@ window.CS = {
       "id": "c46c3df4a",
       "u": "A3",
       "n": "A3-design.denormalisation",
-      "f": "queri|updat|anomali"
+      "f": "databases|Denormalisation|update anomaly",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32330,7 +33357,7 @@ window.CS = {
       "id": "67133a7ba",
       "u": "A3",
       "n": "A3-sql.ddl",
-      "f": "primary key",
+      "f": "SQL|DDL",
       "fg": 1
     },
     {
@@ -32348,7 +33375,7 @@ window.CS = {
       "id": "b7c3b57f2",
       "u": "A3",
       "n": "A3-sql.ddl",
-      "f": "data definition|definition language|language ddl",
+      "f": "SQL|DDL|DML",
       "fg": 1
     },
     {
@@ -32384,7 +33411,7 @@ window.CS = {
       "id": "6d1b8e91d",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "sql query|student studentid|studentid name",
+      "f": "SQL|INNER JOIN",
       "fg": 1
     },
     {
@@ -32402,7 +33429,8 @@ window.CS = {
       "id": "bc9a2f053",
       "u": "A3",
       "n": "A3-sql.change",
-      "f": "studentid|sql|year"
+      "f": "SQL",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32440,7 +33468,8 @@ window.CS = {
       "id": "8c46a3076",
       "u": "A3",
       "n": "A3-sql.aggregates",
-      "f": "desc|avg|highest"
+      "f": "ORDER BY|GROUP BY|Aggregate functions",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32478,7 +33507,8 @@ window.CS = {
       "id": "2c4cc300f",
       "u": "A3",
       "n": "A3-sql.views",
-      "f": "queri|acces|tabl"
+      "f": "DBMS|view",
+      "fg": 1
     },
     {
       "k": "model",
@@ -32516,7 +33546,7 @@ window.CS = {
       "id": "45a43584a",
       "u": "A3",
       "n": "A3-sql.transactions",
-      "f": "acid properties",
+      "f": "databases|transaction|ACID",
       "fg": 1
     },
     {
@@ -32554,7 +33584,7 @@ window.CS = {
       "id": "7ffe36fdf",
       "u": "A3",
       "n": "A3-design.keys",
-      "f": "primary key|foreign key|field",
+      "f": "primary key|foreign key",
       "fg": 1
     },
     {
@@ -32590,7 +33620,7 @@ window.CS = {
       "id": "2f9c3d469",
       "u": "A3",
       "n": "A3-design.normalisation",
-      "f": "update anomaly",
+      "f": "anomalies|record",
       "fg": 1
     },
     {
@@ -32738,7 +33768,7 @@ window.CS = {
       "id": "d127a7c20",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "social media|relational database",
+      "f": "database|Relational databases|NoSQL",
       "fg": 1
     },
     {
@@ -32757,7 +33787,7 @@ window.CS = {
       "id": "40e524e7b",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "ride hailing|spatial database",
+      "f": "database|Spatial databases",
       "fg": 1
     },
     {
@@ -32777,7 +33807,7 @@ window.CS = {
       "id": "6f71e0be1",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "data warehouse",
+      "f": "data warehouse|ETL|append-only",
       "fg": 1
     },
     {
@@ -32797,7 +33827,7 @@ window.CS = {
       "id": "fcab9fb98",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "data warehouse",
+      "f": "databases|data warehouse|ETL",
       "fg": 1
     },
     {
@@ -32817,7 +33847,7 @@ window.CS = {
       "id": "b5706bd69",
       "u": "A3",
       "n": "A3-alternative.olap",
-      "f": "data mining",
+      "f": "data mining|Clustering",
       "fg": 1
     },
     {
@@ -32837,7 +33867,7 @@ window.CS = {
       "id": "aec8e70d4",
       "u": "A3",
       "n": "A3-alternative.olap",
-      "f": "data mining",
+      "f": "data mining|Clustering",
       "fg": 1
     },
     {
@@ -32857,7 +33887,7 @@ window.CS = {
       "id": "f22c63b0f",
       "u": "A3",
       "n": "A3-alternative.distributed",
-      "f": "distributed database",
+      "f": "database|distributed database|Replication",
       "fg": 1
     },
     {
@@ -32877,7 +33907,7 @@ window.CS = {
       "id": "fab2481c9",
       "u": "A3",
       "n": "A3-alternative.distributed",
-      "f": "distributed database",
+      "f": "database|distributed database|Replication",
       "fg": 1
     },
     {
@@ -32987,7 +34017,7 @@ window.CS = {
       "id": "c2892d6cd",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "social media|graph database",
+      "f": "database|Graph databases",
       "fg": 1
     },
     {
@@ -33006,7 +34036,7 @@ window.CS = {
       "id": "fc99662c8",
       "u": "A4",
       "n": "A4-machine-learning.what",
-      "f": "machine learning",
+      "f": "Machine learning|training data",
       "fg": 1
     },
     {
@@ -33024,7 +34054,7 @@ window.CS = {
       "id": "25a9782a7",
       "u": "A4",
       "n": "A4-machine-learning.what",
-      "f": "artificial intelligence|machine learning",
+      "f": "Artificial intelligence|Machine learning",
       "fg": 1
     },
     {
@@ -33043,7 +34073,7 @@ window.CS = {
       "id": "6db8ef54a",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "supervised learning|email spam",
+      "f": "supervised learning|training data",
       "fg": 1
     },
     {
@@ -33062,7 +34092,7 @@ window.CS = {
       "id": "366e8acb1",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "supervised learning",
+      "f": "supervised learning|labelled data|training data",
       "fg": 1
     },
     {
@@ -33118,7 +34148,7 @@ window.CS = {
       "id": "887149a02",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "machine learning|market basket|basket analysis",
+      "f": "Machine learning|natural language processing|unsupervised learning",
       "fg": 1
     },
     {
@@ -33138,7 +34168,7 @@ window.CS = {
       "id": "b6fa0debe",
       "u": "A4",
       "n": "A4-machine-learning.hardware",
-      "f": "large language|language model",
+      "f": "Training|TPUs|processing power",
       "fg": 1
     },
     {
@@ -33158,7 +34188,8 @@ window.CS = {
       "id": "2825d7151",
       "u": "A4",
       "n": "A4-machine-learning.hardware",
-      "f": "runn|give|massive"
+      "f": "Training|TPUs|RAM",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33176,7 +34207,7 @@ window.CS = {
       "id": "46d11f488",
       "u": "A4",
       "n": "A4-ethics.ethics",
-      "f": "machine learning",
+      "f": "Machine learning|training data",
       "fg": 1
     },
     {
@@ -33256,7 +34287,7 @@ window.CS = {
       "id": "7c5c46fe0",
       "u": "A4",
       "n": "A4-ethics.daily",
-      "f": "machine learning|digital divide",
+      "f": "Machine learning|digital divide",
       "fg": 1
     },
     {
@@ -33368,7 +34399,7 @@ window.CS = {
       "id": "90056378c",
       "u": "A4",
       "n": "A4-ethics.ethics",
-      "f": "machine learning",
+      "f": "Machine learning|model|Bias",
       "fg": 1
     },
     {
@@ -33405,7 +34436,7 @@ window.CS = {
       "id": "44ff035ac",
       "u": "A4",
       "n": "A4-data.cleaning",
-      "f": "data cleaning|machine learning",
+      "f": "machine learning|model|missing values",
       "fg": 1
     },
     {
@@ -33446,7 +34477,7 @@ window.CS = {
       "id": "6eb4702c8",
       "u": "A4",
       "n": "A4-data.features",
-      "f": "embedded methods|feature selection",
+      "f": "Feature selection|decision tree",
       "fg": 1
     },
     {
@@ -33466,7 +34497,7 @@ window.CS = {
       "id": "d10e67ef5",
       "u": "A4",
       "n": "A4-data.features",
-      "f": "wrapper methods|feature selection",
+      "f": "Feature selection",
       "fg": 1
     },
     {
@@ -33486,7 +34517,8 @@ window.CS = {
       "id": "ed8663342",
       "u": "A4",
       "n": "A4-data.dimensions",
-      "f": "featur|sampl|becom"
+      "f": "curse of dimensionality|KNN|Overfitting",
+      "fg": 1
     },
     {
       "k": "model",
@@ -33556,7 +34588,7 @@ window.CS = {
       "id": "12068c909",
       "u": "A4",
       "n": "A4-data.cleaning",
-      "f": "min max",
+      "f": "Normalisation",
       "fg": 1
     },
     {
@@ -33614,7 +34646,7 @@ window.CS = {
       "id": "d611a43f1",
       "u": "A4",
       "n": "A4-models.regression",
-      "f": "linear regression",
+      "f": "Linear regression|training data",
       "fg": 1
     },
     {
@@ -33653,7 +34685,7 @@ window.CS = {
       "id": "954465a9e",
       "u": "A4",
       "n": "A4-models.classify",
-      "f": "nearest neighbours",
+      "f": "KNN|labels",
       "fg": 1
     },
     {
@@ -33692,7 +34724,7 @@ window.CS = {
       "id": "765d91687",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "hyperparameter tuning",
+      "f": "model|Hyperparameters|tree depth",
       "fg": 1
     },
     {
@@ -33712,7 +34744,7 @@ window.CS = {
       "id": "4b176f283",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "training data|data but|test data",
+      "f": "model|training data|test set",
       "fg": 1
     },
     {
@@ -33732,7 +34764,7 @@ window.CS = {
       "id": "1e8587fb7",
       "u": "A4",
       "n": "A4-models.clustering",
-      "f": "means clustering|groups data",
+      "f": "Clustering",
       "fg": 1
     },
     {
@@ -33752,7 +34784,8 @@ window.CS = {
       "id": "da47ed594",
       "u": "A4",
       "n": "A4-models.clustering",
-      "f": "featur|label|spender"
+      "f": "Clustering|labels",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -33770,7 +34803,7 @@ window.CS = {
       "id": "c289d7916",
       "u": "A4",
       "n": "A4-models.association",
-      "f": "association rule|rule learning|crime analysis",
+      "f": "bias",
       "fg": 1
     },
     {
@@ -33806,7 +34839,7 @@ window.CS = {
       "id": "1419ce33a",
       "u": "A4",
       "n": "A4-models.regression",
-      "f": "dependent variable|linear regression",
+      "f": "Linear regression",
       "fg": 1
     },
     {
@@ -33822,8 +34855,9 @@ window.CS = {
       "c": "Predict",
       "id": "e79d4aa29",
       "u": "A4",
-      "n": "A4-models.regression",
-      "f": "equation|regression|model"
+      "n": "A4-models.metrics",
+      "f": "model|regression",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33858,7 +34892,8 @@ window.CS = {
       "id": "e2a6a0d58",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "give|recall|precision"
+      "f": "model",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -33893,7 +34928,7 @@ window.CS = {
       "id": "736045025",
       "u": "A4",
       "n": "A4-models.clustering",
-      "f": "unsupervised learning",
+      "f": "Clustering|labels",
       "fg": 1
     },
     {
@@ -33931,7 +34966,7 @@ window.CS = {
       "id": "66ccc6d0f",
       "u": "A4",
       "n": "A4-advanced.reinforcement",
-      "f": "agent learns|reinforcement learning",
+      "f": "Reinforcement learning",
       "fg": 1
     },
     {
@@ -33972,7 +35007,7 @@ window.CS = {
       "id": "f9f6827fd",
       "u": "A4",
       "n": "A4-advanced.genetic",
-      "f": "genetic algorithm|delivery route|travelling salesperson",
+      "f": "genetic algorithm",
       "fg": 1
     },
     {
@@ -34009,7 +35044,7 @@ window.CS = {
       "id": "8067f2aa1",
       "u": "A4",
       "n": "A4-advanced.ann",
-      "f": "multi layer|artificial neural|neural network",
+      "f": "deep learning|artificial neural network|activation function",
       "fg": 1
     },
     {
@@ -34049,7 +35084,7 @@ window.CS = {
       "id": "ec6dcaf43",
       "u": "A4",
       "n": "A4-advanced.cnn",
-      "f": "convolutional neural|neural network",
+      "f": "neural network|convolutional neural network|pooling",
       "fg": 1
     },
     {
@@ -34089,7 +35124,7 @@ window.CS = {
       "id": "320aa62d4",
       "u": "A4",
       "n": "A4-advanced.choosing",
-      "f": "model selection",
+      "f": "model|model selection|linear regression",
       "fg": 1
     },
     {
@@ -34126,7 +35161,7 @@ window.CS = {
       "id": "9f7669cf7",
       "u": "A4",
       "n": "A4-advanced.reinforcement",
-      "f": "reinforcement learning",
+      "f": "Reinforcement learning",
       "fg": 1
     },
     {
@@ -34161,7 +35196,7 @@ window.CS = {
       "id": "7a408c5ac",
       "u": "A4",
       "n": "A4-advanced.genetic",
-      "f": "fitness function|genetic algorithm",
+      "f": "genetic algorithm",
       "fg": 1
     },
     {
@@ -34238,7 +35273,7 @@ window.CS = {
       "id": "331a42264",
       "u": "B1",
       "n": "B1-computational-thinking.spec",
-      "f": "problem specification",
+      "f": "problem specification|Constraints",
       "fg": 1
     },
     {
@@ -34280,7 +35315,7 @@ window.CS = {
       "id": "d4180c5c0",
       "u": "B1",
       "n": "B1-computational-thinking.concepts",
-      "f": "computational thinking",
+      "f": "Computational thinking|Pattern recognition|Algorithmic design",
       "fg": 1
     },
     {
@@ -34298,7 +35333,8 @@ window.CS = {
       "id": "dfea8467b",
       "u": "B1",
       "n": "B1-computational-thinking.concepts",
-      "f": "solv|combin|manageable"
+      "f": "Decomposition",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34315,7 +35351,7 @@ window.CS = {
       "id": "aadc825ff",
       "u": "B1",
       "n": "B1-computational-thinking.concepts",
-      "f": "pattern recognition",
+      "f": "Pattern recognition",
       "fg": 1
     },
     {
@@ -34333,7 +35369,7 @@ window.CS = {
       "id": "78b2775f4",
       "u": "B1",
       "n": "B1-computational-thinking.applying",
-      "f": "pattern recognition",
+      "f": "Pattern recognition",
       "fg": 1
     },
     {
@@ -34353,7 +35389,7 @@ window.CS = {
       "id": "7e5f83cfa",
       "u": "B1",
       "n": "B1-computational-thinking.applying",
-      "f": "computational thinking",
+      "f": "computational thinking|Decomposition|Abstraction",
       "fg": 1
     },
     {
@@ -34371,7 +35407,7 @@ window.CS = {
       "id": "15fcf4f64",
       "u": "B1",
       "n": "B1-computational-thinking.flowcharts",
-      "f": "flowchart|symbol|exit",
+      "f": "flowchart",
       "fg": 1
     },
     {
@@ -34408,7 +35444,8 @@ window.CS = {
       "id": "936cd06fd",
       "u": "B1",
       "n": "B1-computational-thinking.concepts",
-      "f": "remov|abstraction|relevant"
+      "f": "Abstraction",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -34462,7 +35499,7 @@ window.CS = {
       "id": "a686c0d46",
       "u": "B1",
       "n": "B1-computational-thinking.flowcharts",
-      "f": "flowchart|diamond|symbol",
+      "f": "flowchart",
       "fg": 1
     },
     {
@@ -34480,7 +35517,7 @@ window.CS = {
       "id": "2d2c11e91",
       "u": "B1",
       "n": "B1-computational-thinking.flowcharts",
-      "f": "flowchart|count|input",
+      "f": "flowchart",
       "fg": 1
     },
     {
@@ -34498,7 +35535,7 @@ window.CS = {
       "id": "1afac87d6",
       "u": "B1",
       "n": "B1-computational-thinking.spec",
-      "f": "evaluation criteria|problem specification",
+      "f": "problem specification",
       "fg": 1
     },
     {
@@ -34516,7 +35553,7 @@ window.CS = {
       "id": "3b9a18ca0",
       "u": "B2",
       "n": "B2-fundamentals.variables",
-      "f": "converted before",
+      "f": "data type",
       "fg": 1
     },
     {
@@ -34554,7 +35591,7 @@ window.CS = {
       "id": "78db351f8",
       "u": "B2",
       "n": "B2-fundamentals.variables",
-      "f": "data type",
+      "f": "variable|data type",
       "fg": 1
     },
     {
@@ -34572,7 +35609,7 @@ window.CS = {
       "id": "791dd678b",
       "u": "B2",
       "n": "B2-fundamentals.scope",
-      "f": "local variables|global variables",
+      "f": "variable|scope|function",
       "fg": 1
     },
     {
@@ -34590,7 +35627,7 @@ window.CS = {
       "id": "06c1d9219",
       "u": "B2",
       "n": "B2-fundamentals.scope",
-      "f": "local variable|global variable",
+      "f": "variable|scope|function",
       "fg": 1
     },
     {
@@ -34608,7 +35645,7 @@ window.CS = {
       "id": "0448b44e2",
       "u": "B2",
       "n": "B2-fundamentals.scope",
-      "f": "global variables",
+      "f": "variable|scope|function",
       "fg": 1
     },
     {
@@ -34625,7 +35662,8 @@ window.CS = {
       "id": "2e48e3000",
       "u": "B2",
       "n": "B2-fundamentals.strings",
-      "f": "extract|character|string"
+      "f": "string",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34663,7 +35701,7 @@ window.CS = {
       "id": "e22d13a86",
       "u": "B2",
       "n": "B2-fundamentals.exceptions",
-      "f": "try except",
+      "f": "exception|string",
       "fg": 1
     },
     {
@@ -34682,7 +35720,7 @@ window.CS = {
       "id": "e5e42cf84",
       "u": "B2",
       "n": "B2-fundamentals.exceptions",
-      "f": "exception handling",
+      "f": "exception",
       "fg": 1
     },
     {
@@ -34700,7 +35738,7 @@ window.CS = {
       "id": "6dd90d37c",
       "u": "B2",
       "n": "B2-fundamentals.exceptions",
-      "f": "exception handling",
+      "f": "exception",
       "fg": 1
     },
     {
@@ -34718,7 +35756,7 @@ window.CS = {
       "id": "5d2672de9",
       "u": "B2",
       "n": "B2-fundamentals.debugging",
-      "f": "syntax error|logic error",
+      "f": "Syntax errors",
       "fg": 1
     },
     {
@@ -34738,7 +35776,8 @@ window.CS = {
       "id": "18ef613ad",
       "u": "B2",
       "n": "B2-fundamentals.debugging",
-      "f": "breakpoint|paus|valu"
+      "f": "Debugging|variable",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -34775,7 +35814,7 @@ window.CS = {
       "id": "45c5bd9db",
       "u": "B2",
       "n": "B2-data-structures.lists",
-      "f": "every element",
+      "f": "loop",
       "fg": 1
     },
     {
@@ -34814,7 +35853,7 @@ window.CS = {
       "id": "6988c23ad",
       "u": "B2",
       "n": "B2-data-structures.grids",
-      "f": "seating plan",
+      "f": "two-dimensional|loop",
       "fg": 1
     },
     {
@@ -34832,7 +35871,7 @@ window.CS = {
       "id": "f32357d32",
       "u": "B2",
       "n": "B2-data-structures.stacks",
-      "f": "data structure",
+      "f": "stack",
       "fg": 1
     },
     {
@@ -34851,7 +35890,7 @@ window.CS = {
       "id": "a0aff743d",
       "u": "B2",
       "n": "B2-data-structures.stacks",
-      "f": "empty stack|stack push|pop pop",
+      "f": "stack|push",
       "fg": 1
     },
     {
@@ -34870,7 +35909,7 @@ window.CS = {
       "id": "b297123ba",
       "u": "B2",
       "n": "B2-data-structures.stacks",
-      "f": "back button",
+      "f": "stack|push",
       "fg": 1
     },
     {
@@ -34888,7 +35927,8 @@ window.CS = {
       "id": "3f0a2d94d",
       "u": "B2",
       "n": "B2-data-structures.queues",
-      "f": "remov|rear|document"
+      "f": "queue",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34905,7 +35945,8 @@ window.CS = {
       "id": "da7b121c2",
       "u": "B2",
       "n": "B2-data-structures.queues",
-      "f": "remov|rear|fifo"
+      "f": "Stack|queue",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34941,7 +35982,8 @@ window.CS = {
       "id": "6064d532e",
       "u": "B2",
       "n": "B2-control.sequence",
-      "f": "proces|deadlock|forever"
+      "f": "deadlock",
+      "fg": 1
     },
     {
       "k": "model",
@@ -34958,7 +36000,8 @@ window.CS = {
       "id": "58c339859",
       "u": "B2",
       "n": "B2-control.sequence",
-      "f": "execut|valu|overwrit"
+      "f": "sequence|iteration",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35011,7 +36054,8 @@ window.CS = {
       "id": "7c4911bb6",
       "u": "B2",
       "n": "B2-control.selection",
-      "f": "valu|elif|equal"
+      "f": "Selection|strings",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35028,7 +36072,7 @@ window.CS = {
       "id": "d94a0e546",
       "u": "B2",
       "n": "B2-control.loops",
-      "f": "while loop",
+      "f": "Iteration",
       "fg": 1
     },
     {
@@ -35067,7 +36111,8 @@ window.CS = {
       "id": "aea798c25",
       "u": "B2",
       "n": "B2-control.loops",
-      "f": "inner|empty|loop"
+      "f": "Iteration",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35084,7 +36129,7 @@ window.CS = {
       "id": "ba90632b2",
       "u": "B2",
       "n": "B2-control.functions",
-      "f": "list|receiv|argument",
+      "f": "parameters|Argument|function",
       "fg": 1
     },
     {
@@ -35104,7 +36149,8 @@ window.CS = {
       "id": "eb84e8db5",
       "u": "B2",
       "n": "B2-control.functions",
-      "f": "debugg|modul|reus"
+      "f": "Modularization|function",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35122,7 +36168,7 @@ window.CS = {
       "id": "75efb791e",
       "u": "B2",
       "n": "B2-algorithms.bigo",
-      "f": "time complexity|linear search|binary search",
+      "f": "Big O notation|linear search|binary search",
       "fg": 1
     },
     {
@@ -35140,7 +36186,7 @@ window.CS = {
       "id": "e5a052dee",
       "u": "B2",
       "n": "B2-algorithms.bigo",
-      "f": "time complexity",
+      "f": "loop|Big O notation|algorithm",
       "fg": 1
     },
     {
@@ -35159,7 +36205,8 @@ window.CS = {
       "id": "2878da285",
       "u": "B2",
       "n": "B2-algorithms.bigo",
-      "f": "alway|ignor|constant"
+      "f": "algorithm",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35176,7 +36223,7 @@ window.CS = {
       "id": "72fdc7f85",
       "u": "B2",
       "n": "B2-algorithms.search",
-      "f": "binary search",
+      "f": "Binary search",
       "fg": 1
     },
     {
@@ -35195,7 +36242,7 @@ window.CS = {
       "id": "89c729d85",
       "u": "B2",
       "n": "B2-algorithms.search",
-      "f": "binary search|linear search",
+      "f": "Linear search|Binary search",
       "fg": 1
     },
     {
@@ -35214,7 +36261,7 @@ window.CS = {
       "id": "c1c7c3ed2",
       "u": "B2",
       "n": "B2-algorithms.sort",
-      "f": "bubble sort",
+      "f": "Bubble sort",
       "fg": 1
     },
     {
@@ -35234,7 +36281,7 @@ window.CS = {
       "id": "c2e1f1292",
       "u": "B2",
       "n": "B2-algorithms.sort",
-      "f": "bubble sort",
+      "f": "Bubble sort|algorithms",
       "fg": 1
     },
     {
@@ -35252,7 +36299,7 @@ window.CS = {
       "id": "3289807d9",
       "u": "B2",
       "n": "B2-algorithms.sort",
-      "f": "selection sort",
+      "f": "Selection sort",
       "fg": 1
     },
     {
@@ -35271,7 +36318,8 @@ window.CS = {
       "id": "1f0e0b525",
       "u": "B2",
       "n": "B2-algorithms.recursion",
-      "f": "solv|toward|recursive"
+      "f": "recursive|base case|function",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35328,7 +36376,7 @@ window.CS = {
       "id": "b42279ca4",
       "u": "B2",
       "n": "B2-algorithms.files",
-      "f": "text file|write mode",
+      "f": "File processing",
       "fg": 1
     },
     {
@@ -35418,7 +36466,7 @@ window.CS = {
       "id": "6e6b5e8a4",
       "u": "B2",
       "n": "B2-algorithms.search",
-      "f": "binary search",
+      "f": "Binary search",
       "fg": 1
     },
     {
@@ -35511,7 +36559,7 @@ window.CS = {
       "id": "9f6c7890b",
       "u": "B2",
       "n": "B2-algorithms.recursion",
-      "f": "recursive function",
+      "f": "function|recursive|base case",
       "fg": 1
     },
     {
@@ -35549,7 +36597,7 @@ window.CS = {
       "id": "aa9b0766e",
       "u": "B3",
       "n": "B3-oop.oop",
-      "f": "object oriented|oriented programming",
+      "f": "Object-oriented programming|objects|Encapsulation",
       "fg": 1
     },
     {
@@ -35606,7 +36654,7 @@ window.CS = {
       "id": "854353cd1",
       "u": "B3",
       "n": "B3-oop.design",
-      "f": "uml class|class diagram|public methods",
+      "f": "class|method|UML class diagram",
       "fg": 1
     },
     {
@@ -35644,7 +36692,8 @@ window.CS = {
       "id": "cf3568bdb",
       "u": "B3",
       "n": "B3-oop.classes",
-      "f": "instantiat|object|python"
+      "f": "objects",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35661,7 +36710,8 @@ window.CS = {
       "id": "aef44287c",
       "u": "B3",
       "n": "B3-oop.classes",
-      "f": "proces|instantiat|allocat"
+      "f": "objects|constructor|attributes",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -35678,7 +36728,7 @@ window.CS = {
       "id": "362d49f63",
       "u": "B3",
       "n": "B3-oop.static",
-      "f": "instance variable",
+      "f": "variable|object|attribute",
       "fg": 1
     },
     {
@@ -35696,7 +36746,7 @@ window.CS = {
       "id": "14c7ff56c",
       "u": "B3",
       "n": "B3-oop.static",
-      "f": "static method|instance non|non static",
+      "f": "object|method|non-static",
       "fg": 1
     },
     {
@@ -35716,7 +36766,7 @@ window.CS = {
       "id": "1a5223be9",
       "u": "B3",
       "n": "B3-oop.static",
-      "f": "instance variable",
+      "f": "variable|class|object",
       "fg": 1
     },
     {
@@ -35735,7 +36785,8 @@ window.CS = {
       "id": "e187b24cc",
       "u": "B3",
       "n": "B3-oop.encapsulation",
-      "f": "clas|chang|reject"
+      "f": "object|Encapsulation|private",
+      "fg": 1
     },
     {
       "k": "model",
@@ -35754,7 +36805,8 @@ window.CS = {
       "id": "41ed4027e",
       "u": "B3",
       "n": "B3-oop.encapsulation",
-      "f": "attribut|chang|valu"
+      "f": "Encapsulation|Attributes|object",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35788,7 +36840,8 @@ window.CS = {
       "id": "5898a352c",
       "u": "B3",
       "n": "B3-oop.classes",
-      "f": "attribut|creat|initialise"
+      "f": "constructor|attributes|objects",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -35843,7 +36896,7 @@ window.CS = {
       "id": "207e9759d",
       "u": "B3",
       "n": "B3-oop.classes",
-      "f": "python class",
+      "f": "class|methods|constructor",
       "fg": 1
     },
     {
@@ -35861,7 +36914,7 @@ window.CS = {
       "id": "c4dc46cc2",
       "u": "B3",
       "n": "B3-oop.design",
-      "f": "uml class|class diagram",
+      "f": "class|UML class diagram",
       "fg": 1
     },
     {
@@ -35898,7 +36951,7 @@ window.CS = {
       "id": "5964791be",
       "u": "B3",
       "n": "B3-advanced.inheritance",
-      "f": "code reuse",
+      "f": "Inheritance|override|attributes",
       "fg": 1
     },
     {
@@ -35933,7 +36986,7 @@ window.CS = {
       "id": "38684217b",
       "u": "B3",
       "n": "B3-advanced.polymorphism",
-      "f": "method overloading|method overriding",
+      "f": "method|arguments|parameter",
       "fg": 1
     },
     {
@@ -35971,7 +37024,7 @@ window.CS = {
       "id": "967a36de9",
       "u": "B3",
       "n": "B3-advanced.abstraction",
-      "f": "abstract class",
+      "f": "class|object|methods",
       "fg": 1
     },
     {
@@ -35990,7 +37043,7 @@ window.CS = {
       "id": "80cd4d91c",
       "u": "B3",
       "n": "B3-advanced.abstraction",
-      "f": "abstract class",
+      "f": "class|object|methods",
       "fg": 1
     },
     {
@@ -36008,7 +37061,8 @@ window.CS = {
       "id": "85e402d79",
       "u": "B3",
       "n": "B3-advanced.composition",
-      "f": "creat|destroy|outlive"
+      "f": "aggregation",
+      "fg": 1
     },
     {
       "k": "model",
@@ -36027,7 +37081,8 @@ window.CS = {
       "id": "895a8f531",
       "u": "B3",
       "n": "B3-advanced.composition",
-      "f": "exampl|other|creat"
+      "f": "aggregation|object",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -36045,7 +37100,7 @@ window.CS = {
       "id": "0b3143395",
       "u": "B3",
       "n": "B3-advanced.patterns",
-      "f": "observer pattern|weather app",
+      "f": "instance|method",
       "fg": 1
     },
     {
@@ -36082,7 +37137,7 @@ window.CS = {
       "id": "95ded0753",
       "u": "B3",
       "n": "B3-advanced.inheritance",
-      "f": "protected attribute",
+      "f": "attributes",
       "fg": 1
     },
     {
@@ -36118,7 +37173,7 @@ window.CS = {
       "id": "59cbedcd5",
       "u": "B3",
       "n": "B3-advanced.polymorphism",
-      "f": "override|Overloading|method",
+      "f": "override|Overloading|parameter",
       "fg": 1
     },
     {
@@ -36136,7 +37191,7 @@ window.CS = {
       "id": "853ebf0fb",
       "u": "B3",
       "n": "B3-advanced.abstraction",
-      "f": "abstract class|class cannot",
+      "f": "class|object|methods",
       "fg": 1
     },
     {
@@ -36154,7 +37209,7 @@ window.CS = {
       "id": "c7b1ba2b5",
       "u": "B3",
       "n": "B3-advanced.composition",
-      "f": "object contains",
+      "f": "object",
       "fg": 1
     },
     {
@@ -36172,7 +37227,7 @@ window.CS = {
       "id": "e14d2232d",
       "u": "B3",
       "n": "B3-advanced.patterns",
-      "f": "design pattern",
+      "f": "design pattern|instance|method",
       "fg": 1
     },
     {
@@ -36191,7 +37246,7 @@ window.CS = {
       "id": "3e620435a",
       "u": "B4",
       "n": "B4-adt.adt",
-      "f": "abstract data|data types",
+      "f": "abstract data type|abstraction|linked list",
       "fg": 1
     },
     {
@@ -36210,7 +37265,7 @@ window.CS = {
       "id": "b3c3d4fc1",
       "u": "B4",
       "n": "B4-adt.adt",
-      "f": "data structure",
+      "f": "abstract data type|stack|linked list",
       "fg": 1
     },
     {
@@ -36230,7 +37285,8 @@ window.CS = {
       "id": "ed6bd18df",
       "u": "B4",
       "n": "B4-adt.linked",
-      "f": "contiguou|acces|travers"
+      "f": "linked list|direct access",
+      "fg": 1
     },
     {
       "k": "model",
@@ -36249,7 +37305,7 @@ window.CS = {
       "id": "ab058153c",
       "u": "B4",
       "n": "B4-adt.linked",
-      "f": "singly linked",
+      "f": "linked list",
       "fg": 1
     },
     {
@@ -36268,7 +37324,7 @@ window.CS = {
       "id": "0e7c5b63c",
       "u": "B4",
       "n": "B4-adt.bst",
-      "f": "binary search|search tree",
+      "f": "binary|binary search tree",
       "fg": 1
     },
     {
@@ -36288,7 +37344,7 @@ window.CS = {
       "id": "ae43fabbb",
       "u": "B4",
       "n": "B4-adt.bst",
-      "f": "binary search|search tree|order traversal",
+      "f": "binary|binary search tree",
       "fg": 1
     },
     {
@@ -36306,7 +37362,7 @@ window.CS = {
       "id": "1f656d358",
       "u": "B4",
       "n": "B4-adt.sets",
-      "f": "already taken",
+      "f": "hash table",
       "fg": 1
     },
     {
@@ -36345,7 +37401,7 @@ window.CS = {
       "id": "e2ae536f0",
       "u": "B4",
       "n": "B4-adt.hash",
-      "f": "hash table",
+      "f": "hash table|collision",
       "fg": 1
     },
     {
@@ -36364,7 +37420,7 @@ window.CS = {
       "id": "22ae2de94",
       "u": "B4",
       "n": "B4-adt.hash",
-      "f": "hash table|hash function|key mod",
+      "f": "hash table|collision",
       "fg": 1
     },
     {
@@ -36399,7 +37455,7 @@ window.CS = {
       "id": "fefad2a18",
       "u": "B4",
       "n": "B4-adt.linked",
-      "f": "doubly linked|singly linked",
+      "f": "linked list",
       "fg": 1
     },
     {
@@ -36452,7 +37508,7 @@ window.CS = {
       "id": "1cfafff76",
       "u": "B4",
       "n": "B4-adt.bst",
-      "f": "binary search|search tree|inserting values",
+      "f": "binary|binary search tree",
       "fg": 1
     },
     {
@@ -36507,7 +37563,7 @@ window.CS = {
       "id": "79d367e86",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "image generation",
+      "f": "Generative AI|text-to-image|clients",
       "fg": 1
     },
     {
@@ -36527,7 +37583,7 @@ window.CS = {
       "id": "4de5f6b18",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "image generation|visionary studios",
+      "f": "Generative AI|text-to-image|clients",
       "fg": 1
     },
     {
@@ -36547,7 +37603,7 @@ window.CS = {
       "id": "c37922358",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "computational cost|diffusion model",
+      "f": "training|Diffusion models|sampling steps",
       "fg": 1
     },
     {
@@ -36589,7 +37645,8 @@ window.CS = {
       "id": "77c9eead9",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "curat|imag|licens"
+      "f": "models|stereotypes|intellectual property",
+      "fg": 1
     },
     {
       "k": "model",
@@ -36630,7 +37687,7 @@ window.CS = {
       "id": "aade24e36",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "visionary studios|models trained",
+      "f": "models|intellectual property|human review",
       "fg": 1
     },
     {
@@ -36649,7 +37706,7 @@ window.CS = {
       "id": "e146b4295",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "mode collapse",
+      "f": "mode collapse|generative adversarial network",
       "fg": 1
     },
     {
@@ -36669,7 +37726,8 @@ window.CS = {
       "id": "a5c8a5ea8",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "balanc|imag|improv"
+      "f": "generative adversarial network|generator",
+      "fg": 1
     },
     {
       "k": "fm",
@@ -36688,7 +37746,8 @@ window.CS = {
       "id": "6ab0294a0",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "weaknes|organis|imag"
+      "f": "VAEs|latent space|GANs",
+      "fg": 1
     },
     {
       "k": "model",
@@ -36729,7 +37788,7 @@ window.CS = {
       "id": "7a1fba64e",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "character consistency",
+      "f": "model|embeddings",
       "fg": 1
     },
     {
@@ -36748,7 +37807,7 @@ window.CS = {
       "id": "1db892444",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "visionary studios",
+      "f": "clients|embeddings",
       "fg": 1
     },
     {
@@ -36999,7 +38058,8 @@ window.CS = {
       "id": "d6f0de083",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "weaknes|organis|autoencoder"
+      "f": "VAEs|latent space",
+      "fg": 1
     },
     {
       "k": "quiz",
@@ -37057,7 +38117,7 @@ window.CS = {
       "id": "6553e3259",
       "u": "B1",
       "n": "Pseudocode.status",
-      "f": "before coding",
+      "f": "Pseudocode",
       "fg": 1
     },
     {
@@ -37165,7 +38225,8 @@ window.CS = {
       "id": "04e382505",
       "u": "B1",
       "n": "Pseudocode.try-it",
-      "f": "writ|pseudocode|language"
+      "f": "pseudocode",
+      "fg": 1
     },
     {
       "k": "model",
@@ -37182,7 +38243,8 @@ window.CS = {
       "id": "0a9dba23b",
       "u": "B1",
       "n": "Pseudocode.try-it",
-      "f": "writ|pseudocode|write"
+      "f": "pseudocode",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37200,7 +38262,7 @@ window.CS = {
       "id": "4e1314acd",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "image generation",
+      "f": "Generative AI|text-to-image",
       "fg": 1
     },
     {
@@ -37220,7 +38282,7 @@ window.CS = {
       "id": "a6fe81fca",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "image generation",
+      "f": "model|Generative AI|Conditional generation",
       "fg": 1
     },
     {
@@ -37240,7 +38302,7 @@ window.CS = {
       "id": "960b49a18",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "image translation",
+      "f": "Image-to-image",
       "fg": 1
     },
     {
@@ -37259,7 +38321,7 @@ window.CS = {
       "id": "cdff81d6a",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "segmentation map|image generation",
+      "f": "Generative AI|Segmentation maps|Conditional generation",
       "fg": 1
     },
     {
@@ -37278,7 +38340,7 @@ window.CS = {
       "id": "96a2e3d09",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "image generation|visionary studios|concept art",
+      "f": "Generative AI|text-to-image|clients",
       "fg": 1
     },
     {
@@ -37297,7 +38359,7 @@ window.CS = {
       "id": "646f71a82",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "image generation",
+      "f": "Generative AI|Conditional generation|synthetic datasets",
       "fg": 1
     },
     {
@@ -37317,7 +38379,8 @@ window.CS = {
       "id": "f2c657e3b",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "ambiguou|specify|reflect"
+      "f": "model|Segmentation maps|text-to-image",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37336,7 +38399,7 @@ window.CS = {
       "id": "70978b714",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "text prompt",
+      "f": "model|diffusion models|text-to-image",
       "fg": 1
     },
     {
@@ -37355,7 +38418,7 @@ window.CS = {
       "id": "eca2a353d",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "noise injection",
+      "f": "Diffusion models",
       "fg": 1
     },
     {
@@ -37374,7 +38437,7 @@ window.CS = {
       "id": "6fe1c41c8",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "diffusion models",
+      "f": "training|Diffusion models",
       "fg": 1
     },
     {
@@ -37395,7 +38458,8 @@ window.CS = {
       "id": "5a60c8d43",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "denois|proces|predict"
+      "f": "denoising|CNN",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37413,7 +38477,7 @@ window.CS = {
       "id": "5eb343a74",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "convolutional neural|neural network|diffusion model",
+      "f": "training|neural network|CNN",
       "fg": 1
     },
     {
@@ -37433,7 +38497,7 @@ window.CS = {
       "id": "a76ebdaa0",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "during training|during generation",
+      "f": "training|DDPM",
       "fg": 1
     },
     {
@@ -37453,7 +38517,7 @@ window.CS = {
       "id": "711228f6b",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "diffusion model",
+      "f": "training|Diffusion models",
       "fg": 1
     },
     {
@@ -37474,7 +38538,7 @@ window.CS = {
       "id": "d6d1aa87d",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "diffusion models|computationally expensive",
+      "f": "training|Diffusion models|GPUs",
       "fg": 1
     },
     {
@@ -37494,7 +38558,7 @@ window.CS = {
       "id": "044bc547f",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "denoising steps",
+      "f": "sampling steps",
       "fg": 1
     },
     {
@@ -37515,7 +38579,7 @@ window.CS = {
       "id": "2ab8b6ecd",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "visionary studios|diffusion models",
+      "f": "training|Diffusion models|Latent diffusion",
       "fg": 1
     },
     {
@@ -37554,7 +38618,7 @@ window.CS = {
       "id": "9f0da7355",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "diffusion model|denoising step",
+      "f": "training|Diffusion models",
       "fg": 1
     },
     {
@@ -37574,7 +38638,7 @@ window.CS = {
       "id": "3facf0e77",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "diffusion models",
+      "f": "training|Diffusion models",
       "fg": 1
     },
     {
@@ -37597,7 +38661,7 @@ window.CS = {
       "id": "0d3e90a34",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "visionary studios|diffusion model",
+      "f": "training|Diffusion models|latency",
       "fg": 1
     },
     {
@@ -37617,7 +38681,7 @@ window.CS = {
       "id": "648ba2594",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "training noise",
+      "f": "training",
       "fg": 1
     },
     {
@@ -37636,7 +38700,8 @@ window.CS = {
       "id": "4e139d956",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "imag|dimensional|vector"
+      "f": "generative adversarial network|noise vector",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37654,7 +38719,8 @@ window.CS = {
       "id": "f40ed641c",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "receiv|imag|generat"
+      "f": "generative adversarial network|training data",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37674,7 +38740,8 @@ window.CS = {
       "id": "2f79363d4",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "produc|imag|predict"
+      "f": "generative adversarial network|noise vector|generator",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37692,7 +38759,7 @@ window.CS = {
       "id": "a5af6f234",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "mode collapse",
+      "f": "mode collapse|generative adversarial network|training data",
       "fg": 1
     },
     {
@@ -37712,7 +38779,7 @@ window.CS = {
       "id": "2512314cc",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "dimensional noise|noise vector",
+      "f": "generative adversarial network|noise vector",
       "fg": 1
     },
     {
@@ -37756,7 +38823,7 @@ window.CS = {
       "id": "e816d9aaa",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "mode collapse",
+      "f": "training|mode collapse",
       "fg": 1
     },
     {
@@ -37777,7 +38844,7 @@ window.CS = {
       "id": "bb9de45c6",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "mode collapse",
+      "f": "generative adversarial network|mode collapse",
       "fg": 1
     },
     {
@@ -37798,7 +38865,7 @@ window.CS = {
       "id": "6a542863f",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "generating images",
+      "f": "training|diffusion|generative adversarial network",
       "fg": 1
     },
     {
@@ -37817,7 +38884,7 @@ window.CS = {
       "id": "9d5bb3fd9",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "diffusion model",
+      "f": "training|diffusion|generative adversarial network",
       "fg": 1
     },
     {
@@ -37856,7 +38923,8 @@ window.CS = {
       "id": "58b26cdf0",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "generat|imag|modifi"
+      "f": "VAEs|latent space",
+      "fg": 1
     },
     {
       "k": "case",
@@ -37875,7 +38943,7 @@ window.CS = {
       "id": "f8e37def4",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "similar images|close together|latent space",
+      "f": "latent space",
       "fg": 1
     },
     {
@@ -37895,7 +38963,7 @@ window.CS = {
       "id": "933b42525",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "flow based|generative model",
+      "f": "model",
       "fg": 1
     },
     {
@@ -37915,7 +38983,7 @@ window.CS = {
       "id": "9bcc3e3c8",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "flow based|based models",
+      "f": "model|transparency|Flow-based models",
       "fg": 1
     },
     {
@@ -37934,7 +39002,7 @@ window.CS = {
       "id": "7e4b6610e",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "visionary studios",
+      "f": "VAEs|latent space",
       "fg": 1
     },
     {
@@ -37955,7 +39023,7 @@ window.CS = {
       "id": "c5acf05de",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "hybrid model",
+      "f": "model|hybrid model|GANs",
       "fg": 1
     },
     {
@@ -37974,7 +39042,7 @@ window.CS = {
       "id": "4430290ce",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "visionary studios",
+      "f": "model|Training stability|scalability",
       "fg": 1
     },
     {
@@ -37993,7 +39061,7 @@ window.CS = {
       "id": "af714b921",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "output quality",
+      "f": "model",
       "fg": 1
     },
     {
@@ -38013,7 +39081,7 @@ window.CS = {
       "id": "fc6924d74",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "computational efficiency",
+      "f": "model|GPUs",
       "fg": 1
     },
     {
@@ -38033,7 +39101,7 @@ window.CS = {
       "id": "aeaefbfe9",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "training stability",
+      "f": "model|Training stability|mode collapse",
       "fg": 1
     },
     {
@@ -38053,7 +39121,7 @@ window.CS = {
       "id": "c851a28d2",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "visionary studios",
+      "f": "scalability|GPUs",
       "fg": 1
     },
     {
@@ -38092,7 +39160,7 @@ window.CS = {
       "id": "73d7ff934",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "character consistency|embedding based|based approaches",
+      "f": "conditioning",
       "fg": 1
     },
     {
@@ -38111,7 +39179,7 @@ window.CS = {
       "id": "1bf57864b",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "style adherence",
+      "f": "clients|prompts",
       "fg": 1
     },
     {
@@ -38193,7 +39261,7 @@ window.CS = {
       "id": "8e2cbf209",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "intellectual property",
+      "f": "models",
       "fg": 1
     },
     {
@@ -38213,7 +39281,7 @@ window.CS = {
       "id": "e911a5097",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "inaccurate images",
+      "f": "models",
       "fg": 1
     },
     {
@@ -38234,7 +39302,7 @@ window.CS = {
       "id": "38b1350cc",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "visionary studios|generated images",
+      "f": "prompts|bias|training data",
       "fg": 1
     },
     {
@@ -38254,7 +39322,8 @@ window.CS = {
       "id": "eacb9cbf5",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "generat|audienc|label"
+      "f": "Transparency|clients|training data",
+      "fg": 1
     },
     {
       "k": "case",
@@ -38276,7 +39345,7 @@ window.CS = {
       "id": "65c757f47",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "visionary studios|images collected",
+      "f": "internet|models|intellectual property",
       "fg": 1
     },
     {
@@ -38295,7 +39364,8 @@ window.CS = {
       "id": "2988e0e7c",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "concern|train|diffusion"
+      "f": "models|Diffusion",
+      "fg": 1
     },
     {
       "k": "case",
@@ -38313,7 +39383,7 @@ window.CS = {
       "id": "c493568b2",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "generated images",
+      "f": "clients",
       "fg": 1
     },
     {
@@ -38333,7 +39403,7 @@ window.CS = {
       "id": "45c1bbdb3",
       "u": "CS",
       "n": "Case-study.links",
-      "f": "needs gpus|diffusion models",
+      "f": "GPUs|models|diffusion models",
       "fg": 1
     },
     {
@@ -38353,7 +39423,7 @@ window.CS = {
       "id": "1420f7fd3",
       "u": "CS",
       "n": "Case-study.links",
-      "f": "000 images|2048 2048|2048 pixels",
+      "f": "pixels",
       "fg": 1
     },
     {
@@ -38373,7 +39443,8 @@ window.CS = {
       "id": "d17bcc752",
       "u": "CS",
       "n": "Case-study.links",
-      "f": "licens|scal|iaas"
+      "f": "models|PaaS|IaaS",
+      "fg": 1
     },
     {
       "k": "case",
@@ -38392,7 +39463,7 @@ window.CS = {
       "id": "66d51f63e",
       "u": "CS",
       "n": "Case-study.links",
-      "f": "latent space|lossy compression",
+      "f": "Lossy|Latent spaces|lossy compression",
       "fg": 1
     },
     {
@@ -38412,7 +39483,8 @@ window.CS = {
       "id": "2b0ea04ac",
       "u": "CS",
       "n": "Case-study.links",
-      "f": "featur|textur|restor"
+      "f": "CNNs",
+      "fg": 1
     },
     {
       "k": "case",
@@ -38431,7 +39503,7 @@ window.CS = {
       "id": "76f0ad346",
       "u": "CS",
       "n": "Case-study.links",
-      "f": "000 images",
+      "f": "GPUs",
       "fg": 1
     },
     {
@@ -38452,7 +39524,7 @@ window.CS = {
       "id": "06a0def45",
       "u": "CS",
       "n": "Case-study.links",
-      "f": "every image|been disclosed|table generatedimage",
+      "f": "prompts",
       "fg": 1
     },
     {
@@ -38471,7 +39543,7 @@ window.CS = {
       "id": "ad4375fa1",
       "u": "CS",
       "n": "Case-study.links",
-      "f": "machine learning",
+      "f": "ML|GANs|supervised",
       "fg": 1
     },
     {
@@ -38491,7 +39563,7 @@ window.CS = {
       "id": "9d676223d",
       "u": "CS",
       "n": "Case-study.links",
-      "f": "studio needs|000 images",
+      "f": "GPUs|IaaS",
       "fg": 1
     },
     {
@@ -38514,7 +39586,7 @@ window.CS = {
       "id": "192850b93",
       "u": "CS",
       "n": "Case-study.extended",
-      "f": "visionary studios|studios manage|computational demands",
+      "f": "iterative denoising|latent space|CNN",
       "fg": 1
     },
     {
@@ -38537,7 +39609,7 @@ window.CS = {
       "id": "14052af8c",
       "u": "CS",
       "n": "Case-study.extended",
-      "f": "visionary studios|ethical considerations|intellectual property",
+      "f": "model|bias mitigation|human review",
       "fg": 1
     },
     {
@@ -38564,7 +39636,7 @@ window.CS = {
       "id": "08e7da687",
       "u": "CS",
       "n": "Case-study.extended",
-      "f": "visionary studios|studios balance|discriminator networks",
+      "f": "GAN|generator|adversarial dynamic",
       "fg": 1
     },
     {
@@ -38588,7 +39660,7 @@ window.CS = {
       "id": "a6dd08303",
       "u": "CS",
       "n": "Case-study.extended",
-      "f": "hybrid model|vaes gans|gans flow",
+      "f": "model|diffusion models|GAN",
       "fg": 1
     },
     {
@@ -38614,7 +39686,7 @@ window.CS = {
       "id": "01aed8551",
       "u": "CS",
       "n": "Case-study.extended",
-      "f": "visionary studios|studios manage|computational demands",
+      "f": "model|diffusion models|iterative denoising",
       "fg": 1
     },
     {
@@ -38640,7 +39712,7 @@ window.CS = {
       "id": "5ff081c56",
       "u": "CS",
       "n": "Case-study.extended",
-      "f": "visionary studios|ethical considerations|large datasets",
+      "f": "model|generative AI|bias mitigation",
       "fg": 1
     },
     {
@@ -38670,7 +39742,7 @@ window.CS = {
       "id": "28f9d4fc2",
       "u": "CS",
       "n": "Case-study.extended",
-      "f": "visionary studios|studios balance|discriminator networks",
+      "f": "GAN|generator|D-dimensional noise vector",
       "fg": 1
     },
     {
@@ -38698,7 +39770,7 @@ window.CS = {
       "id": "dec82f1f7",
       "u": "CS",
       "n": "Case-study.extended",
-      "f": "hybrid model|vaes gans|gans flow",
+      "f": "model|diffusion models|GAN",
       "fg": 1
     },
     {
@@ -38717,7 +39789,7 @@ window.CS = {
       "id": "aa0e5fea2",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "central processing unit",
+      "f": "central processing unit|ALU",
       "fg": 1
     },
     {
@@ -38737,7 +39809,7 @@ window.CS = {
       "id": "4057b8dbb",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "control unit",
+      "f": "central processing unit|control unit|instruction register",
       "fg": 1
     },
     {
@@ -38775,7 +39847,7 @@ window.CS = {
       "id": "d2ebd5274",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "Registers",
+      "f": "central processing unit|Registers",
       "fg": 1
     },
     {
@@ -38812,7 +39884,7 @@ window.CS = {
       "id": "9da6fc2d8",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "memory address register",
+      "f": "memory address register|buses",
       "fg": 1
     },
     {
@@ -38830,7 +39902,7 @@ window.CS = {
       "id": "3adc3b51c",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "instruction register",
+      "f": "Registers|instruction register",
       "fg": 1
     },
     {
@@ -38848,7 +39920,7 @@ window.CS = {
       "id": "5e1217721",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "accumulator",
+      "f": "accumulator|ALU",
       "fg": 1
     },
     {
@@ -38868,7 +39940,7 @@ window.CS = {
       "id": "e9641df59",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "single-core",
+      "f": "single-core|buses",
       "fg": 1
     },
     {
@@ -38887,7 +39959,7 @@ window.CS = {
       "id": "7205245b2",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "Co-processors",
+      "f": "Co-processors|central processing unit",
       "fg": 1
     },
     {
@@ -38906,7 +39978,7 @@ window.CS = {
       "id": "a07e70448",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "Clock speed",
+      "f": "CPU|Clock speed",
       "fg": 1
     },
     {
@@ -38925,7 +39997,7 @@ window.CS = {
       "id": "755c545f9",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "RAM",
+      "f": "RAM|secondary storage|CPU",
       "fg": 1
     },
     {
@@ -38944,7 +40016,7 @@ window.CS = {
       "id": "005eb9256",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "ROM",
+      "f": "RAM|ROM|volatile",
       "fg": 1
     },
     {
@@ -38963,7 +40035,7 @@ window.CS = {
       "id": "47e5d2c19",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "volatile",
+      "f": "volatile|SSD|ROM",
       "fg": 1
     },
     {
@@ -38982,7 +40054,7 @@ window.CS = {
       "id": "bc82f994d",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "hard disk",
+      "f": "hard disk|SSD|cost per GB",
       "fg": 1
     },
     {
@@ -39001,7 +40073,7 @@ window.CS = {
       "id": "c941fc210",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "eMMC",
+      "f": "SSD|eMMC",
       "fg": 1
     },
     {
@@ -39060,7 +40132,7 @@ window.CS = {
       "id": "915038646",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "Network-attached storage",
+      "f": "Network-attached storage|backups",
       "fg": 1
     },
     {
@@ -39117,7 +40189,7 @@ window.CS = {
       "id": "fe589069d",
       "u": "A1",
       "n": "A1-hardware.cloud",
-      "f": "PaaS",
+      "f": "PaaS|operating system",
       "fg": 1
     },
     {
@@ -39136,7 +40208,7 @@ window.CS = {
       "id": "23ed22a89",
       "u": "A1",
       "n": "A1-hardware.cloud",
-      "f": "IaaS",
+      "f": "SaaS|IaaS|operating system",
       "fg": 1
     },
     {
@@ -39155,7 +40227,7 @@ window.CS = {
       "id": "959b60228",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "binary",
+      "f": "binary|denary",
       "fg": 1
     },
     {
@@ -39174,7 +40246,7 @@ window.CS = {
       "id": "32e59d1e5",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "denary",
+      "f": "binary|denary",
       "fg": 1
     },
     {
@@ -39211,7 +40283,7 @@ window.CS = {
       "id": "166744f2e",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "pixel",
+      "f": "bits|pixel|File size",
       "fg": 1
     },
     {
@@ -39230,7 +40302,7 @@ window.CS = {
       "id": "469dc33be",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "sample rate",
+      "f": "sample rate|File size",
       "fg": 1
     },
     {
@@ -39249,7 +40321,7 @@ window.CS = {
       "id": "0f9c435aa",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "frames",
+      "f": "compressed|pixel|frames",
       "fg": 1
     },
     {
@@ -39267,7 +40339,7 @@ window.CS = {
       "id": "7e9e5de7f",
       "u": "A1",
       "n": "A1-data-logic.gates",
-      "f": "logic gates",
+      "f": "logic gates|binary",
       "fg": 1
     },
     {
@@ -39286,7 +40358,7 @@ window.CS = {
       "id": "3f29e4cd7",
       "u": "A1",
       "n": "A1-data-logic.gates",
-      "f": "AND",
+      "f": "AND|OR",
       "fg": 1
     },
     {
@@ -39342,7 +40414,7 @@ window.CS = {
       "id": "0efa5b122",
       "u": "A1",
       "n": "A1-data-logic.gates",
-      "f": "NAND",
+      "f": "NAND|logic gates",
       "fg": 1
     },
     {
@@ -39361,7 +40433,7 @@ window.CS = {
       "id": "a3e34719e",
       "u": "A1",
       "n": "A1-data-logic.gates",
-      "f": "NOR",
+      "f": "NOR|AND|OR",
       "fg": 1
     },
     {
@@ -39380,7 +40452,7 @@ window.CS = {
       "id": "9b476a3d4",
       "u": "A1",
       "n": "A1-data-logic.gates",
-      "f": "XNOR",
+      "f": "XNOR|bits",
       "fg": 1
     },
     {
@@ -39417,7 +40489,7 @@ window.CS = {
       "id": "71c416bc0",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "abstraction",
+      "f": "operating system|abstraction",
       "fg": 1
     },
     {
@@ -39437,7 +40509,7 @@ window.CS = {
       "id": "31fe51585",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "Memory management",
+      "f": "RAM|Memory management|secondary storage",
       "fg": 1
     },
     {
@@ -39456,7 +40528,7 @@ window.CS = {
       "id": "a36f7134d",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "File system",
+      "f": "operating system|File system|file permissions",
       "fg": 1
     },
     {
@@ -39496,7 +40568,7 @@ window.CS = {
       "id": "a4ded2f27",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "Virtualisation",
+      "f": "Virtualisation|malware",
       "fg": 1
     },
     {
@@ -39515,7 +40587,7 @@ window.CS = {
       "id": "faaf68be8",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "Scheduling",
+      "f": "Scheduling|CPU",
       "fg": 1
     },
     {
@@ -39534,7 +40606,7 @@ window.CS = {
       "id": "a315488e6",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "FCFS",
+      "f": "Scheduling|FCFS|CPU",
       "fg": 1
     },
     {
@@ -39553,7 +40625,7 @@ window.CS = {
       "id": "093e615e2",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "Round robin",
+      "f": "Scheduling|Round robin|time slice",
       "fg": 1
     },
     {
@@ -39573,7 +40645,7 @@ window.CS = {
       "id": "44bfea0e1",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "Multilevel queues",
+      "f": "Scheduling|Multilevel queues|Round robin",
       "fg": 1
     },
     {
@@ -39592,7 +40664,7 @@ window.CS = {
       "id": "2ceb51881",
       "u": "A1",
       "n": "A1-os.interrupts",
-      "f": "polling",
+      "f": "polling|CPU",
       "fg": 1
     },
     {
@@ -39613,7 +40685,8 @@ window.CS = {
       "id": "89cb8d453",
       "u": "A2",
       "n": "A2-basics.types",
-      "f": "resourc|shar|messag"
+      "f": "internet",
+      "fg": 1
     },
     {
       "k": "term",
@@ -39631,7 +40704,7 @@ window.CS = {
       "id": "42b20aa1b",
       "u": "A2",
       "n": "A2-basics.types",
-      "f": "PAN",
+      "f": "PAN|LAN",
       "fg": 1
     },
     {
@@ -39668,7 +40741,7 @@ window.CS = {
       "id": "bbe352b50",
       "u": "A2",
       "n": "A2-basics.types",
-      "f": "MAN",
+      "f": "MAN|LAN",
       "fg": 1
     },
     {
@@ -39687,7 +40760,7 @@ window.CS = {
       "id": "24078a6f1",
       "u": "A2",
       "n": "A2-basics.types",
-      "f": "bandwidth",
+      "f": "bandwidth|latency",
       "fg": 1
     },
     {
@@ -39725,7 +40798,7 @@ window.CS = {
       "id": "2b15b81aa",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "internet",
+      "f": "internet|HTTP",
       "fg": 1
     },
     {
@@ -39746,7 +40819,7 @@ window.CS = {
       "id": "f95f89340",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "Cloud",
+      "f": "Cloud|internet",
       "fg": 1
     },
     {
@@ -39786,7 +40859,7 @@ window.CS = {
       "id": "ac4ec5185",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "Mobile networks",
+      "f": "Mobile networks|bandwidth|latency",
       "fg": 1
     },
     {
@@ -39804,7 +40877,7 @@ window.CS = {
       "id": "4e490dff4",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "network interface card",
+      "f": "network interface card|wireless",
       "fg": 1
     },
     {
@@ -39823,7 +40896,7 @@ window.CS = {
       "id": "fa78ca82a",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "gateway",
+      "f": "gateway|protocols",
       "fg": 1
     },
     {
@@ -39842,7 +40915,7 @@ window.CS = {
       "id": "fb7035286",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "wireless access point",
+      "f": "wireless|wireless access point",
       "fg": 1
     },
     {
@@ -39880,7 +40953,7 @@ window.CS = {
       "id": "d4a050ca5",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "MAC address",
+      "f": "MAC address|IP addresses",
       "fg": 1
     },
     {
@@ -39918,7 +40991,7 @@ window.CS = {
       "id": "09530a117",
       "u": "A2",
       "n": "A2-basics.tcp",
-      "f": "UDP",
+      "f": "UDP|ACK|packets",
       "fg": 1
     },
     {
@@ -39937,7 +41010,7 @@ window.CS = {
       "id": "b89427c67",
       "u": "A2",
       "n": "A2-basics.http",
-      "f": "HTTP",
+      "f": "HTTP|web servers",
       "fg": 1
     },
     {
@@ -39957,7 +41030,7 @@ window.CS = {
       "id": "07b23704e",
       "u": "A2",
       "n": "A2-basics.http",
-      "f": "HTTPS",
+      "f": "HTTPS|digital certificate|encrypted",
       "fg": 1
     },
     {
@@ -39976,7 +41049,7 @@ window.CS = {
       "id": "8355a4e9f",
       "u": "A2",
       "n": "A2-basics.http",
-      "f": "DHCP",
+      "f": "DHCP|IP address",
       "fg": 1
     },
     {
@@ -39995,7 +41068,7 @@ window.CS = {
       "id": "c9e744b94",
       "u": "A2",
       "n": "A2-transmission-security.firewalls",
-      "f": "Port numbers",
+      "f": "Port numbers|IP addresses",
       "fg": 1
     },
     {
@@ -40033,7 +41106,7 @@ window.CS = {
       "id": "158ced3cd",
       "u": "A2",
       "n": "A2-architecture.topologies",
-      "f": "mesh",
+      "f": "internet|topology|mesh",
       "fg": 1
     },
     {
@@ -40052,7 +41125,7 @@ window.CS = {
       "id": "1e92c5e72",
       "u": "A2",
       "n": "A2-architecture.topologies",
-      "f": "hybrid",
+      "f": "topology|hybrid",
       "fg": 1
     },
     {
@@ -40071,7 +41144,7 @@ window.CS = {
       "id": "d0222acc9",
       "u": "A2",
       "n": "A2-architecture.topologies",
-      "f": "single point of failure",
+      "f": "single point of failure|switch|routers",
       "fg": 1
     },
     {
@@ -40090,7 +41163,7 @@ window.CS = {
       "id": "3d57f8b8d",
       "u": "A2",
       "n": "A2-architecture.models",
-      "f": "peer-to-peer",
+      "f": "peer-to-peer|server|single point of failure",
       "fg": 1
     },
     {
@@ -40111,7 +41184,7 @@ window.CS = {
       "id": "ae21ea0a2",
       "u": "A2",
       "n": "A2-architecture.subnetting",
-      "f": "Network segmentation",
+      "f": "Network segmentation|guest Wi-Fi|malware",
       "fg": 1
     },
     {
@@ -40129,7 +41202,7 @@ window.CS = {
       "id": "fce90d9e4",
       "u": "A2",
       "n": "A2-architecture.subnetting",
-      "f": "Subnetting",
+      "f": "Subnetting|Subnet mask|host",
       "fg": 1
     },
     {
@@ -40148,7 +41221,7 @@ window.CS = {
       "id": "1a5901155",
       "u": "A2",
       "n": "A2-architecture.vlans",
-      "f": "access control lists",
+      "f": "access control lists|firewall|IP address",
       "fg": 1
     },
     {
@@ -40186,7 +41259,8 @@ window.CS = {
       "id": "1eee29bf7",
       "u": "A2",
       "n": "A2-transmission-security.ip",
-      "f": "addres|chang|server"
+      "f": "IP address",
+      "fg": 1
     },
     {
       "k": "term",
@@ -40204,7 +41278,7 @@ window.CS = {
       "id": "df30cf4ff",
       "u": "A2",
       "n": "A2-transmission-security.ip",
-      "f": "Private",
+      "f": "IP address|Private|internet",
       "fg": 1
     },
     {
@@ -40225,7 +41299,7 @@ window.CS = {
       "id": "0313eac09",
       "u": "A2",
       "n": "A2-transmission-security.media",
-      "f": "copper",
+      "f": "copper|LANs|bandwidth",
       "fg": 1
     },
     {
@@ -40246,7 +41320,7 @@ window.CS = {
       "id": "c9f0febbb",
       "u": "A2",
       "n": "A2-transmission-security.media",
-      "f": "Wireless",
+      "f": "Wireless|intercepted",
       "fg": 1
     },
     {
@@ -40265,7 +41339,7 @@ window.CS = {
       "id": "df13ceefc",
       "u": "A2",
       "n": "A2-transmission-security.firewalls",
-      "f": "allowlist",
+      "f": "allowlist|threats",
       "fg": 1
     },
     {
@@ -40284,7 +41358,7 @@ window.CS = {
       "id": "7cbf9b6a2",
       "u": "A2",
       "n": "A2-transmission-security.encryption",
-      "f": "Encryption",
+      "f": "Encryption|intercepted",
       "fg": 1
     },
     {
@@ -40303,7 +41377,7 @@ window.CS = {
       "id": "9ba0ee69e",
       "u": "A2",
       "n": "A2-transmission-security.encryption",
-      "f": "symmetric",
+      "f": "Encryption|symmetric|intercepted",
       "fg": 1
     },
     {
@@ -40323,7 +41397,7 @@ window.CS = {
       "id": "7c095ffaa",
       "u": "A2",
       "n": "A2-transmission-security.encryption",
-      "f": "digital certificate",
+      "f": "HTTPS|digital certificate|private keys",
       "fg": 1
     },
     {
@@ -40344,7 +41418,7 @@ window.CS = {
       "id": "763d3ca21",
       "u": "A2",
       "n": "A2-transmission-security.encryption",
-      "f": "Key management",
+      "f": "Key management|Encryption",
       "fg": 1
     },
     {
@@ -40363,7 +41437,7 @@ window.CS = {
       "id": "0eadae9ca",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "relational databases",
+      "f": "database|relational databases|records",
       "fg": 1
     },
     {
@@ -40382,7 +41456,7 @@ window.CS = {
       "id": "fc476b500",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "flat-file database",
+      "f": "database|flat-file database|data redundancy",
       "fg": 1
     },
     {
@@ -40401,7 +41475,7 @@ window.CS = {
       "id": "6f87dee87",
       "u": "A3",
       "n": "A3-design.keys",
-      "f": "primary key",
+      "f": "primary key|field",
       "fg": 1
     },
     {
@@ -40420,7 +41494,7 @@ window.CS = {
       "id": "c545c4358",
       "u": "A3",
       "n": "A3-design.keys",
-      "f": "composite key",
+      "f": "composite key|field",
       "fg": 1
     },
     {
@@ -40439,7 +41513,7 @@ window.CS = {
       "id": "ce1995f0c",
       "u": "A3",
       "n": "A3-design.keys",
-      "f": "candidate key",
+      "f": "primary key|candidate key|field",
       "fg": 1
     },
     {
@@ -40458,7 +41532,7 @@ window.CS = {
       "id": "c31917d7a",
       "u": "A3",
       "n": "A3-design.keys",
-      "f": "referential integrity",
+      "f": "databases|referential integrity|primary key",
       "fg": 1
     },
     {
@@ -40496,7 +41570,7 @@ window.CS = {
       "id": "eb0005f16",
       "u": "A3",
       "n": "A3-design.normalisation",
-      "f": "Normalisation",
+      "f": "Normalisation|3NF|redundant data",
       "fg": 1
     },
     {
@@ -40515,7 +41589,7 @@ window.CS = {
       "id": "5e4c88be7",
       "u": "A3",
       "n": "A3-design.normalisation",
-      "f": "anomalies",
+      "f": "anomalies|record",
       "fg": 1
     },
     {
@@ -40534,7 +41608,7 @@ window.CS = {
       "id": "d51751c05",
       "u": "A3",
       "n": "A3-design.normalisation",
-      "f": "1NF",
+      "f": "1NF|Atomic value|repeating groups",
       "fg": 1
     },
     {
@@ -40553,7 +41627,7 @@ window.CS = {
       "id": "c663a1705",
       "u": "A3",
       "n": "A3-design.normalisation",
-      "f": "2NF",
+      "f": "2NF|partial dependency|composite key",
       "fg": 1
     },
     {
@@ -40572,7 +41646,7 @@ window.CS = {
       "id": "b1a86d19a",
       "u": "A3",
       "n": "A3-sql.ddl",
-      "f": "SQL",
+      "f": "SQL|DDL|DML",
       "fg": 1
     },
     {
@@ -40591,7 +41665,7 @@ window.CS = {
       "id": "763531e62",
       "u": "A3",
       "n": "A3-sql.ddl",
-      "f": "DML",
+      "f": "SQL|DML|INSERT",
       "fg": 1
     },
     {
@@ -40611,7 +41685,7 @@ window.CS = {
       "id": "0c341ccd7",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "SELECT",
+      "f": "SQL|SELECT|ORDER BY",
       "fg": 1
     },
     {
@@ -40649,7 +41723,7 @@ window.CS = {
       "id": "54c5a2335",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "ORDER BY",
+      "f": "SQL|ORDER BY",
       "fg": 1
     },
     {
@@ -40669,7 +41743,7 @@ window.CS = {
       "id": "e2bb0cc21",
       "u": "A4",
       "n": "A4-machine-learning.what",
-      "f": "Artificial intelligence",
+      "f": "Artificial intelligence|Machine learning|Deep learning",
       "fg": 1
     },
     {
@@ -40688,7 +41762,7 @@ window.CS = {
       "id": "a218387a7",
       "u": "A4",
       "n": "A4-machine-learning.what",
-      "f": "training",
+      "f": "Machine learning|training|training data",
       "fg": 1
     },
     {
@@ -40707,7 +41781,7 @@ window.CS = {
       "id": "92cd9a766",
       "u": "A4",
       "n": "A4-machine-learning.what",
-      "f": "training data",
+      "f": "training|training data",
       "fg": 1
     },
     {
@@ -40727,7 +41801,7 @@ window.CS = {
       "id": "cb6244e41",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "unsupervised learning",
+      "f": "Machine learning|unsupervised learning|natural language processing",
       "fg": 1
     },
     {
@@ -40748,7 +41822,7 @@ window.CS = {
       "id": "cd9cba1cc",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "reinforcement learning",
+      "f": "reinforcement learning|training data",
       "fg": 1
     },
     {
@@ -40769,7 +41843,7 @@ window.CS = {
       "id": "8e6e78649",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "Deep learning",
+      "f": "Machine learning|Deep learning|training data",
       "fg": 1
     },
     {
@@ -40788,7 +41862,7 @@ window.CS = {
       "id": "65ec72a55",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "Transfer learning",
+      "f": "model|Transfer learning|training data",
       "fg": 1
     },
     {
@@ -40807,7 +41881,7 @@ window.CS = {
       "id": "3868943cd",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "Classification",
+      "f": "Classification|regression|training data",
       "fg": 1
     },
     {
@@ -40826,7 +41900,7 @@ window.CS = {
       "id": "a9273e257",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "regression",
+      "f": "Classification|regression",
       "fg": 1
     },
     {
@@ -40846,7 +41920,7 @@ window.CS = {
       "id": "8792f2725",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "natural language processing",
+      "f": "natural language processing|Machine learning",
       "fg": 1
     },
     {
@@ -40865,7 +41939,7 @@ window.CS = {
       "id": "691f0055c",
       "u": "A4",
       "n": "A4-machine-learning.hardware",
-      "f": "TPUs",
+      "f": "TPUs|deep learning|CPUs",
       "fg": 1
     },
     {
@@ -40904,7 +41978,7 @@ window.CS = {
       "id": "0cab0a0e0",
       "u": "A4",
       "n": "A4-ethics.ethics",
-      "f": "Transparency",
+      "f": "Machine learning|Transparency",
       "fg": 1
     },
     {
@@ -40946,7 +42020,7 @@ window.CS = {
       "id": "d0402ab49",
       "u": "A4",
       "n": "A4-ethics.ethics",
-      "f": "Privacy",
+      "f": "Privacy|Surveillance",
       "fg": 1
     },
     {
@@ -40966,7 +42040,7 @@ window.CS = {
       "id": "6f9d8921d",
       "u": "A4",
       "n": "A4-ethics.ethics",
-      "f": "Misinformation",
+      "f": "Machine learning|Misinformation",
       "fg": 1
     },
     {
@@ -41008,7 +42082,7 @@ window.CS = {
       "id": "219e7874c",
       "u": "A4",
       "n": "A4-ethics.ethics",
-      "f": "Environmental impact",
+      "f": "Machine learning|Environmental impact",
       "fg": 1
     },
     {
@@ -41028,7 +42102,7 @@ window.CS = {
       "id": "0598b349f",
       "u": "A4",
       "n": "A4-ethics.ethics",
-      "f": "human oversight",
+      "f": "Machine learning|human oversight|training data",
       "fg": 1
     },
     {
@@ -41143,7 +42217,7 @@ window.CS = {
       "id": "8a7b8cd46",
       "u": "B1",
       "n": "B1-computational-thinking.concepts",
-      "f": "Algorithmic design",
+      "f": "Algorithmic design|algorithm",
       "fg": 1
     },
     {
@@ -41162,7 +42236,7 @@ window.CS = {
       "id": "42783cedf",
       "u": "B2",
       "n": "B2-fundamentals.variables",
-      "f": "variable",
+      "f": "variable|constant",
       "fg": 1
     },
     {
@@ -41203,7 +42277,7 @@ window.CS = {
       "id": "25abaf050",
       "u": "B2",
       "n": "B2-fundamentals.debugging",
-      "f": "Debugging",
+      "f": "Debugging|variable",
       "fg": 1
     },
     {
@@ -41222,7 +42296,7 @@ window.CS = {
       "id": "ac443a59b",
       "u": "B2",
       "n": "B2-control.sequence",
-      "f": "sequence",
+      "f": "sequence|variables",
       "fg": 1
     },
     {
@@ -41241,7 +42315,7 @@ window.CS = {
       "id": "8042cff25",
       "u": "B2",
       "n": "B2-control.sequence",
-      "f": "infinite loop",
+      "f": "iteration|infinite loop|variables",
       "fg": 1
     },
     {
@@ -41340,7 +42414,7 @@ window.CS = {
       "id": "861257a91",
       "u": "B2",
       "n": "B2-algorithms.sort",
-      "f": "Selection sort",
+      "f": "Bubble sort|Selection sort",
       "fg": 1
     },
     {
@@ -41360,7 +42434,7 @@ window.CS = {
       "id": "62cdb64ad",
       "u": "B3",
       "n": "B3-oop.design",
-      "f": "attribute",
+      "f": "class|attribute|method",
       "fg": 1
     },
     {
@@ -41379,7 +42453,7 @@ window.CS = {
       "id": "0d8020af4",
       "u": "B3",
       "n": "B3-oop.design",
-      "f": "method",
+      "f": "function|method|attribute",
       "fg": 1
     },
     {
@@ -41398,7 +42472,7 @@ window.CS = {
       "id": "00d003dc3",
       "u": "B3",
       "n": "B3-oop.encapsulation",
-      "f": "information hiding",
+      "f": "information hiding|private|methods",
       "fg": 1
     },
     {
@@ -41417,7 +42491,7 @@ window.CS = {
       "id": "9b4d2d5d3",
       "u": "B3",
       "n": "B3-oop.encapsulation",
-      "f": "accessor",
+      "f": "Attributes|methods|accessor",
       "fg": 1
     },
     {
@@ -41436,7 +42510,7 @@ window.CS = {
       "id": "3a81e09a1",
       "u": "A1",
       "n": "A1-hardware.cpugpu",
-      "f": "VRAM",
+      "f": "CPU|GPU|RAM",
       "fg": 1
     },
     {
@@ -41455,7 +42529,7 @@ window.CS = {
       "id": "78c3f606a",
       "u": "A1",
       "n": "A1-hardware.cpugpu",
-      "f": "throughput",
+      "f": "latency|throughput",
       "fg": 1
     },
     {
@@ -41473,7 +42547,7 @@ window.CS = {
       "id": "37eb1370d",
       "u": "A1",
       "n": "A1-hardware.pipeline",
-      "f": "write-back",
+      "f": "Pipelining|write-back",
       "fg": 1
     },
     {
@@ -41492,7 +42566,7 @@ window.CS = {
       "id": "3cfed2c79",
       "u": "A1",
       "n": "A1-hardware.pipeline",
-      "f": "hazard",
+      "f": "Pipelining|conditional branch|hazard",
       "fg": 1
     },
     {
@@ -41511,7 +42585,7 @@ window.CS = {
       "id": "690c7270b",
       "u": "A1",
       "n": "A1-os.contention",
-      "f": "Multitasking",
+      "f": "OS|Multitasking|time slices",
       "fg": 1
     },
     {
@@ -41570,7 +42644,7 @@ window.CS = {
       "id": "71ea8a3c8",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "control system",
+      "f": "control system|Actuators|open-loop",
       "fg": 1
     },
     {
@@ -41666,7 +42740,7 @@ window.CS = {
       "id": "4fddf2e1b",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "set point",
+      "f": "set point|Sensors",
       "fg": 1
     },
     {
@@ -41685,7 +42759,7 @@ window.CS = {
       "id": "f37d3aece",
       "u": "A1",
       "n": "A1-translation.compilers",
-      "f": "high level",
+      "f": "compiler|machine code|source code",
       "fg": 1
     },
     {
@@ -41705,7 +42779,7 @@ window.CS = {
       "id": "6d4129f0d",
       "u": "A1",
       "n": "A1-translation.jit",
-      "f": "bytecode",
+      "f": "bytecode|Compilers|machine code",
       "fg": 1
     },
     {
@@ -41725,7 +42799,7 @@ window.CS = {
       "id": "654734984",
       "u": "A2",
       "n": "A2-basics.layers",
-      "f": "TCP/IP model",
+      "f": "TCP|TCP/IP model|Ethernet",
       "fg": 1
     },
     {
@@ -41744,7 +42818,7 @@ window.CS = {
       "id": "54447ed2f",
       "u": "A2",
       "n": "A2-basics.layers",
-      "f": "Application layer",
+      "f": "protocols|Application layer|DNS",
       "fg": 1
     },
     {
@@ -41764,7 +42838,7 @@ window.CS = {
       "id": "6c553ef5b",
       "u": "A2",
       "n": "A2-basics.layers",
-      "f": "Transport layer",
+      "f": "Transport layer|checksum|UDP",
       "fg": 1
     },
     {
@@ -41783,7 +42857,7 @@ window.CS = {
       "id": "0dccd5848",
       "u": "A2",
       "n": "A2-basics.layers",
-      "f": "Internet layer",
+      "f": "internet|Internet layer|packet",
       "fg": 1
     },
     {
@@ -41802,7 +42876,7 @@ window.CS = {
       "id": "f65a17355",
       "u": "A2",
       "n": "A2-basics.layers",
-      "f": "Network interface layer",
+      "f": "Network interface layer|checksum|MAC addresses",
       "fg": 1
     },
     {
@@ -41821,7 +42895,7 @@ window.CS = {
       "id": "3adaeedbf",
       "u": "A2",
       "n": "A2-architecture.servers",
-      "f": "server",
+      "f": "server|File server|backups",
       "fg": 1
     },
     {
@@ -41841,7 +42915,7 @@ window.CS = {
       "id": "ef0bd199c",
       "u": "A2",
       "n": "A2-architecture.servers",
-      "f": "Web server",
+      "f": "Web server|server|overloaded",
       "fg": 1
     },
     {
@@ -41860,7 +42934,7 @@ window.CS = {
       "id": "46ff670a7",
       "u": "A2",
       "n": "A2-architecture.servers",
-      "f": "Mail server",
+      "f": "server|Mail server|clients",
       "fg": 1
     },
     {
@@ -41879,7 +42953,7 @@ window.CS = {
       "id": "f7db108c3",
       "u": "A2",
       "n": "A2-transmission-security.routing",
-      "f": "routing table",
+      "f": "routing table|packets|Routers",
       "fg": 1
     },
     {
@@ -41898,7 +42972,7 @@ window.CS = {
       "id": "309812bc6",
       "u": "A2",
       "n": "A2-transmission-security.routing",
-      "f": "static routing",
+      "f": "static routing|bandwidth|Routers",
       "fg": 1
     },
     {
@@ -41917,7 +42991,7 @@ window.CS = {
       "id": "1fdb6921c",
       "u": "A2",
       "n": "A2-transmission-security.routing",
-      "f": "convergence",
+      "f": "dynamic routing|convergence|packets",
       "fg": 1
     },
     {
@@ -41936,7 +43010,7 @@ window.CS = {
       "id": "6281efc69",
       "u": "A2",
       "n": "A2-transmission-security.threats",
-      "f": "malware",
+      "f": "viruses|malware|vulnerabilities",
       "fg": 1
     },
     {
@@ -41956,7 +43030,7 @@ window.CS = {
       "id": "e0c31fd1a",
       "u": "A2",
       "n": "A2-transmission-security.threats",
-      "f": "man-in-the-middle",
+      "f": "man-in-the-middle|encryption",
       "fg": 1
     },
     {
@@ -41995,7 +43069,7 @@ window.CS = {
       "id": "bf86ca1a1",
       "u": "A2",
       "n": "A2-transmission-security.threats",
-      "f": "SQL injection",
+      "f": "SQL|SQL injection",
       "fg": 1
     },
     {
@@ -42034,7 +43108,7 @@ window.CS = {
       "id": "90d4bba38",
       "u": "A2",
       "n": "A2-transmission-security.threats",
-      "f": "zero-day",
+      "f": "zero-day|vulnerabilities",
       "fg": 1
     },
     {
@@ -42072,7 +43146,7 @@ window.CS = {
       "id": "b45ab36a0",
       "u": "A2",
       "n": "A2-transmission-security.defences",
-      "f": "input validation",
+      "f": "input validation|SQL",
       "fg": 1
     },
     {
@@ -42091,7 +43165,7 @@ window.CS = {
       "id": "1d4ea48d9",
       "u": "A2",
       "n": "A2-transmission-security.defences",
-      "f": "content security policy",
+      "f": "XSS|content security policy",
       "fg": 1
     },
     {
@@ -42110,7 +43184,7 @@ window.CS = {
       "id": "9d200a677",
       "u": "A2",
       "n": "A2-transmission-security.defences",
-      "f": "penetration testing",
+      "f": "penetration testing|weak passwords|Unpatched software",
       "fg": 1
     },
     {
@@ -42149,7 +43223,7 @@ window.CS = {
       "id": "388b0dec0",
       "u": "A3",
       "n": "A3-sql.transactions",
-      "f": "TCL",
+      "f": "TCL|transaction",
       "fg": 1
     },
     {
@@ -42168,7 +43242,7 @@ window.CS = {
       "id": "c5f25cf49",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "Cloud databases",
+      "f": "database|Cloud databases|Backups",
       "fg": 1
     },
     {
@@ -42187,7 +43261,7 @@ window.CS = {
       "id": "7139ff053",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "Spatial databases",
+      "f": "database|Spatial databases",
       "fg": 1
     },
     {
@@ -42207,7 +43281,7 @@ window.CS = {
       "id": "735fb771f",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "In-memory databases",
+      "f": "database|In-memory databases|RAM",
       "fg": 1
     },
     {
@@ -42227,7 +43301,7 @@ window.CS = {
       "id": "85f36c35e",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "ETL",
+      "f": "ETL|data warehouse",
       "fg": 1
     },
     {
@@ -42247,7 +43321,7 @@ window.CS = {
       "id": "7044306c0",
       "u": "A3",
       "n": "A3-alternative.olap",
-      "f": "OLAP",
+      "f": "OLAP|Pivot",
       "fg": 1
     },
     {
@@ -42285,7 +43359,7 @@ window.CS = {
       "id": "f1ac039ee",
       "u": "A3",
       "n": "A3-alternative.distributed",
-      "f": "Partitioning",
+      "f": "Scalability|Partitioning",
       "fg": 1
     },
     {
@@ -42324,7 +43398,7 @@ window.CS = {
       "id": "908c8278b",
       "u": "A4",
       "n": "A4-data.cleaning",
-      "f": "impute",
+      "f": "impute|missing values",
       "fg": 1
     },
     {
@@ -42343,7 +43417,7 @@ window.CS = {
       "id": "8f14857be",
       "u": "A4",
       "n": "A4-data.cleaning",
-      "f": "before training",
+      "f": "Normalisation|model|KNN",
       "fg": 1
     },
     {
@@ -42362,7 +43436,8 @@ window.CS = {
       "id": "4ed039910",
       "u": "A4",
       "n": "A4-data.cleaning",
-      "f": "scal|rescal|valu"
+      "f": "Normalisation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42379,7 +43454,7 @@ window.CS = {
       "id": "c15e45e18",
       "u": "A4",
       "n": "A4-models.regression",
-      "f": "coefficient of determination",
+      "f": "model|coefficient of determination",
       "fg": 1
     },
     {
@@ -42399,7 +43474,7 @@ window.CS = {
       "id": "60fbaab92",
       "u": "A4",
       "n": "A4-models.classify",
-      "f": "collaborative filtering",
+      "f": "KNN|collaborative filtering",
       "fg": 1
     },
     {
@@ -42457,7 +43532,8 @@ window.CS = {
       "id": "313214e0a",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "measur|recall|disease"
+      "f": "model|confusion matrix",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42477,7 +43553,7 @@ window.CS = {
       "id": "619024086",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "Overfitting",
+      "f": "Overfitting|test set|validation",
       "fg": 1
     },
     {
@@ -42497,7 +43573,7 @@ window.CS = {
       "id": "dcdbdc23a",
       "u": "A4",
       "n": "A4-models.clustering",
-      "f": "customer segmentation",
+      "f": "Clustering",
       "fg": 1
     },
     {
@@ -42518,7 +43594,7 @@ window.CS = {
       "id": "3ceab4594",
       "u": "A4",
       "n": "A4-models.association",
-      "f": "predictive policing",
+      "f": "predictive policing|human oversight|transparency",
       "fg": 1
     },
     {
@@ -42559,7 +43635,7 @@ window.CS = {
       "id": "25f09c1d4",
       "u": "A4",
       "n": "A4-advanced.ann",
-      "f": "single perceptron",
+      "f": "training data|activation function",
       "fg": 1
     },
     {
@@ -42578,7 +43654,7 @@ window.CS = {
       "id": "3204ec731",
       "u": "A4",
       "n": "A4-advanced.cnn",
-      "f": "convolutional layer",
+      "f": "feature map|pixel",
       "fg": 1
     },
     {
@@ -42597,7 +43673,7 @@ window.CS = {
       "id": "f0a8be400",
       "u": "B2",
       "n": "B2-algorithms.recursion",
-      "f": "base case",
+      "f": "function|recursive|base case",
       "fg": 1
     },
     {
@@ -42617,7 +43693,7 @@ window.CS = {
       "id": "42352460e",
       "u": "B2",
       "n": "B2-algorithms.recursion",
-      "f": "call stack",
+      "f": "stack|function|recursive",
       "fg": 1
     },
     {
@@ -42638,7 +43714,7 @@ window.CS = {
       "id": "dfbde3601",
       "u": "B2",
       "n": "B2-algorithms.recursion",
-      "f": "quicksort",
+      "f": "recursive|quicksort|base case",
       "fg": 1
     },
     {
@@ -42657,7 +43733,8 @@ window.CS = {
       "id": "3d4f54788",
       "u": "B3",
       "n": "B3-advanced.inheritance",
-      "f": "attribut|clas|declar"
+      "f": "attributes|methods|classes",
+      "fg": 1
     },
     {
       "k": "term",
@@ -42676,7 +43753,7 @@ window.CS = {
       "id": "c73f08054",
       "u": "B3",
       "n": "B3-advanced.polymorphism",
-      "f": "override",
+      "f": "method|Polymorphism|override",
       "fg": 1
     },
     {
@@ -42695,7 +43772,7 @@ window.CS = {
       "id": "b482127a6",
       "u": "B3",
       "n": "B3-advanced.composition",
-      "f": "aggregation",
+      "f": "aggregation|object",
       "fg": 1
     },
     {
@@ -42733,7 +43810,7 @@ window.CS = {
       "id": "0b10343f6",
       "u": "B3",
       "n": "B3-advanced.patterns",
-      "f": "singleton",
+      "f": "singleton|instance",
       "fg": 1
     },
     {
@@ -42753,7 +43830,7 @@ window.CS = {
       "id": "a03cfd47a",
       "u": "B3",
       "n": "B3-advanced.patterns",
-      "f": "factory",
+      "f": "design pattern|factory|instance",
       "fg": 1
     },
     {
@@ -42773,7 +43850,7 @@ window.CS = {
       "id": "693dce3d7",
       "u": "B4",
       "n": "B4-adt.linked",
-      "f": "new node|singly linked",
+      "f": "linked list",
       "fg": 1
     },
     {
@@ -42808,7 +43885,7 @@ window.CS = {
       "id": "3d891a8b1",
       "u": "B4",
       "n": "B4-adt.bst",
-      "f": "order traversal|binary search|search tree",
+      "f": "binary|binary search tree",
       "fg": 1
     },
     {
@@ -42828,7 +43905,7 @@ window.CS = {
       "id": "3c366053d",
       "u": "B4",
       "n": "B4-adt.hash",
-      "f": "hash table",
+      "f": "hash table|collision",
       "fg": 1
     },
     {
@@ -42847,7 +43924,7 @@ window.CS = {
       "id": "e97244ce3",
       "u": "B4",
       "n": "B4-adt.hash",
-      "f": "load factor",
+      "f": "hash table|load factor|collision",
       "fg": 1
     },
     {
@@ -42868,7 +43945,7 @@ window.CS = {
       "id": "f8a3f3eef",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "denoising",
+      "f": "training|Diffusion models|denoising",
       "fg": 1
     },
     {
@@ -42887,7 +43964,7 @@ window.CS = {
       "id": "bc3407d44",
       "u": "CS",
       "n": "Case-study.diffusion",
-      "f": "DDPM",
+      "f": "DDPM|neural network",
       "fg": 1
     },
     {
@@ -42925,7 +44002,7 @@ window.CS = {
       "id": "7230ff712",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "Generative AI",
+      "f": "Generative AI|Segmentation maps|Image-to-image",
       "fg": 1
     },
     {
@@ -42945,7 +44022,7 @@ window.CS = {
       "id": "b71f89b18",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "Prompt engineering",
+      "f": "Prompt engineering|text-to-image",
       "fg": 1
     },
     {
@@ -42965,7 +44042,7 @@ window.CS = {
       "id": "44428f18b",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "text encoder",
+      "f": "model|Generative AI|text-to-image",
       "fg": 1
     },
     {
@@ -42985,7 +44062,7 @@ window.CS = {
       "id": "bcc749722",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "synthetic datasets",
+      "f": "Generative AI|synthetic datasets|Conditional generation",
       "fg": 1
     },
     {
@@ -43004,7 +44081,7 @@ window.CS = {
       "id": "916ab1e22",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "model collapse",
+      "f": "model|synthetic datasets|model collapse",
       "fg": 1
     },
     {
@@ -43023,7 +44100,7 @@ window.CS = {
       "id": "329b4f0b6",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "Class-conditional",
+      "f": "Class-conditional|label",
       "fg": 1
     },
     {
@@ -43061,7 +44138,7 @@ window.CS = {
       "id": "ce320fce8",
       "u": "CS",
       "n": "Case-study.techniques",
-      "f": "Segmentation maps",
+      "f": "Generative AI|Segmentation maps|Conditional generation",
       "fg": 1
     },
     {
@@ -43081,7 +44158,7 @@ window.CS = {
       "id": "46ae89f01",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "embeddings",
+      "f": "embeddings|conditioning",
       "fg": 1
     },
     {
@@ -43104,7 +44181,7 @@ window.CS = {
       "id": "2c6d13848",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "intellectual property",
+      "f": "internet|models|intellectual property",
       "fg": 1
     },
     {
@@ -43123,7 +44200,7 @@ window.CS = {
       "id": "a664cac75",
       "u": "CS",
       "n": "Case-study.ethics",
-      "f": "stereotypes",
+      "f": "models|stereotypes|human review",
       "fg": 1
     },
     {
@@ -43142,7 +44219,7 @@ window.CS = {
       "id": "a52b09ba8",
       "u": "CS",
       "n": "Case-study.evaluate",
-      "f": "Training stability",
+      "f": "model|diffusion|Training stability",
       "fg": 1
     },
     {
@@ -43183,7 +44260,7 @@ window.CS = {
       "id": "855e2f548",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "generator",
+      "f": "training|generator",
       "fg": 1
     },
     {
@@ -43203,7 +44280,7 @@ window.CS = {
       "id": "328ddb7e1",
       "u": "CS",
       "n": "Case-study.gan",
-      "f": "adversarial dynamic",
+      "f": "generative adversarial network|adversarial dynamic",
       "fg": 1
     },
     {
@@ -43222,7 +44299,7 @@ window.CS = {
       "id": "d5ac003d6",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "Flow-based models",
+      "f": "model|Flow-based models|latent space",
       "fg": 1
     },
     {
@@ -43241,7 +44318,7 @@ window.CS = {
       "id": "1043b3cf5",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "latent space",
+      "f": "model|Diffusion|latent space",
       "fg": 1
     },
     {
@@ -43264,7 +44341,7 @@ window.CS = {
       "id": "b4a79d298",
       "u": "CS",
       "n": "Case-study.hybrid",
-      "f": "hybrid model",
+      "f": "model|hybrid model|latent space",
       "fg": 1
     },
     {
@@ -43284,7 +44361,7 @@ window.CS = {
       "id": "5e32ab793",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "virtual memory",
+      "f": "virtual memory|secondary storage|RAM",
       "fg": 1
     },
     {
@@ -43303,7 +44380,7 @@ window.CS = {
       "id": "23618791e",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "context switch",
+      "f": "Scheduling|Round robin|context switch",
       "fg": 1
     },
     {
@@ -43323,7 +44400,7 @@ window.CS = {
       "id": "15194a0a8",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "starvation",
+      "f": "Scheduling|Priority scheduling|starvation",
       "fg": 1
     },
     {
@@ -43342,7 +44419,7 @@ window.CS = {
       "id": "2dc3df738",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "operating system",
+      "f": "operating system|scheduling|CPU",
       "fg": 1
     },
     {
@@ -43380,7 +44457,7 @@ window.CS = {
       "id": "0e4f888e3",
       "u": "A2",
       "n": "A2-transmission-security.packets",
-      "f": "checksum",
+      "f": "checksum|packets",
       "fg": 1
     },
     {
@@ -43399,7 +44476,7 @@ window.CS = {
       "id": "9f6c7f7cf",
       "u": "A2",
       "n": "A2-basics.tcp",
-      "f": "video call",
+      "f": "packets",
       "fg": 1
     },
     {
@@ -43452,7 +44529,7 @@ window.CS = {
       "id": "67dfaefaf",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "database management system",
+      "f": "database|database management system|SQL",
       "fg": 1
     },
     {
@@ -43471,7 +44548,7 @@ window.CS = {
       "id": "912d82ca6",
       "u": "A3",
       "n": "A3-design.keys",
-      "f": "referential integrity",
+      "f": "referential integrity|foreign key",
       "fg": 1
     },
     {
@@ -43492,7 +44569,8 @@ window.CS = {
       "id": "9f267d276",
       "u": "A3",
       "n": "A3-sql.ddl",
-      "f": "updat|writ|dbms"
+      "f": "DBMS",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43511,7 +44589,7 @@ window.CS = {
       "id": "15983dc4c",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "sql query",
+      "f": "SQL|WHERE",
       "fg": 1
     },
     {
@@ -43531,7 +44609,7 @@ window.CS = {
       "id": "cbee21ebf",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "sql query|alphabetical order",
+      "f": "SQL|ORDER BY",
       "fg": 1
     },
     {
@@ -43586,7 +44664,7 @@ window.CS = {
       "id": "ffd92d651",
       "u": "A4",
       "n": "A4-data.dimensions",
-      "f": "Principal component analysis",
+      "f": "model|Principal component analysis|curse of dimensionality",
       "fg": 1
     },
     {
@@ -43605,7 +44683,7 @@ window.CS = {
       "id": "1007bba40",
       "u": "A4",
       "n": "A4-advanced.ann",
-      "f": "activation function",
+      "f": "deep learning|artificial neural network|activation function",
       "fg": 1
     },
     {
@@ -43624,7 +44702,7 @@ window.CS = {
       "id": "525fc1010",
       "u": "A4",
       "n": "A4-advanced.cnn",
-      "f": "pooling",
+      "f": "neural network|convolutional neural network|pooling",
       "fg": 1
     },
     {
@@ -43643,7 +44721,7 @@ window.CS = {
       "id": "0f60224e5",
       "u": "A4",
       "n": "A4-advanced.cnn",
-      "f": "feature map",
+      "f": "neural network|convolutional neural network|feature map",
       "fg": 1
     },
     {
@@ -43662,7 +44740,7 @@ window.CS = {
       "id": "463d63c95",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "opcode",
+      "f": "opcode|machine instruction|control unit",
       "fg": 1
     },
     {
@@ -43681,7 +44759,7 @@ window.CS = {
       "id": "a67f7b32d",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "operand",
+      "f": "operand|opcode|machine instruction",
       "fg": 1
     },
     {
@@ -43700,7 +44778,7 @@ window.CS = {
       "id": "41fddab40",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "machine instruction",
+      "f": "machine instruction|opcode|operand",
       "fg": 1
     },
     {
@@ -43719,7 +44797,7 @@ window.CS = {
       "id": "69a2e2fe8",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "single core|core processor",
+      "f": "single-core|central processing unit",
       "fg": 1
     },
     {
@@ -43738,7 +44816,7 @@ window.CS = {
       "id": "b80a7e411",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "multi core|core processor",
+      "f": "single-core|central processing unit",
       "fg": 1
     },
     {
@@ -43757,7 +44835,7 @@ window.CS = {
       "id": "385e74184",
       "u": "A1",
       "n": "A1-hardware.gpu",
-      "f": "parallel processing",
+      "f": "parallel processing|cores",
       "fg": 1
     },
     {
@@ -43776,7 +44854,7 @@ window.CS = {
       "id": "aa47a421b",
       "u": "A1",
       "n": "A1-hardware.cpugpu",
-      "f": "Core architecture",
+      "f": "cores|Core architecture|cache",
       "fg": 1
     },
     {
@@ -43795,7 +44873,7 @@ window.CS = {
       "id": "fc3a7d0fd",
       "u": "A1",
       "n": "A1-hardware.cpugpu",
-      "f": "Task division",
+      "f": "CPU|GPU|Task division",
       "fg": 1
     },
     {
@@ -43813,8 +44891,8 @@ window.CS = {
       "c": "Define",
       "id": "7308d9dd9",
       "u": "A1",
-      "n": "A1-hardware.cloud",
-      "f": "processing power",
+      "n": "A1-hardware.fde",
+      "f": "Clock speed|cores|cache",
       "fg": 1
     },
     {
@@ -43851,7 +44929,8 @@ window.CS = {
       "id": "8343c2d10",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "clock|core|processor"
+      "f": "cores",
+      "fg": 1
     },
     {
       "k": "term",
@@ -43924,7 +45003,7 @@ window.CS = {
       "id": "5f5b61ee4",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "fetch stage",
+      "f": "fetch stage|memory address register|memory data register",
       "fg": 1
     },
     {
@@ -43943,7 +45022,7 @@ window.CS = {
       "id": "f809c6e19",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "opcode|operand|decode",
+      "f": "opcode|fetch–decode–execute cycle|operand",
       "fg": 1
     },
     {
@@ -43962,7 +45041,7 @@ window.CS = {
       "id": "7e8f0209c",
       "u": "A1",
       "n": "A1-hardware.fde",
-      "f": "execute stage",
+      "f": "execute stage|accumulator|fetch–decode–execute cycle",
       "fg": 1
     },
     {
@@ -43999,7 +45078,7 @@ window.CS = {
       "id": "204353771",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "branch instruction",
+      "f": "branch instruction|program counter",
       "fg": 1
     },
     {
@@ -44018,7 +45097,8 @@ window.CS = {
       "id": "2a442406b",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "chang|branch|instruction"
+      "f": "branch instruction",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44036,7 +45116,8 @@ window.CS = {
       "id": "35e78bcc0",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "addres|jump|fetch"
+      "f": "branch instruction|program counter",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44054,7 +45135,8 @@ window.CS = {
       "id": "543958c83",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "other|alu|register"
+      "f": "single-core|control unit|ALU",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44072,7 +45154,7 @@ window.CS = {
       "id": "b85b64ff2",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "Primary memory",
+      "f": "Primary memory|ROM|secondary storage",
       "fg": 1
     },
     {
@@ -44091,7 +45173,8 @@ window.CS = {
       "id": "d13e62867",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "differenc|slight|shar"
+      "f": "cache|core|RAM",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44109,7 +45192,7 @@ window.CS = {
       "id": "6c323bec6",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "cache hits",
+      "f": "cache|cache hits|RAM",
       "fg": 1
     },
     {
@@ -44128,7 +45211,7 @@ window.CS = {
       "id": "c4504aab5",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "non volatile|volatile memory",
+      "f": "volatile|firmware|SSD",
       "fg": 1
     },
     {
@@ -44147,7 +45230,8 @@ window.CS = {
       "id": "9cfb48b5d",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "secondary|virtual|ram"
+      "f": "virtual memory|secondary storage|RAM",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44165,7 +45249,7 @@ window.CS = {
       "id": "8c0e7dc12",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "firmware",
+      "f": "firmware|BIOS|ROM",
       "fg": 1
     },
     {
@@ -44184,7 +45268,7 @@ window.CS = {
       "id": "c3bc6f05d",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "BIOS",
+      "f": "BIOS|firmware|ROM",
       "fg": 1
     },
     {
@@ -44203,7 +45287,8 @@ window.CS = {
       "id": "49738d2d4",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "operat|bootstrap|boot"
+      "f": "ROM|secondary storage|RAM",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44221,7 +45306,7 @@ window.CS = {
       "id": "e8213fc85",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "secondary storage",
+      "f": "secondary storage|cost per GB|SSD",
       "fg": 1
     },
     {
@@ -44240,7 +45325,7 @@ window.CS = {
       "id": "8e7053a11",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "internal storage",
+      "f": "eMMC|SSD|hard disk",
       "fg": 1
     },
     {
@@ -44259,7 +45344,7 @@ window.CS = {
       "id": "c78f07464",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "external storage",
+      "f": "Optical discs|Network-attached storage|secondary storage",
       "fg": 1
     },
     {
@@ -44278,7 +45363,7 @@ window.CS = {
       "id": "e94e55b32",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "Magnetic tape",
+      "f": "Magnetic tape|backups",
       "fg": 1
     },
     {
@@ -44297,7 +45382,7 @@ window.CS = {
       "id": "12bad2c1f",
       "u": "A1",
       "n": "A1-hardware.memory",
-      "f": "random access",
+      "f": "random access|SSD|RAM",
       "fg": 1
     },
     {
@@ -44316,7 +45401,7 @@ window.CS = {
       "id": "bdf42c2d6",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "sequential access",
+      "f": "sequential access|Magnetic tape|backups",
       "fg": 1
     },
     {
@@ -44335,7 +45420,8 @@ window.CS = {
       "id": "361cd26da",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "acces|ssds|hdds"
+      "f": "SSD",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44371,7 +45457,7 @@ window.CS = {
       "id": "3def0b4fb",
       "u": "A1",
       "n": "A1-hardware.storage",
-      "f": "cost per GB",
+      "f": "cost per GB|SSD|hard disk",
       "fg": 1
     },
     {
@@ -44426,7 +45512,7 @@ window.CS = {
       "id": "f488f813c",
       "u": "A1",
       "n": "A1-hardware.compression",
-      "f": "lossless compression",
+      "f": "Compression|lossless compression|run-length encoding",
       "fg": 1
     },
     {
@@ -44445,7 +45531,7 @@ window.CS = {
       "id": "6addb6c72",
       "u": "A1",
       "n": "A1-hardware.compression",
-      "f": "lossy compression",
+      "f": "Compression|lossy compression",
       "fg": 1
     },
     {
@@ -44464,7 +45550,8 @@ window.CS = {
       "id": "0f54a8fd5",
       "u": "A1",
       "n": "A1-hardware.compression",
-      "f": "divid|ratio|compress"
+      "f": "Compression",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44482,7 +45569,7 @@ window.CS = {
       "id": "8786448a0",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "File size",
+      "f": "File size|bits|compressed",
       "fg": 1
     },
     {
@@ -44501,7 +45588,8 @@ window.CS = {
       "id": "141f590fd",
       "u": "A1",
       "n": "A1-hardware.compression",
-      "f": "divid|reduc|compression"
+      "f": "bits|Compression",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44519,7 +45607,8 @@ window.CS = {
       "id": "d156b356d",
       "u": "A1",
       "n": "A1-hardware.compression",
-      "f": "compress|saving|transfer"
+      "f": "bandwidth",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44629,7 +45718,8 @@ window.CS = {
       "id": "336c8dc9c",
       "u": "A1",
       "n": "A1-hardware.cloud",
-      "f": "backup|quick|server"
+      "f": "backups",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44666,7 +45756,7 @@ window.CS = {
       "id": "4272ac179",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "nibble",
+      "f": "nibble|Hexadecimal|bit",
       "fg": 1
     },
     {
@@ -44685,7 +45775,8 @@ window.CS = {
       "id": "a287a1de2",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "valu|hexadecimal|denary"
+      "f": "place values|denary|Hexadecimal",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44703,7 +45794,7 @@ window.CS = {
       "id": "94930f24f",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "place values",
+      "f": "place values|binary",
       "fg": 1
     },
     {
@@ -44722,7 +45813,8 @@ window.CS = {
       "id": "94fc20b7e",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "valu|nibbl|hexadecimal"
+      "f": "binary|Hexadecimal|nibble",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44740,7 +45832,8 @@ window.CS = {
       "id": "4ccb38b90",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "nibbl|becom|nibble"
+      "f": "binary|nibble|Hexadecimal",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44758,7 +45851,7 @@ window.CS = {
       "id": "eb530bb36",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "most significant bit",
+      "f": "most significant bit|place values|binary",
       "fg": 1
     },
     {
@@ -44777,7 +45870,7 @@ window.CS = {
       "id": "39126f3ac",
       "u": "A1",
       "n": "A1-data-logic.binary",
-      "f": "least significant bit",
+      "f": "least significant bit|place values|binary",
       "fg": 1
     },
     {
@@ -44796,7 +45889,8 @@ window.CS = {
       "id": "46927ccab",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "stor|calculation|available"
+      "f": "bits",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44814,7 +45908,8 @@ window.CS = {
       "id": "47fc56198",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "encod|imag|agre"
+      "f": "binary",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44850,7 +45945,8 @@ window.CS = {
       "id": "72f45ab57",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "stor|bitmap|represent"
+      "f": "pixel|binary",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44868,7 +45964,8 @@ window.CS = {
       "id": "1dbf740d7",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "give|width|resolution"
+      "f": "pixel",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44886,7 +45983,7 @@ window.CS = {
       "id": "793a79cd4",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "colour depth",
+      "f": "pixel|bits",
       "fg": 1
     },
     {
@@ -44905,7 +46002,7 @@ window.CS = {
       "id": "64a72bdc1",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "bit depth",
+      "f": "sample rate|pixel|bits",
       "fg": 1
     },
     {
@@ -44943,7 +46040,8 @@ window.CS = {
       "id": "4e46f5545",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "give|doubl|mono"
+      "f": "File size",
+      "fg": 1
     },
     {
       "k": "term",
@@ -44961,7 +46059,7 @@ window.CS = {
       "id": "7315d19dd",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "image file",
+      "f": "pixel|sample rate|bits",
       "fg": 1
     },
     {
@@ -44980,7 +46078,7 @@ window.CS = {
       "id": "82f93538f",
       "u": "A1",
       "n": "A1-data-logic.storing",
-      "f": "metadata",
+      "f": "metadata|pixel",
       "fg": 1
     },
     {
@@ -44998,8 +46096,8 @@ window.CS = {
       "c": "Define",
       "id": "38fae0e59",
       "u": "A1",
-      "n": "A1-data-logic.truth",
-      "f": "binary|boolean|false",
+      "n": "A1-data-logic.binary",
+      "f": "binary",
       "fg": 1
     },
     {
@@ -45017,8 +46115,8 @@ window.CS = {
       "c": "Outline",
       "id": "3d3d1497f",
       "u": "A1",
-      "n": "A1-data-logic.diagrams",
-      "f": "logic gate",
+      "n": "A1-data-logic.gates",
+      "f": "logic gates|binary",
       "fg": 1
     },
     {
@@ -45036,8 +46134,9 @@ window.CS = {
       "c": "Define",
       "id": "2e7048852",
       "u": "A1",
-      "n": "A1-data-logic.truth",
-      "f": "describ|operator|circuit"
+      "n": "A1-data-logic.diagrams",
+      "f": "NAND|logic circuit",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45055,7 +46154,8 @@ window.CS = {
       "id": "9bea5a30d",
       "u": "A1",
       "n": "A1-data-logic.truth",
-      "f": "intermediate|truth|circuit"
+      "f": "truth table",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45073,7 +46173,8 @@ window.CS = {
       "id": "7dac8f292",
       "u": "A1",
       "n": "A1-data-logic.gates",
-      "f": "produc|circuit|gate"
+      "f": "logic gates|binary",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45091,7 +46192,8 @@ window.CS = {
       "id": "2ab39f8c4",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "proces|execut|resourc"
+      "f": "register|operating system",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45109,7 +46211,8 @@ window.CS = {
       "id": "755eafb35",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "proces|shar|thread"
+      "f": "single-core",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45127,7 +46230,8 @@ window.CS = {
       "id": "095326e8a",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "allocat|controll|resourc"
+      "f": "CPU",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45145,7 +46249,8 @@ window.CS = {
       "id": "7ecd72677",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "decid|proces|schedul"
+      "f": "Scheduling|CPU",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45163,7 +46268,7 @@ window.CS = {
       "id": "21c071427",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "file management",
+      "f": "File system|file permissions",
       "fg": 1
     },
     {
@@ -45182,7 +46287,7 @@ window.CS = {
       "id": "6fab8e32c",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "Device management",
+      "f": "device drivers|Device management",
       "fg": 1
     },
     {
@@ -45201,7 +46306,7 @@ window.CS = {
       "id": "737e76fd5",
       "u": "A1",
       "n": "A1-hardware.cpu",
-      "f": "input output",
+      "f": "interrupt|central processing unit",
       "fg": 1
     },
     {
@@ -45239,7 +46344,7 @@ window.CS = {
       "id": "87ef09b49",
       "u": "A1",
       "n": "A1-os.os",
-      "f": "directories",
+      "f": "directories|File system",
       "fg": 1
     },
     {
@@ -45276,7 +46381,7 @@ window.CS = {
       "id": "292134487",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "ready queue",
+      "f": "ready queue|Scheduling|CPU",
       "fg": 1
     },
     {
@@ -45295,7 +46400,7 @@ window.CS = {
       "id": "ffa906f01",
       "u": "A1",
       "n": "A1-os.scheduling",
-      "f": "time slice",
+      "f": "time slice|Round robin|Scheduling",
       "fg": 1
     },
     {
@@ -45314,7 +46419,7 @@ window.CS = {
       "id": "a19dba019",
       "u": "A1",
       "n": "A1-os.interrupts",
-      "f": "ISR",
+      "f": "interrupts|ISR|CPU",
       "fg": 1
     },
     {
@@ -45333,7 +46438,7 @@ window.CS = {
       "id": "1273720ae",
       "u": "A1",
       "n": "A1-os.interrupts",
-      "f": "response times",
+      "f": "response times|polling|interrupts",
       "fg": 1
     },
     {
@@ -45352,7 +46457,8 @@ window.CS = {
       "id": "11b471e68",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "compar|actuator|controller"
+      "f": "control system|Actuators|set point",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45370,7 +46476,8 @@ window.CS = {
       "id": "bc3af14f5",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "measur|controller|convert"
+      "f": "Sensors",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45388,7 +46495,8 @@ window.CS = {
       "id": "5867f13a7",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "heater|valve|actuator"
+      "f": "Actuators",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45406,7 +46514,8 @@ window.CS = {
       "id": "31f931fe6",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "sens|compar|continu"
+      "f": "control system|open-loop|set point",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45424,7 +46533,7 @@ window.CS = {
       "id": "03b3d0c09",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "set point",
+      "f": "set point|control system|Sensors",
       "fg": 1
     },
     {
@@ -45443,7 +46552,8 @@ window.CS = {
       "id": "213c6bbe8",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "chang|heater|above"
+      "f": "control system",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45479,7 +46589,8 @@ window.CS = {
       "id": "a58dae8fa",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "automat|door|sensor"
+      "f": "control system|Sensors",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45515,7 +46626,8 @@ window.CS = {
       "id": "986e2f750",
       "u": "A1",
       "n": "A1-os.control",
-      "f": "automat|able|safe"
+      "f": "control system",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45533,7 +46645,7 @@ window.CS = {
       "id": "9ff995a4a",
       "u": "A1",
       "n": "A1-translation.compilers",
-      "f": "source code",
+      "f": "source code|CPU",
       "fg": 1
     },
     {
@@ -45552,7 +46664,8 @@ window.CS = {
       "id": "7d463e317",
       "u": "A1",
       "n": "A1-translation.jit",
-      "f": "produc|compiler|source"
+      "f": "Compilers|machine code|source code",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45570,7 +46683,7 @@ window.CS = {
       "id": "25ebb035e",
       "u": "A1",
       "n": "A1-translation.compilers",
-      "f": "executable file",
+      "f": "executable file|machine code|source code",
       "fg": 1
     },
     {
@@ -45589,7 +46702,7 @@ window.CS = {
       "id": "7dd3146de",
       "u": "A1",
       "n": "A1-translation.jit",
-      "f": "machine code",
+      "f": "machine code|CPU",
       "fg": 1
     },
     {
@@ -45608,7 +46721,7 @@ window.CS = {
       "id": "3e2c9b875",
       "u": "A1",
       "n": "A1-translation.scenarios",
-      "f": "native code",
+      "f": "native code|compilers|machine code",
       "fg": 1
     },
     {
@@ -45627,7 +46740,7 @@ window.CS = {
       "id": "128e35808",
       "u": "A1",
       "n": "A1-translation.jit",
-      "f": "bytecode|runtime|virtual",
+      "f": "bytecode|virtual machine",
       "fg": 1
     },
     {
@@ -45646,7 +46759,7 @@ window.CS = {
       "id": "ce47287a1",
       "u": "A1",
       "n": "A1-translation.jit",
-      "f": "virtual machine",
+      "f": "virtual machine|bytecode",
       "fg": 1
     },
     {
@@ -45665,7 +46778,8 @@ window.CS = {
       "id": "448ffc984",
       "u": "A1",
       "n": "A1-translation.compilers",
-      "f": "executable|done|produce"
+      "f": "executable file",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45683,7 +46797,8 @@ window.CS = {
       "id": "621ac9ec7",
       "u": "A1",
       "n": "A1-translation.compilers",
-      "f": "translat|runn|interpreter"
+      "f": "compiler|source code",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45700,8 +46815,8 @@ window.CS = {
       "c": "Define",
       "id": "0bb2b873e",
       "u": "A1",
-      "n": "A1-translation.scenarios",
-      "f": "Cross-platform",
+      "n": "A1-translation.jit",
+      "f": "cross-platform|bytecode|virtual machine",
       "fg": 1
     },
     {
@@ -45720,7 +46835,7 @@ window.CS = {
       "id": "e3524ad66",
       "u": "A1",
       "n": "A1-translation.jit",
-      "f": "portability",
+      "f": "portability|bytecode|native code",
       "fg": 1
     },
     {
@@ -45739,7 +46854,7 @@ window.CS = {
       "id": "e30168794",
       "u": "A1",
       "n": "A1-translation.scenarios",
-      "f": "Performance-critical",
+      "f": "Performance-critical|compilers|machine code",
       "fg": 1
     },
     {
@@ -45777,7 +46892,7 @@ window.CS = {
       "id": "a6cf1bdca",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "World Wide Web",
+      "f": "World Wide Web|HTTP|HTTPS",
       "fg": 1
     },
     {
@@ -45796,7 +46911,7 @@ window.CS = {
       "id": "e242b5271",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "digital infrastructure",
+      "f": "digital infrastructure|distributed system|Edge computing",
       "fg": 1
     },
     {
@@ -45814,9 +46929,8 @@ window.CS = {
       "c": "Define",
       "id": "db0704940",
       "u": "A2",
-      "n": "A2-basics.infrastructure",
-      "f": "blockchain",
-      "fg": 1
+      "n": "A2-basics.types",
+      "f": "shar|link|network"
     },
     {
       "k": "term",
@@ -45834,7 +46948,7 @@ window.CS = {
       "id": "ec1d9b8e9",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "smart traffic system",
+      "f": "smart traffic system|Edge computing",
       "fg": 1
     },
     {
@@ -45853,7 +46967,7 @@ window.CS = {
       "id": "85e22ffae",
       "u": "A2",
       "n": "A2-architecture.models",
-      "f": "clients",
+      "f": "clients|server",
       "fg": 1
     },
     {
@@ -45872,7 +46986,7 @@ window.CS = {
       "id": "cb8158a77",
       "u": "A2",
       "n": "A2-basics.http",
-      "f": "Host",
+      "f": "Host|IP address",
       "fg": 1
     },
     {
@@ -45891,7 +47005,8 @@ window.CS = {
       "id": "9d740b986",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "receive|node|connect"
+      "f": "switch|router",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45909,7 +47024,7 @@ window.CS = {
       "id": "e150c6c9e",
       "u": "A2",
       "n": "A2-basics.tcp",
-      "f": "ACK",
+      "f": "ACK|TCP",
       "fg": 1
     },
     {
@@ -45928,7 +47043,8 @@ window.CS = {
       "id": "07ce55089",
       "u": "A2",
       "n": "A2-architecture.models",
-      "f": "controll|resourc|updat"
+      "f": "client–server|server|single point of failure",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45946,7 +47062,8 @@ window.CS = {
       "id": "214fd1b96",
       "u": "A2",
       "n": "A2-architecture.models",
-      "f": "shar|resourc|peer"
+      "f": "peer-to-peer|server|single point of failure",
+      "fg": 1
     },
     {
       "k": "term",
@@ -45964,7 +47081,7 @@ window.CS = {
       "id": "608e454dc",
       "u": "A2",
       "n": "A2-architecture.topologies",
-      "f": "mesh|topology|reliability",
+      "f": "mesh|topology",
       "fg": 1
     },
     {
@@ -45983,7 +47100,8 @@ window.CS = {
       "id": "3c2e0b1bd",
       "u": "A2",
       "n": "A2-basics.types",
-      "f": "acros|measur|mbps"
+      "f": "bandwidth",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46000,8 +47118,9 @@ window.CS = {
       "c": "Define",
       "id": "d521099c4",
       "u": "A2",
-      "n": "A2-architecture.models",
-      "f": "devic|shar|switch"
+      "n": "A2-architecture.topologies",
+      "f": "Collisions|switch",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46019,7 +47138,8 @@ window.CS = {
       "id": "f8e1f9eac",
       "u": "A2",
       "n": "A2-architecture.topologies",
-      "f": "cabl|devic|choos"
+      "f": "mesh|topology",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46037,7 +47157,8 @@ window.CS = {
       "id": "6dd080f81",
       "u": "A2",
       "n": "A2-architecture.subnetting",
-      "f": "separat|other|controll"
+      "f": "firewall|switches|router",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46055,7 +47176,8 @@ window.CS = {
       "id": "8884b0e72",
       "u": "A2",
       "n": "A2-architecture.subnetting",
-      "f": "devic|addres|subnett"
+      "f": "Subnetting|IPv4",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46072,8 +47194,9 @@ window.CS = {
       "c": "Define",
       "id": "639885ac4",
       "u": "A2",
-      "n": "A2-architecture.vlans",
-      "f": "acces|devic|segment"
+      "n": "A2-architecture.subnetting",
+      "f": "guest Wi-Fi|Wi-Fi",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46091,7 +47214,7 @@ window.CS = {
       "id": "9992479b1",
       "u": "A2",
       "n": "A2-architecture.vlans",
-      "f": "layer-3 switch",
+      "f": "switches|layer-3 switch|VLANs",
       "fg": 1
     },
     {
@@ -46110,7 +47233,8 @@ window.CS = {
       "id": "d362889e6",
       "u": "A2",
       "n": "A2-architecture.models",
-      "f": "stor|central|connect"
+      "f": "server",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46128,7 +47252,8 @@ window.CS = {
       "id": "133eaa0f8",
       "u": "A2",
       "n": "A2-architecture.models",
-      "f": "client|server|software"
+      "f": "server|web server|clients",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46146,7 +47271,8 @@ window.CS = {
       "id": "91770f361",
       "u": "A2",
       "n": "A2-architecture.models",
-      "f": "stor|client|server"
+      "f": "server|clients",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46163,8 +47289,9 @@ window.CS = {
       "c": "Define",
       "id": "794082b9d",
       "u": "A2",
-      "n": "A2-basics.devices",
-      "f": "rout|choos|acros"
+      "n": "A2-transmission-security.packets",
+      "f": "Packet switching|routing table|packets",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46182,7 +47309,8 @@ window.CS = {
       "id": "cfca3d4c7",
       "u": "A2",
       "n": "A2-transmission-security.packets",
-      "f": "deliver|reassemble|destination"
+      "f": "sequence number|packets|protocol",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46200,7 +47328,7 @@ window.CS = {
       "id": "ec29853e5",
       "u": "A2",
       "n": "A2-transmission-security.packets",
-      "f": "payload",
+      "f": "payload|packets",
       "fg": 1
     },
     {
@@ -46219,7 +47347,7 @@ window.CS = {
       "id": "505f61e53",
       "u": "A2",
       "n": "A2-transmission-security.packets",
-      "f": "sequence number",
+      "f": "sequence number|Packet switching|packets",
       "fg": 1
     },
     {
@@ -46238,7 +47366,7 @@ window.CS = {
       "id": "5380f7338",
       "u": "A2",
       "n": "A2-transmission-security.packets",
-      "f": "reassembly",
+      "f": "reassembly|Packet switching|sequence number",
       "fg": 1
     },
     {
@@ -46257,7 +47385,7 @@ window.CS = {
       "id": "97d9576c8",
       "u": "A2",
       "n": "A2-transmission-security.packets",
-      "f": "same message",
+      "f": "Packet switching|packets|router",
       "fg": 1
     },
     {
@@ -46294,7 +47422,8 @@ window.CS = {
       "id": "1f650b940",
       "u": "A2",
       "n": "A2-transmission-security.packets",
-      "f": "congestion|retransmission|gaps"
+      "f": "packets|Packet switching|TCP",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46312,7 +47441,7 @@ window.CS = {
       "id": "82d0ddd6f",
       "u": "A2",
       "n": "A2-basics.types",
-      "f": "Mbps",
+      "f": "Mbps|bandwidth",
       "fg": 1
     },
     {
@@ -46349,7 +47478,8 @@ window.CS = {
       "id": "c62302dae",
       "u": "A2",
       "n": "A2-transmission-security.media",
-      "f": "cabl|wireles|copper"
+      "f": "Wireless",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46367,7 +47497,8 @@ window.CS = {
       "id": "aef399aa4",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "cabl|fram|devic"
+      "f": "frames|MAC address|switch",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46385,7 +47516,8 @@ window.CS = {
       "id": "411784cd0",
       "u": "A2",
       "n": "A2-basics.devices",
-      "f": "wireles|devic|acces"
+      "f": "wireless|wireless access point|LAN",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46403,7 +47535,8 @@ window.CS = {
       "id": "9e7d8c10b",
       "u": "A2",
       "n": "A2-basics.infrastructure",
-      "f": "acces|devic|coverage"
+      "f": "Mobile networks|internet",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46661,7 +47794,8 @@ window.CS = {
       "id": "50801084a",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "relat|entity|relational"
+      "f": "relational databases|entity|records",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46697,8 +47831,9 @@ window.CS = {
       "c": "Define",
       "id": "7c5ad9c5d",
       "u": "A3",
-      "n": "A3-design.keys",
-      "f": "tabl|creat|foreign"
+      "n": "A3-design.erd",
+      "f": "Cardinality|primary key|foreign key",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46716,7 +47851,8 @@ window.CS = {
       "id": "4df5e8510",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "valu|databas|stor"
+      "f": "relational databases",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46734,7 +47870,7 @@ window.CS = {
       "id": "4ef317af5",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "Concurrency control",
+      "f": "Concurrency control|records|transactions",
       "fg": 1
     },
     {
@@ -46791,7 +47927,8 @@ window.CS = {
       "id": "404408387",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "databas|tool|support"
+      "f": "relational databases",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46809,7 +47946,8 @@ window.CS = {
       "id": "ca8617aea",
       "u": "A3",
       "n": "A3-design.keys",
-      "f": "enforc|dbms|foreign"
+      "f": "primary key|foreign key|field",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46845,8 +47983,9 @@ window.CS = {
       "c": "Define",
       "id": "71ffd806a",
       "u": "A3",
-      "n": "A3-design.schemas",
-      "f": "quick|performance|index"
+      "n": "A3-design.what",
+      "f": "SQL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -46864,7 +48003,7 @@ window.CS = {
       "id": "a55e12d0a",
       "u": "A3",
       "n": "A3-design.what",
-      "f": "Rigid schema",
+      "f": "Rigid schema|relational databases|fields",
       "fg": 1
     },
     {
@@ -46882,8 +48021,8 @@ window.CS = {
       "c": "Define",
       "id": "dccb3b35d",
       "u": "A3",
-      "n": "A3-design.denormalisation",
-      "f": "tabl|databas|join"
+      "n": "A3-design.what",
+      "f": "tabl|databas|limitation"
     },
     {
       "k": "term",
@@ -47061,7 +48200,8 @@ window.CS = {
       "id": "18d65572a",
       "u": "A3",
       "n": "A3-sql.ddl",
-      "f": "retriev|query|sql"
+      "f": "SQL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47079,7 +48219,8 @@ window.CS = {
       "id": "25625a563",
       "u": "A3",
       "n": "A3-sql.ddl",
-      "f": "command|dbms|select"
+      "f": "DDL|SQL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47097,7 +48238,8 @@ window.CS = {
       "id": "9483f5d22",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "tabl|clause|statement"
+      "f": "ORDER BY|SQL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47133,7 +48275,8 @@ window.CS = {
       "id": "afcd33787",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "sql|pattern|match"
+      "f": "WHERE|SQL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47151,7 +48294,8 @@ window.CS = {
       "id": "aa816e2ae",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "mean|sql|pattern"
+      "f": "WHERE|SQL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47169,7 +48313,8 @@ window.CS = {
       "id": "7c23dc15f",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "tabl|clause|select"
+      "f": "SQL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47186,8 +48331,9 @@ window.CS = {
       "c": "Define",
       "id": "2af6e8926",
       "u": "A3",
-      "n": "A3-sql.change",
-      "f": "valu|select|sql"
+      "n": "A3-sql.ddl",
+      "f": "SQL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47205,7 +48351,7 @@ window.CS = {
       "id": "38fa2a65a",
       "u": "A3",
       "n": "A3-sql.aggregates",
-      "f": "GROUP BY",
+      "f": "GROUP BY|Aggregate functions|field",
       "fg": 1
     },
     {
@@ -47224,7 +48370,7 @@ window.CS = {
       "id": "7ab317d7f",
       "u": "A3",
       "n": "A3-sql.aggregates",
-      "f": "HAVING",
+      "f": "HAVING|GROUP BY|Aggregate functions",
       "fg": 1
     },
     {
@@ -47243,7 +48389,7 @@ window.CS = {
       "id": "707b08a2e",
       "u": "A3",
       "n": "A3-sql.select",
-      "f": "sql query",
+      "f": "SQL|ORDER BY",
       "fg": 1
     },
     {
@@ -47262,7 +48408,7 @@ window.CS = {
       "id": "b4588078e",
       "u": "A3",
       "n": "A3-sql.views",
-      "f": "virtual view",
+      "f": "view",
       "fg": 1
     },
     {
@@ -47281,7 +48427,8 @@ window.CS = {
       "id": "d1bf9d139",
       "u": "A3",
       "n": "A3-sql.transactions",
-      "f": "chang|rollback|tcl"
+      "f": "transaction|TCL",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47299,7 +48446,8 @@ window.CS = {
       "id": "ca3e5dcfb",
       "u": "A3",
       "n": "A3-sql.transactions",
-      "f": "acid|constraint|transaction"
+      "f": "ACID|transaction|constraint",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47317,7 +48465,7 @@ window.CS = {
       "id": "a88c103a8",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "Document databases",
+      "f": "database|Document databases|NoSQL",
       "fg": 1
     },
     {
@@ -47336,7 +48484,7 @@ window.CS = {
       "id": "d1e8f5418",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "key value",
+      "f": "database|NoSQL",
       "fg": 1
     },
     {
@@ -47355,7 +48503,7 @@ window.CS = {
       "id": "c18e37540",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "Graph databases",
+      "f": "database|Graph databases|NoSQL",
       "fg": 1
     },
     {
@@ -47374,7 +48522,7 @@ window.CS = {
       "id": "a39a1709e",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "managed service",
+      "f": "managed service|Cloud databases|Backups",
       "fg": 1
     },
     {
@@ -47393,7 +48541,7 @@ window.CS = {
       "id": "501e10fb1",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "real-time analytics",
+      "f": "real-time analytics|In-memory databases",
       "fg": 1
     },
     {
@@ -47412,7 +48560,7 @@ window.CS = {
       "id": "7da035e20",
       "u": "A3",
       "n": "A3-alternative.types",
-      "f": "E-commerce",
+      "f": "E-commerce|In-memory databases",
       "fg": 1
     },
     {
@@ -47450,7 +48598,7 @@ window.CS = {
       "id": "3dd2b6f8a",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "business intelligence",
+      "f": "business intelligence|data warehouse",
       "fg": 1
     },
     {
@@ -47469,7 +48617,7 @@ window.CS = {
       "id": "bbc054ea2",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "append-only",
+      "f": "append-only|record|data warehouse",
       "fg": 1
     },
     {
@@ -47488,7 +48636,7 @@ window.CS = {
       "id": "7648c0674",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "Subject-oriented",
+      "f": "Subject-oriented|transactions|data warehouse",
       "fg": 1
     },
     {
@@ -47507,7 +48655,7 @@ window.CS = {
       "id": "69dff1609",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "integrated data",
+      "f": "data warehouse",
       "fg": 1
     },
     {
@@ -47526,7 +48674,7 @@ window.CS = {
       "id": "5584c6023",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "Time-variant",
+      "f": "Time-variant|data warehouse",
       "fg": 1
     },
     {
@@ -47545,7 +48693,7 @@ window.CS = {
       "id": "4b2919c45",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "non volatile",
+      "f": "Non-volatile|record|data warehouse",
       "fg": 1
     },
     {
@@ -47564,7 +48712,8 @@ window.CS = {
       "id": "b20f81fd6",
       "u": "A3",
       "n": "A3-alternative.warehouse",
-      "f": "queri|updat|characteristic"
+      "f": "data warehouse",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47582,7 +48731,7 @@ window.CS = {
       "id": "58a68d578",
       "u": "A3",
       "n": "A3-alternative.olap",
-      "f": "pattern discovery",
+      "f": "data mining",
       "fg": 1
     },
     {
@@ -47601,7 +48750,7 @@ window.CS = {
       "id": "2edc1ed88",
       "u": "A3",
       "n": "A3-alternative.olap",
-      "f": "Anomaly detection",
+      "f": "Anomaly detection|data mining",
       "fg": 1
     },
     {
@@ -47620,7 +48769,7 @@ window.CS = {
       "id": "ae307dafe",
       "u": "A3",
       "n": "A3-alternative.distributed",
-      "f": "Fault tolerance",
+      "f": "Fault tolerance|Replication|distributed database",
       "fg": 1
     },
     {
@@ -47639,7 +48788,7 @@ window.CS = {
       "id": "d935f3a6a",
       "u": "A3",
       "n": "A3-alternative.distributed",
-      "f": "Global query processing",
+      "f": "Global query processing|distributed database",
       "fg": 1
     },
     {
@@ -47658,7 +48807,7 @@ window.CS = {
       "id": "d96bed8c8",
       "u": "A3",
       "n": "A3-alternative.distributed",
-      "f": "location transparency",
+      "f": "location transparency|distributed database",
       "fg": 1
     },
     {
@@ -47677,7 +48826,7 @@ window.CS = {
       "id": "606301d8d",
       "u": "A3",
       "n": "A3-alternative.distributed",
-      "f": "distribution transparency",
+      "f": "distribution transparency|Replication|distributed database",
       "fg": 1
     },
     {
@@ -47696,7 +48845,7 @@ window.CS = {
       "id": "dccce21ee",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "labelled data",
+      "f": "training data|labelled data|supervised learning",
       "fg": 1
     },
     {
@@ -47715,7 +48864,7 @@ window.CS = {
       "id": "4583ec035",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "unlabelled data",
+      "f": "unlabelled data|unsupervised learning",
       "fg": 1
     },
     {
@@ -47733,8 +48882,8 @@ window.CS = {
       "c": "Define",
       "id": "8840be2e1",
       "u": "A4",
-      "n": "A4-machine-learning.types",
-      "f": "predict|measurable|feature"
+      "n": "A4-machine-learning.what",
+      "f": "predict|input|model"
     },
     {
       "k": "term",
@@ -47751,8 +48900,9 @@ window.CS = {
       "c": "Define",
       "id": "d1c6a29a3",
       "u": "A4",
-      "n": "A4-machine-learning.types",
-      "f": "spam|train|house"
+      "n": "A4-machine-learning.what",
+      "f": "training data",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47770,7 +48920,7 @@ window.CS = {
       "id": "d1b5322f7",
       "u": "A4",
       "n": "A4-machine-learning.what",
-      "f": "regression|tree|train",
+      "f": "decision trees|regression|Machine learning",
       "fg": 1
     },
     {
@@ -47788,8 +48938,8 @@ window.CS = {
       "c": "Define",
       "id": "9e6423977",
       "u": "A4",
-      "n": "A4-machine-learning.types",
-      "f": "give|clas|spam"
+      "n": "A4-machine-learning.what",
+      "f": "give|spam|prediction"
     },
     {
       "k": "term",
@@ -47806,8 +48956,9 @@ window.CS = {
       "c": "Define",
       "id": "b6600175f",
       "u": "A4",
-      "n": "A4-machine-learning.hardware",
-      "f": "comput|inference|train"
+      "n": "A4-machine-learning.what",
+      "f": "training",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47825,7 +48976,7 @@ window.CS = {
       "id": "e2e3d4c5d",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "medical imaging",
+      "f": "natural language processing|CNNs|Machine learning",
       "fg": 1
     },
     {
@@ -47844,7 +48995,8 @@ window.CS = {
       "id": "2b602d3ea",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "labell|category|detection"
+      "f": "Classification|natural language processing",
+      "fg": 1
     },
     {
       "k": "term",
@@ -47862,7 +49014,7 @@ window.CS = {
       "id": "0e25238f5",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "object detection",
+      "f": "natural language processing",
       "fg": 1
     },
     {
@@ -47881,7 +49033,7 @@ window.CS = {
       "id": "556c72dc9",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "Robotics navigation",
+      "f": "Robotics navigation|reinforcement learning|Machine learning",
       "fg": 1
     },
     {
@@ -47900,7 +49052,7 @@ window.CS = {
       "id": "00e21085f",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "NLP",
+      "f": "natural language processing|NLP|Machine learning",
       "fg": 1
     },
     {
@@ -47919,7 +49071,7 @@ window.CS = {
       "id": "6337640b8",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "sentiment analysis",
+      "f": "natural language processing",
       "fg": 1
     },
     {
@@ -47938,7 +49090,7 @@ window.CS = {
       "id": "5c0734261",
       "u": "A4",
       "n": "A4-machine-learning.types",
-      "f": "market basket|basket analysis",
+      "f": "natural language processing",
       "fg": 1
     },
     {
@@ -47957,7 +49109,7 @@ window.CS = {
       "id": "1be69eb9b",
       "u": "A4",
       "n": "A4-machine-learning.hardware",
-      "f": "machine learning",
+      "f": "CPUs|ML|deep learning",
       "fg": 1
     },
     {
@@ -47975,8 +49127,8 @@ window.CS = {
       "c": "Explain",
       "id": "6f30a48b4",
       "u": "A4",
-      "n": "A4-machine-learning.hardware",
-      "f": "machine learning",
+      "n": "A4-machine-learning.what",
+      "f": "Machine learning|training|Deep learning",
       "fg": 1
     },
     {
@@ -47995,7 +49147,7 @@ window.CS = {
       "id": "d9062eeb5",
       "u": "A4",
       "n": "A4-machine-learning.hardware",
-      "f": "matrix operations",
+      "f": "matrix operations|GPUs|deep learning",
       "fg": 1
     },
     {
@@ -48049,8 +49201,9 @@ window.CS = {
       "c": "Define",
       "id": "de5309510",
       "u": "A4",
-      "n": "A4-machine-learning.hardware",
-      "f": "train|storage|model"
+      "n": "A4-machine-learning.what",
+      "f": "training data",
+      "fg": 1
     },
     {
       "k": "term",
@@ -48067,8 +49220,8 @@ window.CS = {
       "c": "Define",
       "id": "0514522cc",
       "u": "A4",
-      "n": "A4-machine-learning.hardware",
-      "f": "comput|cloud|size"
+      "n": "A4-machine-learning.what",
+      "f": "comput|model|need"
     },
     {
       "k": "term",
@@ -48086,7 +49239,7 @@ window.CS = {
       "id": "d0d883e9b",
       "u": "A4",
       "n": "A4-data.cleaning",
-      "f": "data preprocessing",
+      "f": "data preprocessing|missing values|Outliers",
       "fg": 1
     },
     {
@@ -48124,7 +49277,7 @@ window.CS = {
       "id": "ef72a17e2",
       "u": "A4",
       "n": "A4-data.cleaning",
-      "f": "missing values",
+      "f": "missing values|impute",
       "fg": 1
     },
     {
@@ -48161,7 +49314,8 @@ window.CS = {
       "id": "6756f4622",
       "u": "A4",
       "n": "A4-data.cleaning",
-      "f": "valu|convert|red"
+      "f": "training data",
+      "fg": 1
     },
     {
       "k": "term",
@@ -48216,7 +49370,7 @@ window.CS = {
       "id": "8571706d3",
       "u": "A4",
       "n": "A4-data.dimensions",
-      "f": "dimensionality reduction",
+      "f": "Principal component analysis|Feature selection",
       "fg": 1
     },
     {
@@ -48235,7 +49389,7 @@ window.CS = {
       "id": "3c6ec2d17",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "training set",
+      "f": "model|training set",
       "fg": 1
     },
     {
@@ -48273,7 +49427,7 @@ window.CS = {
       "id": "26292bed2",
       "u": "A4",
       "n": "A4-advanced.ann",
-      "f": "neural network",
+      "f": "deep learning",
       "fg": 1
     },
     {
@@ -48292,7 +49446,7 @@ window.CS = {
       "id": "c2d188c98",
       "u": "A4",
       "n": "A4-advanced.ann",
-      "f": "input layer",
+      "f": "input layer|output layer|deep learning",
       "fg": 1
     },
     {
@@ -48311,7 +49465,8 @@ window.CS = {
       "id": "e2727cf8b",
       "u": "A4",
       "n": "A4-advanced.cnn",
-      "f": "slid|acros|produc"
+      "f": "feature map",
+      "fg": 1
     },
     {
       "k": "term",
@@ -48329,7 +49484,7 @@ window.CS = {
       "id": "5b0987b60",
       "u": "A4",
       "n": "A4-advanced.ann",
-      "f": "output layer",
+      "f": "output layer|deep learning",
       "fg": 1
     },
     {
@@ -48348,7 +49503,7 @@ window.CS = {
       "id": "acb446839",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "learning rate",
+      "f": "learning rate|Hyperparameters",
       "fg": 1
     },
     {
@@ -48367,7 +49522,7 @@ window.CS = {
       "id": "c73a71fd9",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "tree depth",
+      "f": "tree depth|Hyperparameters|decision tree",
       "fg": 1
     },
     {
@@ -48386,7 +49541,7 @@ window.CS = {
       "id": "ee4c84ffe",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "hyperparameter tuning",
+      "f": "Hyperparameters|tree depth|validation set",
       "fg": 1
     },
     {
@@ -48405,7 +49560,8 @@ window.CS = {
       "id": "5a39743fb",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "overfitt|unseen|poor"
+      "f": "training data",
+      "fg": 1
     },
     {
       "k": "term",
@@ -48423,7 +49579,8 @@ window.CS = {
       "id": "f10b3357c",
       "u": "A4",
       "n": "A4-models.metrics",
-      "f": "evaluat|metric|recall"
+      "f": "model|test set|validation",
+      "fg": 1
     },
     {
       "k": "term",
@@ -49015,6 +50172,1802 @@ window.CS = {
       "c": "Trace",
       "id": "97f53ff87",
       "u": "EX"
+    },
+    {
+      "k": "term",
+      "p": "A1-data-logic",
+      "s": "storing",
+      "h": 0,
+      "m": 2,
+      "q": "Explain how increasing the frame rate of a video affects its file size.",
+      "a": [
+        "More frames are stored for every second of video;",
+        "so, with the same resolution and colour depth, the uncompressed file size increases in proportion to the frame rate."
+      ],
+      "t": "frame-video",
+      "c": "Explain",
+      "id": "b4bb3292b",
+      "u": "A1",
+      "n": "A1-data-logic.storing",
+      "f": "File size|frames|pixel",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-transmission-security",
+      "s": "packets",
+      "h": 0,
+      "m": 3,
+      "q": "Describe the structure of a data packet.",
+      "a": [
+        "A header holding the source and destination IP addresses and a sequence number (plus control data such as the protocol and TTL);",
+        "a payload holding one piece of the actual data being sent;",
+        "a trailer holding error-checking data such as a checksum."
+      ],
+      "t": "packet",
+      "c": "Describe",
+      "id": "fdf64590e",
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "packets|time to live|checksum",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-basics",
+      "s": "devices",
+      "h": 0,
+      "m": 2,
+      "q": "Distinguish between a frame and a packet.",
+      "a": [
+        "A frame is the unit sent across one link inside a network, addressed by MAC addresses and forwarded by switches;",
+        "whereas a packet is the unit routed between networks, addressed by IP addresses and forwarded by routers (on each link the packet travels inside a frame)."
+      ],
+      "t": "frame-net",
+      "c": "Distinguish",
+      "id": "f594aab16",
+      "u": "A2",
+      "n": "A2-basics.devices",
+      "f": "packets|frames|MAC address",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-basics",
+      "s": "tcp",
+      "h": 0,
+      "m": 2,
+      "q": "Outline the purpose of the TCP three-way handshake.",
+      "a": [
+        "It sets up a connection between the two devices before data is sent (SYN, SYN-ACK, ACK);",
+        "so both sides know the other is ready and agree starting sequence numbers, which allows reliable, ordered delivery."
+      ],
+      "t": "handshake",
+      "c": "Outline",
+      "id": "aa8b68cf8",
+      "u": "A2",
+      "n": "A2-basics.tcp",
+      "f": "TCP|handshake|Sequence numbers",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-transmission-security",
+      "s": "packets",
+      "h": 0,
+      "m": 2,
+      "q": "Explain the purpose of the time to live (TTL) field in a packet header.",
+      "a": [
+        "Each router that forwards the packet decreases the TTL by one, and the packet is discarded when it reaches zero;",
+        "this stops packets that cannot reach their destination (for example in a routing loop) circulating for ever and wasting bandwidth."
+      ],
+      "t": "ttl",
+      "c": "Explain",
+      "id": "44595235a",
+      "u": "A2",
+      "n": "A2-transmission-security.packets",
+      "f": "packets|time to live|Packet switching",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-basics",
+      "s": "http",
+      "h": 0,
+      "m": 3,
+      "q": "Identify the three main parts of the URL https://www.school.org/timetable.html.",
+      "a": [
+        "Protocol: https;",
+        "domain name: www.school.org;",
+        "path to the resource: /timetable.html."
+      ],
+      "t": "url",
+      "c": "Identify",
+      "id": "44fb77d94",
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "HTTPS|domain names|protocols",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-basics",
+      "s": "http",
+      "h": 0,
+      "m": 2,
+      "q": "Explain why DNS is needed when a user types a domain name into a browser.",
+      "a": [
+        "Computers connect to servers using IP addresses, not names;",
+        "so a DNS server must translate (resolve) the domain name into the server’s IP address before the browser can request the page."
+      ],
+      "t": "domain-name",
+      "c": "Explain",
+      "id": "798c23b11",
+      "u": "A2",
+      "n": "A2-basics.http",
+      "f": "DNS|domain names|IP address",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-architecture",
+      "s": "subnetting",
+      "h": 0,
+      "m": 2,
+      "q": "Outline the purpose of a subnet mask.",
+      "a": [
+        "It separates an IP address into its network part and its host part (the 1 bits mark the network part);",
+        "so a device can tell whether a destination is on its own subnet (send directly) or on another network (send to the gateway)."
+      ],
+      "t": "subnet-mask",
+      "c": "Outline",
+      "id": "e611af3f0",
+      "u": "A2",
+      "n": "A2-architecture.subnetting",
+      "f": "Subnetting|Subnet mask|host",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-transmission-security",
+      "s": "encryption",
+      "h": 0,
+      "m": 2,
+      "q": "Explain how a digital signature shows that a message has not been altered.",
+      "a": [
+        "The sender encrypts a hash of the message with their private key; the receiver decrypts it with the sender’s public key and hashes the received message again;",
+        "if the two hashes match the message is unchanged, and only the holder of the private key could have produced the signature."
+      ],
+      "t": "digital-signature",
+      "c": "Explain",
+      "id": "48efc2747",
+      "u": "A2",
+      "n": "A2-transmission-security.encryption",
+      "f": "digital signatures|private keys|Asymmetric",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-transmission-security",
+      "s": "threats",
+      "h": 1,
+      "m": 2,
+      "q": "Explain how a botnet is used in a DDoS attack.",
+      "a": [
+        "The attacker commands thousands of infected devices to send requests to the target at the same time;",
+        "the flood of traffic overwhelms the server or its bandwidth so genuine users cannot get through, and it is hard to block because it comes from many addresses."
+      ],
+      "t": "botnet",
+      "c": "Explain",
+      "id": "09201c52c",
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "DDoS|botnet|bandwidth",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-transmission-security",
+      "s": "threats",
+      "h": 1,
+      "m": 2,
+      "q": "Distinguish between a virus and a worm.",
+      "a": [
+        "A virus needs a host file or program and spreads only when a user runs or shares it;",
+        "whereas a worm is standalone and replicates itself across the network automatically, without any user action."
+      ],
+      "t": "virus-worm",
+      "c": "Distinguish",
+      "id": "0f8dba9bf",
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "viruses",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A2-transmission-security",
+      "s": "threats",
+      "h": 1,
+      "m": 2,
+      "q": "Suggest two measures that protect user accounts against brute-force attacks.",
+      "a": [
+        "Lock the account, or add a growing delay, after several failed login attempts;",
+        "require long, complex passwords together with multi-factor authentication, so guessing the password alone is not enough."
+      ],
+      "t": "brute-force",
+      "c": "Suggest",
+      "id": "b3ba2afae",
+      "u": "A2",
+      "n": "A2-transmission-security.threats",
+      "f": "brute force|authentication",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A3-design",
+      "s": "what",
+      "h": 0,
+      "m": 2,
+      "q": "Distinguish between a record and a field in a relational database.",
+      "a": [
+        "A record is one row of a table, holding all the data about one item (e.g. one student);",
+        "whereas a field is one column, holding one attribute (e.g. date of birth) for every record."
+      ],
+      "t": "record",
+      "c": "Distinguish",
+      "id": "c5e765ec5",
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "database|relational databases|records",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "A3-design",
+      "s": "what",
+      "h": 0,
+      "m": 2,
+      "q": "Identify the primary key and one other field in the table Student(StudentID, Name, DateOfBirth).",
+      "a": [
+        "Primary key: StudentID, because it uniquely identifies each record;",
+        "another field: Name or DateOfBirth (an attribute stored for every student)."
+      ],
+      "t": "field",
+      "c": "Identify",
+      "id": "3b9872eec",
+      "u": "A3",
+      "n": "A3-design.what",
+      "f": "fields|relational databases|records",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B1-computational-thinking",
+      "s": "concepts",
+      "h": 0,
+      "m": 2,
+      "q": "Outline two characteristics of a well-designed algorithm.",
+      "a": [
+        "It is finite: it always finishes after a limited number of steps;",
+        "every step is precise and unambiguous, so it gives the correct output for every valid input."
+      ],
+      "t": "algorithm",
+      "c": "Outline",
+      "id": "7610969ae",
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "Algorithmic design|algorithm",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-fundamentals",
+      "s": "variables",
+      "h": 0,
+      "m": 2,
+      "q": "Explain one advantage of using a named constant instead of typing the value each time it is needed.",
+      "a": [
+        "The value is changed in one place only, where the constant is declared;",
+        "so every use updates consistently (no copy is missed) and the name makes the code easier to understand."
+      ],
+      "t": "constant",
+      "c": "Explain",
+      "id": "4e2457b39",
+      "u": "B2",
+      "n": "B2-fundamentals.variables",
+      "f": "constant",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-fundamentals",
+      "s": "variables",
+      "h": 0,
+      "m": 2,
+      "q": "State two rules or conventions for choosing a good identifier.",
+      "a": [
+        "It must follow the language’s rules: no spaces, must not start with a digit, must not be a reserved word;",
+        "it should be meaningful and describe what it stores (e.g. averageMark rather than x)."
+      ],
+      "t": "identifier",
+      "c": "State",
+      "id": "2e8192f0d",
+      "u": "B2",
+      "n": "B2-fundamentals.variables",
+      "f": "spac|reserv|stor"
+    },
+    {
+      "k": "term",
+      "p": "B2-fundamentals",
+      "s": "variables",
+      "h": 0,
+      "m": 2,
+      "q": "Explain what happens when the statement count = count + 1 is executed.",
+      "a": [
+        "The expression on the right is evaluated first, using the current value of count;",
+        "the result is then stored back in count, replacing the old value, so count increases by 1."
+      ],
+      "t": "assignment",
+      "c": "Explain",
+      "id": "2ed836a58",
+      "u": "B2",
+      "n": "B2-fundamentals.variables",
+      "f": "Assignment",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-fundamentals",
+      "s": "variables",
+      "h": 0,
+      "m": 2,
+      "q": "State the values of 23 DIV 4 and 23 MOD 4.",
+      "a": [
+        "23 DIV 4 = 5;",
+        "23 MOD 4 = 3."
+      ],
+      "t": "div-mod",
+      "c": "State",
+      "id": "650e859fb",
+      "u": "B2",
+      "n": "B2-fundamentals.variables",
+      "f": "integer division",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-fundamentals",
+      "s": "strings",
+      "h": 0,
+      "m": 2,
+      "q": "Explain why the Python statement s[0] = \"J\" causes an error when s is a string.",
+      "a": [
+        "Strings are immutable, so their characters cannot be changed in place;",
+        "a new string must be built instead, e.g. s = \"J\" + s[1:]."
+      ],
+      "t": "mutable",
+      "c": "Explain",
+      "id": "ed2b5be1d",
+      "u": "B2",
+      "n": "B2-fundamentals.strings",
+      "f": "string|immutable",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-fundamentals",
+      "s": "debugging",
+      "h": 0,
+      "m": 3,
+      "q": "A program accepts ages from 11 to 18 inclusive. Identify one example each of normal, boundary and erroneous test data.",
+      "a": [
+        "Normal: e.g. 15;",
+        "boundary: e.g. 11 or 18 (or 10 and 19, just outside the range);",
+        "erroneous: e.g. 25, −3 or “twelve”."
+      ],
+      "t": "test-data",
+      "c": "Identify",
+      "id": "17aa21437",
+      "u": "B2",
+      "n": "B2-fundamentals.debugging",
+      "f": "test data|boundary",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-data-structures",
+      "s": "lists",
+      "h": 0,
+      "m": 2,
+      "q": "A list scores holds 8 values. State the index of its last element and explain your answer.",
+      "a": [
+        "7;",
+        "because indexing starts at 0, the indexes run from 0 to length − 1."
+      ],
+      "t": "index",
+      "c": "State",
+      "id": "e63813ad1",
+      "u": "B2",
+      "n": "B2-data-structures.lists",
+      "f": "index",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-data-structures",
+      "s": "stacks",
+      "h": 0,
+      "m": 2,
+      "q": "A stack is empty. After push(4), push(9), pop(), push(2), state the value returned by peek() and the number of items on the stack.",
+      "a": [
+        "peek() returns 2;",
+        "there are 2 items on the stack (4 at the bottom, 2 on top)."
+      ],
+      "t": "push-pop",
+      "c": "State",
+      "id": "030aa8bb4",
+      "u": "B2",
+      "n": "B2-data-structures.stacks",
+      "f": "stack|push",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-data-structures",
+      "s": "queues",
+      "h": 0,
+      "m": 2,
+      "q": "An empty queue has enqueue(A), enqueue(B), enqueue(C) and then dequeue() applied. State the item removed and the item now at the front.",
+      "a": [
+        "A is removed (first in, first out);",
+        "B is now at the front."
+      ],
+      "t": "enqueue",
+      "c": "State",
+      "id": "242bb5e48",
+      "u": "B2",
+      "n": "B2-data-structures.queues",
+      "f": "queue",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-control",
+      "s": "functions",
+      "h": 0,
+      "m": 2,
+      "q": "Distinguish between a parameter and an argument.",
+      "a": [
+        "A parameter is the variable listed in the function definition, e.g. def area(w, h);",
+        "whereas an argument is the actual value passed in the call, e.g. area(4, 5)."
+      ],
+      "t": "parameter",
+      "c": "Distinguish",
+      "id": "68a1ba497",
+      "u": "B2",
+      "n": "B2-control.functions",
+      "f": "parameters|Argument|function",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-control",
+      "s": "functions",
+      "h": 0,
+      "m": 2,
+      "q": "In the call total = add(3, x), identify the arguments and state what happens to them.",
+      "a": [
+        "The arguments are 3 and the current value of x;",
+        "they are assigned to the function’s parameters in order, and the value the function returns is stored in total."
+      ],
+      "t": "argument",
+      "c": "Identify",
+      "id": "4ca693918",
+      "u": "B2",
+      "n": "B2-control.functions",
+      "f": "Argument|parameters|function",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-control",
+      "s": "functions",
+      "h": 0,
+      "m": 2,
+      "q": "Distinguish between a function that returns a value and one that only prints it.",
+      "a": [
+        "A returned value is sent back to the caller, which can store it or use it in further calculations;",
+        "whereas a printed value is only shown on screen, so the calling code cannot use it."
+      ],
+      "t": "return-value",
+      "c": "Distinguish",
+      "id": "838da2a21",
+      "u": "B2",
+      "n": "B2-control.functions",
+      "f": "function|return a value",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-control",
+      "s": "loops",
+      "h": 0,
+      "m": 2,
+      "q": "An outer loop runs 4 times and its inner loop runs 6 times. State how many times the inner loop body executes and explain why.",
+      "a": [
+        "24 times;",
+        "because the inner loop runs all 6 of its passes for each of the 4 passes of the outer loop."
+      ],
+      "t": "nested-loop",
+      "c": "State",
+      "id": "4e814872f",
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "Iteration",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-control",
+      "s": "loops",
+      "h": 0,
+      "m": 2,
+      "q": "Outline the difference between a counter and a running total.",
+      "a": [
+        "A counter increases by 1 each time an event happens, e.g. count = count + 1;",
+        "whereas a running total adds each value to a sum, e.g. total = total + mark (both start at 0 before the loop)."
+      ],
+      "t": "counter",
+      "c": "Outline",
+      "id": "48e1ce46e",
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "Iteration",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-control",
+      "s": "loops",
+      "h": 0,
+      "m": 2,
+      "q": "Explain why 0 would be an unsuitable sentinel value for a loop that reads the prices of items in a shop.",
+      "a": [
+        "A sentinel must be a value that can never be genuine data;",
+        "an item could have a price of 0 (free), so the loop would stop early; a value such as −1 should be used instead."
+      ],
+      "t": "sentinel",
+      "c": "Explain",
+      "id": "f785ec17a",
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "Iteration",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-control",
+      "s": "loops",
+      "h": 0,
+      "m": 2,
+      "q": "Outline the purpose of a Boolean flag in a linear search.",
+      "a": [
+        "It records whether the target has been found: it starts as False and is set to True on a match;",
+        "after the loop it is checked to output “found” or “not found” (and it can be used to stop the loop early)."
+      ],
+      "t": "flag",
+      "c": "Outline",
+      "id": "d85a4cb63",
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "Iteration",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B2-control",
+      "s": "loops",
+      "h": 0,
+      "m": 2,
+      "q": "Explain why a post-condition loop suits asking a user to enter a password until it is correct.",
+      "a": [
+        "A post-condition loop always runs its body at least once;",
+        "the user has to enter the password at least once before it can be checked, and the loop repeats until the entry is correct."
+      ],
+      "t": "pre-post-loop",
+      "c": "Explain",
+      "id": "4d901cb38",
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "Iteration|Pre-condition",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B3-oop",
+      "s": "classes",
+      "h": 0,
+      "m": 2,
+      "q": "Explain why self.balance is used instead of balance inside a method of a BankAccount class.",
+      "a": [
+        "self refers to the particular object the method was called on;",
+        "so self.balance reaches that object’s attribute, whereas balance on its own would be a separate local variable that disappears when the method ends."
+      ],
+      "t": "self-this",
+      "c": "Explain",
+      "id": "d50f4c1d0",
+      "u": "B3",
+      "n": "B3-oop.classes",
+      "f": "class|methods|attributes",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B3-oop",
+      "s": "encapsulation",
+      "h": 0,
+      "m": 2,
+      "q": "Explain why attributes are usually declared private.",
+      "a": [
+        "Private attributes cannot be read or changed directly from outside the class;",
+        "so all access goes through methods that can validate changes, protecting the object’s data (encapsulation)."
+      ],
+      "t": "public-private-oop",
+      "c": "Explain",
+      "id": "870422aa5",
+      "u": "B3",
+      "n": "B3-oop.encapsulation",
+      "f": "Attributes|private|Encapsulation",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B3-advanced",
+      "s": "inheritance",
+      "h": 1,
+      "m": 2,
+      "q": "Outline one advantage of inheritance.",
+      "a": [
+        "Shared attributes and methods are written once in the superclass and reused by every subclass;",
+        "so there is less duplicated code, and a change in the superclass applies to all its subclasses."
+      ],
+      "t": "inheritance",
+      "c": "Outline",
+      "id": "ef7d1cb2b",
+      "u": "B3",
+      "n": "B3-advanced.inheritance",
+      "f": "Inheritance|attributes|methods",
+      "fg": 1
+    },
+    {
+      "k": "term",
+      "p": "B3-advanced",
+      "s": "polymorphism",
+      "h": 1,
+      "m": 2,
+      "q": "Explain how polymorphism lets a program call area() on a list containing different kinds of shape.",
+      "a": [
+        "Each subclass (Circle, Square, …) overrides area() with its own formula;",
+        "so the program can call shape.area() on every object and the correct version runs for each object’s class at run time, without checking its type."
+      ],
+      "t": "polymorphism",
+      "c": "Explain",
+      "id": "32f907493",
+      "u": "B3",
+      "n": "B3-advanced.polymorphism",
+      "f": "Polymorphism|override|object",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B1-computational-thinking",
+      "s": "spec",
+      "h": 0,
+      "m": 5,
+      "q": "A running club wants a program that records each member’s weekly distance and produces a monthly leaderboard. Construct a problem specification for this program, including the problem statement, two constraints or limitations and two evaluation criteria.",
+      "a": [
+        "Problem statement: the club needs a program that stores each member’s weekly distance and ranks members by their monthly total;",
+        "one constraint or limitation, e.g. it must run on the club’s existing laptop, or data is entered by one volunteer once a week;",
+        "a second constraint or limitation, e.g. members’ personal data must be kept private, or distances are entered in km to one decimal place;",
+        "one measurable evaluation criterion, e.g. the leaderboard is correct for a set of test data and is produced in under 5 seconds;",
+        "a second measurable criterion, e.g. a week’s data can be entered in under 2 minutes, or invalid distances (negative or over 200 km) are rejected."
+      ],
+      "c": "Construct",
+      "id": "35148bf91",
+      "u": "B1",
+      "n": "B1-computational-thinking.spec",
+      "f": "problem specification|Constraints",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B1-computational-thinking",
+      "s": "concepts",
+      "h": 0,
+      "m": 4,
+      "q": "A school is developing an app for booking its sports facilities. Describe how decomposition and abstraction could each be used when designing the app.",
+      "a": [
+        "Decomposition: the system is broken into smaller sub-problems, e.g. logging in, showing free slots, making a booking, sending a confirmation;",
+        "each sub-problem can then be designed, coded and tested separately, possibly by different people;",
+        "Abstraction: only the details needed are kept, e.g. a facility is represented by its name, capacity and time slots, ignoring its colour or exact location;",
+        "this simplifies the data and the code, so the model is easier to build, understand and change."
+      ],
+      "c": "Describe",
+      "id": "41fb6012e",
+      "u": "B1",
+      "n": "B1-computational-thinking.concepts",
+      "f": "Decomposition|Abstraction",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-control",
+      "s": "loops",
+      "h": 0,
+      "m": 4,
+      "q": "Trace the following code when the user enters 4, 7, 2 and then −1, and state the output.<pre class=\"lang-py\">largest = -1\ncount = 0\nn = int(input())\nwhile n != -1:\n    count = count + 1\n    if n &gt; largest:\n        largest = n\n    n = int(input())\nprint(count, largest)</pre><pre class=\"lang-java\">Scanner sc = new Scanner(System.in);\nint largest = -1;\nint count = 0;\nint n = sc.nextInt();\nwhile (n != -1) {\n    count = count + 1;\n    if (n &gt; largest) {\n        largest = n;\n    }\n    n = sc.nextInt();\n}\nSystem.out.println(count + &quot; &quot; + largest);</pre>",
+      "a": [
+        "n = 4: count = 1, largest = 4;",
+        "n = 7: count = 2, largest = 7;",
+        "n = 2: count = 3, largest stays 7;",
+        "n = −1 ends the loop (it is not counted), so the output is 3 7."
+      ],
+      "c": "Trace",
+      "id": "92008782f",
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "Iteration",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-control",
+      "s": "loops",
+      "h": 0,
+      "m": 3,
+      "q": "Trace the following code and state the output.<pre class=\"lang-py\">total = 0\nfor i in range(1, 4):\n    for j in range(i):\n        total = total + i\nprint(total)</pre><pre class=\"lang-java\">int total = 0;\nfor (int i = 1; i &lt; 4; i++) {\n    for (int j = 0; j &lt; i; j++) {\n        total = total + i;\n    }\n}\nSystem.out.println(total);</pre>",
+      "a": [
+        "i = 1: the inner loop runs once, total = 1;",
+        "i = 2: the inner loop runs twice, total = 5;",
+        "i = 3: the inner loop runs three times, total = 14, so the output is 14."
+      ],
+      "c": "Trace",
+      "id": "1c8ef26a9",
+      "u": "B2",
+      "n": "B2-control.loops",
+      "f": "Iteration",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-fundamentals",
+      "s": "exceptions",
+      "h": 0,
+      "m": 5,
+      "q": "Construct a function <code>getMark()</code> that keeps asking the user for a mark until they enter a whole number from 0 to 100 inclusive, then returns it. The program must not crash if the user types letters.",
+      "a": [
+        "A loop that repeats until a valid mark has been entered;",
+        "reads the input and converts it to an integer;",
+        "catches the conversion error (ValueError / NumberFormatException) so letters do not crash the program;",
+        "checks that 0 ≤ mark ≤ 100 and rejects values outside the range;",
+        "returns the valid mark."
+      ],
+      "c": "Construct",
+      "id": "692edbf18",
+      "u": "B2",
+      "ex": {
+        "py": "def getMark():\n    while True:\n        try:\n            mark = int(input(\"Mark (0-100): \"))\n            if 0 <= mark <= 100:\n                return mark\n            print(\"Out of range\")\n        except ValueError:\n            print(\"Whole numbers only\")",
+        "java": "static int getMark(Scanner sc) {\n    while (true) {\n        System.out.print(\"Mark (0-100): \");\n        try {\n            int mark = Integer.parseInt(sc.nextLine());\n            if (mark >= 0 && mark <= 100) {\n                return mark;\n            }\n            System.out.println(\"Out of range\");\n        } catch (NumberFormatException e) {\n            System.out.println(\"Whole numbers only\");\n        }\n    }\n}"
+      },
+      "n": "B2-fundamentals.exceptions",
+      "f": "function|exception|string",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-algorithms",
+      "s": "search",
+      "h": 0,
+      "m": 4,
+      "q": "Construct a function <code>findIndex(names, target)</code> that returns the index of the first occurrence of <code>target</code> in the list/array <code>names</code>, or −1 if it is not there.",
+      "a": [
+        "Loops through every index of the list/array in order;",
+        "compares the element at each index with target;",
+        "returns the index as soon as a match is found;",
+        "returns −1 after the loop if there was no match."
+      ],
+      "c": "Construct",
+      "id": "a2ce26fdc",
+      "u": "B2",
+      "ex": {
+        "py": "def findIndex(names, target):\n    for i in range(len(names)):\n        if names[i] == target:\n            return i\n    return -1",
+        "java": "static int findIndex(String[] names, String target) {\n    for (int i = 0; i < names.length; i++) {\n        if (names[i].equals(target)) {\n            return i;\n        }\n    }\n    return -1;\n}"
+      },
+      "n": "B2-algorithms.search",
+      "f": "loop",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-algorithms",
+      "s": "search",
+      "h": 0,
+      "m": 5,
+      "q": "A sorted list holds [3, 8, 12, 19, 25, 31, 40, 52]. Trace a binary search for 50, showing low, high and mid at each step. Start with low = 0 and high = 7, and use mid = (low + high) DIV 2.",
+      "a": [
+        "low = 0, high = 7, mid = 3: 19 < 50, so low = 4;",
+        "low = 4, high = 7, mid = 5: 31 < 50, so low = 6;",
+        "low = 6, high = 7, mid = 6: 40 < 50, so low = 7;",
+        "low = 7, high = 7, mid = 7: 52 > 50, so high = 6;",
+        "low (7) > high (6), so the search stops: 50 is not in the list (return −1 / not found)."
+      ],
+      "c": "Trace",
+      "id": "cee38cb2b",
+      "u": "B2",
+      "n": "B2-algorithms.search",
+      "f": "Binary search",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-algorithms",
+      "s": "sort",
+      "h": 0,
+      "m": 4,
+      "q": "Show the contents of the list [5, 1, 4, 2, 8] after each pass of a bubble sort into ascending order, and state how many passes are needed if the algorithm stops when a pass makes no swaps.",
+      "a": [
+        "After pass 1: [1, 4, 2, 5, 8];",
+        "after pass 2: [1, 2, 4, 5, 8];",
+        "pass 3 makes no swaps, which confirms the list is sorted;",
+        "3 passes are needed (without the no-swap check the algorithm would carry on for all n − 1 = 4 passes)."
+      ],
+      "c": "Trace",
+      "id": "c7dfb6e6d",
+      "u": "B2",
+      "n": "B2-algorithms.sort",
+      "f": "Bubble sort|algorithms",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-data-structures",
+      "s": "grids",
+      "h": 0,
+      "m": 6,
+      "q": "A 2D array/list <code>sales</code> has 4 rows (shops) and 7 columns (days). Construct code that outputs the total sales for each shop, then the number of the shop with the highest total.",
+      "a": [
+        "An outer loop over each row (shop);",
+        "a running total reset to 0 for each shop;",
+        "an inner loop that adds every value in that row;",
+        "outputs each shop’s total;",
+        "keeps the highest total so far and its shop index (both initialised before the loops);",
+        "outputs the shop with the highest total after the loops (index + 1 if shops are numbered from 1)."
+      ],
+      "c": "Construct",
+      "id": "4c977cf39",
+      "u": "B2",
+      "ex": {
+        "py": "best, bestShop = -1, -1\nfor shop in range(len(sales)):\n    total = 0\n    for day in range(len(sales[shop])):\n        total = total + sales[shop][day]\n    print(\"Shop\", shop + 1, \"total:\", total)\n    if total > best:\n        best, bestShop = total, shop\nprint(\"Highest: shop\", bestShop + 1)",
+        "java": "int best = -1, bestShop = -1;\nfor (int shop = 0; shop < sales.length; shop++) {\n    int total = 0;\n    for (int day = 0; day < sales[shop].length; day++) {\n        total = total + sales[shop][day];\n    }\n    System.out.println(\"Shop \" + (shop + 1) + \" total: \" + total);\n    if (total > best) {\n        best = total;\n        bestShop = shop;\n    }\n}\nSystem.out.println(\"Highest: shop \" + (bestShop + 1));"
+      },
+      "n": "B2-data-structures.grids",
+      "f": "two-dimensional|loop",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-algorithms",
+      "s": "files",
+      "h": 0,
+      "m": 6,
+      "q": "A text file <code>scores.txt</code> holds one line per student in the form <code>name,score</code> (e.g. <code>Ana,72</code>). Construct code that reads the file and outputs the names of students who scored 50 or more, followed by how many such students there are.",
+      "a": [
+        "Opens the file for reading and closes it (or uses with / try-with-resources);",
+        "loops through every line of the file;",
+        "splits each line at the comma into name and score;",
+        "converts the score to an integer before comparing it;",
+        "outputs the name when the score is 50 or more and increases a counter;",
+        "outputs the counter after the loop."
+      ],
+      "c": "Construct",
+      "id": "b1af6283d",
+      "u": "B2",
+      "ex": {
+        "py": "count = 0\nwith open(\"scores.txt\", \"r\") as f:\n    for line in f:\n        name, score = line.strip().split(\",\")\n        if int(score) >= 50:\n            print(name)\n            count = count + 1\nprint(count, \"students scored 50 or more\")",
+        "java": "int count = 0;\ntry (BufferedReader br = new BufferedReader(new FileReader(\"scores.txt\"))) {\n    String line;\n    while ((line = br.readLine()) != null) {\n        String[] parts = line.trim().split(\",\");\n        if (Integer.parseInt(parts[1]) >= 50) {\n            System.out.println(parts[0]);\n            count++;\n        }\n    }\n} catch (IOException e) {\n    System.out.println(\"Could not read the file\");\n}\nSystem.out.println(count + \" students scored 50 or more\");"
+      },
+      "n": "B2-algorithms.files",
+      "f": "File processing|string",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-data-structures",
+      "s": "stacks",
+      "h": 0,
+      "m": 4,
+      "q": "Explain how a stack can be used to check whether the brackets in an expression such as <code>(a[b]c)</code> are balanced.",
+      "a": [
+        "Read the expression one character at a time;",
+        "push every opening bracket onto the stack;",
+        "for each closing bracket, pop the top item and check it is the matching opening bracket (an empty stack or a mismatch means unbalanced);",
+        "at the end the brackets are balanced only if the stack is empty."
+      ],
+      "c": "Explain",
+      "id": "aece51aeb",
+      "u": "B2",
+      "n": "B2-data-structures.stacks",
+      "f": "stack|push",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-algorithms",
+      "s": "bigo",
+      "h": 0,
+      "m": 4,
+      "q": "Algorithm A processes a list of n items with one loop over the list. Algorithm B has a loop over the list nested inside another loop over the list. State the time complexity of each and explain what happens to their running times when n doubles.",
+      "a": [
+        "A is O(n);",
+        "B is O(n²);",
+        "when n doubles, A’s running time roughly doubles;",
+        "whereas B’s roughly quadruples (2² = 4 times), so B scales much worse for large n."
+      ],
+      "c": "Explain",
+      "id": "5ad352598",
+      "u": "B2",
+      "n": "B2-algorithms.bigo",
+      "f": "loop|Big O notation|algorithm",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-data-structures",
+      "s": "queues",
+      "h": 0,
+      "m": 4,
+      "q": "Jobs J1, J2 and J3 are sent to a printer queue. J1 is printed, then J4 arrives, then two more jobs are printed. State the jobs printed, in order, and the job left waiting. Explain why a queue rather than a stack is used.",
+      "a": [
+        "Printed in order: J1, J2, J3;",
+        "J4 is left in the queue;",
+        "a queue is FIFO, so jobs are printed in the order they were sent;",
+        "a stack is LIFO, so the newest job would print first and early jobs could wait for a long time (unfair)."
+      ],
+      "c": "Explain",
+      "id": "f26e09a69",
+      "u": "B2",
+      "n": "B2-data-structures.queues",
+      "f": "Stack|queue",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-fundamentals",
+      "s": "strings",
+      "h": 0,
+      "m": 5,
+      "q": "Construct a function <code>isPalindrome(word)</code> that returns true if <code>word</code> reads the same forwards and backwards, ignoring upper and lower case, and false otherwise. Do not use a built-in reverse method.",
+      "a": [
+        "Converts the word to one case (lower or upper);",
+        "compares characters from both ends (index i with index length − 1 − i), or builds a reversed copy with a loop;",
+        "loops over at least the first half of the word;",
+        "returns false as soon as a pair does not match;",
+        "returns true if every pair matches."
+      ],
+      "c": "Construct",
+      "id": "48cdeac39",
+      "u": "B2",
+      "ex": {
+        "py": "def isPalindrome(word):\n    w = word.lower()\n    n = len(w)\n    for i in range(n // 2):\n        if w[i] != w[n - 1 - i]:\n            return False\n    return True",
+        "java": "static boolean isPalindrome(String word) {\n    String w = word.toLowerCase();\n    int n = w.length();\n    for (int i = 0; i < n / 2; i++) {\n        if (w.charAt(i) != w.charAt(n - 1 - i)) {\n            return false;\n        }\n    }\n    return true;\n}"
+      },
+      "n": "B2-fundamentals.strings",
+      "f": "lower case",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-algorithms",
+      "s": "recursion",
+      "h": 1,
+      "m": 4,
+      "q": "Trace <code>mystery(472)</code>, showing each call, then state the value returned and what the function calculates.<pre class=\"lang-py\">def mystery(n):\n    if n == 0:\n        return 0\n    return n % 10 + mystery(n // 10)</pre><pre class=\"lang-java\">static int mystery(int n) {\n    if (n == 0) {\n        return 0;\n    }\n    return n % 10 + mystery(n / 10);\n}</pre>",
+      "a": [
+        "mystery(472) returns 2 + mystery(47);",
+        "mystery(47) returns 7 + mystery(4), and mystery(4) returns 4 + mystery(0);",
+        "mystery(0) is the base case and returns 0, so the calls unwind to 4, then 11, then 13;",
+        "the result is 13: the function adds up the digits of n."
+      ],
+      "c": "Trace",
+      "id": "84e4ece5e",
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "function|base case",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-algorithms",
+      "s": "recursion",
+      "h": 1,
+      "m": 4,
+      "q": "Construct a recursive function <code>power(base, exp)</code> that returns base raised to the non-negative whole number exp, without using a loop or a built-in power operator.",
+      "a": [
+        "Base case: when exp is 0, return 1;",
+        "recursive case: return base × power(base, exp − 1);",
+        "each call reduces exp by 1, so the calls move towards the base case;",
+        "correct function header, parameters and return statements."
+      ],
+      "c": "Construct",
+      "id": "e785d5e5a",
+      "u": "B2",
+      "ex": {
+        "py": "def power(base, exp):\n    if exp == 0:\n        return 1\n    return base * power(base, exp - 1)",
+        "java": "static long power(long base, int exp) {\n    if (exp == 0) {\n        return 1;\n    }\n    return base * power(base, exp - 1);\n}"
+      },
+      "n": "B2-algorithms.recursion",
+      "f": "loops|function|recursive",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B2-algorithms",
+      "s": "recursion",
+      "h": 1,
+      "m": 4,
+      "q": "Using the first element as the pivot, show the result of one partition of [6, 3, 9, 1, 7, 4] by quicksort. Explain why the worst case of quicksort is O(n²).",
+      "a": [
+        "Values smaller than the pivot 6 go before it: 3, 1, 4 (in any order);",
+        "values larger than 6 go after it: 9, 7 (in any order), e.g. [3, 1, 4, 6, 9, 7], with 6 now in its final position;",
+        "the worst case happens when the pivot is always the smallest or largest value, e.g. an already sorted list with the first element as pivot;",
+        "each partition then removes only one element, giving about n levels of up to n comparisons: O(n²)."
+      ],
+      "c": "Explain",
+      "id": "436e229c0",
+      "u": "B2",
+      "n": "B2-algorithms.recursion",
+      "f": "quicksort",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B3-oop",
+      "s": "classes",
+      "h": 0,
+      "m": 6,
+      "q": "A library tracks its books. Construct a class <code>Book</code> with private attributes <code>title</code>, <code>author</code> and <code>copiesAvailable</code>; a constructor that sets all three; an accessor for <code>copiesAvailable</code>; and a method <code>borrow()</code> that reduces <code>copiesAvailable</code> by 1 only if a copy is available, returning true if the loan succeeded and false otherwise.",
+      "a": [
+        "Class Book declared with the three attributes made private;",
+        "a constructor that takes title, author and the number of copies and assigns them to the object’s attributes (self. / this.);",
+        "an accessor (e.g. getCopiesAvailable()) that returns the value;",
+        "borrow() checks whether copiesAvailable > 0;",
+        "if so, it reduces copiesAvailable by 1 and returns true;",
+        "otherwise it returns false and leaves the value unchanged."
+      ],
+      "c": "Construct",
+      "id": "4733b13e7",
+      "u": "B3",
+      "ex": {
+        "py": "class Book:\n    def __init__(self, title, author, copies):\n        self.__title = title\n        self.__author = author\n        self.__copiesAvailable = copies\n\n    def getCopiesAvailable(self):\n        return self.__copiesAvailable\n\n    def borrow(self):\n        if self.__copiesAvailable > 0:\n            self.__copiesAvailable -= 1\n            return True\n        return False",
+        "java": "public class Book {\n    private String title;\n    private String author;\n    private int copiesAvailable;\n\n    public Book(String title, String author, int copies) {\n        this.title = title;\n        this.author = author;\n        this.copiesAvailable = copies;\n    }\n\n    public int getCopiesAvailable() {\n        return copiesAvailable;\n    }\n\n    public boolean borrow() {\n        if (copiesAvailable > 0) {\n            copiesAvailable--;\n            return true;\n        }\n        return false;\n    }\n}"
+      },
+      "n": "B3-oop.classes",
+      "f": "class|attributes|methods",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B3-oop",
+      "s": "design",
+      "h": 0,
+      "m": 4,
+      "q": "Construct a UML class diagram for a class <code>Student</code> with private attributes <code>name</code> (string) and <code>grades</code> (a list of integers), and public methods <code>addGrade(grade)</code> and <code>average()</code>, which returns a real number.",
+      "a": [
+        "A three-part box with the class name Student at the top;",
+        "attributes: − name: String and − grades: List / int[] (− shows private);",
+        "methods: + addGrade(grade: int): void (+ shows public);",
+        "+ average(): double / real, with the parameter and return types shown."
+      ],
+      "c": "Construct",
+      "id": "84d71b73b",
+      "u": "B3",
+      "n": "B3-oop.design",
+      "f": "String|class|attribute",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B3-oop",
+      "s": "static",
+      "h": 0,
+      "m": 3,
+      "q": "Every new <code>Ticket</code> object must get a unique number, starting at 1. Explain how a static (class) variable can be used to do this.",
+      "a": [
+        "A static variable (e.g. nextNumber) belongs to the class, so there is one copy shared by all Ticket objects;",
+        "the constructor copies its current value into the new object’s own attribute (e.g. number);",
+        "then increases the static variable by 1, so the next object created gets the next number."
+      ],
+      "c": "Explain",
+      "id": "fe596df55",
+      "u": "B3",
+      "n": "B3-oop.static",
+      "f": "variable|class|object",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B3-oop",
+      "s": "encapsulation",
+      "h": 0,
+      "m": 4,
+      "q": "A <code>Thermostat</code> class stores <code>targetTemperature</code> as a public attribute, and other parts of the program sometimes set it to impossible values such as 500. Explain how encapsulation would solve this problem.",
+      "a": [
+        "Make targetTemperature private, so it cannot be changed directly from outside the class;",
+        "provide a mutator (setter), e.g. setTarget(t), as the only way to change it;",
+        "the setter validates the value (e.g. accepts only 5–35 °C) and rejects invalid values;",
+        "so the object’s data always stays valid, and the checking code is written in one place."
+      ],
+      "c": "Explain",
+      "id": "6dcba520e",
+      "u": "B3",
+      "n": "B3-oop.encapsulation",
+      "f": "class|Attributes|Encapsulation",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B3-advanced",
+      "s": "inheritance",
+      "h": 1,
+      "m": 5,
+      "q": "A class <code>Vehicle</code> has attributes <code>registration</code> and <code>wheels</code>, a constructor that sets both, and a method <code>describe()</code> that returns a string. Construct a subclass <code>ElectricCar</code> that adds a private attribute <code>batteryKWh</code>, uses the superclass constructor and overrides <code>describe()</code> to add the battery size.",
+      "a": [
+        "ElectricCar is declared as a subclass of Vehicle (class ElectricCar(Vehicle) / extends Vehicle);",
+        "its constructor takes registration and batteryKWh;",
+        "it calls the superclass constructor with super() to set the inherited attributes (wheels = 4);",
+        "it stores batteryKWh in a private attribute;",
+        "it overrides describe(), reusing super().describe() and adding the battery size."
+      ],
+      "c": "Construct",
+      "id": "d114daac8",
+      "u": "B3",
+      "ex": {
+        "py": "class ElectricCar(Vehicle):\n    def __init__(self, registration, batteryKWh):\n        super().__init__(registration, 4)\n        self.__batteryKWh = batteryKWh\n\n    def describe(self):\n        return super().describe() + \", battery \" + str(self.__batteryKWh) + \" kWh\"",
+        "java": "public class ElectricCar extends Vehicle {\n    private double batteryKWh;\n\n    public ElectricCar(String registration, double batteryKWh) {\n        super(registration, 4);\n        this.batteryKWh = batteryKWh;\n    }\n\n    @Override\n    public String describe() {\n        return super.describe() + \", battery \" + batteryKWh + \" kWh\";\n    }\n}"
+      },
+      "n": "B3-advanced.inheritance",
+      "f": "classes|attributes|methods",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B3-advanced",
+      "s": "composition",
+      "h": 1,
+      "m": 4,
+      "q": "A <code>School</code> has <code>Classroom</code> objects, which are destroyed if the school is demolished, and <code>Teacher</code> objects, who can move to another school. Identify the relationship between School and each of the other classes, and explain the difference.",
+      "a": [
+        "School and Classroom: composition;",
+        "School and Teacher: aggregation;",
+        "in composition the part cannot exist without the whole, so classrooms are created and destroyed with the school (filled diamond in UML);",
+        "in aggregation the part has its own lifetime and can exist on its own or belong to another whole (hollow diamond)."
+      ],
+      "c": "Explain",
+      "id": "4e14e7edb",
+      "u": "B3",
+      "n": "B3-advanced.composition",
+      "f": "classes|object|aggregation",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B3-advanced",
+      "s": "patterns",
+      "h": 1,
+      "m": 3,
+      "q": "A game must have exactly one <code>ScoreBoard</code> object, used by every part of the program. Identify a suitable design pattern and outline how it guarantees a single instance.",
+      "a": [
+        "The singleton pattern;",
+        "the constructor is made private, so other classes cannot create new ScoreBoard objects;",
+        "a static method (e.g. getInstance()) creates the object the first time it is called and returns that same stored object every time after."
+      ],
+      "c": "Outline",
+      "id": "b95be2a71",
+      "u": "B3",
+      "n": "B3-advanced.patterns",
+      "f": "instance|design pattern|singleton",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B4-adt",
+      "s": "linked",
+      "h": 1,
+      "m": 4,
+      "q": "Construct an algorithm that counts the nodes in a singly linked list, given a reference <code>head</code> to the first node, where each node has <code>data</code> and <code>next</code>.",
+      "a": [
+        "Set a counter to 0 and a current reference to head;",
+        "loop while current is not null/None;",
+        "add 1 to the counter and move current to current.next;",
+        "return the counter when the end is reached (0 for an empty list)."
+      ],
+      "c": "Construct",
+      "id": "3427b4b91",
+      "u": "B4",
+      "ex": {
+        "py": "def countNodes(head):\n    count = 0\n    current = head\n    while current is not None:\n        count += 1\n        current = current.next\n    return count",
+        "java": "static int countNodes(Node head) {\n    int count = 0;\n    Node current = head;\n    while (current != null) {\n        count++;\n        current = current.next;\n    }\n    return count;\n}"
+      },
+      "n": "B4-adt.linked",
+      "f": "linked list",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B4-adt",
+      "s": "bst",
+      "h": 1,
+      "m": 4,
+      "q": "The values 50, 30, 70, 20, 40, 60, 80, 35 are inserted in this order into an empty binary search tree. Draw the tree, then state its in-order and pre-order traversals and its height (counting edges from the root).",
+      "a": [
+        "Correct tree: 50 at the root; 30 and 70 as its children; 20 and 40 under 30; 60 and 80 under 70; 35 as the left child of 40;",
+        "in-order: 20, 30, 35, 40, 50, 60, 70, 80;",
+        "pre-order: 50, 30, 20, 40, 35, 70, 60, 80;",
+        "height = 3 (the path 50 → 30 → 40 → 35)."
+      ],
+      "c": "State",
+      "id": "69a587215",
+      "u": "B4",
+      "n": "B4-adt.bst",
+      "f": "binary|binary search tree",
+      "fg": 1
+    },
+    {
+      "k": "xs",
+      "p": "B4-adt",
+      "s": "hash",
+      "h": 1,
+      "m": 4,
+      "q": "A hash table has 7 slots (0–6), uses hash(key) = key MOD 7 and resolves collisions by chaining. Show the table after inserting 15, 22, 9, 29 and 36, and explain why the load factor matters.",
+      "a": [
+        "15, 22, 29 and 36 all hash to slot 1, so slot 1 holds the chain 15 → 22 → 29 → 36;",
+        "9 hashes to slot 2, and every other slot is empty;",
+        "the load factor is items ÷ slots, here 5 ÷ 7 ≈ 0.71;",
+        "as it rises, chains get longer and look-ups slow towards O(n), so the table is resized and rehashed past a threshold (a better hash function also spreads keys more evenly)."
+      ],
+      "c": "Explain",
+      "id": "a1ac038c8",
+      "u": "B4",
+      "n": "B4-adt.hash",
+      "f": "hash table|collision|load factor",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A1-hardware",
+      "s": "compression",
+      "h": 0,
+      "m": 4,
+      "q": "A school records lessons as high-definition video and streams them to students at home. Explain two ways the school could reduce buffering for students with slow home connections.",
+      "a": [
+        "Compress the video more (lossy compression / a lower bit rate);",
+        "so less data has to be sent each second, which fits within a lower bandwidth;",
+        "offer lower-resolution or lower-frame-rate versions (adaptive streaming);",
+        "smaller streams take less time to transmit, so playback does not stall waiting for packets."
+      ],
+      "c": "Explain",
+      "id": "d6992c57c",
+      "u": "A1",
+      "us": [
+        "A1",
+        "A2"
+      ],
+      "pp": 1,
+      "n": "A1-hardware.compression",
+      "f": "lossy compression|Compression|bandwidth",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A1-hardware",
+      "s": "cloud",
+      "h": 0,
+      "m": 6,
+      "q": "A company moves its files from a NAS in its office to a cloud storage service. Discuss the impact of this change, referring to network connectivity and data security.",
+      "a": [
+        "Benefit: files can be reached from anywhere with an internet connection, supporting remote working;",
+        "benefit: the provider handles backups, off-site copies and extra capacity, so a hardware failure in the office no longer loses data;",
+        "drawback: access depends on the internet connection and on the provider, so an outage or a slow link stops work;",
+        "drawback: data is held on third-party servers and crosses the internet, so it must be encrypted in transit (TLS) and at rest, with strong authentication such as MFA;",
+        "drawback: an ongoing subscription cost and the risk of vendor lock-in;",
+        "a reasoned conclusion, e.g. worthwhile if the connection is reliable and the data is encrypted, keeping a local copy of critical files."
+      ],
+      "c": "Discuss",
+      "id": "6b8b381f4",
+      "u": "A1",
+      "us": [
+        "A1",
+        "A2"
+      ],
+      "pp": 1,
+      "n": "A1-hardware.cloud",
+      "f": "vendor lock-in|backups|internet",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A1-hardware",
+      "s": "cloud",
+      "h": 0,
+      "m": 3,
+      "q": "A start-up wants to launch a web app quickly without managing any servers. Identify the most suitable cloud service model and explain one network-related risk of relying on it.",
+      "a": [
+        "PaaS (platform as a service);",
+        "the provider manages the servers, operating system and runtime, so the developers only deploy their code;",
+        "risk: if the provider or the internet connection has an outage, or latency is high, users cannot use the app and the start-up cannot fix it themselves."
+      ],
+      "c": "Explain",
+      "id": "6ba224045",
+      "u": "A1",
+      "us": [
+        "A1",
+        "A2"
+      ],
+      "pp": 1,
+      "n": "A1-hardware.cloud",
+      "f": "PaaS|operating system|internet",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A2-architecture",
+      "s": "models",
+      "h": 0,
+      "m": 5,
+      "q": "A school website lets parents log in and see their child’s grades, which are stored in a relational database on a separate database server. Describe how a parent’s request for grades is handled, from the browser to the database and back.",
+      "a": [
+        "The browser (client) sends an HTTPS request to the web server;",
+        "the web/application server checks that the parent is logged in and allowed to see that child’s data;",
+        "it sends an SQL query (e.g. SELECT … WHERE StudentID = …) to the database server;",
+        "the DBMS runs the query and returns the matching records;",
+        "the web server builds a page from the results and sends it back to the browser, encrypted by HTTPS."
+      ],
+      "c": "Describe",
+      "id": "27ed90506",
+      "u": "A2",
+      "us": [
+        "A2",
+        "A3"
+      ],
+      "pp": 1,
+      "n": "A2-architecture.models",
+      "f": "server|web server|clients",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A2-transmission-security",
+      "s": "threats",
+      "h": 0,
+      "m": 4,
+      "q": "Explain how an attacker could use SQL injection against the parents’ login form, and describe two ways to prevent it.",
+      "a": [
+        "The attacker types SQL code into an input field (e.g. <code>' OR '1'='1</code>) instead of normal data;",
+        "if the input is pasted straight into the query, the database runs it, e.g. logging in without a password or revealing other records;",
+        "prevention: use parameterised queries / prepared statements, so input is always treated as data, never as code;",
+        "prevention: validate input, and give the web app’s database account only the privileges it needs (least privilege)."
+      ],
+      "c": "Explain",
+      "id": "14927d77a",
+      "u": "A2",
+      "us": [
+        "A2",
+        "A3"
+      ],
+      "pp": 1,
+      "n": "A2-transmission-security.threats",
+      "f": "SQL|SQL injection|database query",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A1-hardware",
+      "s": "storage",
+      "h": 0,
+      "m": 4,
+      "q": "Suggest, with reasons, a suitable storage device for a database server that handles many small reads and writes every second, and a suitable way of keeping backups.",
+      "a": [
+        "An SSD;",
+        "it has no moving parts, so access times are very short for many small random reads and writes, giving fast queries;",
+        "backups: regular (e.g. nightly) copies kept off-site or in cloud storage;",
+        "so the data survives fire, theft or ransomware at the main site and can be restored to a recent point."
+      ],
+      "c": "Suggest",
+      "id": "333e4b053",
+      "u": "A1",
+      "us": [
+        "A1",
+        "A3"
+      ],
+      "pp": 1,
+      "n": "A1-hardware.storage",
+      "f": "backups|cloud storage|SSD",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A4-machine-learning",
+      "s": "hardware",
+      "h": 0,
+      "m": 4,
+      "q": "A hospital will train an image-recognition model on millions of X-rays, then run it inside portable scanners. Explain why the hospital might train the model in the cloud but run it on the scanners themselves.",
+      "a": [
+        "Training needs massive parallel processing (many GPUs/TPUs) and storage for millions of images, which is expensive to buy, so renting it in the cloud is cheaper and scales;",
+        "training happens rarely, so paying only for the time used is efficient;",
+        "running the model (inference) needs much less computing power, so a small NPU in the scanner is enough;",
+        "running on the device gives fast results without an internet connection and keeps patients’ images in the hospital (privacy)."
+      ],
+      "c": "Explain",
+      "id": "fa8755e95",
+      "u": "A1",
+      "us": [
+        "A1",
+        "A4"
+      ],
+      "pp": 1,
+      "n": "A4-machine-learning.hardware",
+      "f": "Training|TPUs|GPUs",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A4-machine-learning",
+      "s": "hardware",
+      "h": 0,
+      "m": 4,
+      "q": "A city installs smart traffic cameras that use machine learning to detect congestion. Explain why processing the video on the camera itself (edge computing) can be better than sending it to a central server.",
+      "a": [
+        "Video streams are large, so sending them all needs a lot of network bandwidth;",
+        "processing on the camera means only small results (e.g. a congestion level) are sent, reducing traffic;",
+        "decisions are faster (low latency) because there is no round trip to a server, which matters for live traffic lights;",
+        "less personal video leaves the camera, improving privacy, and the system keeps working if the network fails."
+      ],
+      "c": "Explain",
+      "id": "40fca07f8",
+      "u": "A2",
+      "us": [
+        "A2",
+        "A4"
+      ],
+      "pp": 1,
+      "n": "A4-machine-learning.hardware",
+      "f": "Edge|ML|latency",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A4-ethics",
+      "s": "ethics",
+      "h": 0,
+      "m": 6,
+      "q": "A school plans to use its student database (attendance, grades and home postcode) to train a model that predicts which students might fail. Discuss two ethical issues and how the school could address them.",
+      "a": [
+        "Bias: past data may reflect existing inequalities (e.g. postcode linked to income), so the model could unfairly flag some groups;",
+        "address it: remove or test sensitive features such as postcode, and check the results for bias across groups;",
+        "Privacy and consent: data collected for school records is reused for a new purpose;",
+        "address it: inform families and get consent where required, minimise and anonymise the data, and follow data-protection law (e.g. GDPR);",
+        "accountability: a prediction should support, not replace, teachers’ judgement, and students should be able to question it (human oversight);",
+        "a reasoned conclusion on whether the benefit (earlier support) outweighs the risks."
+      ],
+      "c": "Discuss",
+      "id": "235282b96",
+      "u": "A3",
+      "us": [
+        "A3",
+        "A4"
+      ],
+      "pp": 1,
+      "n": "A4-ethics.ethics",
+      "f": "model|human oversight|Data protection",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A3-alternative",
+      "s": "distributed",
+      "h": 1,
+      "m": 4,
+      "q": "A retailer stores its database across data centres in three countries. Explain one benefit and one problem of this distributed database compared with a single central database.",
+      "a": [
+        "Benefit: customers’ queries are answered by a nearby data centre, reducing latency;",
+        "and if one site or link fails the others keep working (fault tolerance through replicated data);",
+        "problem: keeping replicas consistent means sending every update across the WAN to each site, adding traffic and delay;",
+        "so transactions are more complex (e.g. two-phase commit), and a network failure can leave copies temporarily inconsistent."
+      ],
+      "c": "Explain",
+      "id": "912f9339d",
+      "u": "A2",
+      "us": [
+        "A2",
+        "A3"
+      ],
+      "pp": 1,
+      "n": "A3-alternative.distributed",
+      "f": "database|distributed database|Replication",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A1-os",
+      "s": "control",
+      "h": 1,
+      "m": 4,
+      "q": "A smart greenhouse uses temperature sensors and a heater that are linked over Wi-Fi to a central controller. Explain the effect on the control system if the wireless network has high latency, and suggest how to reduce the risk.",
+      "a": [
+        "Sensor readings and commands arrive late, so the controller reacts to out-of-date temperatures;",
+        "the heater switches on or off too late, so the temperature overshoots or undershoots the set point (unstable control that could damage the plants);",
+        "reduce the risk: place a local controller or fail-safe thermostat next to the heater, so the closed loop does not depend on the network;",
+        "or use a wired, more reliable connection, with fail-safe behaviour if messages stop arriving."
+      ],
+      "c": "Explain",
+      "id": "9a1a87b6e",
+      "u": "A1",
+      "us": [
+        "A1",
+        "A2"
+      ],
+      "pp": 1,
+      "n": "A1-os.control",
+      "f": "control system|Sensors|open-loop",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "B1-computational-thinking",
+      "s": "concepts",
+      "h": 0,
+      "m": 6,
+      "q": "A teacher wants a program that reads 30 test marks, then outputs the mean, the highest mark and how many marks are below the mean. Decompose the problem into three sub-problems, then construct the code for one of them as a function.",
+      "a": [
+        "Sub-problem 1: read the 30 marks into a list/array (with validation);",
+        "sub-problem 2: calculate the mean and the highest mark;",
+        "sub-problem 3: count how many marks are below the mean;",
+        "the chosen function has suitable parameters (e.g. the list of marks);",
+        "it uses a loop with a running total, a highest-so-far value or a counter, as appropriate;",
+        "it returns its result rather than relying on global variables."
+      ],
+      "c": "Construct",
+      "id": "aac2c870a",
+      "u": "B1",
+      "us": [
+        "B1",
+        "B2"
+      ],
+      "pp": 2,
+      "ex": {
+        "py": "def countBelow(marks, mean):\n    count = 0\n    for m in marks:\n        if m < mean:\n            count += 1\n    return count",
+        "java": "static int countBelow(int[] marks, double mean) {\n    int count = 0;\n    for (int m : marks) {\n        if (m < mean) {\n            count++;\n        }\n    }\n    return count;\n}"
+      },
+      "n": "B1-computational-thinking.concepts",
+      "f": "Decomposition|loops",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "B2-fundamentals",
+      "s": "debugging",
+      "h": 0,
+      "m": 4,
+      "q": "The function below should return the average of a list of numbers, but it gives wrong answers. Identify the two errors, state the type of each and correct them.<pre class=\"lang-py\">def average(nums):\n    total = 0\n    for i in range(1, len(nums)):\n        total = total + i\n    return total / len(nums)</pre><pre class=\"lang-java\">static double average(int[] nums) {\n    int total = 0;\n    for (int i = 1; i &lt; nums.length; i++) {\n        total = total + i;\n    }\n    return (double) total / nums.length;\n}</pre>",
+      "a": [
+        "Error 1: the loop starts at index 1, so the first number is skipped;",
+        "it is a logic (off-by-one) error: start at index 0;",
+        "Error 2: the loop adds the index i instead of the value nums[i];",
+        "it is a logic error: use total = total + nums[i] (both run without crashing, which is why they are logic errors, not syntax errors)."
+      ],
+      "c": "Identify",
+      "id": "856d62881",
+      "u": "B1",
+      "us": [
+        "B1",
+        "B2"
+      ],
+      "pp": 2,
+      "n": "B2-fundamentals.debugging",
+      "f": "function|Syntax errors",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "B3-oop",
+      "s": "classes",
+      "h": 0,
+      "m": 5,
+      "q": "Construct a class <code>Playlist</code> that stores a list of song titles, with a method <code>addSong(title)</code> that never adds a duplicate, and a method <code>count()</code> that returns how many songs are stored.",
+      "a": [
+        "A private list/ArrayList attribute, created empty in the constructor;",
+        "addSong(title) checks whether the title is already in the list (a loop, in, or contains);",
+        "it adds the title only if it is not already there;",
+        "count() returns the length/size of the list;",
+        "self / this is used correctly to reach the attribute."
+      ],
+      "c": "Construct",
+      "id": "cdf38ea50",
+      "u": "B2",
+      "us": [
+        "B2",
+        "B3"
+      ],
+      "pp": 2,
+      "ex": {
+        "py": "class Playlist:\n    def __init__(self):\n        self.__songs = []\n\n    def addSong(self, title):\n        if title not in self.__songs:\n            self.__songs.append(title)\n\n    def count(self):\n        return len(self.__songs)",
+        "java": "import java.util.ArrayList;\n\npublic class Playlist {\n    private ArrayList<String> songs = new ArrayList<>();\n\n    public void addSong(String title) {\n        if (!songs.contains(title)) {\n            songs.add(title);\n        }\n    }\n\n    public int count() {\n        return songs.size();\n    }\n}"
+      },
+      "n": "B3-oop.classes",
+      "f": "class|methods|constructor",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "B2-algorithms",
+      "s": "files",
+      "h": 0,
+      "m": 6,
+      "q": "A file <code>members.txt</code> holds lines such as <code>Ana,2019</code>. Construct code that reads the file, creates a <code>Member</code> object (attributes <code>name</code> and <code>joinYear</code>) for each line and stores the objects in a list, then outputs the names of members who joined before 2020.",
+      "a": [
+        "Opens and reads the file line by line, closing it properly;",
+        "splits each line into name and year, converting the year to an integer;",
+        "creates a Member object with the constructor for each line;",
+        "appends each object to a list/ArrayList;",
+        "loops through the list after reading;",
+        "outputs the name (via the attribute or an accessor) when joinYear < 2020."
+      ],
+      "c": "Construct",
+      "id": "bc39238aa",
+      "u": "B2",
+      "us": [
+        "B2",
+        "B3"
+      ],
+      "pp": 2,
+      "ex": {
+        "py": "class Member:\n    def __init__(self, name, joinYear):\n        self.name = name\n        self.joinYear = joinYear\n\nmembers = []\nwith open(\"members.txt\") as f:\n    for line in f:\n        name, year = line.strip().split(\",\")\n        members.append(Member(name, int(year)))\n\nfor m in members:\n    if m.joinYear < 2020:\n        print(m.name)",
+        "java": "ArrayList<Member> members = new ArrayList<>();\ntry (BufferedReader br = new BufferedReader(new FileReader(\"members.txt\"))) {\n    String line;\n    while ((line = br.readLine()) != null) {\n        String[] p = line.trim().split(\",\");\n        members.add(new Member(p[0], Integer.parseInt(p[1])));\n    }\n} catch (IOException e) {\n    System.out.println(\"Could not read the file\");\n}\nfor (Member m : members) {\n    if (m.getJoinYear() < 2020) {\n        System.out.println(m.getName());\n    }\n}"
+      },
+      "n": "B2-algorithms.files",
+      "f": "string",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "B4-adt",
+      "s": "linked",
+      "h": 1,
+      "m": 4,
+      "q": "Customers join a queue only at the back and leave only from the front. Compare using an array/list and a singly linked list to store this queue.",
+      "a": [
+        "With an array/list, removing from the front shifts every remaining item along, which is O(n) (unless a circular array with front and rear pointers is used);",
+        "a linked list with head and tail references removes at the head and adds at the tail in O(1), with no shifting;",
+        "an array/list allows direct access to any position by index and uses less memory per item (no pointers);",
+        "a linked list grows and shrinks dynamically, so no maximum size has to be chosen in advance (both keep FIFO order)."
+      ],
+      "c": "Compare",
+      "id": "2ddf52713",
+      "u": "B2",
+      "us": [
+        "B2",
+        "B4"
+      ],
+      "pp": 2,
+      "n": "B4-adt.linked",
+      "f": "linked list|direct access",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "B4-adt",
+      "s": "adt",
+      "h": 1,
+      "m": 5,
+      "q": "Construct a class <code>Stack</code> that uses a list/ArrayList internally and provides <code>push(item)</code>, <code>pop()</code> and <code>isEmpty()</code>. <code>pop()</code> must return None/null if the stack is empty.",
+      "a": [
+        "A private list/ArrayList attribute, initialised empty;",
+        "push(item) adds the item to the end (the top);",
+        "pop() checks whether the stack is empty and returns None/null if so;",
+        "otherwise it removes and returns the last (top) item;",
+        "isEmpty() returns true when the list has no items."
+      ],
+      "c": "Construct",
+      "id": "fd139b4aa",
+      "u": "B3",
+      "us": [
+        "B3",
+        "B4"
+      ],
+      "pp": 2,
+      "ex": {
+        "py": "class Stack:\n    def __init__(self):\n        self.__items = []\n\n    def push(self, item):\n        self.__items.append(item)\n\n    def pop(self):\n        if self.isEmpty():\n            return None\n        return self.__items.pop()\n\n    def isEmpty(self):\n        return len(self.__items) == 0",
+        "java": "import java.util.ArrayList;\n\npublic class Stack<T> {\n    private ArrayList<T> items = new ArrayList<>();\n\n    public void push(T item) {\n        items.add(item);\n    }\n\n    public T pop() {\n        if (isEmpty()) {\n            return null;\n        }\n        return items.remove(items.size() - 1);\n    }\n\n    public boolean isEmpty() {\n        return items.isEmpty();\n    }\n}"
+      },
+      "n": "B4-adt.adt",
+      "f": "stack",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "B4-adt",
+      "s": "hash",
+      "h": 1,
+      "m": 6,
+      "q": "A login system looks up usernames thousands of times a second. Compare a linear search of an unsorted list, a binary search of a sorted list and a hash table for this task.",
+      "a": [
+        "A linear search of an unsorted list is O(n): it may check every name, which is slow for large n;",
+        "but the list needs no sorting, and adding a new username is O(1);",
+        "a binary search of a sorted list is O(log n), much faster for large n;",
+        "but the list must be kept sorted, so every new username costs O(n) shifting;",
+        "a hash table gives O(1) average look-up, the fastest for frequent searches;",
+        "but it needs extra memory, slows down with many collisions (high load factor) and does not keep names in order, so on balance it suits this task best."
+      ],
+      "c": "Compare",
+      "id": "73e139209",
+      "u": "B2",
+      "us": [
+        "B2",
+        "B4"
+      ],
+      "pp": 2,
+      "n": "B4-adt.hash",
+      "f": "hash table|load factor|collision",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "A3-design",
+      "s": "what",
+      "h": 0,
+      "m": 4,
+      "q": "A club keeps its members as records in a list inside a program, and is considering a relational database instead. Outline two advantages of the database for this purpose.",
+      "a": [
+        "The data is stored permanently and can be shared by several users and programs at once,",
+        "instead of living in one program’s memory and being lost when it ends;",
+        "the DBMS enforces integrity (primary keys, data types, referential integrity),",
+        "and SQL queries can search, sort and combine records without writing a new loop for every question."
+      ],
+      "c": "Outline",
+      "id": "efe2373f9",
+      "u": "A3",
+      "us": [
+        "A3",
+        "B2"
+      ],
+      "pp": 0,
+      "n": "A3-design.what",
+      "f": "database|relational databases|records",
+      "fg": 1
+    },
+    {
+      "k": "mix",
+      "p": "B2-fundamentals",
+      "s": "variables",
+      "h": 0,
+      "m": 3,
+      "q": "Explain why <code>0.1 + 0.2 == 0.3</code> evaluates to false in both Python and Java, linking your answer to how numbers are stored in binary.",
+      "a": [
+        "Real numbers are stored as binary floating point, with a fixed number of bits;",
+        "0.1 and 0.2 cannot be represented exactly in binary (they are recurring binary fractions), so the stored values are tiny approximations;",
+        "their sum is 0.30000000000000004, not exactly 0.3, so the comparison fails; compare with a small tolerance instead, e.g. abs(a − b) < 1e-9."
+      ],
+      "c": "Explain",
+      "id": "753c58c43",
+      "u": "A1",
+      "us": [
+        "A1",
+        "B2"
+      ],
+      "pp": 0,
+      "n": "B2-fundamentals.variables",
+      "f": "stor|valu|float"
     }
   ]
 };

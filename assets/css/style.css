@@ -911,3 +911,14 @@ body[data-tb="on"] .tb{display:flex;flex-direction:column;gap:12px;margin:2px 0 
 .ans-ph b{color:var(--ink)}
 section#quiz .ans-ph{border-color:#5A606B;color:#C9CDD4}
 section#quiz .ans-ph b{color:#FFFFFF}
+/* practice: paper picker and section headings */
+.px-pp{margin:4px 0 10px}
+.px-sec{margin:14px 0 2px;font-family:var(--f-disp);font-size:20px;line-height:1.1}
+.pq-ex{margin:10px 0 4px}
+.pq-ex pre{margin:6px 0 0;font-size:12.5px;padding:10px 12px;border-radius:10px;overflow-x:auto}
+.pq-q pre{margin:8px 0 2px;font-size:12.5px;padding:10px 12px;border-radius:10px;overflow-x:auto;font-weight:400}
+/* Textbook mode reads as explanations: the written explanation already defines the terms,
+   so the stop's exam-definition box is hidden there (it stays in Cheat sheet mode). */
+body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
+.kt.kt-chips{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.kt.kt-chips .kt-h{margin:0 4px 0 0}
