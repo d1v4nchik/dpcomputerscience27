@@ -972,3 +972,23 @@ body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 .px-stop{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin:0 0 10px}
 .gl-group h3{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
 .gl-acts{margin-left:auto;display:flex;gap:6px}
+/* collapsible filters (Practice, Flashcards, Glossary): fold to one line with a summary */
+.ftog{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--bd2);background:var(--card,var(--bg2));color:var(--ink);border-radius:12px;padding:10px 14px;font:700 14px var(--f-body);cursor:pointer;white-space:nowrap}
+.ftog:hover{border-color:var(--ink)}
+.fnum{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--ink);color:var(--bg);font:700 11.5px var(--f-mono)}
+.fchev{font-size:11px;color:var(--muted)}
+.fsum{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:13px;color:var(--muted)}
+.fsum:empty{display:none}
+.fsum-t{border:0;background:none;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer}
+.fsum-t:hover{color:var(--ink);text-decoration:underline}
+.fsum-x{border:0;background:none;padding:0;font:700 13px var(--f-body);color:var(--ink);text-decoration:underline;cursor:pointer}
+.px-filters .fbody{display:flex;flex-direction:column;gap:12px}
+.px-filters:not(.open){gap:8px;padding:12px 14px}
+.px-filters:not(.open) .fbody{display:none}
+.deck-top{flex-wrap:wrap}
+.deck-top .deck-sum{font-size:13px;color:var(--muted);margin-right:auto}
+.deck-top .ftog{padding:7px 12px;font-size:13px}
+#fc-deck:not(.open) .fbody{display:none}
+#fc-deck .fbody .deck-units{margin-top:12px}
+.gl-filters{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.gl-filters:not(.open) .fbody{display:none}
