@@ -922,3 +922,31 @@ section#quiz .ans-ph b{color:#FFFFFF}
 body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 .kt.kt-chips{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
 .kt.kt-chips .kt-h{margin:0 4px 0 0}
+/* video cards (same pattern as the Business Management notes) */
+.tvids{margin:18px 0 4px}
+.tvids-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:0 0 8px}
+.tvids-h b{font:700 17px var(--f-disp)}
+.tvids-h span{font-size:12.5px;color:var(--muted)}
+.vcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:10px}
+.vcards:not(.all)>.vcard:nth-child(n+4){display:none}
+.vcard{display:flex;gap:12px;align-items:flex-start;background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--ink);min-width:0}
+.vcard:hover{border-color:var(--line,var(--bd2))}
+.vplay{flex:none;width:38px;height:38px;border-radius:50%;background:var(--line,#2E5CCB);display:grid;place-items:center}
+.vcard b{display:block;font-size:14px;line-height:1.3}
+.vcard small{display:block;font-size:12.5px;color:var(--muted);margin-top:3px}
+.vcard em{display:block;font-style:normal;font:500 11.5px/1.4 var(--f-mono,monospace);color:var(--tdark,var(--muted));margin-top:4px}
+.vmore{margin-top:10px;border:1px solid var(--bd2);background:none;border-radius:999px;padding:7px 12px;font-weight:700;font-size:13px;color:var(--ink);cursor:pointer}
+.tvids-top{width:100%;max-width:880px;margin:10px auto 0;border:1px solid var(--bd);border-radius:14px;background:var(--bg2);padding:10px 14px}
+.tvids-top summary{cursor:pointer;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;list-style:none}
+.tvids-top summary::-webkit-details-marker{display:none}
+.tvids-top summary::before{content:"▶";font-size:11px;color:var(--line,var(--muted))}
+.tvids-top[open] summary::before{content:"▼"}
+.tvids-top summary b{font:700 15px var(--f-disp)}
+.tvids-top summary span{font-size:12.5px;color:var(--muted)}
+.tvids-top .vcards{margin-top:10px}
+@media (max-width:700px){
+  .vcards:not(.all){display:flex;overflow-x:auto;gap:10px;scroll-snap-type:x mandatory;margin:0 -16px;padding:2px 16px 8px;scrollbar-width:none}
+  .vcards:not(.all)::-webkit-scrollbar{display:none}
+  .vcards:not(.all)>.vcard:nth-child(n){flex:0 0 78%;scroll-snap-align:start;display:flex}
+  .vmore{display:none}
+}

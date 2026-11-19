@@ -29909,11 +29909,27 @@ window.CS = {
   "res": {
     "videos": [
       [
+        "A1",
+        "Topic A1: Computer Fundamentals (Level 7 in 7 hours, part 1)",
+        "Jerry's Tutorials",
+        "https://www.youtube.com/watch?v=IjhPUBP2ubo",
+        "the whole of A1 in one video",
+        false
+      ],
+      [
         "A1.1",
         "Topic A1.1 – Computer Hardware and Operations",
         "The CS Classroom",
         "https://www.youtube.com/watch?v=K6Nn36mbQ98",
         "CPU and F–D–E 02:36 · buses 17:01 · cores 18:36 · GPUs 20:10 · CPU vs GPU (HL) 26:59 · primary storage 43:30 · caches 47:29 · pipelining (HL) 51:37 · secondary storage 59:41 · virtual memory 1:17:50 · compression 1:19:33 · RLE 1:23:39 · transform coding 1:28:15 · cloud 1:33:17",
+        false
+      ],
+      [
+        "A1.1",
+        "IB CS A1.1 · Computer Hardware and Operation",
+        "Computer Science with Mr. E",
+        "https://www.youtube.com/watch?v=gZzxFK8bqTk",
+        "the whole topic (23 min)",
         false
       ],
       [
@@ -29925,6 +29941,14 @@ window.CS = {
         false
       ],
       [
+        "A1.2",
+        "IB CS A1.2 · Data Representation and Computer Logic",
+        "Computer Science with Mr. E",
+        "https://www.youtube.com/watch?v=X1rIgYLhQMo",
+        "Number types 02:17 · How binary works 03:52 · Binary to hexadecimal 07:58 · Data units 09:44 · Storing integers 11:26 · Storing text and characters 13:30 · Storing images 15:22 · Storing sounds 17:19",
+        false
+      ],
+      [
         "A1.3",
         "Topic A1.3 – Operating Systems and Control Systems",
         "The CS Classroom",
@@ -29933,19 +29957,19 @@ window.CS = {
         false
       ],
       [
-        "A1.4",
-        "Topic A1.4 – Translation (HL)",
-        "The CS Classroom",
-        "https://www.youtube.com/watch?v=-bws9-G6jsw",
-        "interpreters, compilers, JIT and bytecode",
-        true
+        "A1.3",
+        "IB CS A1.3 · Operating Systems and Control Systems",
+        "Computer Science with Mr. E",
+        "https://www.youtube.com/watch?v=xKuZO7ukp6A",
+        "What is an operating system? 02:32 · Everything the OS manages 04:10 · Programs, processes and threads 06:41 · More core OS functions 07:31 · Scheduling 09:25 · Polling vs interrupts 15:03 · Multitasking and resource alloca 18:27 · Control systems and feedback 20:24",
+        false
       ],
       [
-        "A1",
-        "Topic A1: Computer Fundamentals (Level 7 in 7 hours, part 1)",
-        "Jerry's Tutorials",
-        "https://www.youtube.com/watch?v=IjhPUBP2ubo",
-        "the whole of A1 in one video",
+        "A1.4",
+        "IB CS A1.4 · Translation (HL)",
+        "Computer Science with Mr. E",
+        "https://www.youtube.com/watch?v=9dMDaOTEcxQ",
+        "Why does code need translating? 02:29 · From your code to the processor 04:12 · Compiler vs interpreter 06:50 · The translation pipeline 07:56 · The pipeline in action 09:38 · The hybrid approach (JIT) 11:04 · Comparing all four approaches 12:49 · Worked example 14:41",
         false
       ],
       [
@@ -29981,6 +30005,14 @@ window.CS = {
         false
       ],
       [
+        "A2.4",
+        "IB CS A2.4 · Network Security",
+        "Computer Science with Mr. E",
+        "https://www.youtube.com/watch?v=Wp4Ns43RAo8",
+        "Why security matters (the CIA tr 06:23 · What is a firewall? 11:41 · Whitelist vs blacklist 16:46 · How firewalls inspect traffic 21:38 · Firewalls: strengths & limitatio 25:48 · NAT as a security side effect 34:05 · Common network vulnerabilities ( 40:32 · Attacks on the network & data (H 47:05",
+        false
+      ],
+      [
         "A3",
         "Topic A3: Databases (Level 7 in 7 hours, part 3)",
         "Jerry's Tutorials",
@@ -29997,20 +30029,20 @@ window.CS = {
         false
       ],
       [
-        "A4.1",
-        "A4.1 Machine Learning Fundamentals",
-        "Mr Bulmer's Learning Zone",
-        "https://www.youtube.com/watch?v=d_M91YeAvmk",
-        "types of machine learning and where they are used (17 min, no chapters)",
-        false
-      ],
-      [
         "A4",
         "But what is a neural network? (deep learning, chapter 1)",
         "3Blue1Brown",
         "https://www.youtube.com/watch?v=aircAruvnKk",
         "neurons 02:42 · layers 03:35 · why layers 05:31 · edge detection 08:38 · weights and biases 11:34 · how learning works 12:30 · recap 15:17",
         true
+      ],
+      [
+        "A4.1",
+        "A4.1 Machine Learning Fundamentals",
+        "Mr Bulmer's Learning Zone",
+        "https://www.youtube.com/watch?v=d_M91YeAvmk",
+        "types of machine learning and where they are used (17 min, no chapters)",
+        false
       ],
       [
         "B2",
@@ -51969,5 +52001,3031 @@ window.CS = {
       "n": "B2-fundamentals.variables",
       "f": "stor|valu|float"
     }
-  ]
+  ],
+  "watch": {
+    "A1-hardware": {
+      "cpu": [
+        [
+          "aALgJd_CNvo",
+          "Describe the functions and interactions of the main CPU components",
+          "Mr. Rhed CS",
+          0,
+          "A1.1.1",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          156,
+          "CPU and F–D–E · from 2:36",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          1021,
+          "buses · from 17:01",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          1116,
+          "cores · from 18:36",
+          0
+        ]
+      ],
+      "fde": [
+        [
+          "p3FkxMVDSq0",
+          "Describe the fetch, decode and execute cycle",
+          "Mr. Rhed CS",
+          0,
+          "A1.1.5",
+          0
+        ],
+        [
+          "4775ikl_bLY",
+          "How Does a CPU Work?",
+          "Computer Science with Mr. E",
+          0,
+          "Animated · 7 min",
+          0
+        ]
+      ],
+      "pipeline": [
+        [
+          "OlyYYQ1L4Qs",
+          "Describe the process of pipelining in multi core architectures",
+          "Mr. Rhed CS",
+          0,
+          "A1.1.6",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          3097,
+          "pipelining (HL) · from 51:37",
+          0
+        ]
+      ],
+      "gpu": [
+        [
+          "owlxEwSATXU",
+          "Describe the role of a GPU",
+          "Mr. Rhed CS",
+          0,
+          "A1.1.2",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          1210,
+          "GPUs · from 20:10",
+          0
+        ]
+      ],
+      "cpugpu": [
+        [
+          "7GZFBGus4s8",
+          "Explain the differences between the CPU and the GPU",
+          "Mr. Rhed CS",
+          0,
+          "A1.1.3",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          1619,
+          "CPU vs GPU (HL) · from 26:59",
+          0
+        ]
+      ],
+      "memory": [
+        [
+          "s9JXktf6A_c",
+          "Explain the purposes of different types of primary memory",
+          "Mr. Rhed CS",
+          0,
+          "A1.1.4",
+          0
+        ],
+        [
+          "n2bTWTbTcko",
+          "Why Can't Your CPU Remember Everything?",
+          "Computer Science with Mr. E",
+          0,
+          "Animated · 8 min",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          2610,
+          "primary storage · from 43:30",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          2849,
+          "caches · from 47:29",
+          0
+        ]
+      ],
+      "storage": [
+        [
+          "y_bhLQwVCDY",
+          "Describe internal and external types of secondary memory storage",
+          "Mr. Rhed CS",
+          0,
+          "A1.1.7",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          3581,
+          "secondary storage · from 59:41",
+          0
+        ]
+      ],
+      "compression": [
+        [
+          "FA_yrsLzZEM",
+          "Describe the concept of compression",
+          "Mr. Rhed CS",
+          0,
+          "A1.1.8",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          4773,
+          "compression · from 79:33",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          5019,
+          "RLE · from 83:39",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          5295,
+          "transform coding · from 88:15",
+          0
+        ]
+      ],
+      "cloud": [
+        [
+          "U8ui3zGb8xc",
+          "Describe the different types of services in cloud computing",
+          "Mr. Rhed CS",
+          0,
+          "A1.1.9",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          5597,
+          "cloud · from 93:17",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "IjhPUBP2ubo",
+          "Topic A1: Computer Fundamentals (Level 7 in 7 hours, part 1)",
+          "Jerry's Tutorials",
+          0,
+          "Whole topic",
+          0
+        ],
+        [
+          "K6Nn36mbQ98",
+          "Topic A1.1 – Computer Hardware and Operations",
+          "The CS Classroom",
+          0,
+          "14 chapters",
+          0
+        ],
+        [
+          "gZzxFK8bqTk",
+          "IB CS A1.1 · Computer Hardware and Operation",
+          "Computer Science with Mr. E",
+          0,
+          "Whole topic",
+          0
+        ]
+      ]
+    },
+    "A1-data-logic": {
+      "binary": [
+        [
+          "jc90Woz2mHA",
+          "Describe the principal methods of representing data",
+          "Mr. Rhed CS",
+          0,
+          "A1.2.1",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          23,
+          "binary · from 0:23",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          271,
+          "conversions · from 4:31",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "IB CS A1.2 · Data Representation and Computer Logic",
+          "Computer Science with Mr. E",
+          137,
+          "Number types · from 2:17",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "IB CS A1.2 · Data Representation and Computer Logic",
+          "Computer Science with Mr. E",
+          232,
+          "How binary works · from 3:52",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "IB CS A1.2 · Data Representation and Computer Logic",
+          "Computer Science with Mr. E",
+          478,
+          "Binary to hexadecimal · from 7:58",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "IB CS A1.2 · Data Representation and Computer Logic",
+          "Computer Science with Mr. E",
+          584,
+          "Data units · from 9:44",
+          0
+        ]
+      ],
+      "storing": [
+        [
+          "TBvjU_wAx80",
+          "Explain how binary is used to store data",
+          "Mr. Rhed CS",
+          0,
+          "A1.2.2",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          1676,
+          "text · from 27:56",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          2050,
+          "images · from 34:10",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          2659,
+          "sound · from 44:19",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          3026,
+          "video · from 50:26",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "IB CS A1.2 · Data Representation and Computer Logic",
+          "Computer Science with Mr. E",
+          686,
+          "Storing integers · from 11:26",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "IB CS A1.2 · Data Representation and Computer Logic",
+          "Computer Science with Mr. E",
+          810,
+          "Storing text and characters · from 13:30",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "IB CS A1.2 · Data Representation and Computer Logic",
+          "Computer Science with Mr. E",
+          922,
+          "Storing images · from 15:22",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "IB CS A1.2 · Data Representation and Computer Logic",
+          "Computer Science with Mr. E",
+          1039,
+          "Storing sounds · from 17:19",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "A1.2 | Data Representation and Computer Logic | SL & HL",
+          "Computer Science with Mr. E",
+          1143,
+          "Storing video · from 19:03",
+          0
+        ]
+      ],
+      "gates": [
+        [
+          "DjbT4oWpUkU",
+          "Describe the purpose and use of logic gates",
+          "Mr. Rhed CS",
+          0,
+          "A1.2.3",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          3248,
+          "logic gates · from 54:08",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "A1.2 | Data Representation and Computer Logic | SL & HL",
+          "Computer Science with Mr. E",
+          1250,
+          "What are logic gates? · from 20:50",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "A1.2 | Data Representation and Computer Logic | SL & HL",
+          "Computer Science with Mr. E",
+          1335,
+          "AND, OR, NOT gates · from 22:15",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "A1.2 | Data Representation and Computer Logic | SL & HL",
+          "Computer Science with Mr. E",
+          1430,
+          "NAND, NOR, XOR, XNOR · from 23:50",
+          0
+        ]
+      ],
+      "truth": [
+        [
+          "SsQN2gICHxw",
+          "Construct and analyse truth tables",
+          "Mr. Rhed CS",
+          0,
+          "A1.2.4",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          3830,
+          "truth tables · from 63:50",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          4710,
+          "Boolean algebra · from 78:30",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "A1.2 | Data Representation and Computer Logic | SL & HL",
+          "Computer Science with Mr. E",
+          1518,
+          "Building truth tables · from 25:18",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "A1.2 | Data Representation and Computer Logic | SL & HL",
+          "Computer Science with Mr. E",
+          1942,
+          "Boolean algebra laws · from 32:22",
+          0
+        ]
+      ],
+      "kmap": [
+        [
+          "SsQN2gICHxw",
+          "Construct and analyse truth tables",
+          "Mr. Rhed CS",
+          0,
+          "A1.2.4",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          5178,
+          "K-maps · from 86:18",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "A1.2 | Data Representation and Computer Logic | SL & HL",
+          "Computer Science with Mr. E",
+          1840,
+          "Karnaugh maps · from 30:40",
+          0
+        ]
+      ],
+      "diagrams": [
+        [
+          "vRMuNDQmybQ",
+          "Construct logic diagrams",
+          "Mr. Rhed CS",
+          0,
+          "A1.2.5",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          3572,
+          "circuits · from 59:32",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "A1.2 | Data Representation and Computer Logic | SL & HL",
+          "Computer Science with Mr. E",
+          2045,
+          "Reading logic diagrams · from 34:05",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "IjhPUBP2ubo",
+          "Topic A1: Computer Fundamentals (Level 7 in 7 hours, part 1)",
+          "Jerry's Tutorials",
+          0,
+          "Whole topic",
+          0
+        ],
+        [
+          "IdWT7hT6SpA",
+          "Topic A1.2 – Data Representation and Computer Logic",
+          "The CS Classroom",
+          0,
+          "13 chapters",
+          0
+        ],
+        [
+          "X1rIgYLhQMo",
+          "IB CS A1.2 · Data Representation and Computer Logic",
+          "Computer Science with Mr. E",
+          0,
+          "8 chapters",
+          0
+        ]
+      ]
+    },
+    "A1-os": {
+      "os": [
+        [
+          "A7Fanqbc3mg",
+          "Describe the role of operating systems",
+          "Mr. Rhed CS",
+          0,
+          "A1.3.1",
+          0
+        ],
+        [
+          "XdSgno4w_Vs",
+          "Describe the functions of an operating system",
+          "Mr. Rhed CS",
+          0,
+          "A1.3.2",
+          0
+        ],
+        [
+          "wEGfpBYJ0jk",
+          "Topic A1.3 – Operating Systems and Control Systems",
+          "The CS Classroom",
+          0,
+          "OS roles and functions · from 0:00",
+          0
+        ],
+        [
+          "wEGfpBYJ0jk",
+          "Topic A1.3 – Operating Systems and Control Systems",
+          "The CS Classroom",
+          1317,
+          "processes, threads, states · from 21:57",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "IB CS A1.3 · Operating Systems and Control Systems",
+          "Computer Science with Mr. E",
+          152,
+          "What is an operating system? · from 2:32",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "IB CS A1.3 · Operating Systems and Control Systems",
+          "Computer Science with Mr. E",
+          250,
+          "Everything the OS manages · from 4:10",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "IB CS A1.3 · Operating Systems and Control Systems",
+          "Computer Science with Mr. E",
+          401,
+          "Programs, processes and threads · from 6:41",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "IB CS A1.3 · Operating Systems and Control Systems",
+          "Computer Science with Mr. E",
+          451,
+          "More core OS functions · from 7:31",
+          0
+        ]
+      ],
+      "scheduling": [
+        [
+          "4Oqj6LN9fcU",
+          "Compare different approaches to scheduling",
+          "Mr. Rhed CS",
+          0,
+          "A1.3.3",
+          0
+        ],
+        [
+          "wEGfpBYJ0jk",
+          "Topic A1.3 – Operating Systems and Control Systems",
+          "The CS Classroom",
+          1495,
+          "scheduling · from 24:55",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "IB CS A1.3 · Operating Systems and Control Systems",
+          "Computer Science with Mr. E",
+          565,
+          "Scheduling · from 9:25",
+          0
+        ]
+      ],
+      "interrupts": [
+        [
+          "mbmboO_qDY0",
+          "Evaluate the use of polling and interrupt handling",
+          "Mr. Rhed CS",
+          0,
+          "A1.3.4",
+          0
+        ],
+        [
+          "wEGfpBYJ0jk",
+          "Topic A1.3 – Operating Systems and Control Systems",
+          "The CS Classroom",
+          1965,
+          "interrupts and polling · from 32:45",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "IB CS A1.3 · Operating Systems and Control Systems",
+          "Computer Science with Mr. E",
+          903,
+          "Polling vs interrupts · from 15:03",
+          0
+        ]
+      ],
+      "contention": [
+        [
+          "h5FCIRbumuU",
+          "Explain the role of the operating system in managing multitasking and resource allocation  HL",
+          "Mr. Rhed CS",
+          0,
+          "A1.3.5",
+          0
+        ],
+        [
+          "wEGfpBYJ0jk",
+          "Topic A1.3 – Operating Systems and Control Systems",
+          "The CS Classroom",
+          2279,
+          "multitasking and contention (HL) · from 37:59",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "IB CS A1.3 · Operating Systems and Control Systems",
+          "Computer Science with Mr. E",
+          1107,
+          "Multitasking and resource alloca · from 18:27",
+          0
+        ]
+      ],
+      "control": [
+        [
+          "3k2rzvoo4Kw",
+          "Describe the use of the control system components",
+          "Mr. Rhed CS",
+          0,
+          "A1.3.6",
+          0
+        ],
+        [
+          "7dTWv1xnIlo",
+          "Explain the use of control systems in a range of real world applications",
+          "Mr. Rhed CS",
+          0,
+          "A1.3.7",
+          0
+        ],
+        [
+          "wEGfpBYJ0jk",
+          "Topic A1.3 – Operating Systems and Control Systems",
+          "The CS Classroom",
+          2933,
+          "control systems (HL) · from 48:53",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "IB CS A1.3 · Operating Systems and Control Systems",
+          "Computer Science with Mr. E",
+          1224,
+          "Control systems and feedback · from 20:24",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "A1.3 | Operating Systems and Control Systems | SL & HL",
+          "Computer Science with Mr. E",
+          1327,
+          "Control system components · from 22:07",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "IjhPUBP2ubo",
+          "Topic A1: Computer Fundamentals (Level 7 in 7 hours, part 1)",
+          "Jerry's Tutorials",
+          0,
+          "Whole topic",
+          0
+        ],
+        [
+          "wEGfpBYJ0jk",
+          "Topic A1.3 – Operating Systems and Control Systems",
+          "The CS Classroom",
+          0,
+          "6 chapters",
+          0
+        ],
+        [
+          "xKuZO7ukp6A",
+          "IB CS A1.3 · Operating Systems and Control Systems",
+          "Computer Science with Mr. E",
+          0,
+          "8 chapters",
+          0
+        ]
+      ]
+    },
+    "A1-translation": {
+      "compilers": [
+        [
+          "Q2LmnP9gq2g",
+          "Evaluate the translation processes of interpreters and compilers",
+          "Mr. Rhed CS",
+          0,
+          "A1.4.1",
+          0
+        ],
+        [
+          "9dMDaOTEcxQ",
+          "IB CS A1.4 · Translation (HL)",
+          "Computer Science with Mr. E",
+          149,
+          "Why does code need translating? · from 2:29",
+          0
+        ],
+        [
+          "9dMDaOTEcxQ",
+          "IB CS A1.4 · Translation (HL)",
+          "Computer Science with Mr. E",
+          252,
+          "From your code to the processor · from 4:12",
+          0
+        ],
+        [
+          "9dMDaOTEcxQ",
+          "IB CS A1.4 · Translation (HL)",
+          "Computer Science with Mr. E",
+          410,
+          "Compiler vs interpreter · from 6:50",
+          0
+        ],
+        [
+          "9dMDaOTEcxQ",
+          "IB CS A1.4 · Translation (HL)",
+          "Computer Science with Mr. E",
+          476,
+          "The translation pipeline · from 7:56",
+          0
+        ],
+        [
+          "9dMDaOTEcxQ",
+          "IB CS A1.4 · Translation (HL)",
+          "Computer Science with Mr. E",
+          578,
+          "The pipeline in action · from 9:38",
+          0
+        ]
+      ],
+      "jit": [
+        [
+          "Q2LmnP9gq2g",
+          "Evaluate the translation processes of interpreters and compilers",
+          "Mr. Rhed CS",
+          0,
+          "A1.4.1",
+          0
+        ],
+        [
+          "9dMDaOTEcxQ",
+          "IB CS A1.4 · Translation (HL)",
+          "Computer Science with Mr. E",
+          664,
+          "The hybrid approach (JIT) · from 11:04",
+          0
+        ]
+      ],
+      "scenarios": [
+        [
+          "Q2LmnP9gq2g",
+          "Evaluate the translation processes of interpreters and compilers",
+          "Mr. Rhed CS",
+          0,
+          "A1.4.1",
+          0
+        ],
+        [
+          "9dMDaOTEcxQ",
+          "IB CS A1.4 · Translation (HL)",
+          "Computer Science with Mr. E",
+          769,
+          "Comparing all four approaches · from 12:49",
+          0
+        ],
+        [
+          "9dMDaOTEcxQ",
+          "IB CS A1.4 · Translation (HL)",
+          "Computer Science with Mr. E",
+          881,
+          "Worked example · from 14:41",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "IjhPUBP2ubo",
+          "Topic A1: Computer Fundamentals (Level 7 in 7 hours, part 1)",
+          "Jerry's Tutorials",
+          0,
+          "Whole topic",
+          0
+        ],
+        [
+          "9dMDaOTEcxQ",
+          "IB CS A1.4 · Translation (HL)",
+          "Computer Science with Mr. E",
+          0,
+          "8 chapters",
+          0
+        ]
+      ]
+    },
+    "A2-basics": {
+      "types": [
+        [
+          "5TDS8zKMRMY",
+          "Describe the purpose and characteristics of networks",
+          "Mr. Rhed CS",
+          0,
+          "A2.1.1",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          178,
+          "LAN, WAN, PAN and more · from 2:58",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          440,
+          "VPNs · from 7:20",
+          0
+        ]
+      ],
+      "infrastructure": [
+        [
+          "ILBza79Lkl4",
+          "Describe the purpose, benefits and limitations of modern digital infrastructures",
+          "Mr. Rhed CS",
+          0,
+          "A2.1.2",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          798,
+          "cloud, edge, distributed · from 13:18",
+          0
+        ]
+      ],
+      "devices": [
+        [
+          "YOzfKwgYF3E",
+          "Describe the function of network devices",
+          "Mr. Rhed CS",
+          0,
+          "A2.1.3",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          1286,
+          "network devices · from 21:26",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          1771,
+          "switch vs router vs gateway · from 29:31",
+          0
+        ]
+      ],
+      "tcp": [
+        [
+          "u69bM0vkpGo",
+          "Describe the network protocols used for transport and application",
+          "Mr. Rhed CS",
+          0,
+          "A2.1.4",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          2004,
+          "TCP vs UDP · from 33:24",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          2124,
+          "three-way handshake · from 35:24",
+          0
+        ]
+      ],
+      "http": [
+        [
+          "u69bM0vkpGo",
+          "Describe the network protocols used for transport and application",
+          "Mr. Rhed CS",
+          0,
+          "A2.1.4",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          2232,
+          "HTTP and HTTPS · from 37:12",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          2377,
+          "DHCP and other protocols · from 39:37",
+          0
+        ]
+      ],
+      "layers": [
+        [
+          "Ki4F1j5alXo",
+          "Describe the function of the TCP/IP model",
+          "Mr. Rhed CS",
+          0,
+          "A2.1.5",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          2512,
+          "TCP/IP model (HL) · from 41:52",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "Ma06PWWSZtM",
+          "Topic A2: Networks (Level 7 in 7 hours, part 2)",
+          "Jerry's Tutorials",
+          0,
+          "4 chapters",
+          0
+        ],
+        [
+          "Ma06PWWSZtM",
+          "Topic A2: Networks (Level 7 in 7 hours, part 2)",
+          "Jerry's Tutorials",
+          11,
+          "Jump to A2.1 at 0:11",
+          0
+        ],
+        [
+          "lSO5AUrMmHs",
+          "A2.1 Network Fundamentals",
+          "Computer Science with Mr. E",
+          0,
+          "13 chapters",
+          0
+        ]
+      ]
+    },
+    "A2-architecture": {
+      "topologies": [
+        [
+          "izmdm4g8z_U",
+          "Describe the functions and practical applications of network topologies",
+          "Mr. Rhed CS",
+          0,
+          "A2.2.1",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          155,
+          "topologies · from 2:35",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          311,
+          "star · from 5:11",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          405,
+          "mesh · from 6:45",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          568,
+          "hybrid · from 9:28",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          688,
+          "comparing topologies · from 11:28",
+          0
+        ]
+      ],
+      "servers": [
+        [
+          "XdorF0nktK4",
+          "Describe the function of servers",
+          "Mr. Rhed CS",
+          0,
+          "A2.2.2",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          840,
+          "servers · from 14:00",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          927,
+          "DNS · from 15:27",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          1079,
+          "DHCP · from 17:59",
+          0
+        ]
+      ],
+      "models": [
+        [
+          "1P0BBeHER8s",
+          "Compare and contrast networking models",
+          "Mr. Rhed CS",
+          0,
+          "A2.2.3",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          1490,
+          "client-server · from 24:50",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          1609,
+          "peer-to-peer · from 26:49",
+          0
+        ]
+      ],
+      "subnetting": [
+        [
+          "HbmU1eg5FxM",
+          "Explain the concepts and applications of network segmentation",
+          "Mr. Rhed CS",
+          0,
+          "A2.2.4",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          1831,
+          "segmentation · from 30:31",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          1936,
+          "subnetting · from 32:16",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          2052,
+          "network address with AND · from 34:12",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          2433,
+          "CIDR · from 40:33",
+          0
+        ]
+      ],
+      "vlans": [
+        [
+          "HbmU1eg5FxM",
+          "Explain the concepts and applications of network segmentation",
+          "Mr. Rhed CS",
+          0,
+          "A2.2.4",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          2214,
+          "VLANs · from 36:54",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          2315,
+          "ACLs · from 38:35",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "Ma06PWWSZtM",
+          "Topic A2: Networks (Level 7 in 7 hours, part 2)",
+          "Jerry's Tutorials",
+          0,
+          "4 chapters",
+          0
+        ],
+        [
+          "Ma06PWWSZtM",
+          "Topic A2: Networks (Level 7 in 7 hours, part 2)",
+          "Jerry's Tutorials",
+          570,
+          "Jump to A2.2 at 9:30",
+          0
+        ],
+        [
+          "0MyQ64hrDAQ",
+          "A2.2 Network Architecture",
+          "Computer Science with Mr. E",
+          0,
+          "17 chapters",
+          0
+        ]
+      ]
+    },
+    "A2-transmission-security": {
+      "ip": [
+        [
+          "rcfOKfw1_Ww",
+          "Describe different types of IP addressing",
+          "Mr. Rhed CS",
+          0,
+          "A2.3.1",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          136,
+          "IP addresses · from 2:16",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          195,
+          "IPv4 vs IPv6 · from 3:15",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          478,
+          "public vs private · from 7:58",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          636,
+          "NAT · from 10:36",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          854,
+          "static vs dynamic addressing · from 14:14",
+          0
+        ]
+      ],
+      "media": [
+        [
+          "cTRO5NQKmzE",
+          "Compare types of media for data transmission",
+          "Mr. Rhed CS",
+          0,
+          "A2.3.2",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          1045,
+          "transmission media · from 17:25",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          1247,
+          "UTP vs STP · from 20:47",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          1413,
+          "choosing a medium · from 23:33",
+          0
+        ]
+      ],
+      "packets": [
+        [
+          "LNyq16LiA8E",
+          "Explain how packet switching is used to send data across a network",
+          "Mr. Rhed CS",
+          0,
+          "A2.3.3",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          1658,
+          "packet switching · from 27:38",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          1855,
+          "inside a packet · from 30:55",
+          0
+        ]
+      ],
+      "routing": [
+        [
+          "0UW55cwY8yk",
+          "Explain how static routing and dynamic routing move data across local area networks",
+          "Mr. Rhed CS",
+          0,
+          "A2.3.4",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          2616,
+          "routing · from 43:36",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          3069,
+          "static vs dynamic routing · from 51:09",
+          0
+        ]
+      ],
+      "firewalls": [
+        [
+          "JH3s7stw5Q8",
+          "Discuss the effectiveness of firewalls at protecting a network",
+          "Mr. Rhed CS",
+          0,
+          "A2.4.1",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "IB CS A2.4 · Network Security",
+          "Computer Science with Mr. E",
+          701,
+          "What is a firewall? · from 11:41",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "IB CS A2.4 · Network Security",
+          "Computer Science with Mr. E",
+          1006,
+          "Whitelist vs blacklist · from 16:46",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "IB CS A2.4 · Network Security",
+          "Computer Science with Mr. E",
+          1298,
+          "How firewalls inspect traffic · from 21:38",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "IB CS A2.4 · Network Security",
+          "Computer Science with Mr. E",
+          1548,
+          "Firewalls: strengths & limitatio · from 25:48",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "IB CS A2.4 · Network Security",
+          "Computer Science with Mr. E",
+          2045,
+          "NAT as a security side effect · from 34:05",
+          0
+        ]
+      ],
+      "threats": [
+        [
+          "_9TpXPPuQ34",
+          "Describe common network vulnerabilities",
+          "Mr. Rhed CS",
+          0,
+          "A2.4.2",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "IB CS A2.4 · Network Security",
+          "Computer Science with Mr. E",
+          2432,
+          "Common network vulnerabilities ( · from 40:32",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "IB CS A2.4 · Network Security",
+          "Computer Science with Mr. E",
+          2825,
+          "Attacks on the network & data (H · from 47:05",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          3351,
+          "Attacks on people & software (HL) · from 55:51",
+          0
+        ]
+      ],
+      "defences": [
+        [
+          "2s43RFgAZiU",
+          "Describe common network countermeasures",
+          "Mr. Rhed CS",
+          0,
+          "A2.4.3",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          3945,
+          "Matching vulnerabilities to countermeasures (HL) · from 65:45",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          4592,
+          "Detection, access & testing (HL) · from 76:32",
+          0
+        ]
+      ],
+      "encryption": [
+        [
+          "qNsw9pDD9sk",
+          "Describe the process of encryption and digital certificates",
+          "Mr. Rhed CS",
+          0,
+          "A2.4.4",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          5282,
+          "What is encryption? · from 88:02",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          5741,
+          "Symmetric cryptography · from 95:41",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          5945,
+          "Asymmetric cryptography · from 99:05",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          6137,
+          "Symmetric vs asymmetric · from 102:17",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          6338,
+          "Digital certificates & the CA · from 105:38",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          6554,
+          "Digital signatures · from 109:14",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "A2.4 | Network Security | SL & HL",
+          "Computer Science with Mr. E",
+          6759,
+          "Hash functions · from 112:39",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "Ma06PWWSZtM",
+          "Topic A2: Networks (Level 7 in 7 hours, part 2)",
+          "Jerry's Tutorials",
+          0,
+          "4 chapters",
+          0
+        ],
+        [
+          "Ma06PWWSZtM",
+          "Topic A2: Networks (Level 7 in 7 hours, part 2)",
+          "Jerry's Tutorials",
+          1191,
+          "Jump to A2.3 at 19:51",
+          0
+        ],
+        [
+          "Ma06PWWSZtM",
+          "Topic A2: Networks (Level 7 in 7 hours, part 2)",
+          "Jerry's Tutorials",
+          1558,
+          "Jump to A2.4 at 25:58",
+          0
+        ],
+        [
+          "JUTb_g2ZVBU",
+          "A2.3 Data Transmission",
+          "Computer Science with Mr. E",
+          0,
+          "14 chapters",
+          0
+        ],
+        [
+          "Wp4Ns43RAo8",
+          "IB CS A2.4 · Network Security",
+          "Computer Science with Mr. E",
+          0,
+          "8 chapters",
+          0
+        ]
+      ]
+    },
+    "A3-design": {
+      "what": [
+        [
+          "rmzU31BDeIk",
+          "Explain the features, benefits and limitations of a relational database",
+          "Mr. Rhed CS",
+          0,
+          "A3.1.1",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          1505,
+          "DBMS · from 25:05",
+          0
+        ]
+      ],
+      "keys": [
+        [
+          "rmzU31BDeIk",
+          "Explain the features, benefits and limitations of a relational database",
+          "Mr. Rhed CS",
+          0,
+          "A3.1.1",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          577,
+          "primary and foreign keys · from 9:37",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          1275,
+          "candidate and composite keys · from 21:15",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          1447,
+          "referential integrity · from 24:07",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          2160,
+          "data integrity · from 36:00",
+          0
+        ]
+      ],
+      "schemas": [
+        [
+          "nQXwvuCPqMI",
+          "Describe database schemas",
+          "Mr. Rhed CS",
+          0,
+          "A3.2.1",
+          0
+        ]
+      ],
+      "erd": [
+        [
+          "4MWAqV3st2U",
+          "Construct ERDs",
+          "Mr. Rhed CS",
+          0,
+          "A3.2.2",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          5557,
+          "ERDs · from 92:37",
+          0
+        ]
+      ],
+      "types": [
+        [
+          "8SCQiWgAnRQ",
+          "Outline the different data types used in relational databases",
+          "Mr. Rhed CS",
+          0,
+          "A3.2.3",
+          0
+        ]
+      ],
+      "build": [
+        [
+          "RO7W6GOeYwA",
+          "Construct tables for relational databases",
+          "Mr. Rhed CS",
+          0,
+          "A3.2.4",
+          0
+        ]
+      ],
+      "normalisation": [
+        [
+          "nNkx0_fF4mw",
+          "Explain the difference between normal forms",
+          "Mr. Rhed CS",
+          0,
+          "A3.2.5",
+          0
+        ],
+        [
+          "l8o97PGZBjA",
+          "Construct a database normalized to 3NF for a range of real world scenarios",
+          "Mr. Rhed CS",
+          0,
+          "A3.2.6",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          2280,
+          "redundancy · from 38:00",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          2518,
+          "normal forms · from 41:58",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          3190,
+          "normalisation examples · from 53:10",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          4866,
+          "anomalies · from 81:06",
+          0
+        ]
+      ],
+      "denormalisation": [
+        [
+          "aGvbAHVevp0",
+          "Evaluate the need for denormalizing databases",
+          "Mr. Rhed CS",
+          0,
+          "A3.2.7",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "A33jaIPrqwc",
+          "Topic A3: Databases (Level 7 in 7 hours, part 3)",
+          "Jerry's Tutorials",
+          0,
+          "4 chapters",
+          0
+        ],
+        [
+          "A33jaIPrqwc",
+          "Topic A3: Databases (Level 7 in 7 hours, part 3)",
+          "Jerry's Tutorials",
+          8,
+          "Jump to A3.1 at 0:08",
+          0
+        ],
+        [
+          "A33jaIPrqwc",
+          "Topic A3: Databases (Level 7 in 7 hours, part 3)",
+          "Jerry's Tutorials",
+          264,
+          "Jump to A3.2 at 4:24",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          0,
+          "15 chapters",
+          0
+        ]
+      ]
+    },
+    "A3-sql": {
+      "ddl": [
+        [
+          "CBzsmMHzGI0",
+          "Outline the differences between data language types within SQL",
+          "Mr. Rhed CS",
+          0,
+          "A3.3.1",
+          0
+        ]
+      ],
+      "select": [
+        [
+          "NZa4GPzePew",
+          "Construct queries between two tables in SQL",
+          "Mr. Rhed CS",
+          0,
+          "A3.3.2",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          877,
+          "SQL queries · from 14:37",
+          0
+        ]
+      ],
+      "change": [
+        [
+          "EfXmawj630s",
+          "Explain how SQL can be used to update data in a database",
+          "Mr. Rhed CS",
+          0,
+          "A3.3.3",
+          0
+        ]
+      ],
+      "aggregates": [
+        [
+          "WrY3MOfcdGY",
+          "Construct calculations within a database using SQL’s aggregate functions",
+          "Mr. Rhed CS",
+          0,
+          "A3.3.4",
+          0
+        ]
+      ],
+      "views": [
+        [
+          "GfzM3P1TGq4",
+          "Describe different database views",
+          "Mr. Rhed CS",
+          0,
+          "A3.3.5",
+          0
+        ]
+      ],
+      "transactions": [
+        [
+          "VpH4uqWIjQk",
+          "Describe how transactions maintain data integrity in a database",
+          "Mr. Rhed CS",
+          0,
+          "A3.3.6",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          1844,
+          "transactions · from 30:44",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          2021,
+          "ACID · from 33:41",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "A33jaIPrqwc",
+          "Topic A3: Databases (Level 7 in 7 hours, part 3)",
+          "Jerry's Tutorials",
+          0,
+          "4 chapters",
+          0
+        ],
+        [
+          "A33jaIPrqwc",
+          "Topic A3: Databases (Level 7 in 7 hours, part 3)",
+          "Jerry's Tutorials",
+          2119,
+          "Jump to A3.3 at 35:19",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          0,
+          "15 chapters",
+          0
+        ]
+      ]
+    },
+    "A3-alternative": {
+      "types": [
+        [
+          "GTI1PmpkEEk",
+          "Outline the different types of databases as approaches to storing data",
+          "Mr. Rhed CS",
+          0,
+          "A3.4.1",
+          0
+        ]
+      ],
+      "warehouse": [
+        [
+          "imzE1tH5XcY",
+          "Explain the primary objectives of data warehouses in data management and business intelligenc",
+          "Mr. Rhed CS",
+          0,
+          "A3.4.2",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          6336,
+          "data warehouse (HL) · from 105:36",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          6501,
+          "ETL (HL) · from 108:21",
+          0
+        ]
+      ],
+      "olap": [
+        [
+          "42B5gcNGJc4",
+          "Explain the role of online analytical processing OLAP and data mining for business intelligen",
+          "Mr. Rhed CS",
+          0,
+          "A3.4.3",
+          0
+        ]
+      ],
+      "distributed": [
+        [
+          "8-snq5pgvM4",
+          "Describe the features of distributed databases",
+          "Mr. Rhed CS",
+          0,
+          "A3.4.4",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "A33jaIPrqwc",
+          "Topic A3: Databases (Level 7 in 7 hours, part 3)",
+          "Jerry's Tutorials",
+          0,
+          "4 chapters",
+          0
+        ],
+        [
+          "A33jaIPrqwc",
+          "Topic A3: Databases (Level 7 in 7 hours, part 3)",
+          "Jerry's Tutorials",
+          3101,
+          "Jump to A3.4 at 51:41",
+          0
+        ],
+        [
+          "UtsGmghoOUc",
+          "Option A: Databases (old syllabus, still useful for A3)",
+          "The CS Classroom",
+          0,
+          "15 chapters",
+          0
+        ]
+      ]
+    },
+    "A4-machine-learning": {
+      "types": [
+        [
+          "LHhthh02Mkc",
+          "Describe the types of machine learning and their applications in the real world",
+          "Mr. Rhed CS",
+          0,
+          "A4.1.1",
+          0
+        ]
+      ],
+      "hardware": [
+        [
+          "pPyP_VQwa74",
+          "Describe the hardware requirements for various scenarios where machine learning is deployed",
+          "Mr. Rhed CS",
+          0,
+          "A4.1.2",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "aircAruvnKk",
+          "But what is a neural network? (deep learning, chapter 1)",
+          "3Blue1Brown",
+          0,
+          "Old syllabus · still useful",
+          1
+        ],
+        [
+          "d_M91YeAvmk",
+          "A4.1 Machine Learning Fundamentals",
+          "Mr Bulmer's Learning Zone",
+          0,
+          "Whole topic",
+          0
+        ]
+      ]
+    },
+    "A4-data": {
+      "cleaning": [
+        [
+          "ZlAK2l8jGgM",
+          "Describe the significance of data cleaning",
+          "Mr. Rhed CS",
+          0,
+          "A4.2.1",
+          0
+        ]
+      ],
+      "features": [
+        [
+          "1QIHBK_esmg",
+          "Describe the role of feature selection",
+          "Mr. Rhed CS",
+          0,
+          "A4.2.2",
+          0
+        ]
+      ],
+      "dimensions": [
+        [
+          "5NQ_NNo3O3I",
+          "Describe the importance of dimensionality reduction",
+          "Mr. Rhed CS",
+          0,
+          "A4.2.3",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "aircAruvnKk",
+          "But what is a neural network? (deep learning, chapter 1)",
+          "3Blue1Brown",
+          0,
+          "Old syllabus · still useful",
+          1
+        ]
+      ]
+    },
+    "A4-models": {
+      "regression": [
+        [
+          "LXiicgbvxPE",
+          "Explain how linear regression is used to predict continuous outcomes",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.1",
+          0
+        ]
+      ],
+      "classify": [
+        [
+          "XRV9hpLqRRg",
+          "Explain how classifications techniques in supervised learning are used to predict discrete ca",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.2",
+          0
+        ]
+      ],
+      "metrics": [
+        [
+          "KwkiT2fLhWg",
+          "Explain the role of hyperparameter tuning when evaluating supervised learning algorithms",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.3",
+          0
+        ]
+      ],
+      "clustering": [
+        [
+          "158VXZNBFlI",
+          "Describe how clustering techniques in unsupervised learning are used to group data based on s",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.4",
+          0
+        ]
+      ],
+      "association": [
+        [
+          "19GZgwZNby4",
+          "Describe how learning techniques using the association rule are used to uncover relations bet",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.5",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "aircAruvnKk",
+          "But what is a neural network? (deep learning, chapter 1)",
+          "3Blue1Brown",
+          0,
+          "Old syllabus · still useful",
+          1
+        ]
+      ]
+    },
+    "A4-advanced": {
+      "reinforcement": [
+        [
+          "89EuOUyEvN8",
+          "Describe how an agent learns to make decisions by interacting with its environment in RL.",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.6",
+          0
+        ]
+      ],
+      "genetic": [
+        [
+          "zxRJ5VkWYIM",
+          "Describe the application of genetic algorithms in various real world situations",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.7",
+          0
+        ]
+      ],
+      "ann": [
+        [
+          "wtyz3lRXAfE",
+          "Outline the structure and function of ANNs and how multi layer networks are used to model com",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.8",
+          0
+        ],
+        [
+          "aircAruvnKk",
+          "But what is a neural network? (deep learning, chapter 1)",
+          "3Blue1Brown",
+          162,
+          "neurons · from 2:42",
+          1
+        ],
+        [
+          "aircAruvnKk",
+          "But what is a neural network? (deep learning, chapter 1)",
+          "3Blue1Brown",
+          215,
+          "layers · from 3:35",
+          1
+        ],
+        [
+          "aircAruvnKk",
+          "But what is a neural network? (deep learning, chapter 1)",
+          "3Blue1Brown",
+          694,
+          "weights and biases · from 11:34",
+          1
+        ],
+        [
+          "aircAruvnKk",
+          "But what is a neural network? (deep learning, chapter 1)",
+          "3Blue1Brown",
+          750,
+          "how learning works · from 12:30",
+          1
+        ]
+      ],
+      "cnn": [
+        [
+          "Y8S9UQm46k4",
+          "Describe how CNNs are designed to adaptively learn spatial hierarchies of features in images",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.9",
+          0
+        ]
+      ],
+      "choosing": [
+        [
+          "GGyyfwMdf_c",
+          "Explain the importance of model selection and comparison in machine learning",
+          "Mr. Rhed CS",
+          0,
+          "A4.3.10",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "aircAruvnKk",
+          "But what is a neural network? (deep learning, chapter 1)",
+          "3Blue1Brown",
+          0,
+          "Old syllabus · still useful",
+          1
+        ]
+      ]
+    },
+    "A4-ethics": {
+      "ethics": [
+        [
+          "JvgAenMnU3Q",
+          "Discuss the ethical implications of machine learning in real world scenarios",
+          "Mr. Rhed CS",
+          0,
+          "A4.4.1",
+          0
+        ]
+      ],
+      "daily": [
+        [
+          "J2OyAwGJPi8",
+          "Discuss ethical aspects of the increasing integration of computer technologies into daily.",
+          "Mr. Rhed CS",
+          0,
+          "A4.4.2",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "aircAruvnKk",
+          "But what is a neural network? (deep learning, chapter 1)",
+          "3Blue1Brown",
+          0,
+          "Old syllabus · still useful",
+          1
+        ]
+      ]
+    },
+    "B1-computational-thinking": {
+      "spec": [
+        [
+          "j9IXRz1dXCE",
+          "Construct a problem specification",
+          "Mr. Rhed CS",
+          0,
+          "B1.1.1",
+          0
+        ]
+      ],
+      "concepts": [
+        [
+          "KZTFr85l-7Y",
+          "Describe the fundamental concepts of computational thinking",
+          "Mr. Rhed CS",
+          0,
+          "B1.1.2",
+          0
+        ]
+      ],
+      "applying": [
+        [
+          "Z7ntO5TINf8",
+          "Explain how applying computational thinking to fundamental concepts is used to approach and s",
+          "Mr. Rhed CS",
+          0,
+          "B1.1.3",
+          0
+        ]
+      ],
+      "flowcharts": [
+        [
+          "PEcOkwFBS28",
+          "Trace flowcharts for a range of programming algorithms",
+          "Mr. Rhed CS",
+          0,
+          "B1.1.4",
+          0
+        ]
+      ]
+    },
+    "B2-fundamentals": {
+      "variables": [
+        [
+          "IA32aoWlV_Q",
+          "Construct and trace programs using a range of global and local variables of various data type",
+          "Mr. Rhed CS",
+          0,
+          "B2.1.1",
+          0
+        ]
+      ],
+      "scope": [
+        [
+          "IA32aoWlV_Q",
+          "Construct and trace programs using a range of global and local variables of various data type",
+          "Mr. Rhed CS",
+          0,
+          "B2.1.1",
+          0
+        ]
+      ],
+      "strings": [
+        [
+          "AfbUxp_lmds",
+          "Construct programs that can extract and manipulate substrings",
+          "Mr. Rhed CS",
+          0,
+          "B2.1.2",
+          0
+        ]
+      ],
+      "exceptions": [
+        [
+          "Jhi_JdZ0WCA",
+          "Describe how programs use common exception handling techniques",
+          "Mr. Rhed CS",
+          0,
+          "B2.1.3",
+          0
+        ],
+        [
+          "aus4YG2J_-o",
+          "Topic B2: Programming (Python) (Level 7 in 7 hours, part 4)",
+          "Jerry's Tutorials",
+          2157,
+          "exceptions · from 35:57",
+          0
+        ],
+        [
+          "H-U6TjLMfNE",
+          "Topic B2: Programming (Java) (Level 7 in 7 hours)",
+          "Jerry's Tutorials",
+          2074,
+          "exceptions · from 34:34",
+          0
+        ]
+      ],
+      "debugging": [
+        [
+          "v4mrnAet1h0",
+          "Construct and use common debugging techniques",
+          "Mr. Rhed CS",
+          0,
+          "B2.1.4",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "aus4YG2J_-o",
+          "Topic B2: Programming (Python) (Level 7 in 7 hours, part 4)",
+          "Jerry's Tutorials",
+          0,
+          "6 chapters",
+          0
+        ],
+        [
+          "H-U6TjLMfNE",
+          "Topic B2: Programming (Java) (Level 7 in 7 hours)",
+          "Jerry's Tutorials",
+          0,
+          "6 chapters",
+          0
+        ]
+      ]
+    },
+    "B2-data-structures": {
+      "static": [
+        [
+          "uqKaX5KtOKY",
+          "Compare static and dynamic data structures",
+          "Mr. Rhed CS",
+          0,
+          "B2.2.1",
+          0
+        ],
+        [
+          "aus4YG2J_-o",
+          "Topic B2: Programming (Python) (Level 7 in 7 hours, part 4)",
+          "Jerry's Tutorials",
+          587,
+          "data structures · from 9:47",
+          0
+        ],
+        [
+          "H-U6TjLMfNE",
+          "Topic B2: Programming (Java) (Level 7 in 7 hours)",
+          "Jerry's Tutorials",
+          778,
+          "data structures · from 12:58",
+          0
+        ]
+      ],
+      "lists": [
+        [
+          "boNSZc_v8hI",
+          "Construct programs that apply arrays and Lists",
+          "Mr. Rhed CS",
+          0,
+          "B2.2.2",
+          0
+        ]
+      ],
+      "grids": [
+        [
+          "boNSZc_v8hI",
+          "Construct programs that apply arrays and Lists",
+          "Mr. Rhed CS",
+          0,
+          "B2.2.2",
+          0
+        ]
+      ],
+      "stacks": [
+        [
+          "Wg4Osl_1dP4",
+          "Explain the concept of a stack as a “last in, first out” LIFO data structure",
+          "Mr. Rhed CS",
+          0,
+          "B2.2.3",
+          0
+        ]
+      ],
+      "queues": [
+        [
+          "2zr7Lm8KwKY",
+          "Explain the concept of a queue as a “first in, first out” FIFO data structure",
+          "Mr. Rhed CS",
+          0,
+          "B2.2.4",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "aus4YG2J_-o",
+          "Topic B2: Programming (Python) (Level 7 in 7 hours, part 4)",
+          "Jerry's Tutorials",
+          0,
+          "6 chapters",
+          0
+        ],
+        [
+          "H-U6TjLMfNE",
+          "Topic B2: Programming (Java) (Level 7 in 7 hours)",
+          "Jerry's Tutorials",
+          0,
+          "6 chapters",
+          0
+        ]
+      ]
+    },
+    "B2-control": {
+      "sequence": [
+        [
+          "HdUgAl8VpMU",
+          "Construct programs that implement the correct sequence of code instructions to meet program o",
+          "Mr. Rhed CS",
+          0,
+          "B2.3.1",
+          0
+        ]
+      ],
+      "selection": [
+        [
+          "0cUSv2WGN1Y",
+          "Construct programs utilizing appropriate selection structures",
+          "Mr. Rhed CS",
+          0,
+          "B2.3.2",
+          0
+        ]
+      ],
+      "loops": [
+        [
+          "6fB_JAoeOZw",
+          "Construct programs that utilize looping structures to perform repeated actions",
+          "Mr. Rhed CS",
+          0,
+          "B2.3.3",
+          0
+        ]
+      ],
+      "functions": [
+        [
+          "j3LBjkyHA_A",
+          "Construct functions and modularization",
+          "Mr. Rhed CS",
+          0,
+          "B2.3.4",
+          0
+        ],
+        [
+          "aus4YG2J_-o",
+          "Topic B2: Programming (Python) (Level 7 in 7 hours, part 4)",
+          "Jerry's Tutorials",
+          1178,
+          "modularity · from 19:38",
+          0
+        ],
+        [
+          "H-U6TjLMfNE",
+          "Topic B2: Programming (Java) (Level 7 in 7 hours)",
+          "Jerry's Tutorials",
+          1286,
+          "modularity · from 21:26",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "aus4YG2J_-o",
+          "Topic B2: Programming (Python) (Level 7 in 7 hours, part 4)",
+          "Jerry's Tutorials",
+          0,
+          "6 chapters",
+          0
+        ],
+        [
+          "H-U6TjLMfNE",
+          "Topic B2: Programming (Java) (Level 7 in 7 hours)",
+          "Jerry's Tutorials",
+          0,
+          "6 chapters",
+          0
+        ]
+      ]
+    },
+    "B2-algorithms": {
+      "bigo": [
+        [
+          "J1ckdoA-7rY",
+          "Describe the efficiency of specific algorithms by calculating their Big O notation to analyse",
+          "Mr. Rhed CS",
+          0,
+          "B2.4.1",
+          0
+        ]
+      ],
+      "search": [
+        [
+          "DiTvjOryaRU",
+          "Construct and trace algorithms to implement a linear search and a binary search for data retr",
+          "Mr. Rhed CS",
+          0,
+          "B2.4.2",
+          0
+        ]
+      ],
+      "sort": [
+        [
+          "kM41SS_Yf-A",
+          "Construct and trace algorithms to implement bubble sort and selection sort, evaluating their",
+          "Mr. Rhed CS",
+          0,
+          "B2.4.3",
+          0
+        ]
+      ],
+      "recursion": [
+        [
+          "VxF1MiueTgs",
+          "Explain the fundamental concept of recursion and its applications in programming",
+          "Mr. Rhed CS",
+          0,
+          "B2.4.4",
+          0
+        ],
+        [
+          "HPbD7RMUB7c",
+          "Construct and trace recursive algorithms in a programming language",
+          "Mr. Rhed CS",
+          0,
+          "B2.4.5",
+          0
+        ]
+      ],
+      "files": [
+        [
+          "7ZLPbSvioUQ",
+          "Construct code to perform file processing operations",
+          "Mr. Rhed CS",
+          0,
+          "B2.5.1",
+          0
+        ],
+        [
+          "aus4YG2J_-o",
+          "Topic B2: Programming (Python) (Level 7 in 7 hours, part 4)",
+          "Jerry's Tutorials",
+          2245,
+          "files · from 37:25",
+          0
+        ],
+        [
+          "H-U6TjLMfNE",
+          "Topic B2: Programming (Java) (Level 7 in 7 hours)",
+          "Jerry's Tutorials",
+          2245,
+          "files · from 37:25",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "aus4YG2J_-o",
+          "Topic B2: Programming (Python) (Level 7 in 7 hours, part 4)",
+          "Jerry's Tutorials",
+          0,
+          "6 chapters",
+          0
+        ],
+        [
+          "H-U6TjLMfNE",
+          "Topic B2: Programming (Java) (Level 7 in 7 hours)",
+          "Jerry's Tutorials",
+          0,
+          "6 chapters",
+          0
+        ]
+      ]
+    },
+    "B3-oop": {
+      "oop": [
+        [
+          "whi72WuVb1s",
+          "Evaluate the fundamentals of OOP",
+          "Mr. Rhed CS",
+          0,
+          "B3.1.1",
+          0
+        ]
+      ],
+      "design": [
+        [
+          "ikYPcki5CFo",
+          "Construct a design of classes, their methods and behaviour",
+          "Mr. Rhed CS",
+          0,
+          "B3.1.2",
+          0
+        ],
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          4951,
+          "UML diagrams · from 82:31",
+          0
+        ]
+      ],
+      "classes": [
+        [
+          "dnFHIwDfuX0",
+          "Construct code to define classes and instantiate objects",
+          "Mr. Rhed CS",
+          0,
+          "B3.1.4",
+          0
+        ],
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          480,
+          "classes and objects · from 8:00",
+          0
+        ],
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          1813,
+          "constructors · from 30:13",
+          0
+        ],
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          2064,
+          "this · from 34:24",
+          0
+        ]
+      ],
+      "static": [
+        [
+          "qy9AA3znPXk",
+          "Distinguish between static and non static variables and methods",
+          "Mr. Rhed CS",
+          0,
+          "B3.1.3",
+          0
+        ],
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          4435,
+          "static members · from 73:55",
+          0
+        ]
+      ],
+      "encapsulation": [
+        [
+          "nqlonvA1Rrs",
+          "Explain and apply the concepts of encapsulation and information hiding in OOP",
+          "Mr. Rhed CS",
+          0,
+          "B3.1.5",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          0,
+          "12 chapters",
+          0
+        ]
+      ]
+    },
+    "B3-advanced": {
+      "inheritance": [
+        [
+          "WyUjdaygWko",
+          "Explain and apply the concept of inheritance in OOP to promote code reusability",
+          "Mr. Rhed CS",
+          0,
+          "B3.2.1",
+          0
+        ],
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          2117,
+          "inheritance · from 35:17",
+          0
+        ],
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          4368,
+          "access modifiers · from 72:48",
+          0
+        ]
+      ],
+      "polymorphism": [
+        [
+          "Km7Q9qFV-uY",
+          "Construct code to model polymorphism and its various forms, such as method overriding",
+          "Mr. Rhed CS",
+          0,
+          "B3.2.2",
+          0
+        ],
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          3582,
+          "polymorphism · from 59:42",
+          0
+        ]
+      ],
+      "abstraction": [
+        [
+          "WYsCPUK-TsU",
+          "Explain the concept of abstraction in OOP",
+          "Mr. Rhed CS",
+          0,
+          "B3.2.3",
+          0
+        ]
+      ],
+      "composition": [
+        [
+          "zkel1HnQzqc",
+          "Explain the role of composition and aggregation in class relationships",
+          "Mr. Rhed CS",
+          0,
+          "B3.2.4",
+          0
+        ],
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          3517,
+          "inheritance vs aggregation · from 58:37",
+          0
+        ]
+      ],
+      "patterns": [
+        [
+          "yYjniXMeMCg",
+          "Explain commonly used design patterns in OOP",
+          "Mr. Rhed CS",
+          0,
+          "B3.2.5",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "LeMlKUTRPWc",
+          "Option D: Object-Oriented Programming, SL part (old syllabus, Java)",
+          "The CS Classroom",
+          0,
+          "12 chapters",
+          0
+        ]
+      ]
+    },
+    "B4-adt": {
+      "adt": [
+        [
+          "Xy5pbvlpaMs",
+          "Explain the properties and purpose of ADTs in programming",
+          "Mr. Rhed CS",
+          0,
+          "B4.1.1",
+          0
+        ]
+      ],
+      "linked": [
+        [
+          "SgBn-VygjcE",
+          "Evaluate linked lists",
+          "Mr. Rhed CS",
+          0,
+          "B4.1.2",
+          0
+        ],
+        [
+          "z8Zh50Fhhmk",
+          "Construct and apply linked lists  singly, doubly and circular",
+          "Mr. Rhed CS",
+          0,
+          "B4.1.3",
+          0
+        ],
+        [
+          "Kw-m1SJr-Ps",
+          "Option D: OOP, HL part: linked lists, stacks, recursion, BSTs (old syllabus, Java)",
+          "The CS Classroom",
+          192,
+          "linked lists · from 3:12",
+          1
+        ],
+        [
+          "Kw-m1SJr-Ps",
+          "Option D: OOP, HL part: linked lists, stacks, recursion, BSTs (old syllabus, Java)",
+          "The CS Classroom",
+          2674,
+          "linked lists vs arrays · from 44:34",
+          1
+        ],
+        [
+          "8feGKobYh8c",
+          "Linked Lists and Binary Trees (old Topic 5)",
+          "The CS Classroom",
+          92,
+          "singly linked lists · from 1:32",
+          1
+        ],
+        [
+          "8feGKobYh8c",
+          "Linked Lists and Binary Trees (old Topic 5)",
+          "The CS Classroom",
+          318,
+          "circular · from 5:18",
+          1
+        ],
+        [
+          "8feGKobYh8c",
+          "Linked Lists and Binary Trees (old Topic 5)",
+          "The CS Classroom",
+          417,
+          "doubly linked · from 6:57",
+          1
+        ],
+        [
+          "8feGKobYh8c",
+          "Linked Lists and Binary Trees (old Topic 5)",
+          "The CS Classroom",
+          638,
+          "adding nodes · from 10:38",
+          1
+        ]
+      ],
+      "bst": [
+        [
+          "YR0gIF_8PzQ",
+          "Explain the structures and properties of BSTs",
+          "Mr. Rhed CS",
+          0,
+          "B4.1.4",
+          0
+        ],
+        [
+          "Kw-m1SJr-Ps",
+          "Option D: OOP, HL part: linked lists, stacks, recursion, BSTs (old syllabus, Java)",
+          "The CS Classroom",
+          7634,
+          "binary search trees · from 127:14",
+          1
+        ],
+        [
+          "Kw-m1SJr-Ps",
+          "Option D: OOP, HL part: linked lists, stacks, recursion, BSTs (old syllabus, Java)",
+          "The CS Classroom",
+          8373,
+          "why BST search is faster · from 139:33",
+          1
+        ],
+        [
+          "8feGKobYh8c",
+          "Linked Lists and Binary Trees (old Topic 5)",
+          "The CS Classroom",
+          1300,
+          "binary trees · from 21:40",
+          1
+        ],
+        [
+          "8feGKobYh8c",
+          "Linked Lists and Binary Trees (old Topic 5)",
+          "The CS Classroom",
+          1843,
+          "adding and removing · from 30:43",
+          1
+        ],
+        [
+          "8feGKobYh8c",
+          "Linked Lists and Binary Trees (old Topic 5)",
+          "The CS Classroom",
+          2108,
+          "pre-, in- and postorder · from 35:08",
+          1
+        ],
+        [
+          "8feGKobYh8c",
+          "Linked Lists and Binary Trees (old Topic 5)",
+          "The CS Classroom",
+          2460,
+          "removing the root · from 41:00",
+          1
+        ]
+      ],
+      "sets": [
+        [
+          "igOuWmPWStU",
+          "Construct and apply sets as an ADT",
+          "Mr. Rhed CS",
+          0,
+          "B4.1.5",
+          0
+        ]
+      ],
+      "hash": [
+        [
+          "wQj1aBOZeB4",
+          "Explain the core principles of ADTs",
+          "Mr. Rhed CS",
+          0,
+          "B4.1.6",
+          0
+        ]
+      ],
+      "top": [
+        [
+          "Kw-m1SJr-Ps",
+          "Option D: OOP, HL part: linked lists, stacks, recursion, BSTs (old syllabus, Java)",
+          "The CS Classroom",
+          0,
+          "Old syllabus · still useful",
+          1
+        ],
+        [
+          "8feGKobYh8c",
+          "Linked Lists and Binary Trees (old Topic 5)",
+          "The CS Classroom",
+          0,
+          "Old syllabus · still useful",
+          1
+        ]
+      ]
+    }
+  }
 };

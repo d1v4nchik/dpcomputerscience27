@@ -566,11 +566,31 @@ function mountPage(p,sec){
   var fcb=$('pg-fc');if(fcb)fcb.onclick=function(){openCards(p)};
   tools.querySelectorAll('.tbsw button').forEach(function(b){b.onclick=function(){setTB(b.dataset.tb==='1');keyTerms(art)}});
   keyTerms(art);
+  watchCards(art,p,tools);
   art.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){showSec(art,b.dataset.sec,true)})});
   $('st-prev').onclick=function(){var v=visibleSecs(art),i=v.findIndex(function(s){return s.id===CUR.s});if(i>0)showSec(art,v[i-1].id,true)};
   $('st-next').onclick=function(){var v=visibleSecs(art),i=v.findIndex(function(s){return s.id===CUR.s});if(i<v.length-1)showSec(art,v[i+1].id,true)};
   var want=sec||LASTSEC[p];
   showSec(art,want,!!sec);
+}
+/* Videos (as in the BM notes): cards at the end of each stop, plus whole-topic videos at the top of the page */
+var PLAY='<span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span>';
+function vcard(c){var href='https://www.youtube.com/watch?v='+c[0]+(c[3]?'&t='+c[3]+'s':''),note=/^[AB]\d\.\d+\.\d+$/.test(c[4])?'Syllabus point '+c[4]:c[4];
+  return '<a class="vcard" href="'+href+'" target="_blank" rel="noopener">'+PLAY+'<span><b>'+esc(c[1])+'</b><small>'+esc(c[2])+'</small><em>'+esc(note)+'</em></span></a>'}
+function watchCards(art,p,tools){
+  var W=CS.watch&&CS.watch[p];if(!W)return;
+  if(W.top&&W.top.length&&tools){
+    var t=document.createElement('details');t.className='tvids tvids-top';
+    t.innerHTML='<summary><b>Watch the whole topic</b><span>'+W.top.length+' video'+(W.top.length>1?'s':'')+' and chapter jumps</span></summary><div class="vcards all">'+W.top.map(vcard).join('')+'</div>';
+    tools.parentNode.insertBefore(t,tools.nextSibling);
+  }
+  art.querySelectorAll('.secs>section').forEach(function(sec){
+    var L=W[sec.id];if(!L||!L.length)return;
+    var d=document.createElement('div');d.className='tvids';
+    d.innerHTML='<div class="tvids-h"><b>Watch</b><span>'+L.length+' video'+(L.length>1?'s':'')+' for this stop</span></div><div class="vcards">'+L.map(vcard).join('')+'</div>'+(L.length>3?'<button type="button" class="vmore">Show all '+L.length+' videos</button>':'');
+    var mb=d.querySelector('.vmore');if(mb)mb.onclick=function(){var v=d.querySelector('.vcards'),all=v.classList.toggle('all');mb.textContent=all?'Show fewer':'Show all '+L.length+' videos'};
+    sec.appendChild(d);
+  });
 }
 /* Textbook mode: written explanations (CSS shows .tb) plus a key-terms box at the end of each stop */
 var TB=!!lsGet('csTb',false);
@@ -694,7 +714,7 @@ function chapters(url,note){
 function renderRes(){
   if(RES.ready)return;RES.ready=true;
   var R=CS.res,h='<div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Go further</div><h1>Resources</h1><p>The videos, books, websites and practice tools used to check these notes. Video chapter links jump straight to the right minute. Everything opens in a new tab.</p></div></div><div class="vbody">';
-  h+='<div class="res-sec"><h2>Video courses</h2><p>Topic lectures with chapter links that jump to the right minute. Most follow the 2027 syllabus; the ones marked “old syllabus” still teach the same ideas, so use the chapters that match your notes. Watch with the matching line open, and pause to do each example yourself.</p><div class="res-grid">';
+  h+='<div class="res-sec"><h2>Video courses</h2><p>Topic lectures with chapter links that jump to the right minute. Most follow the 2027 syllabus; the ones marked “old syllabus” still teach the same ideas, so use the chapters that match your notes. Watch with the matching line open, and pause to do each example yourself. Every stop in the notes also has its own <b>Watch</b> box: a short video for that exact syllabus point (Mr. Rhed CS) and links that jump straight to the right minute of these lectures.</p><div class="res-grid">';
   R.videos.forEach(function(v){
     var line=v[0].slice(0,2),th=/^[AB][1-4]$/.test(line)?' th-'+line:' th-IA';
     h+='<div class="res'+th+(v[5]?' hl-only':'')+'"><div class="top"><span class="tp">'+esc(v[0])+'</span><span class="ch">'+esc(v[2])+'</span>'+(v[5]?'<span class="hltag">HL</span>':'')+'</div><a class="t" href="'+esc(v[3])+'" target="_blank" rel="noopener">'+esc(v[1])+'</a>'+(chapters(v[3],v[4])||'<p>'+esc(v[4])+'</p>')+'</div>';
