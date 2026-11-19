@@ -29,21 +29,22 @@ Every topic in plain words, with flashcards, exam-style practice, a glossary and
 |                             | Standard Level | Higher Level |
 | --------------------------- | -------------: | -----------: |
 | Topic pages                 |             16 |           23 |
-| Flashcards                  |            732 |        1,170 |
-| Exam-style questions        |            313 |          499 |
-| Glossary terms              |            466 |          683 |
+| Flashcards                  |            763 |        1,206 |
+| Exam-style questions        |            346 |          546 |
+| Glossary terms              |            497 |          719 |
 
-Plus 83 diagrams, 27 videos, and guides for the exams, the IA, pseudocode and the 2027 case study.
+Plus 83 diagrams, 136 linked videos (one for almost every syllabus point), and guides for the exams, the IA, pseudocode and the 2027 case study.
 
 ## Features
 
 - **Notes as a transit map.** Each syllabus topic is a coloured *line*, and each page of notes is a *stop*. Every section has an exam definition, a plain-words explanation and an analogy.
-- **Cheat sheet or Textbook.** Switch between quick revision points and full written explanations.
+- **Cheat sheet or Textbook.** Switch between quick revision points and full written explanations of every stop.
+- **Videos on every stop.** A short video for that exact syllabus point, plus links that jump to the right minute of longer topic lectures.
 - **SL / HL toggle.** HL-only content is hidden until you need it.
 - **Python / Java toggle.** All Theme B code examples come in both languages.
-- **Flashcards.** Flip, *Learn* (four mastery levels), *Write* (mark yourself like an examiner), *Test*, and four games: Match, Memory, Gravity and Blitz. *Number drill* generates fresh Paper 1 calculations.
-- **Practice.** Filter the question bank by topic, command term, marks or status. Write an answer, open the markscheme and tick the points you made, or sit a timed mini paper.
-- **Glossary.** Every term with a full-mark definition. Underlined words in the notes open their definition in place.
+- **Flashcards.** Flip, *Learn* (four mastery levels), *Write* (mark yourself like an examiner), *Test*, and four games: Match, Memory, Gravity and Blitz. *Number drill* generates fresh Paper 1 calculations. Quick-answer cards explain *why* the answer is right, and a chosen mode opens on its own until you leave it.
+- **Practice.** Filter by one or several units, Paper 1 or Paper 2, command term, marks or status, including questions that mix units. Write an answer, open the markscheme and tick the points you made, or sit a timed paper with Paper 1’s Section A / Section B split. Code questions follow the Python / Java switch, with example answers. *Open in the notes* goes to the stop that teaches the idea (its own answer stays hidden), with a button straight back.
+- **Glossary.** Every term with a full-mark definition, filterable by several units at once, with *Learn these* and *Test me* for each topic. Underlined words in the notes open their definition in place.
 - **Search everything.** Press <kbd>/</kbd> to search terms, notes and questions.
 - **Your progress stays on your device.** No account, no ads, no analytics. Progress is saved in your browser.
 - **Light and dark mode.** Works on phones as well as laptops.
@@ -107,10 +108,11 @@ Then open <http://localhost:8000>. Any static file server works.
 
 ```
 .
-├── index.html            # Page shell, plus every topic page and diagram as <template>s
+├── index.html            # Page shell
 ├── assets/
 │   ├── css/style.css     # All styles, light and dark themes
-│   ├── js/data.js        # Course content: topics, glossary, flashcards, question bank
+│   ├── pages.html        # Every topic page and diagram, loaded after the first screen
+│   ├── js/data.js        # Course content: topics, glossary, flashcards, question bank, videos
 │   ├── js/app.js         # Router, search, flashcards, practice and number drill
 │   └── img/              # Social preview image
 ├── favicon.svg

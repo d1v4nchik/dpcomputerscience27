@@ -970,3 +970,5 @@ body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 @keyframes pqflash{0%,40%{box-shadow:0 0 0 3px var(--line,#2E5CCB)}100%{box-shadow:0 0 0 0 transparent}}
 .stopact{margin:16px 0 0}
 .px-stop{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin:0 0 10px}
+.gl-group h3{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.gl-acts{margin-left:auto;display:flex;gap:6px}

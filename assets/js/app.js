@@ -708,15 +708,18 @@ $('sheet-scrim').addEventListener('click',function(){closeSheet()});
 $('sheet-in').addEventListener('click',function(e){var g=e.target.closest('button.gl');if(g){e.stopPropagation();openTerm(g.dataset.t)}},true);
 
 /* ---------- glossary ---------- */
-var GLOSS={ready:false,line:'all',q:''};
+var GLOSS={ready:false,line:'all',q:'',lines:[]};
 function renderGloss(){
   var el=$('view-glossary'),sl=isSL();
   if(!GLOSS.ready){
     el.innerHTML='<div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Look it up</div><h1>Glossary</h1><p>Every term in the notes with its exam definition. Tap a term for a picture, a full-mark practice question and a link back to the notes. Learn the definitions word for word: “define” questions reward the precise wording.</p></div></div>'+
       '<div class="vbody"><div class="gl-bar"><input type="search" id="gl-q" placeholder="Filter terms" aria-label="Filter terms" autocomplete="off"><span class="gl-count" id="gl-count"></span></div><div class="chips" id="gl-chips" role="group" aria-label="Line"></div><div id="gl-body"></div></div>';
     $('gl-q').addEventListener('input',function(){GLOSS.q=this.value;drawGloss()});
-    $('gl-chips').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;GLOSS.line=b.dataset.l;drawGloss()});
-    $('gl-body').addEventListener('click',function(e){var b=e.target.closest('.gl-item');if(b)openTerm(b.dataset.t,b)});
+    $('gl-chips').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var l=b.dataset.l;
+      if(l==='all')GLOSS.lines=[];else{var i=GLOSS.lines.indexOf(l);if(i>-1)GLOSS.lines.splice(i,1);else GLOSS.lines.push(l)}drawGloss()});
+    $('gl-body').addEventListener('click',function(e){var a=e.target.closest('[data-gm]');
+      if(a){if(window.csFc){window.csFc.openTopics([a.dataset.g],a.dataset.gm);nav('flashcards')}return}
+      var b=e.target.closest('.gl-item');if(b)openTerm(b.dataset.t,b)});
     GLOSS.ready=true;
   }
   drawGloss();
@@ -724,14 +727,15 @@ function renderGloss(){
 function drawGloss(){
   var sl=isSL(),ql=GLOSS.q.trim().toLowerCase();
   var lines=[['all','All']].concat(CS.lines.filter(function(l){return !(sl&&l.pages.every(function(p){return p.hl}))}).map(function(l){return [l.id,l.id]})).concat([['CS','Case study'],['EX','Command terms']]);
-  $('gl-chips').innerHTML=lines.map(function(l){return '<button type="button" class="chip'+(l[0]!=='all'?' th-'+l[0]:'')+'" data-l="'+l[0]+'" aria-pressed="'+(GLOSS.line===l[0])+'">'+(l[0]!=='all'?'<i></i>':'')+l[1]+'</button>'}).join('');
-  var ids=Object.keys(CS.terms).filter(function(k){var t=CS.terms[k];if(sl&&t.h)return false;if(GLOSS.line!=='all'&&t.g.slice(0,2)!==GLOSS.line)return false;if(ql&&(t.t+' '+t.f+' '+(t.k||'')+' '+t.ib).toLowerCase().indexOf(ql)<0)return false;return true});
+  $('gl-chips').innerHTML=lines.map(function(l){return '<button type="button" class="chip'+(l[0]!=='all'?' th-'+l[0]:'')+'" data-l="'+l[0]+'" aria-pressed="'+(l[0]==='all'?!GLOSS.lines.length:GLOSS.lines.indexOf(l[0])>-1)+'">'+(l[0]!=='all'?'<i></i>':'')+l[1]+'</button>'}).join('');
+  var ids=Object.keys(CS.terms).filter(function(k){var t=CS.terms[k];if(sl&&t.h)return false;if(GLOSS.lines.length&&GLOSS.lines.indexOf(t.g.slice(0,2))<0)return false;if(ql&&(t.t+' '+t.f+' '+(t.k||'')+' '+t.ib).toLowerCase().indexOf(ql)<0)return false;return true});
   var groups={};ids.forEach(function(k){var g=CS.terms[k].g;(groups[g]=groups[g]||[]).push(k)});
   var keys=Object.keys(groups).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
   $('gl-count').textContent=ids.length+' term'+(ids.length===1?'':'s');
   $('gl-body').innerHTML=keys.map(function(g){
     var items=groups[g].sort(function(a,b){return CS.terms[a].t.localeCompare(CS.terms[b].t)});
-    return '<div class="gl-group th-'+g.slice(0,2)+'"><h3><span class="c">'+esc(g)+'</span>'+esc(topicName(g))+'</h3><div class="gl-list">'+items.map(function(k){var t=CS.terms[k];
+    var hasCards=CS.fc.topics.some(function(x){return x.id===g});
+    return '<div class="gl-group th-'+g.slice(0,2)+'"><h3><span class="c">'+esc(g)+'</span>'+esc(topicName(g))+(hasCards?'<span class="gl-acts"><button type="button" class="minibtn" data-gm="learn" data-g="'+esc(g)+'">Learn these</button><button type="button" class="minibtn" data-gm="test" data-g="'+esc(g)+'">Test me</button></span>':'')+'</h3><div class="gl-list">'+items.map(function(k){var t=CS.terms[k];
       return '<button type="button" class="gl-item" data-t="'+k+'"><b>'+esc(t.t)+(t.f?' <small>'+esc(t.f)+'</small>':'')+(t.h?' <span class="hltag">HL</span>':'')+'</b><span>'+esc(t.ib)+'</span></button>'}).join('')+'</div></div>';
   }).join('')||'<p class="note">No terms match. Try fewer letters, or pick “All”.</p>';
 }
@@ -963,6 +967,7 @@ function renderDeck(){
   h+='</div></div>';
   var sel=selCards({keepMastered:true}),m=mastery(sel);
   h+='<div class="deck-foot">'+(S.unit!=='all'?'<button class="minibtn" id="fc-all">Select every topic in this unit</button>':'')+(S.topics.length?'<button class="minibtn" id="fc-none">Clear selection</button>':'')+
+     '<button class="minibtn" id="fc-p1">All Paper 1 topics</button><button class="minibtn" id="fc-p2">All Paper 2 topics</button>'+
      '<label><input type="checkbox" id="fc-star"'+(S.starred?' checked':'')+'> Starred only</label>'+
      '<label><input type="checkbox" id="fc-hidem"'+(S.hideM?' checked':'')+'> Skip mastered cards</label>'+
      '<span class="sum">'+(S.topics.length?sel.length+' cards from '+S.topics.length+' topic'+(S.topics.length>1?'s':''):'All '+sel.length+' cards')+'</span></div>';
@@ -980,6 +985,7 @@ function deckClick(e){
   if(b.dataset.t){var i=S.topics.indexOf(b.dataset.t);if(i>-1)S.topics.splice(i,1);else S.topics.push(b.dataset.t);saveSel();renderDeck();resetMode();return}
   if(b.id==='fc-all'){var sl=isSL();BM.topics.forEach(function(t){if(!(sl&&t.hl)&&(S.unit==='all'||String(t.u)===S.unit)&&S.topics.indexOf(t.id)<0)S.topics.push(t.id)});saveSel();renderDeck();resetMode();return}
   if(b.id==='fc-none'){S.topics=[];saveSel();renderDeck();resetMode();return}
+  if(b.id==='fc-p1'||b.id==='fc-p2'){var sl2=isSL(),p1=b.id==='fc-p1';S.topics=BM.topics.filter(function(t){var u=String(t.u);return !(sl2&&t.hl)&&(p1?(u.charAt(0)==='A'||t.id==='CS'):u.charAt(0)==='B')}).map(function(t){return t.id});S.unit='all';saveSel();renderDeck();resetMode();return}
   if(b.id==='fc-deck-tog'){S.collapsed=!S.collapsed;saveSel();renderDeck();return}
   if(b.id==='fc-star'){S.starred=b.checked;saveSel();renderDeck();resetMode();return}
   if(b.id==='fc-hidem'){S.hideM=b.checked;saveSel();renderDeck();resetMode();return}
