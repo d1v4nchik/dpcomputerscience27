@@ -1,110 +1,94 @@
-<div align="center">
+<p align="center">
+  <a href="https://d1v4nchik.github.io/dpcomputerscience27/"><img src=".github/banner.svg" alt="IB Computer Science: every topic in plain words, with flashcards, practice questions and exam guides" width="100%"></a>
+</p>
 
-<img src="favicon.svg" width="88" height="88" alt="">
+<p align="center">
+  <a href="https://d1v4nchik.github.io/dpcomputerscience27/"><img src="https://img.shields.io/badge/Open_the_notes-2C5BDB?style=for-the-badge" alt="Open the notes" height="40"></a>
+  &nbsp;
+  <a href="#study-without-internet"><img src="https://img.shields.io/badge/Use_it_offline-15171C?style=for-the-badge" alt="Use it offline" height="40"></a>
+</p>
 
-# IB Computer Science Notes
-
-### Everything you need for IB CS, explained in plain words 💡
-
-Notes, flashcards, practice questions and exam guides for **SL and HL**, made for the **2027 syllabus**.
-
-<br>
-
-<a href="https://d1v4nchik.github.io/dpcomputerscience27/"><img src="https://img.shields.io/badge/Open_the_notes-2C5BDB?style=for-the-badge&logo=bookstack&logoColor=white" alt="Open the notes" height="44"></a>
-&nbsp;
-<a href="https://github.com/d1v4nchik/dpcomputerscience27/releases/download/offline/ib-cs-notes-offline.html"><img src="https://img.shields.io/badge/Download_for_offline-15171C?style=for-the-badge&logo=files&logoColor=white" alt="Download for offline" height="44"></a>
-
-<sub>✅ 100% free &nbsp;·&nbsp; ✅ No sign-up &nbsp;·&nbsp; ✅ No ads &nbsp;·&nbsp; ✅ Works on your phone</sub>
-
-<br><br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/home-dark.png">
-  <img src=".github/screenshots/home.png" alt="The home page of the notes, with a search box and a map of every topic" width="880">
-</picture>
-
-</div>
+<p align="center"><sub>Free &nbsp;&middot;&nbsp; No sign-up &nbsp;&middot;&nbsp; No ads &nbsp;&middot;&nbsp; Works on phones and laptops</sub></p>
 
 <br>
 
-## 👋 New here? Start in 3 steps
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/home-dark.png">
+    <img src=".github/screenshots/home.png" alt="The home page of the notes, with a search box and a map of every topic" width="88%">
+  </picture>
+</p>
+
+<br>
+
+## Getting started
 
 <table>
   <tr>
-    <td width="33%" valign="top" align="center">
-      <h3>1️⃣</h3>
+    <td width="33%" valign="top">
+      <sub>STEP 1</sub><br>
       <b><a href="https://d1v4nchik.github.io/dpcomputerscience27/">Open the notes</a></b><br>
-      <sub>It's just a website. Nothing to install, no account needed.</sub>
+      It's a normal website. Nothing to install and no account.
     </td>
-    <td width="33%" valign="top" align="center">
-      <h3>2️⃣</h3>
-      <b>Pick SL or HL</b><br>
-      <sub>Use the switch at the top. You can also pick Python or Java for code examples.</sub>
+    <td width="33%" valign="top">
+      <sub>STEP 2</sub><br>
+      <b>Choose SL or HL</b><br>
+      Use the switch at the top. Pick Python or Java for code too.
     </td>
-    <td width="33%" valign="top" align="center">
-      <h3>3️⃣</h3>
-      <b>Choose a topic and go</b><br>
-      <sub>Read the notes, then test yourself in <b>Practice</b>. Your progress saves by itself.</sub>
+    <td width="33%" valign="top">
+      <sub>STEP 3</sub><br>
+      <b>Pick a topic</b><br>
+      Read the notes, then test yourself in Practice. Progress saves by itself.
     </td>
   </tr>
 </table>
 
-> [!TIP]
-> Press <kbd>/</kbd> on any page to search for a word, a topic or a whole exam question.
+Press <kbd>/</kbd> on any page to search for a word, a topic or a whole exam question.
 
-## 🎒 What's inside
+## What's inside
+
+<p align="center"><img src=".github/stats.svg" alt="23 topic pages, 1,394 flashcards, 546 practice questions, 719 glossary terms" width="100%"></p>
+
+<p align="center"><sub>Totals for HL. SL shows 16 topic pages, 907 flashcards, 346 questions and 497 terms.</sub></p>
 
 <table>
   <tr>
-    <td align="center" width="25%"><h2>23</h2><sub>topic pages</sub></td>
-    <td align="center" width="25%"><h2>1,394</h2><sub>flashcards</sub></td>
-    <td align="center" width="25%"><h2>546</h2><sub>practice questions</sub></td>
-    <td align="center" width="25%"><h2>719</h2><sub>glossary terms</sub></td>
+    <td width="50%" valign="top"><b>Notes as a map</b><br>Each topic is a coloured line and each page is a stop. Every idea has an exam definition, a plain explanation and an everyday example.</td>
+    <td width="50%" valign="top"><b>Short or long</b><br>Switch between quick cheat-sheet points and full textbook-style explanations.</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Flashcards and games</b><br>Learn, Write and Test modes, plus four quick games. Cards explain why the answer is right.</td>
+    <td valign="top"><b>Exam practice</b><br>Write an answer, open the markscheme and tick off what you got, or sit a timed paper.</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Glossary</b><br>Every key term with a full-mark definition. Underlined words in the notes open their meaning.</td>
+    <td valign="top"><b>Videos and guides</b><br>A short video for almost every syllabus point, plus guides to the papers, the IA, pseudocode and the case study.</td>
   </tr>
 </table>
 
-<sub>Numbers are for HL. SL has 16 topic pages, 907 flashcards, 346 questions and 497 terms, because HL-only content is hidden.</sub>
-
-- 🗺️ **Notes as a map**: Every topic is a coloured line and every page is a stop, so you always know where you are. Each idea has an exam definition, a plain-words explanation and an everyday example.
-- 📝 **Short or long**: Switch between quick cheat-sheet points and full textbook-style explanations.
-- 🎬 **Videos**: A short video for almost every syllabus point (136 in total).
-- 🃏 **Flashcards and games**: Learn, Write and Test modes, plus Match, Memory, Gravity and Blitz. Cards explain *why* the answer is right.
-- ✍️ **Exam practice**: Write your answer, open the markscheme and tick off what you got. Or sit a timed paper.
-- 📖 **Glossary**: Every key term with a full-mark definition. Underlined words in the notes open their meaning.
-- 🧭 **Guides**: How each exam paper works, the IA, pseudocode and the 2027 case study.
-- 🌙 **Dark mode**: Easy on the eyes at night, on any screen.
-
-## 📴 Studying without internet
-
-On a plane, on the bus or stuck with bad wifi? Pick one:
+<h2 id="study-without-internet">Study without internet</h2>
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>📲 Install it as an app</h3>
-      <b>⭐ Recommended</b><br><br>
-      Keeps every topic on your device and opens offline.<br>
-      ✅ <b>Updates itself</b> whenever you're back online.
-      <br><br>
-      <b>Laptop</b> (Chrome or Edge): open the notes and click the <b>Install</b> icon at the right of the address bar.<br>
-      <b>iPhone / iPad</b> (Safari): tap <b>Share</b>, then <b>Add to Home Screen</b>.<br>
-      <b>Android</b> (Chrome): tap <b>⋮</b>, then <b>Install app</b>.
+      <b>Install it as an app</b> &nbsp;<sub>RECOMMENDED</sub><br><br>
+      Saves every topic on your device, opens offline, and <b>updates itself</b> whenever you're back online.<br><br>
+      <b>Laptop</b> &nbsp;In Chrome or Edge, click <i>Install</i> at the right of the address bar.<br>
+      <b>iPhone, iPad</b> &nbsp;In Safari, tap <i>Share</i>, then <i>Add to Home Screen</i>.<br>
+      <b>Android</b> &nbsp;In Chrome, tap the menu, then <i>Install app</i>.
     </td>
     <td width="50%" valign="top">
-      <h3>💾 Download one file</h3>
-      <b>For laptops</b><br><br>
-      One file with all the notes. Double-click it to open it in your browser. No internet needed.<br>
-      ⚠️ <b>Doesn't update itself.</b> If newer notes come out, it will show a message (when you're online) so you can download it again.
-      <br><br>
-      <a href="https://github.com/d1v4nchik/dpcomputerscience27/releases/download/offline/ib-cs-notes-offline.html"><b>⬇️ Download the file</b></a>
+      <b>Download one file</b> &nbsp;<sub>LAPTOPS</sub><br><br>
+      A single file with all the notes. Double-click it to open it in your browser, with no internet needed.<br><br>
+      <b>It doesn't update itself.</b> When newer notes come out, it shows a message (if you're online) so you can download it again.<br><br>
+      <a href="https://github.com/d1v4nchik/dpcomputerscience27/releases/download/offline/ib-cs-notes-offline.html"><b>Download the file</b></a>
     </td>
   </tr>
 </table>
 
-> [!NOTE]
-> Open the notes once with internet before you go offline, so the app has time to save everything.
+<sub>Open the notes once with internet before going offline, so the app has time to save everything.</sub>
 
-## 🖼️ A quick look
+## A quick look
 
 <table>
   <tr>
@@ -123,24 +107,24 @@ On a plane, on the bus or stuck with bad wifi? Pick one:
   <img src=".github/screenshots/mobile-dark.png" alt="Home page on a phone in dark mode" width="240">
 </p>
 
-## ❓ Questions
+## Questions
 
 <details>
 <summary><b>Is it really free?</b></summary>
 <br>
-Yes. No payments, no ads and no account. Just open it and study.
+Yes. No payments, no ads and no account.
 </details>
 
 <details>
 <summary><b>Where is my progress saved?</b></summary>
 <br>
-In your browser, on the device you're using. Nobody else can see it. Because there's no account, progress on your laptop and your phone stays separate.
+In your browser, on the device you're using. Nobody else can see it, and your laptop and phone keep separate progress.
 </details>
 
 <details>
-<summary><b>Does it cover my syllabus?</b></summary>
+<summary><b>Which topics does it cover?</b></summary>
 <br>
-It's written for IB Computer Science with <b>first exams in 2027</b>, both SL and HL. Here's every topic:
+The whole IB Computer Science course with first exams in 2027, SL and HL.
 <br><br>
 
 **Theme A: Concepts of computer science (Paper 1)**
@@ -168,27 +152,22 @@ It's written for IB Computer Science with <b>first exams in 2027</b>, both SL an
 <details>
 <summary><b>Is this official IB material?</b></summary>
 <br>
-No. These are independent study notes. They're not made by, endorsed by or connected to the International Baccalaureate Organization. "IB" and "International Baccalaureate" are trademarks of the International Baccalaureate Organization. Always double-check with the official subject guide and your teacher.
+No. These are independent study notes, not made by, endorsed by or connected to the International Baccalaureate Organization. "IB" and "International Baccalaureate" are its trademarks. Always check against the official subject guide and your teacher.
 </details>
 
 <details>
-<summary><b>I found a mistake. What do I do?</b></summary>
+<summary><b>I found a mistake</b></summary>
 <br>
-Thank you! Please <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml">send a correction</a>. Say which topic it's in (for example <i>A2.1</i>) and what's wrong. You'll need a free GitHub account. Have an idea instead? <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=suggestion.yml">Make a suggestion</a>.
+Thank you. Please <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml">send a correction</a> with the topic code (for example A2.1) and what's wrong. Have an idea instead? <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=suggestion.yml">Make a suggestion</a>. Both need a free GitHub account.
 </details>
 
 <details>
 <summary><b>Can I share it?</b></summary>
 <br>
-Please do! Send the <a href="https://d1v4nchik.github.io/dpcomputerscience27/">link</a> to your classmates and teachers. The notes are © d1v4nchik, all rights reserved, so please share the link rather than copying, reposting or selling the content.
+Please do. Send the <a href="https://d1v4nchik.github.io/dpcomputerscience27/">link</a> to classmates and teachers. The notes are &copy; d1v4nchik, all rights reserved, so share the link rather than copying, reposting or selling the content.
 </details>
 
 <br>
 
-<div align="center">
-
-**Good luck with your exams! 🍀**
-
-<sub>Want to help edit the site itself? See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</sub>
-
-</div>
+<p align="center"><b>Good luck with your exams.</b></p>
+<p align="center"><sub><a href="CONTRIBUTING.md">Help edit the site</a></sub></p>
