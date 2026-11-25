@@ -463,6 +463,7 @@ function parse(h){
   var parts=h.split('.'),id=parts[0];
   if(id==='map'||id==='flashcards'||id==='glossary'||id==='resources')return {v:id};
   if(id==='practice')return {v:'practice',u:parts[1]||''};
+  if(id==='specimen')return {v:'specimen',u:parts[1]||''};
   if(SPECIAL[id])return {v:'page',p:SPECIAL[id],s:parts[1]||''};
   if(CS.meta[id])return {v:'page',p:id,s:parts[1]||''};
   for(var i=0;i<CS.index.length;i++)if(CS.index[i].s===id)return {v:'page',p:CS.index[i].p,s:id};
@@ -490,7 +491,7 @@ document.addEventListener('click',function(e){
   else{if(window.csFc)window.csFc.start(k[1]);if(CUR.v!=='flashcards')nav('flashcards');else studyBar()}
 });
 /* "Back to Practice": opening the notes from Practice, Flashcards or the Glossary keeps a way straight back */
-var RET=null,RETNAME={practice:'Practice',flashcards:'Practice',glossary:'Glossary'};
+var RET=null,RETNAME={practice:'Practice',flashcards:'Practice',glossary:'Glossary',specimen:'Specimen papers'};
 function retPill(){
   var b=$('retpill');
   if(!b){b=document.createElement('button');b.type='button';b.id='retpill';b.className='retpill';document.body.appendChild(b);
@@ -501,13 +502,13 @@ function retPill(){
 }
 function go(r,noScroll){
   closeSheet(true);clearFind();
-  if(r.v==='page'){if(RETNAME[CUR.v])RET={v:CUR.v,hash:'#'+CUR.v,y:window.scrollY,q:FIND.pending&&FIND.pending.hide}}
+  if(r.v==='page'){if(RETNAME[CUR.v])RET={v:CUR.v,hash:'#'+CUR.v+(CUR.u?'.'+CUR.u:''),y:window.scrollY,q:FIND.pending&&FIND.pending.hide}}
   else RET=null;
   CUR=r;retPill();
   if(r.v==='page'){mountPage(r.p,r.s);show('page');if(FIND.pending&&!WAITING){var f=FIND.pending;FIND.pending=null;setTimeout(function(){if(f.hide)hideAnswer(f.hide);if(f.q)runFind(f)},40)}}
-  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='flashcards'||r.v==='practice')setTimeout(studyBar,0);if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);}
-  if(!noScroll&&!(r.v==='page'&&r.s))window.scrollTo(0,0);
-  var t=r.v==='page'?(CS.meta[r.p]||{}).title:({map:'Home',flashcards:'Flashcards',practice:'Practice',glossary:'Glossary',resources:'Resources'})[r.v];
+  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='flashcards'||r.v==='practice')setTimeout(studyBar,0);if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);if(r.v==='specimen'&&window.csSpec)window.csSpec.render(r.u);}
+  if(!noScroll&&!(r.v==='page'&&r.s)&&!(r.v==='specimen'&&/-/.test(r.u||'')))window.scrollTo(0,0);
+  var t=r.v==='page'?(CS.meta[r.p]||{}).title:({map:'Home',flashcards:'Flashcards',practice:'Practice',glossary:'Glossary',resources:'Resources',specimen:'Specimen papers'})[r.v];
   document.title=window.CS_STATIC?(r.v==='map'?'IB Computer Science notes 2027 · SL and HL':(t?t+' · ':'')+'IB Computer Science notes'):(t?t+' · ':'')+'IB CS Cheat Sheet';
 }
 window.addEventListener('hashchange',function(){go(parse(location.hash))});
@@ -618,6 +619,7 @@ function mountPage(p,sec){
   view.appendChild(tpl.content.cloneNode(true));
   var art=view.querySelector('.pg'),secs=art.querySelector('.secs');
   if(!secs){return}
+  initLine(art);buildRail(art,p);
   var tools=document.createElement('div');tools.className='pgtools';
   tools.innerHTML='<span class="steplabel" id="steplabel"></span><span style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="seg" role="group" aria-label="Layout"><button type="button" data-mode="step" aria-pressed="'+(MODE==='step')+'">One stop</button><button type="button" data-mode="all" aria-pressed="'+(MODE!=='step')+'">Whole line</button></span>'+
     '<span class="seg tbsw" role="group" aria-label="Notes style"><button type="button" data-tb="0" aria-pressed="'+!TB+'" title="Short revision notes">Cheat sheet</button><button type="button" data-tb="1" aria-pressed="'+TB+'" title="Every stop explained in full sentences, with the diagrams and worked examples; the short definition boxes are left to Cheat sheet">Textbook</button></span>'+
@@ -665,25 +667,89 @@ function watchCards(art,p,tools){
 var TB=!!lsGet('csTb',false);
 function setTB(on){TB=!!on;lsSet('csTb',TB);BODY.setAttribute('data-tb',TB?'on':'off');document.querySelectorAll('.tbsw button').forEach(function(x){x.setAttribute('aria-pressed',String((x.dataset.tb==='1')===TB))})}
 function keyTerms(art){
+  /* the old "Terms in this stop" box is gone: the route sidebar lists the current stop's terms instead */
   art.querySelectorAll('.kt').forEach(function(k){k.remove()});
-  if(!TB)return;
-  art.querySelectorAll('.secs>section').forEach(function(sec){
-    var seen={},ids=[];
-    sec.querySelectorAll('button.gl[data-t]').forEach(function(b){if(b.closest('.tb'))return;var id=b.dataset.t,t=CS.terms[id];if(!t||seen[id]||(isSL()&&t.h))return;seen[id]=1;ids.push(id)});
-    if(!ids.length)return;
-    /* names only: the explanation above already defines them, and a tap opens the full definition */
-    var box=document.createElement('aside');box.className='kt kt-chips';box.setAttribute('aria-label','Terms in this stop');
-    box.innerHTML='<span class="kt-h">Terms in this stop</span>'+ids.map(function(id){var t=CS.terms[id];
-      return '<button type="button" class="gl kt-t" data-t="'+esc(id)+'">'+esc(t.t)+'</button>'}).join('<span aria-hidden="true">·</span>');
-    sec.appendChild(box);
+  railSync(art,CUR.s);
+}
+/* ---------- route sidebar (wide screens): the line drawn vertically, this stop's syllabus points, terms and practice ---------- */
+var READ=lsGet('csRead',{}),CANDO=lsGet('csCanDo',{});
+function sylFor(p,sid){return (window.CS_SYL||[]).filter(function(u){return u.at.some(function(a){return a[0]===p&&a[1]===sid})&&!(isSL()&&u.h)})}
+function buildRail(art,p){
+  var main=art.querySelector('main');if(!main)return;
+  var old=main.querySelector('.rail');if(old)old.remove();
+  var r=document.createElement('aside');r.className='rail';r.setAttribute('aria-label','Route through this page');
+  main.classList.add('has-rail');main.insertBefore(r,main.firstChild);
+  r.addEventListener('click',function(e){
+    var b=e.target.closest('[data-go]');if(b){showSec(art,b.dataset.go,true);return}
+    var h=e.target.closest('[data-hd]');if(h){var t=art.querySelector('.secs>section.cur .tb-h:nth-of-type(1)');var all=art.querySelectorAll('.secs>section.cur h3.tb-h,.secs>section.cur h3');var el=all[+h.dataset.hd];if(el)el.scrollIntoView({behavior:'smooth',block:'start'});return}
+    var c=e.target.closest('input[data-cd]');if(c){CANDO[c.dataset.cd]=c.checked?1:0;if(!c.checked)delete CANDO[c.dataset.cd];lsSet('csCanDo',CANDO);railCount(r);return}
+    var x=e.target.closest('[data-act]');if(!x)return;
+    if(x.dataset.act==='prac'&&window.csPrac)window.csPrac.stop(p+'.'+CUR.s);
+    if(x.dataset.act==='fc')openCards(p);
   });
 }
+function railCount(r){var n=r.querySelectorAll('input[data-cd]').length,k=r.querySelectorAll('input[data-cd]:checked').length,el=r.querySelector('.rsyl-n');if(el)el.textContent=n?k+' of '+n+' ticked':''}
+function railSync(art,sid){
+  var r=art&&art.querySelector('.rail');if(!r||!sid)return;
+  var p=CUR.p,v=visibleSecs(art),ci=v.findIndex(function(s){return s.id===sid}),rd=READ[p]||[];
+  var meta=CS.meta[p]||{},pg=PAGES[p],code=(art.querySelector('header [style*="font-size: 120px"]')||{}).textContent||'';
+  var h='<div class="rbox rroute"><div class="rhead"><span class="rbadge">'+esc(code.trim()||'')+'</span><span class="rht"><b>Route</b><small>'+(MODE==='step'?'Stop '+(ci+1)+' of '+v.length:v.length+' stops')+' · '+rd.filter(function(x){return v.some(function(s){return s.id===x})}).length+' read</small></span></div><ol class="rline">';
+  v.forEach(function(sec,i){
+    var nm=(art.querySelector('.st[data-sec="'+sec.id+'"] .stn')||{}).textContent||sec.id,cd=(sec.querySelector('span[style*="JetBrains"]')||{}).textContent||'';
+    if(!/^[AB]\d/.test(cd))cd='';
+    var cls=(i===ci?' cur':'')+(i<ci?' past':'')+(rd.indexOf(sec.id)>-1?' read':'')+(sec.id==='quiz'?' term':'');
+    h+='<li class="rst'+cls+'"><button type="button" data-go="'+sec.id+'"'+(i===ci?' aria-current="step"':'')+'><i class="rdot" aria-hidden="true"></i><span class="rn">'+esc(nm)+'</span>'+(cd?'<span class="rcode">'+esc(cd)+'</span>':'')+'</button>';
+    if(i===ci){var hs=[].slice.call(sec.querySelectorAll(TB?'h3.tb-h':'h3')).filter(function(x){return x.offsetParent!==null&&x.textContent.trim()});
+      if(hs.length>1)h+='<ul class="rsub">'+hs.slice(0,8).map(function(x,k){return '<li><button type="button" data-hd="'+[].indexOf.call(sec.querySelectorAll(TB?'h3.tb-h':'h3'),x)+'">'+esc(x.textContent.replace(/\s*\([AB]\d[^)]*\)\s*$/,''))+'</button></li>'}).join('')+'</ul>'}
+    h+='</li>';
+  });
+  h+='</ol></div>';
+  var cur=v[ci],us=cur?sylFor(p,cur.id):[];
+  if(us.length){
+    h+='<div class="rbox rsyl"><div class="rh4"><span>IB guide · this stop</span><span class="rsyl-n"></span></div>'+us.map(function(u){
+      return '<details class="ru"><summary><span class="ruc">'+esc(u.c)+(u.h?' <em>HL</em>':'')+'</span><span class="rus">'+esc(u.s)+'</span></summary><ul>'+u.b.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>'+
+        (u.q&&u.q.length?'<div class="rulq"><b>Linking questions</b>'+u.q.map(function(x){return '<span>'+esc(x)+'</span>'}).join('')+'</div>':'')+
+        '</details><label class="rcan"><input type="checkbox" data-cd="'+esc(u.c)+'"'+(CANDO[u.c]?' checked':'')+'> I can do this</label>'}).join('')+'</div>';
+  }
+  if(cur){var seen={},ids=[];cur.querySelectorAll('button.gl[data-t]').forEach(function(b){var id=b.dataset.t,t=CS.terms[id];if(!t||seen[id]||(isSL()&&t.h))return;seen[id]=1;ids.push(id)});
+    if(ids.length)h+='<div class="rbox rterms"><div class="rh4"><span>Key terms · this stop</span><span>'+ids.length+'</span></div><div class="rchips">'+ids.slice(0,30).map(function(id){return '<button type="button" class="gl" data-t="'+esc(id)+'">'+esc(CS.terms[id].t)+'</button>'}).join('')+'</div></div>'}
+  var sp=(window.CS_SPEC_Q||[]).filter(function(q){return cur&&q.n===p+'.'+cur.id&&!(isSL()&&q.hl)});
+  var nq=cur?CS.prac.filter(function(q){return q.n===p+'.'+cur.id&&q.k!=='term'&&!(isSL()&&q.h)}).length:0;
+  if(pg&&cur&&cur.id!=='quiz')h+='<div class="rbox ract">'+(nq?'<button type="button" class="ract-b" data-act="prac"><b>'+nq+'</b> exam-style question'+(nq>1?'s':'')+' on this stop<span aria-hidden="true">→</span></button>':'')+
+    (sp.length?sp.slice(0,4).map(function(q){return '<a class="ract-b spec" href="#specimen.'+q.id+'"><b>Specimen</b> '+esc(q.label)+' · '+q.m+' mark'+(q.m>1?'s':'')+'<span aria-hidden="true">→</span></a>'}).join(''):'')+
+    '<button type="button" class="ract-b" data-act="fc">Flashcards for '+esc(pg.code)+'<span aria-hidden="true">→</span></button></div>';
+  r.innerHTML=h;railCount(r);
+}
+function markRead(p,sid){if(!p||!sid||sid==='quiz')return;var a=READ[p]||(READ[p]=[]);if(a.indexOf(sid)<0){a.push(sid);lsSet('csRead',READ)}}
+function initLine(art){
+  var hd=art.querySelector('header'),sts=art.querySelector('.sts');if(!hd||!sts)return;
+  var bg=(hd.getAttribute('style')||'').match(/background:\s*([^;]+)/),st=sts.querySelector('.st'),fg=st&&st.style.color;
+  if(bg)sts.style.setProperty('--hb',bg[1].trim());
+  if(fg)sts.style.setProperty('--fg',fg);
+  if(!sts.querySelector('.trk-fill')){var f=document.createElement('div');f.className='trk-fill';f.setAttribute('aria-hidden','true');var t=sts.querySelector('.trk');sts.insertBefore(f,t?t.nextSibling:sts.firstChild)}
+}
+function lineFill(art){
+  var sts=art&&art.querySelector('.sts'),f=sts&&sts.querySelector('.trk-fill'),c=sts&&sts.querySelector('.st.cur .dot');if(!f)return;
+  if(!c){f.style.width='0';return}
+  var r=sts.getBoundingClientRect(),d=c.getBoundingClientRect();f.style.width=Math.max(0,d.left+d.width/2-r.left)+'px';
+  var w=art.querySelector('.stw');if(w&&w.scrollWidth>w.clientWidth){var x=d.left-r.left-w.clientWidth/2;w.scrollLeft=Math.max(0,x)}
+}
+/* whole-line layout: follow the reader down the page so the stepper and route sidebar stay in step */
+var SPYT=0;window.addEventListener('scroll',function(){if(SPYT||MODE==='step'||CUR.v!=='page')return;SPYT=requestAnimationFrame(function(){SPYT=0;
+  var art=$('view-page').querySelector('.pg');if(!art||!art.querySelector('.rail,.sts'))return;var v=visibleSecs(art),id=null;
+  v.forEach(function(s){if(s.getBoundingClientRect().top<window.innerHeight*0.4)id=s.id});id=id||(v[0]&&v[0].id);
+  if(id&&id!==CUR.s)showSec(art,id,false)})},{passive:true});
+window.addEventListener('resize',function(){var a=$('view-page')&&$('view-page').querySelector('.pg');if(a)lineFill(a)});
 function showSec(art,id,scroll){
   var v=visibleSecs(art);if(!v.length)return;
   var cur=v.filter(function(s){return s.id===id})[0]||v[0];
+  if(art._cur&&art._cur!==cur.id)markRead(CUR.p,art._cur);art._cur=cur.id;
   CUR.s=cur.id;LASTSEC[CUR.p]=cur.id;lsSet('csLast',LASTSEC);lsSet('csLastRoute',{p:CUR.p,s:cur.id});
   art.querySelectorAll('.secs>section').forEach(function(s){s.classList.toggle('cur',s===cur)});
-  art.querySelectorAll('.st').forEach(function(b){var on=b.dataset.sec===cur.id;b.classList.toggle('cur',on);b.setAttribute('aria-current',on?'step':'false')});
+  var vis=[].filter.call(art.querySelectorAll('.st'),function(b){return b.offsetParent!==null}),ci=-1;
+  vis.forEach(function(b,k){if(b.dataset.sec===cur.id)ci=k});
+  art.querySelectorAll('.st').forEach(function(b){var on=b.dataset.sec===cur.id;b.classList.toggle('cur',on);b.classList.toggle('done',vis.indexOf(b)>-1&&vis.indexOf(b)<ci);b.setAttribute('aria-current',on?'step':'false')});
+  lineFill(art);railSync(art,cur.id);
   var i=v.indexOf(cur),name=(art.querySelector('.st[data-sec="'+cur.id+'"] .stn')||{}).textContent||'';
   var lab=$('steplabel');if(lab)lab.textContent=MODE==='step'?'Stop '+(i+1)+' of '+v.length+' · '+name:v.length+' stops on this page';
   var pv=$('st-prev'),nx=$('st-next');
