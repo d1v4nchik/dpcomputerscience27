@@ -1456,3 +1456,49 @@ body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 .pxv .deck-units button{font-size:14px;border:1.5px solid var(--pf);background:var(--card);color:var(--ink);padding:6px 13px}
 .pxv .deck-units button i{display:none}
 .pxv .deck-units button.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+
+/* ===== Practice v4: the CS look back (hairline cards, line colours, underline tabs), keeping the grouped layout. Lighter to render. ===== */
+#view-practice,#view-flashcards,#view-specimen,:root[data-theme="dark"] :is(#view-practice,#view-flashcards,#view-specimen){--pf:var(--hair);--psh:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) :is(#view-practice,#view-flashcards,#view-specimen){--pf:var(--hair);--psh:none}}
+.pxv .fcl-box,:root[data-theme="dark"] .pxv .fcl-box{border:1px solid var(--hair);box-shadow:none;border-radius:20px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pxv .fcl-box{border:1px solid var(--hair);box-shadow:none}}
+.pxv .fcl #fc-stage,:root[data-theme="dark"] .pxv .fcl #fc-stage{border:1px solid var(--hair);box-shadow:none;border-radius:20px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pxv .fcl #fc-stage{border:1px solid var(--hair);box-shadow:none}}
+.vbody.pxv{max-width:1240px;padding-top:22px}
+/* underline tabs */
+.studybar{margin:0 0 20px;min-height:48px}
+.studybar .px-tabs{border-bottom:1px solid var(--hair);gap:4px}
+.studybar .px-tabs button{border:0;border-bottom:3px solid transparent;border-radius:0;background:none;color:var(--muted);padding:10px 14px 11px;margin-bottom:-1px;font-size:17px}
+.studybar .px-tabs button:hover{color:var(--ink);background:none}
+.studybar .px-tabs button[aria-selected="true"]{background:none;color:var(--ink);border-bottom-color:var(--ink)}
+.studybar .px-tabs button span{background:color-mix(in srgb,var(--ink) 7%,transparent);color:var(--muted);font-size:11.5px}
+.studybar .px-tabs button[aria-selected="true"] span{background:var(--ink);color:var(--bg)}
+/* side panel controls in the site's own style */
+.pf-g select{border:1.5px solid var(--bd2,var(--hair));border-radius:12px}
+.pf-units button,.pxv .deck-units button{border:1px solid var(--bd2,var(--hair))}
+.pxv .deck-units button i{display:inline-block}
+/* mode switch + search as the site's soft pill and field */
+.pxtop .sb-modes,.pmh .sb-modes{border:0;border-radius:999px;padding:3px;background:color-mix(in srgb,var(--ink) 7%,var(--card))}
+.pxtop .sb-modes button,.pmh .sb-modes button{border-radius:999px;font-size:14.5px;padding:8px 16px;color:var(--muted)}
+.pxtop .sb-modes button:hover,.pmh .sb-modes button:hover{color:var(--ink)}
+#px-q{border:1.5px solid var(--bd2,var(--hair));border-radius:999px;padding:10px 18px}
+/* questions: one card per topic, coloured by its line, items numbered inside */
+.pq-panel{background:none;border:0;box-shadow:none;padding:0;display:flex;flex-direction:column;gap:16px}
+.pq-grp{background:var(--card);border:1px solid var(--hair);border-left:6px solid var(--line);border-radius:20px;padding:16px 20px 6px;content-visibility:auto;contain-intrinsic-size:auto 900px}
+.pq-grp+.pq-grp{border-top:1px solid var(--hair);margin-top:0}
+.pq-gc{color:var(--tdark)}
+.pq-num{background:var(--tint);color:var(--tdark);border:0;border-radius:8px}
+.pq-tag.hl{background:var(--hlbg)}
+.pxv .pq+.pq{border-top:1px solid var(--hair)}
+.pxv .pq-ans{border:1.5px solid var(--bd2,var(--hair));background:var(--bg)}
+.pq-msb{border-radius:999px;font-size:14px;padding:9px 16px}
+.pxv .pq-ms{background:var(--tint);border:0}
+.pxv .px-paper-setup{border:1px solid var(--hair);box-shadow:none}
+/* specimen in the same language */
+.pxv .spc-g{border:1px solid var(--hair);box-shadow:none;content-visibility:auto;contain-intrinsic-size:auto 1400px}
+.pxv .spc-tabs button{border:1px solid var(--hair)}
+.pxv .spc-a{border:1.5px solid var(--bd2,var(--hair));background:var(--bg)}
+/* side panel scrolls with the page: no scroll-inside-a-scroll */
+@media (min-width:1000px){.pxv .fcl-side{position:static;max-height:none;overflow:visible;padding:0}}
+@media (max-width:999px){.pq-grp{padding:12px 14px 4px;border-radius:16px;border-left-width:5px}}
+@media (max-width:560px){.studybar{min-height:44px}.studybar .px-tabs button{font-size:15px;padding:10px 4px 9px}}

@@ -104,7 +104,7 @@ function render(u){
   if(u&&UNITS.some(function(x){return x[0]===u})){F.us=[u];F.cmd='';saveF();V.shown=15;V.order=null}
   var el=$('view-practice');
   if(!V.ready){
-    el.innerHTML='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Your progress is saved on this device.</p></div></div>'+
+    el.innerHTML='<div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Practise</div><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Your progress is saved on this device.</p></div></div>'+
       '<div class="vbody pxv"><div class="studybar" id="sb-practice"></div><div class="fcl"><aside class="fcl-side">'+
       '<section class="fcl-box px-filters" id="px-filters"><button type="button" class="fcl-dtog" id="px-ftog" aria-expanded="false" aria-controls="px-fbody"><span class="fcl-bh">Filters</span><span class="fcl-dsum" id="px-fsum">All questions</span><i aria-hidden="true">▾</i></button>'+
       '<div class="fbody" id="px-fbody"><div class="pf-g"><span class="pf-l">Unit</span><div class="pf-units" id="px-units" role="group" aria-label="Unit"></div></div>'+
@@ -116,7 +116,7 @@ function render(u){
       '<div class="pf-row"><label class="pf-chk"><input type="checkbox" id="px-shuf"> Shuffle</label><button type="button" class="minibtn" id="px-clear">Clear filters</button></div></div></section>'+
       '<section class="fcl-box px-prog"><span class="fcl-bh">Your progress</span><p class="pp-line" id="px-head"></p><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></section>'+
       '</aside><div class="fcl-main"><div class="pxtop"><div class="sb-modes" role="group" aria-label="Study mode"></div><input type="search" id="px-q" placeholder="Search questions" aria-label="Search questions" autocomplete="off"></div><div class="px-cnt" id="px-count"></div><div id="px-body"></div></div></div></div>';
-    $('px-q').addEventListener('input',function(){F.q=this.value;saveF();V.shown=15;V.order=null;drawList()});
+    var qT=null;$('px-q').addEventListener('input',function(){var v=this.value;clearTimeout(qT);qT=setTimeout(function(){F.q=v;saveF();V.shown=15;V.order=null;drawList()},160)});
     $('px-ftog').addEventListener('click',function(){V.fopen=!V.fopen;lsSet('csPracFOpen',V.fopen);fsum()});
     $('px-clear').addEventListener('click',function(){F.us=[];F.pp='';F.src='exam';F.cmd='';F.mk='';F.st='';F.shuffle=false;F.q='';saveF();V.shown=15;V.order=null;draw()});
     $('px-units').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var u=b.dataset.u;
@@ -506,14 +506,17 @@ function retPill(){
         if(c){c.scrollIntoView({block:'center'});c.classList.remove('pq-flash');void c.offsetWidth;c.classList.add('pq-flash')}else window.scrollTo(0,R.y)},80)}}
   b.hidden=!(RET&&CUR.v==='page');if(RET)b.textContent='← Back to '+RETNAME[RET.v];
 }
+var PXV={practice:1,flashcards:1,specimen:1},PREV='';
 function go(r,noScroll){
+  PREV=CUR.v;
   closeSheet(true);clearFind();
   if(r.v==='page'){if(RETNAME[CUR.v])RET={v:CUR.v,hash:'#'+CUR.v+(CUR.u?'.'+CUR.u:''),y:window.scrollY,q:FIND.pending&&FIND.pending.hide}}
   else RET=null;
   CUR=r;retPill();
   if(r.v==='page'){mountPage(r.p,r.s);show('page');if(FIND.pending&&!WAITING){var f=FIND.pending;FIND.pending=null;setTimeout(function(){if(f.hide)hideAnswer(f.hide);if(f.q)runFind(f)},40)}}
-  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='flashcards'||r.v==='practice'||r.v==='specimen')setTimeout(studyBar,0);if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);if(r.v==='specimen'&&window.csSpec)window.csSpec.render(r.u);}
-  if(!noScroll&&!(r.v==='page'&&r.s)&&!(r.v==='specimen'&&/-/.test(r.u||'')))window.scrollTo(0,0);
+  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);if(r.v==='specimen'&&window.csSpec)window.csSpec.render(r.u);if(PXV[r.v])studyBar();}
+  if(PXV[r.v]&&PXV[PREV]&&!(r.v==='specimen'&&/-/.test(r.u||''))){var tb=document.querySelector('.view.on .studybar');if(tb){var y=tb.getBoundingClientRect().top+window.scrollY-(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--topbar-h'))||112)-8;window.scrollTo(0,Math.min(window.scrollY,Math.max(0,y)))}}
+  else if(!noScroll&&!(r.v==='page'&&r.s)&&!(r.v==='specimen'&&/-/.test(r.u||'')))window.scrollTo(0,0);
   var t=r.v==='page'?(CS.meta[r.p]||{}).title:({map:'Home',flashcards:'Flashcards',practice:'Practice',glossary:'Glossary',resources:'Resources',specimen:'Specimen papers'})[r.v];
   document.title=window.CS_STATIC?(r.v==='map'?'IB Computer Science notes 2027 · SL and HL':(t?t+' · ':'')+'IB Computer Science notes'):(t?t+' · ':'')+'IB CS Cheat Sheet';
 }
@@ -981,7 +984,6 @@ document.addEventListener('keydown',function(e){
 function tbh(){var t=$('topbar');if(t)ROOTEL.style.setProperty('--tbh',t.offsetHeight+'px')}
 tbh();window.addEventListener('resize',tbh);
 setTB(TB);
-renderHome();
 go(parse(location.hash),true);
 loadTpl(0);
 })();

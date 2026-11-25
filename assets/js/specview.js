@@ -100,8 +100,10 @@ function render(u){
   var el=$('view-specimen');if(!el)return;
   if(u){if(u==='p1'||u==='p2')PAPER=u;else S.papers.forEach(function(P){P.groups.forEach(function(g){g.parts.forEach(function(q){if(q.id===u)PAPER=P.id})})})}
   lsSet('csSpecP',PAPER);
+  var part=u&&u!=='p1'&&u!=='p2';
+  if(el.dataset.p===PAPER&&el.firstChild){if(part){var t0=$('spc-'+u);if(t0)setTimeout(function(){t0.scrollIntoView({block:'start'});t0.classList.remove('spc-flash');void t0.offsetWidth;t0.classList.add('spc-flash')},30)}return}
   var P=S.papers.filter(function(x){return x.id===PAPER})[0]||S.papers[0];
-  var h='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Your progress is saved on this device.</p></div></div>'+
+  var h='<div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Practise</div><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Your progress is saved on this device.</p></div></div>'+
    '<div class="vbody pxv"><div class="studybar" id="sb-specimen"></div><div class="fcl"><aside class="fcl-side"><div class="fcl-box"><span class="fcl-bh">Specimen papers</span>'+
    '<div class="spc-tabs" role="tablist">'+S.papers.map(function(x){return '<button type="button" role="tab" data-paper="'+x.id+'" aria-selected="'+(x.id===P.id)+'"><b>'+esc(x.name)+'</b><span>'+esc(x.sub)+'</span></button>'}).join('')+'</div>'+
    '<div class="spc-tot" id="spc-tot"></div>'+
@@ -115,7 +117,7 @@ function render(u){
     h+='<section class="spc-g"><h3 class="spc-gh">Question '+qnum(P,g)+'</h3>'+(g.stem?'<div class="spc-stem">'+txt(g.stem)+'</div>':'')+code(g.stemCode)+(g.fig?fig(g.fig):'')+
       g.parts.map(function(q){return partHtml(P,g,q)}).join('')+'</section>';
   });
-  el.innerHTML=h+'</div></div></div>';if(window.csStudyBar)window.csStudyBar();
+  el.innerHTML=h+'</div></div></div>';el.dataset.p=PAPER;if(window.csStudyBar)window.csStudyBar();
   P.groups.forEach(function(g){g.parts.forEach(function(q){scoreUi(q)})});tot(P);
   if(u&&u!=='p1'&&u!=='p2'){var t=$('spc-'+u);if(t)setTimeout(function(){t.scrollIntoView({block:'start'});t.classList.add('spc-flash')},60)}
 }
@@ -132,7 +134,7 @@ document.addEventListener('click',function(e){
   if(b.dataset.open){var q=find(b.dataset.open),s2=st(q.id);s2.open=!s2.open;if(!s2.t)s2.t=[];save();var p=b.closest('.spc-p');p.querySelector('.spc-sol').hidden=!s2.open;
     b.textContent=s2.open?'Hide the breakdown':'I\'ve tried it · show the full breakdown';b.setAttribute('aria-expanded',s2.open);scoreUi(q);tot();return}
   if(b.dataset.lv){var q2=find(b.dataset.lv),s3=st(q2.id);s3.lv=+b.value;save();b.parentNode.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});scoreUi(q2);tot();return}
-  if(b.dataset.reset){var P=S.papers.filter(function(x){return x.id===b.dataset.reset})[0];P.groups.forEach(function(g){g.parts.forEach(function(q){delete ST[q.id]})});save();render(P.id);return}
+  if(b.dataset.reset){var P=S.papers.filter(function(x){return x.id===b.dataset.reset})[0];P.groups.forEach(function(g){g.parts.forEach(function(q){delete ST[q.id]})});save();delete $('view-specimen').dataset.p;render(P.id);return}
 });
 document.addEventListener('change',function(e){
   var c=e.target;if(!c.dataset||!c.dataset.t)return;var q=find(c.dataset.t),s=st(q.id),i=+c.value;s.t=s.t||[];
