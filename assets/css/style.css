@@ -1192,3 +1192,89 @@ body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 .spc-rev{align-self:flex-start;font-weight:800;font-size:14.5px;color:var(--sa);text-decoration:none}
 .spc-rev:hover{text-decoration:underline}
 @media (max-width:560px){.spc-tabs{grid-template-columns:1fr}.spc-g{padding:14px 12px 6px;border-radius:16px}.spc-blk{padding:10px 12px}.spc-sc{margin-left:0;flex-basis:100%}}
+
+/* ---------- Practice: folder tabs + "your cards" side panel + main panel (after the BM notes) ---------- */
+.vhead.plain{background:transparent;color:var(--ink)}
+.vhead.plain .vh-in{max-width:1240px;padding-block:clamp(22px,3.5vw,36px) 4px}
+.vhead.plain h1{font-size:clamp(40px,6vw,60px);margin:0 0 10px;letter-spacing:-.025em}
+.vhead.plain p{color:var(--muted);opacity:1;max-width:62ch}
+.vbody.pxv{max-width:1240px;padding-top:14px}
+.studybar{margin:0 0 18px}
+.px-tabs{display:flex;gap:8px;border-bottom:2px solid var(--ink);overflow-x:auto;scrollbar-width:none}
+.px-tabs::-webkit-scrollbar{display:none}
+.px-tabs button{display:flex;align-items:center;gap:10px;flex:none;font:800 17px var(--f-disp);letter-spacing:-.005em;color:var(--ink);background:var(--card);border:2px solid var(--ink);border-bottom:0;border-radius:14px 14px 0 0;padding:11px 20px 10px;cursor:pointer;white-space:nowrap}
+.px-tabs button span{font:600 12px var(--f-mono);padding:2px 9px;border-radius:999px;color:var(--muted);background:transparent}
+.px-tabs button span:empty{display:none}
+.px-tabs button:hover{background:color-mix(in srgb,var(--ink) 6%,var(--card))}
+.px-tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.px-tabs button[aria-selected="true"] span{background:var(--hlbg);color:#1C1600}
+.fcl{display:flex;flex-direction:column;gap:16px}
+.fcl-side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.fcl-main{min-width:0}
+.fcl-box{background:var(--card);border:2px solid var(--ink);border-radius:18px;padding:16px 18px;min-width:0;box-shadow:4px 4px 0 var(--ink);display:flex;flex-direction:column;gap:12px}
+:root[data-theme="dark"] .fcl-box{box-shadow:4px 4px 0 color-mix(in srgb,var(--ink) 35%,transparent);border-color:color-mix(in srgb,var(--ink) 55%,transparent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fcl-box{box-shadow:4px 4px 0 color-mix(in srgb,var(--ink) 35%,transparent);border-color:color-mix(in srgb,var(--ink) 55%,transparent)}}
+.fcl-bh{display:block;font:700 11.5px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fcl-foot{display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--muted)}
+.fcl-foot b{color:var(--ink);font-family:var(--f-mono)}
+.fcl-foot .fcx-sync{margin-left:0}
+/* the panels drop their old card chrome inside the side box */
+.fcl .px-filters{margin:0}
+.fcl .deck{background:none;border:0;border-radius:0;padding:0;margin:0}
+.fcl .fcx-head{margin:-4px 0 0;gap:4px 16px}
+.fcl .fcx-head .fcx-stat b{font-size:22px}
+.fcl .px-head{margin:0}
+.fcl .px-head .stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fcl .px-head .stats>div{padding:10px 12px;border-radius:12px;background:color-mix(in srgb,var(--ink) 4%,var(--card));border:1px solid var(--hair);min-width:0}
+.fcl .px-head .stats b{font-size:22px}
+.fcl .px-head .stats span{font-size:12px}
+.fcl .px-sync{margin:0;width:auto}
+.sb-modes{display:flex;flex-wrap:wrap;gap:6px}
+.sb-modes button{display:flex;flex-direction:column;gap:1px;text-align:left;border:1.5px solid var(--hair);background:var(--card);border-radius:12px;padding:8px 12px;color:var(--ink);font:inherit;cursor:pointer;flex:1 1 calc(50% - 6px);min-width:0}
+.sb-modes button b{font-size:14px}
+.sb-modes button span{font-size:11.5px;color:var(--muted);line-height:1.3}
+.sb-modes button:hover{border-color:var(--ink)}
+.sb-modes button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.sb-modes button[aria-pressed="true"] span{color:var(--bg);opacity:.8}
+@media (min-width:1000px){
+  .fcl{display:grid;grid-template-columns:330px minmax(0,1fr);gap:26px;align-items:start}
+  .fcl-side{position:sticky;top:calc(var(--topbar-h,112px) + 14px);max-height:calc(100vh - var(--topbar-h,112px) - 28px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:0 8px 8px 0}
+  /* filters and the card chooser stay open in the side panel */
+  .fcl .px-filters:not(.open) .fbody,.fcl #fc-deck:not(.open) .fbody{display:flex}
+  .fcl #fc-deck .fbody{flex-direction:column;gap:12px}
+  .fcl .px-filters:not(.open){padding:16px 18px;gap:12px}
+  .fcl #px-ftog,.fcl #px-fsum,.fcl #fc-dtog,.fcl #fc-dsum,.fcl .deck-top h3{display:none}
+  .fcl .deck-top{display:none}
+  .fcl .px-sel{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .fcl .px-sel label{flex-basis:auto!important;min-width:0}
+  .fcl .px-sel select{width:100%}
+  .fcl .deck-topics{grid-template-columns:1fr}
+  .fcl .deck-foot{margin-top:0}
+  .fcl .deck-foot .sum{margin-left:0;width:100%}
+  /* choosing a flashcard mode keeps the side panel in view */
+  #view-flashcards.fc-focus .fcx-head{display:flex}
+  #view-flashcards.fc-focus #fc-deck{display:block}
+  #view-flashcards.fc-focus .studybar{display:block}
+  #view-flashcards.fc-focus .vhead{display:block}
+  #fc-focusbar .fb-back{display:none}
+  .fcl .gl-bar{flex-wrap:wrap}
+  .fcl .gl-bar input{flex:1 1 100%}
+}
+@media (max-width:999px){
+  .fcl-box{padding:13px 14px;border-radius:14px;box-shadow:3px 3px 0 var(--ink)}
+  .sb-modes{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -4px;padding:0 4px 4px}
+  .sb-modes button{flex:0 0 auto}
+  .sb-modes button span{display:none}
+  #view-practice .fcl-side{display:contents}
+  #view-practice .fcl-main{order:2}
+  #view-practice .pxprog{order:3}
+}
+@media (max-width:560px){.px-tabs button{font-size:15.5px;padding:9px 13px 8px}.vhead.plain h1{font-size:40px}}
+.studybar .px-tabs button{flex-direction:row;border-radius:14px 14px 0 0;border:2px solid var(--ink);border-bottom:0;padding:11px 20px 10px;max-width:none;background:var(--card);color:var(--ink)}
+.studybar .px-tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.studybar .px-tabs button span{font-size:12px;color:var(--muted);line-height:1.4}
+.studybar .px-tabs button[aria-selected="true"] span{color:#1C1600;opacity:1}
+.fcl #fc-stage{border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:18px}
+:root[data-theme="dark"] .fcl #fc-stage{box-shadow:4px 4px 0 color-mix(in srgb,var(--ink) 35%,transparent);border-color:color-mix(in srgb,var(--ink) 55%,transparent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fcl #fc-stage{box-shadow:4px 4px 0 color-mix(in srgb,var(--ink) 35%,transparent);border-color:color-mix(in srgb,var(--ink) 55%,transparent)}}
+@media (max-width:560px){.studybar .px-tabs button{font-size:15.5px;padding:9px 13px 8px}}

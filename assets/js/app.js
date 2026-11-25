@@ -104,10 +104,10 @@ function render(u){
   if(u&&UNITS.some(function(x){return x[0]===u})){F.us=[u];F.cmd='';saveF();V.shown=15;V.order=null}
   var el=$('view-practice');
   if(!V.ready){
-    el.innerHTML='<div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Practise</div><h1>Practice</h1><p>Exam-style questions with markschemes, timed papers and flashcards, all in one place. Choose a way to study, pick your topics, and your progress is saved as you go.</p></div></div>'+
-      '<div class="vbody"><div class="studybar" id="sb-practice"></div><div class="px-head" id="px-head"></div>'+
-      '<div class="px-modes"><span class="seg" role="group" aria-label="Mode"><button type="button" data-m="bank">Question bank</button><button type="button" data-m="paper">Mini paper</button></span><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></div>'+
-      '<div class="px-filters" id="px-filters"><div class="gl-bar"><input type="search" id="px-q" placeholder="Search questions, e.g. “cache” or “normalise”" aria-label="Search questions" autocomplete="off"><span class="gl-count" id="px-count"></span><button type="button" class="ftog" id="px-ftog" aria-expanded="false" aria-controls="px-fbody">Filters</button></div><div class="fsum" id="px-fsum"></div><div class="fbody" id="px-fbody">'+
+    el.innerHTML='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Answer exam-style questions and mark them against the markscheme, or learn the terms with flashcards. Pick your topics, choose a study mode, and your progress is saved.</p></div></div>'+
+      '<div class="vbody pxv"><div class="studybar" id="sb-practice"></div><div class="fcl"><aside class="fcl-side">'+
+      '<div class="px-modes"><span class="seg" role="group" aria-label="Mode"><button type="button" data-m="bank">Question bank</button><button type="button" data-m="paper">Mini paper</button></span></div>'+
+      '<div class="px-filters fcl-box" id="px-filters"><span class="fcl-bh">Your questions</span><div class="gl-bar"><input type="search" id="px-q" placeholder="Search questions, e.g. “cache” or “normalise”" aria-label="Search questions" autocomplete="off"><span class="gl-count" id="px-count"></span><button type="button" class="ftog" id="px-ftog" aria-expanded="false" aria-controls="px-fbody">Filters</button></div><div class="fsum" id="px-fsum"></div><div class="fbody" id="px-fbody">'+
       '<div class="chips" id="px-units" role="group" aria-label="Topic"></div>'+
       '<div class="px-sel"><label><span>Questions</span><select id="px-src"><option value="exam">All exam-style</option><option value="quiz">Test-yourself and bank only</option><option value="model">Model answers from the notes</option><option value="mix">Mixed-topic questions</option><option value="long">Long answers (5+ marks)</option><option value="term">Definitions (glossary)</option><option value="all">Everything incl. definitions</option></select></label>'+
       '<label><span>Paper</span><select id="px-pp"><option value="">Both papers</option><option value="1">Paper 1 · Theme A + case study</option><option value="2">Paper 2 · Theme B</option></select></label>'+
@@ -115,7 +115,9 @@ function render(u){
       '<label><span>Marks</span><select id="px-mk"><option value="">Any</option><option value="1">1–2</option><option value="3">3–4</option><option value="5">5–6</option><option value="7">7 or more</option></select></label>'+
       '<label><span>Status</span><select id="px-st"><option value="">Any</option><option value="new">Not tried yet</option><option value="lost">Lost marks</option><option value="full">Full marks</option><option value="star">Starred</option></select></label>'+
       '<button type="button" class="minibtn" id="px-shuf" aria-pressed="false">Shuffle</button></div></div></div>'+
-      '<div id="px-body"></div></div>';
+      '<section class="fcl-box fcl-modes"><span class="fcl-bh">Study mode</span><div class="sb-modes"></div></section>'+
+      '<section class="fcl-box pxprog"><span class="fcl-bh">Your progress</span><div class="px-head" id="px-head"></div><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></section>'+
+      '</aside><div class="fcl-main"><div id="px-body"></div></div></div></div>';
     $('px-q').addEventListener('input',function(){F.q=this.value;saveF();V.shown=15;V.order=null;drawList()});
     $('px-ftog').addEventListener('click',function(){V.fopen=!V.fopen;lsSet('csPracFOpen',V.fopen);fsum()});
     $('px-fsum').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
@@ -477,15 +479,19 @@ function show(v){
 /* one Practice tab: exam questions and flashcards share a "Choose a way to study" bar (as in the BM notes) */
 var QMODES=[['bank','Question bank','Write answers, tick the markscheme'],['paper','Mini paper','Timed, Paper 1 or Paper 2']];
 function studyBar(){
-  var fcm=window.csFc&&window.csFc.modes?window.csFc.modes():[],cur=CUR.v==='flashcards'?'f:'+(window.csFc?window.csFc.mode():''):'q:'+(window.csPrac?window.csPrac.mode():'bank');
-  var b=function(g,m){var k=g+':'+m[0];return '<button type="button" data-sm="'+k+'" aria-pressed="'+(k===cur)+'"><b>'+esc(g==='f'&&m[0]==='flash'?'Flip cards':m[1])+'</b><span>'+esc(m[2])+'</span></button>'};
-  var h='<div class="sb-h">Choose a way to study</div><div class="sb-groups"><div class="sb-g"><span class="sb-l">Exam questions</span><div class="sb-row">'+QMODES.map(function(m){return b('q',m)}).join('')+'</div></div>'+
-    '<div class="sb-g"><span class="sb-l">Flashcards</span><div class="sb-row">'+fcm.map(function(m){return b('f',m)}).join('')+'</div></div></div>';
-  document.querySelectorAll('.studybar').forEach(function(el){el.innerHTML=h});
+  var fcm=window.csFc&&window.csFc.modes?window.csFc.modes():[],isF=CUR.v==='flashcards',cur=isF?'f:'+(window.csFc?window.csFc.mode():''):'q:'+(window.csPrac?window.csPrac.mode():'bank');
+  var nq=window.csPrac?window.csPrac.count(isSL()):0,nf=window.csFc&&window.csFc.total?window.csFc.total():0;
+  var qm=window.csPrac?window.csPrac.mode():'bank',fm=window.csFc?window.csFc.mode():'flash';
+  var tabs='<div class="px-tabs" role="tablist" aria-label="Practice"><button type="button" role="tab" data-sm="q:'+qm+'" aria-selected="'+!isF+'">Exam questions <span>'+nq.toLocaleString('en')+'</span></button>'+
+    '<button type="button" role="tab" data-sm="f:'+fm+'" aria-selected="'+isF+'">Flashcards <span>'+(nf?nf.toLocaleString('en'):'')+'</span></button></div>';
+  document.querySelectorAll('.studybar').forEach(function(el){el.innerHTML=tabs});
+  var list=isF?fcm.map(function(m){return ['f',m]}):QMODES.map(function(m){return ['q',m]});
+  var mh=list.map(function(x){var g=x[0],m=x[1],k=g+':'+m[0];return '<button type="button" data-sm="'+k+'" aria-pressed="'+(k===cur)+'"><b>'+esc(g==='f'&&m[0]==='flash'?'Flip cards':m[1])+'</b><span>'+esc(m[2])+'</span></button>'}).join('');
+  document.querySelectorAll('.sb-modes').forEach(function(el){el.innerHTML=mh});
 }
 window.csStudyBar=studyBar;
 document.addEventListener('click',function(e){
-  var bt=e.target.closest('.studybar button[data-sm]');if(!bt)return;
+  var bt=e.target.closest('.studybar button[data-sm],.sb-modes button[data-sm]');if(!bt)return;
   var k=bt.dataset.sm.split(':');
   if(k[0]==='q'){if(window.csPrac)window.csPrac.setMode(k[1]);if(CUR.v!=='practice')nav('practice');else studyBar()}
   else{if(window.csFc)window.csFc.start(k[1]);if(CUR.v!=='flashcards')nav('flashcards');else studyBar()}
@@ -1738,6 +1744,7 @@ function startMemory(list,key,n){
 
 var MODEFN={flash:modeFlash,learn:modeLearn,write:modeWrite,test:modeTest,match:modeMatch,memory:modeMemory,gravity:modeGravity,blitz:modeBlitz,drill:function(st){window.csDrill&&window.csDrill(st)}};
 window.csFc={
+  total:function(){return visibleCards().length},
   init:function(){
     if(this.ready){renderDeck();return}
     this.ready=true;
