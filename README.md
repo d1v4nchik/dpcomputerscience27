@@ -58,23 +58,21 @@ Notes, flashcards, practice questions and exam guides for **SL and HL**, made fo
   <tr>
     <td align="center" width="25%"><h2>23</h2><sub>topic pages</sub></td>
     <td align="center" width="25%"><h2>1,394</h2><sub>flashcards</sub></td>
-    <td align="center" width="25%"><h2>546</h2><sub>exam-style questions</sub></td>
+    <td align="center" width="25%"><h2>546</h2><sub>practice questions</sub></td>
     <td align="center" width="25%"><h2>719</h2><sub>glossary terms</sub></td>
   </tr>
 </table>
 
 <sub>Numbers are for HL. SL has 16 topic pages, 907 flashcards, 346 questions and 497 terms, because HL-only content is hidden.</sub>
 
-| | |
-| :--- | :--- |
-| 🗺️ **Notes as a map** | Every topic is a coloured line and every page is a stop, so you always know where you are. Each idea has an exam definition, a plain-words explanation and an everyday example. |
-| 📝 **Short or long** | Switch between quick cheat-sheet points and full textbook-style explanations. |
-| 🎬 **Videos** | A short video for almost every syllabus point (136 in total). |
-| 🃏 **Flashcards and games** | Learn, Write and Test modes, plus Match, Memory, Gravity and Blitz. Cards explain *why* the answer is right. |
-| ✍️ **Exam practice** | Write your answer, open the markscheme and tick off what you got. Or sit a timed paper. |
-| 📖 **Glossary** | Every key term with a full-mark definition. Underlined words in the notes open their meaning. |
-| 🧭 **Guides** | How each exam paper works, the IA, pseudocode and the 2027 case study. |
-| 🌙 **Dark mode** | Easy on the eyes at night, on any screen. |
+- 🗺️ **Notes as a map**: Every topic is a coloured line and every page is a stop, so you always know where you are. Each idea has an exam definition, a plain-words explanation and an everyday example.
+- 📝 **Short or long**: Switch between quick cheat-sheet points and full textbook-style explanations.
+- 🎬 **Videos**: A short video for almost every syllabus point (136 in total).
+- 🃏 **Flashcards and games**: Learn, Write and Test modes, plus Match, Memory, Gravity and Blitz. Cards explain *why* the answer is right.
+- ✍️ **Exam practice**: Write your answer, open the markscheme and tick off what you got. Or sit a timed paper.
+- 📖 **Glossary**: Every key term with a full-mark definition. Underlined words in the notes open their meaning.
+- 🧭 **Guides**: How each exam paper works, the IA, pseudocode and the 2027 case study.
+- 🌙 **Dark mode**: Easy on the eyes at night, on any screen.
 
 ## 📴 Studying without internet
 
