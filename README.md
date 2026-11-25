@@ -1,86 +1,149 @@
 <div align="center">
 
-<img src="favicon.svg" width="72" height="72" alt="">
+<img src="favicon.svg" width="88" height="88" alt="">
 
-# IB Computer Science Cheat Sheet
+# IB Computer Science Notes
 
-**Free SL and HL notes for the IB Diploma Computer Science course (first exams 2027).**
-Every topic in plain words, with flashcards, exam-style practice, a glossary and exam guides. No sign-up, no ads, nothing to install.
+### Everything you need for IB CS, explained in plain words 💡
 
-[![Open the notes](https://img.shields.io/badge/Open_the_notes-d1v4nchik.github.io-2C5BDB?style=for-the-badge)](https://d1v4nchik.github.io/dpcomputerscience27/)
-
-![Syllabus](https://img.shields.io/badge/syllabus-first_exams_2027-15171C)
-![Levels](https://img.shields.io/badge/levels-SL_%2B_HL-14876B)
-![Code](https://img.shields.io/badge/code-Python_%7C_Java-E07A1F)
-[![Last updated](https://img.shields.io/github/last-commit/d1v4nchik/dpcomputerscience27?label=last%20updated&color=127A93)](https://github.com/d1v4nchik/dpcomputerscience27/commits/main)
+Notes, flashcards, practice questions and exam guides for **SL and HL**, made for the **2027 syllabus**.
 
 <br>
 
+<a href="https://d1v4nchik.github.io/dpcomputerscience27/"><img src="https://img.shields.io/badge/Open_the_notes-2C5BDB?style=for-the-badge&logo=bookstack&logoColor=white" alt="Open the notes" height="44"></a>
+&nbsp;
+<a href="https://github.com/d1v4nchik/dpcomputerscience27/releases/download/offline/ib-cs-notes-offline.html"><img src="https://img.shields.io/badge/Download_for_offline-15171C?style=for-the-badge&logo=files&logoColor=white" alt="Download for offline" height="44"></a>
+
+<sub>✅ 100% free &nbsp;·&nbsp; ✅ No sign-up &nbsp;·&nbsp; ✅ No ads &nbsp;·&nbsp; ✅ Works on your phone</sub>
+
+<br><br>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/home-dark.png">
-  <img src=".github/screenshots/home.png" alt="Home page: search box and the topic line map" width="900">
+  <img src=".github/screenshots/home.png" alt="The home page of the notes, with a search box and a map of every topic" width="880">
 </picture>
 
 </div>
 
-## Start studying
+<br>
 
-You don't need to download anything. **[Open the notes](https://d1v4nchik.github.io/dpcomputerscience27/)** in any browser, on your laptop or your phone, and you always get the newest version. Bookmark it, or press <kbd>/</kbd> on any page to search.
+## 👋 New here? Start in 3 steps
 
-Your flashcard and practice progress is saved in your browser on that device. There's no account, so it doesn't move between devices.
+<table>
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <h3>1️⃣</h3>
+      <b><a href="https://d1v4nchik.github.io/dpcomputerscience27/">Open the notes</a></b><br>
+      <sub>It's just a website. Nothing to install, no account needed.</sub>
+    </td>
+    <td width="33%" valign="top" align="center">
+      <h3>2️⃣</h3>
+      <b>Pick SL or HL</b><br>
+      <sub>Use the switch at the top. You can also pick Python or Java for code examples.</sub>
+    </td>
+    <td width="33%" valign="top" align="center">
+      <h3>3️⃣</h3>
+      <b>Choose a topic and go</b><br>
+      <sub>Read the notes, then test yourself in <b>Practice</b>. Your progress saves by itself.</sub>
+    </td>
+  </tr>
+</table>
 
-## Use it without internet
+> [!TIP]
+> Press <kbd>/</kbd> on any page to search for a word, a topic or a whole exam question.
 
-Revising on a plane, on the bus, or somewhere with bad wifi? There are two ways.
+## 🎒 What's inside
 
-### Option 1: Install it as an app (recommended)
+<table>
+  <tr>
+    <td align="center" width="25%"><h2>23</h2><sub>topic pages</sub></td>
+    <td align="center" width="25%"><h2>1,394</h2><sub>flashcards</sub></td>
+    <td align="center" width="25%"><h2>546</h2><sub>exam-style questions</sub></td>
+    <td align="center" width="25%"><h2>719</h2><sub>glossary terms</sub></td>
+  </tr>
+</table>
 
-Install the site and it keeps a copy of every topic on your device. It opens offline, and **it updates itself** the next time you're online.
+<sub>Numbers are for HL. SL has 16 topic pages, 907 flashcards, 346 questions and 497 terms, because HL-only content is hidden.</sub>
 
-| Device | How |
+| | |
 | :--- | :--- |
-| Laptop (Chrome or Edge) | Open the site, then click the **Install** icon at the right of the address bar. |
-| iPhone or iPad (Safari) | Tap **Share**, then **Add to Home Screen**. |
-| Android (Chrome) | Tap the **⋮** menu, then **Install app** or **Add to Home screen**. |
+| 🗺️ **Notes as a map** | Every topic is a coloured line and every page is a stop, so you always know where you are. Each idea has an exam definition, a plain-words explanation and an everyday example. |
+| 📝 **Short or long** | Switch between quick cheat-sheet points and full textbook-style explanations. |
+| 🎬 **Videos** | A short video for almost every syllabus point (136 in total). |
+| 🃏 **Flashcards and games** | Learn, Write and Test modes, plus Match, Memory, Gravity and Blitz. Cards explain *why* the answer is right. |
+| ✍️ **Exam practice** | Write your answer, open the markscheme and tick off what you got. Or sit a timed paper. |
+| 📖 **Glossary** | Every key term with a full-mark definition. Underlined words in the notes open their meaning. |
+| 🧭 **Guides** | How each exam paper works, the IA, pseudocode and the 2027 case study. |
+| 🌙 **Dark mode** | Easy on the eyes at night, on any screen. |
 
-Open the site once while you're online before you go offline, so it has time to save the notes.
+## 📴 Studying without internet
 
-### Option 2: Download one file
+On a plane, on the bus or stuck with bad wifi? Pick one:
 
-[![Download the offline copy](https://img.shields.io/badge/Download-offline_copy_%28one_file%29-15171C?style=for-the-badge)](https://github.com/d1v4nchik/dpcomputerscience27/releases/download/offline/ib-cs-notes-offline.html)
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📲 Install it as an app</h3>
+      <b>⭐ Recommended</b><br><br>
+      Keeps every topic on your device and opens offline.<br>
+      ✅ <b>Updates itself</b> whenever you're back online.
+      <br><br>
+      <b>Laptop</b> (Chrome or Edge): open the notes and click the <b>Install</b> icon at the right of the address bar.<br>
+      <b>iPhone / iPad</b> (Safari): tap <b>Share</b>, then <b>Add to Home Screen</b>.<br>
+      <b>Android</b> (Chrome): tap <b>⋮</b>, then <b>Install app</b>.
+    </td>
+    <td width="50%" valign="top">
+      <h3>💾 Download one file</h3>
+      <b>For laptops</b><br><br>
+      One file with all the notes. Double-click it to open it in your browser. No internet needed.<br>
+      ⚠️ <b>Doesn't update itself.</b> If newer notes come out, it will show a message (when you're online) so you can download it again.
+      <br><br>
+      <a href="https://github.com/d1v4nchik/dpcomputerscience27/releases/download/offline/ib-cs-notes-offline.html"><b>⬇️ Download the file</b></a>
+    </td>
+  </tr>
+</table>
 
-A single HTML file with all the notes, flashcards and practice questions. Save it anywhere and double-click it to open it in your browser, no internet needed. Best on a laptop.
+> [!NOTE]
+> Open the notes once with internet before you go offline, so the app has time to save everything.
 
-> [!WARNING]
-> **A downloaded copy does not update itself.** Corrections and new questions only reach the live site and the app. If you open the file while you're online it will tell you when a newer copy is out, so you can download it again. If you can, use Option 1 instead.
+## 🖼️ A quick look
 
-## What's inside
+<table>
+  <tr>
+    <td width="50%"><img src=".github/screenshots/topic.png" alt="A topic page: A1.1 Hardware, with its stops"><br><sub><b>Topic page.</b> Stops along the line, exam definitions and diagrams.</sub></td>
+    <td width="50%"><img src=".github/screenshots/flashcards.png" alt="Flashcards in Learn mode"><br><sub><b>Flashcards.</b> Learn mode, plus Write, Test and four games.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src=".github/screenshots/practice.png" alt="Practice question bank with filters"><br><sub><b>Practice.</b> Filter by topic, command term and marks, then self-mark.</sub></td>
+    <td width="50%"><img src=".github/screenshots/glossary.png" alt="Glossary in dark mode"><br><sub><b>Glossary.</b> Every term with its full-mark definition (dark mode).</sub></td>
+  </tr>
+</table>
 
-|                             | Standard Level | Higher Level |
-| --------------------------- | -------------: | -----------: |
-| Topic pages                 |             16 |           23 |
-| Flashcards                  |            907 |        1,394 |
-| Exam-style questions        |            346 |          546 |
-| Glossary terms              |            497 |          719 |
+<p align="center">
+  <img src=".github/screenshots/mobile.png" alt="Topic page on a phone" width="240">
+  &nbsp;&nbsp;
+  <img src=".github/screenshots/mobile-dark.png" alt="Home page on a phone in dark mode" width="240">
+</p>
 
-Plus 83 diagrams, 136 linked videos (one for almost every syllabus point), and guides for the exams, the IA, pseudocode and the 2027 case study.
+## ❓ Questions
 
-## Features
+<details>
+<summary><b>Is it really free?</b></summary>
+<br>
+Yes. No payments, no ads and no account. Just open it and study.
+</details>
 
-- **Notes as a transit map.** Each syllabus topic is a coloured *line*, and each page of notes is a *stop*. Every section has an exam definition, a plain-words explanation and an analogy.
-- **Cheat sheet or Textbook.** Switch between quick revision points and full written explanations of every stop.
-- **Videos on every stop.** A short video for that exact syllabus point, plus links that jump to the right minute of longer lectures.
-- **SL or HL.** HL-only content stays hidden until you switch it on.
-- **Python or Java.** All Theme B code examples come in both, so pick the one your school teaches.
-- **Flashcards.** Flip, *Learn* (four mastery levels), *Write* (mark yourself like an examiner), *Test*, and four games: Match, Memory, Gravity and Blitz. *Number drill* gives you fresh Paper 1 calculations every time. Quick-answer cards explain *why* the answer is right.
-- **Exam practice.** Filter questions by unit, Paper 1 or Paper 2, command term or marks. Write your answer, open the markscheme and tick off the points you made, or sit a timed paper with Paper 1’s Section A / Section B split. *Open in the notes* jumps to the stop that teaches the idea.
-- **Glossary.** Every term with a full-mark definition, with *Learn these* and *Test me* for each topic. Underlined words in the notes open their definition in place.
-- **Exam, IA and case study guides.** How each paper works, what the command terms want, how to plan your IA, and the 2027 case study.
-- **Light and dark mode**, on phones as well as laptops.
+<details>
+<summary><b>Where is my progress saved?</b></summary>
+<br>
+In your browser, on the device you're using. Nobody else can see it. Because there's no account, progress on your laptop and your phone stays separate.
+</details>
 
-## Syllabus coverage
-
-HL-only pages are marked **HL**.
+<details>
+<summary><b>Does it cover my syllabus?</b></summary>
+<br>
+It's written for IB Computer Science with <b>first exams in 2027</b>, both SL and HL. Here's every topic:
+<br><br>
 
 **Theme A: Concepts of computer science (Paper 1)**
 
@@ -102,36 +165,32 @@ HL-only pages are marked **HL**.
 
 **Guides:** Exam toolkit · Internal assessment (IA) · 2027 case study · Pseudocode help · Resources
 
-## Screenshots
+</details>
 
-<table>
-  <tr>
-    <td width="50%"><img src=".github/screenshots/topic.png" alt="A topic page: A1.1 Hardware, with its stops"><br><sub><b>Topic page.</b> Stops along the line, exam definitions and diagrams.</sub></td>
-    <td width="50%"><img src=".github/screenshots/flashcards.png" alt="Flashcards in Learn mode"><br><sub><b>Flashcards.</b> Learn mode, plus Write, Test and four games.</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src=".github/screenshots/practice.png" alt="Practice question bank with filters"><br><sub><b>Practice.</b> Filter by topic, command term and marks, then self-mark.</sub></td>
-    <td width="50%"><img src=".github/screenshots/glossary.png" alt="Glossary in dark mode"><br><sub><b>Glossary.</b> Every term with its full-mark definition (dark mode).</sub></td>
-  </tr>
-</table>
+<details>
+<summary><b>Is this official IB material?</b></summary>
+<br>
+No. These are independent study notes. They're not made by, endorsed by or connected to the International Baccalaureate Organization. "IB" and "International Baccalaureate" are trademarks of the International Baccalaureate Organization. Always double-check with the official subject guide and your teacher.
+</details>
 
-<p align="center">
-  <img src=".github/screenshots/mobile.png" alt="Topic page on a phone" width="240">
-  &nbsp;&nbsp;
-  <img src=".github/screenshots/mobile-dark.png" alt="Home page on a phone in dark mode" width="240">
-</p>
+<details>
+<summary><b>I found a mistake. What do I do?</b></summary>
+<br>
+Thank you! Please <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml">send a correction</a>. Say which topic it's in (for example <i>A2.1</i>) and what's wrong. You'll need a free GitHub account. Have an idea instead? <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=suggestion.yml">Make a suggestion</a>.
+</details>
 
-## Found a mistake?
+<details>
+<summary><b>Can I share it?</b></summary>
+<br>
+Please do! Send the <a href="https://d1v4nchik.github.io/dpcomputerscience27/">link</a> to your classmates and teachers. The notes are © d1v4nchik, all rights reserved, so please share the link rather than copying, reposting or selling the content.
+</details>
 
-Spotted an error, a typo or something that doesn't match the 2027 syllabus? Please [send a correction](https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml). Mention the topic code (for example *A2.1*) and, if you can, where you checked it. Ideas for new features or topics are welcome too: [make a suggestion](https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=suggestion.yml). You need a free GitHub account to post either.
+<br>
 
-Want to help edit the notes directly? See [CONTRIBUTING.md](CONTRIBUTING.md).
+<div align="center">
 
-## Disclaimer
+**Good luck with your exams! 🍀**
 
-> [!NOTE]
-> These are independent study notes. They are not affiliated with, endorsed by or connected to the International Baccalaureate Organization. "IB" and "International Baccalaureate" are trademarks of the International Baccalaureate Organization. Always check against the official subject guide and your teacher.
+<sub>Want to help edit the site itself? See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</sub>
 
-## Sharing
-
-© d1v4nchik. All rights reserved. You're very welcome to share the [link to the notes](https://d1v4nchik.github.io/dpcomputerscience27/) with classmates and teachers, but please don't copy, repost or sell the content itself.
+</div>
