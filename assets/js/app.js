@@ -182,7 +182,7 @@ function card(q,n,opt){
     (/Python/.test(q.q)?'<p class="lang-note">Sitting Paper 2 in Java? Answer in Java: the marking points are the same.</p>':'')+
     '<textarea class="pq-ans" rows="'+(q.m>=6?7:q.m>=3?4:2)+'" placeholder="'+(opt.paper?'Your answer':'Write your answer first (optional), then open the markscheme')+'" aria-label="Your answer">'+esc(V.ans[q.id]||'')+'</textarea>';
   if(!opt.paper)out+='<div class="pq-act"><button type="button" class="minibtn pri" data-a="ms">Show markscheme</button><button type="button" class="minibtn pq-ai" data-a="ai"'+(SAMPLE?'':' hidden')+'><span aria-hidden="true">✦</span> Mark with Claude</button>'+notesLink(q)+'</div>';
-  out+='<div class="pq-ms"'+(opt.open?'':' hidden')+'>'+ms(q)+'</div></article>';
+  out+='<div class="pq-ms"'+(opt.open?'':' hidden')+'>'+ms(q)+(q.st&&q.st.length?'<div class="pq-st"><div class="pq-lab">How to get the marks</div><ol>'+q.st.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ol></div>':'')+(q.tr?'<div class="pq-tr"><span class="pq-trl">Watch out</span> '+q.tr+'</div>':'')+'</div></article>';
   return out;
 }
 function ms(q){

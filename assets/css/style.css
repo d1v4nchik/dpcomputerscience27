@@ -1331,3 +1331,9 @@ body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 @media (max-width:999px){.fcl .spc-tabs{grid-template-columns:1fr 1fr}.fcl .spc-tabs button span,.fcl .spc-intro{display:none}}
 .fcl .px-more{display:block}.fcl .px-more>summary{justify-content:flex-start!important;margin:0!important}.fcl .px-more[open]>summary{margin-bottom:10px!important}
 @media (max-width:560px){.studybar .px-tabs button{font-size:14px;padding:9px 8px 10px;gap:6px}.studybar .px-tabs button span{padding:1px 6px;font-size:10.5px}}
+.pq-st{border-radius:12px;padding:10px 14px;background:color-mix(in srgb,var(--ink) 4%,var(--card));border:1px solid var(--hair)}
+.pq-st ol{margin:6px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:5px;font-size:15px;line-height:1.55}
+.pq-st li::marker{font-weight:800;color:var(--line)}
+.pq-tr{border-left:4px solid #E2A33A;border-radius:10px;padding:8px 12px;font-size:15px;line-height:1.55;background:color-mix(in srgb,#E2A33A 9%,var(--card))}
+.pq-trl{font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.pq-st ol,.pq-st li{font-family:var(--f-body)}.pq-st ol{list-style:decimal}
