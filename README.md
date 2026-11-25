@@ -5,15 +5,14 @@
 # IB Computer Science Cheat Sheet
 
 **Free SL and HL notes for the IB Diploma Computer Science course (first exams 2027).**
-Every topic in plain words, with flashcards, exam-style practice, a glossary and exam guides, all in one fast site.
+Every topic in plain words, with flashcards, exam-style practice, a glossary and exam guides. No sign-up, no ads, nothing to install.
 
 [![Open the notes](https://img.shields.io/badge/Open_the_notes-d1v4nchik.github.io-2C5BDB?style=for-the-badge)](https://d1v4nchik.github.io/dpcomputerscience27/)
 
 ![Syllabus](https://img.shields.io/badge/syllabus-first_exams_2027-15171C)
 ![Levels](https://img.shields.io/badge/levels-SL_%2B_HL-14876B)
 ![Code](https://img.shields.io/badge/code-Python_%7C_Java-E07A1F)
-![Stack](https://img.shields.io/badge/stack-HTML_%C2%B7_CSS_%C2%B7_JS-6D4AD8)
-[![Last commit](https://img.shields.io/github/last-commit/d1v4nchik/dpcomputerscience27?color=127A93)](https://github.com/d1v4nchik/dpcomputerscience27/commits/main)
+[![Last updated](https://img.shields.io/github/last-commit/d1v4nchik/dpcomputerscience27?label=last%20updated&color=127A93)](https://github.com/d1v4nchik/dpcomputerscience27/commits/main)
 
 <br>
 
@@ -23,6 +22,37 @@ Every topic in plain words, with flashcards, exam-style practice, a glossary and
 </picture>
 
 </div>
+
+## Start studying
+
+You don't need to download anything. **[Open the notes](https://d1v4nchik.github.io/dpcomputerscience27/)** in any browser, on your laptop or your phone, and you always get the newest version. Bookmark it, or press <kbd>/</kbd> on any page to search.
+
+Your flashcard and practice progress is saved in your browser on that device. There's no account, so it doesn't move between devices.
+
+## Use it without internet
+
+Revising on a plane, on the bus, or somewhere with bad wifi? There are two ways.
+
+### Option 1: Install it as an app (recommended)
+
+Install the site and it keeps a copy of every topic on your device. It opens offline, and **it updates itself** the next time you're online.
+
+| Device | How |
+| :--- | :--- |
+| Laptop (Chrome or Edge) | Open the site, then click the **Install** icon at the right of the address bar. |
+| iPhone or iPad (Safari) | Tap **Share**, then **Add to Home Screen**. |
+| Android (Chrome) | Tap the **⋮** menu, then **Install app** or **Add to Home screen**. |
+
+Open the site once while you're online before you go offline, so it has time to save the notes.
+
+### Option 2: Download one file
+
+[![Download the offline copy](https://img.shields.io/badge/Download-offline_copy_%28one_file%29-15171C?style=for-the-badge)](https://github.com/d1v4nchik/dpcomputerscience27/releases/download/offline/ib-cs-notes-offline.html)
+
+A single HTML file with all the notes, flashcards and practice questions. Save it anywhere and double-click it to open it in your browser, no internet needed. Best on a laptop.
+
+> [!WARNING]
+> **A downloaded copy does not update itself.** Corrections and new questions only reach the live site and the app. If you open the file while you're online it will tell you when a newer copy is out, so you can download it again. If you can, use Option 1 instead.
 
 ## What's inside
 
@@ -39,16 +69,14 @@ Plus 83 diagrams, 136 linked videos (one for almost every syllabus point), and g
 
 - **Notes as a transit map.** Each syllabus topic is a coloured *line*, and each page of notes is a *stop*. Every section has an exam definition, a plain-words explanation and an analogy.
 - **Cheat sheet or Textbook.** Switch between quick revision points and full written explanations of every stop.
-- **Videos on every stop.** A short video for that exact syllabus point, plus links that jump to the right minute of longer topic lectures.
-- **SL / HL toggle.** HL-only content is hidden until you need it.
-- **Python / Java toggle.** All Theme B code examples come in both languages.
-- **One Practice tab.** Exam questions, timed papers and every flashcard mode sit together under *Choose a way to study*.
-- **Flashcards.** Flip, *Learn* (four mastery levels), *Write* (mark yourself like an examiner), *Test*, and four games: Match, Memory, Gravity and Blitz. *Number drill* generates fresh Paper 1 calculations. Quick-answer cards explain *why* the answer is right, and a chosen mode opens on its own until you leave it.
-- **Practice.** Filter by one or several units, Paper 1 or Paper 2, command term, marks or status, including questions that mix units. Write an answer, open the markscheme and tick the points you made, or sit a timed paper with Paper 1’s Section A / Section B split. Code questions follow the Python / Java switch, with example answers. *Open in the notes* goes to the stop that teaches the idea (its own answer stays hidden), with a button straight back.
-- **Glossary.** Every term with a full-mark definition, filterable by several units at once, with *Learn these* and *Test me* for each topic. Underlined words in the notes open their definition in place.
-- **Search everything.** Press <kbd>/</kbd> to search terms, notes and questions.
-- **Your progress stays on your device.** No account, no ads, no analytics. Progress is saved in your browser.
-- **Light and dark mode.** Works on phones as well as laptops.
+- **Videos on every stop.** A short video for that exact syllabus point, plus links that jump to the right minute of longer lectures.
+- **SL or HL.** HL-only content stays hidden until you switch it on.
+- **Python or Java.** All Theme B code examples come in both, so pick the one your school teaches.
+- **Flashcards.** Flip, *Learn* (four mastery levels), *Write* (mark yourself like an examiner), *Test*, and four games: Match, Memory, Gravity and Blitz. *Number drill* gives you fresh Paper 1 calculations every time. Quick-answer cards explain *why* the answer is right.
+- **Exam practice.** Filter questions by unit, Paper 1 or Paper 2, command term or marks. Write your answer, open the markscheme and tick off the points you made, or sit a timed paper with Paper 1’s Section A / Section B split. *Open in the notes* jumps to the stop that teaches the idea.
+- **Glossary.** Every term with a full-mark definition, with *Learn these* and *Test me* for each topic. Underlined words in the notes open their definition in place.
+- **Exam, IA and case study guides.** How each paper works, what the command terms want, how to plan your IA, and the 2027 case study.
+- **Light and dark mode**, on phones as well as laptops.
 
 ## Syllabus coverage
 
@@ -93,39 +121,11 @@ HL-only pages are marked **HL**.
   <img src=".github/screenshots/mobile-dark.png" alt="Home page on a phone in dark mode" width="240">
 </p>
 
-## Run it locally
+## Found a mistake?
 
-It's a static site with no build step and no dependencies.
+Spotted an error, a typo or something that doesn't match the 2027 syllabus? Please [send a correction](https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml). Mention the topic code (for example *A2.1*) and, if you can, where you checked it. Ideas for new features or topics are welcome too: [make a suggestion](https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=suggestion.yml). You need a free GitHub account to post either.
 
-```bash
-git clone https://github.com/d1v4nchik/dpcomputerscience27.git
-cd dpcomputerscience27
-python3 -m http.server 8000
-```
-
-Then open <http://localhost:8000>. Any static file server works.
-
-## Project structure
-
-```
-.
-├── index.html            # Page shell
-├── assets/
-│   ├── css/style.css     # All styles, light and dark themes
-│   ├── pages.html        # Every topic page and diagram, loaded after the first screen
-│   ├── js/data.js        # Course content: topics, glossary, flashcards, question bank, videos
-│   ├── js/app.js         # Router, search, flashcards, practice and number drill
-│   └── img/              # Social preview image
-├── favicon.svg
-├── robots.txt
-└── sitemap.xml
-```
-
-It's deployed with GitHub Pages straight from `main`.
-
-## Corrections and suggestions
-
-Spotted a mistake, a typo or something that doesn't match the 2027 syllabus? Please [open a correction](https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml). Include the topic code (for example *A2.1*) and, if you can, a source. Ideas are welcome too: [make a suggestion](https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=suggestion.yml).
+Want to help edit the notes directly? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Disclaimer
 
