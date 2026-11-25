@@ -101,7 +101,7 @@ function render(u){
   if(u){if(u==='p1'||u==='p2')PAPER=u;else S.papers.forEach(function(P){P.groups.forEach(function(g){g.parts.forEach(function(q){if(q.id===u)PAPER=P.id})})})}
   lsSet('csSpecP',PAPER);
   var P=S.papers.filter(function(x){return x.id===PAPER})[0]||S.papers[0];
-  var h='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Choose what to practise on the side; your progress is saved on this device.</p></div></div>'+
+  var h='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Your progress is saved on this device.</p></div></div>'+
    '<div class="vbody pxv"><div class="studybar" id="sb-specimen"></div><div class="fcl"><aside class="fcl-side"><div class="fcl-box"><span class="fcl-bh">Specimen papers</span>'+
    '<div class="spc-tabs" role="tablist">'+S.papers.map(function(x){return '<button type="button" role="tab" data-paper="'+x.id+'" aria-selected="'+(x.id===P.id)+'"><b>'+esc(x.name)+'</b><span>'+esc(x.sub)+'</span></button>'}).join('')+'</div>'+
    '<div class="spc-tot" id="spc-tot"></div>'+

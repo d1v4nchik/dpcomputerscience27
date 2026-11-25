@@ -104,29 +104,26 @@ function render(u){
   if(u&&UNITS.some(function(x){return x[0]===u})){F.us=[u];F.cmd='';saveF();V.shown=15;V.order=null}
   var el=$('view-practice');
   if(!V.ready){
-    el.innerHTML='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Choose what to practise on the side; your progress is saved on this device.</p></div></div>'+
+    el.innerHTML='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Your progress is saved on this device.</p></div></div>'+
       '<div class="vbody pxv"><div class="studybar" id="sb-practice"></div><div class="fcl"><aside class="fcl-side">'+
-      '<div class="px-modes"><span class="seg" role="group" aria-label="Mode"><button type="button" data-m="bank">Question bank</button><button type="button" data-m="paper">Mini paper</button></span></div>'+
-      '<div class="px-filters fcl-box" id="px-filters"><span class="fcl-bh">Your questions</span><div class="gl-bar"><input type="search" id="px-q" placeholder="Search questions, e.g. “cache” or “normalise”" aria-label="Search questions" autocomplete="off"><span class="gl-count" id="px-count"></span><button type="button" class="ftog" id="px-ftog" aria-expanded="false" aria-controls="px-fbody">Filters</button></div><div class="fsum" id="px-fsum"></div><div class="fbody" id="px-fbody">'+
-      '<div class="chips" id="px-units" role="group" aria-label="Topic"></div>'+
-      '<details class="px-more"><summary>More filters</summary><div class="px-sel"><label><span>Questions</span><select id="px-src"><option value="exam">All exam-style</option><option value="quiz">Test-yourself and bank only</option><option value="model">Model answers from the notes</option><option value="mix">Mixed-topic questions</option><option value="long">Long answers (5+ marks)</option><option value="term">Definitions (glossary)</option><option value="all">Everything incl. definitions</option></select></label>'+
-      '<label><span>Paper</span><select id="px-pp"><option value="">Both papers</option><option value="1">Paper 1 · Theme A + case study</option><option value="2">Paper 2 · Theme B</option></select></label>'+
-      '<label><span>Command term</span><select id="px-cmd"></select></label>'+
-      '<label><span>Marks</span><select id="px-mk"><option value="">Any</option><option value="1">1–2</option><option value="3">3–4</option><option value="5">5–6</option><option value="7">7 or more</option></select></label>'+
-      '<label><span>Status</span><select id="px-st"><option value="">Any</option><option value="new">Not tried yet</option><option value="lost">Lost marks</option><option value="full">Full marks</option><option value="star">Starred</option></select></label>'+
-      '<button type="button" class="minibtn" id="px-shuf" aria-pressed="false">Shuffle</button></div></details></div><div class="fcl-foot"><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></div></div>'+
-      '</aside><div class="fcl-main"><div class="pmh"><div class="pmh-top"><h2 id="px-title">Question bank</h2><div class="pmh-stats" id="px-head"></div></div><div class="sb-modes" role="group" aria-label="Study mode"></div></div><div id="px-body"></div></div></div></div>';
+      '<section class="fcl-box px-filters" id="px-filters"><button type="button" class="fcl-dtog" id="px-ftog" aria-expanded="false" aria-controls="px-fbody"><span class="fcl-bh">Filters</span><span class="fcl-dsum" id="px-fsum">All questions</span><i aria-hidden="true">▾</i></button>'+
+      '<div class="fbody" id="px-fbody"><div class="pf-g"><span class="pf-l">Unit</span><div class="pf-units" id="px-units" role="group" aria-label="Unit"></div></div>'+
+      '<label class="pf-g"><span class="pf-l">Paper</span><select id="px-pp"><option value="">Both papers</option><option value="1">Paper 1 · Theme A + case study</option><option value="2">Paper 2 · Theme B</option></select></label>'+
+      '<label class="pf-g"><span class="pf-l">Question type</span><select id="px-src"><option value="exam">All exam-style</option><option value="quiz">Test-yourself and bank only</option><option value="model">Model answers from the notes</option><option value="mix">Mixed-topic questions</option><option value="long">Long answers (5+ marks)</option><option value="term">Definitions (glossary)</option><option value="all">Everything incl. definitions</option></select></label>'+
+      '<label class="pf-g"><span class="pf-l">Command term</span><select id="px-cmd"></select></label>'+
+      '<label class="pf-g"><span class="pf-l">Marks</span><select id="px-mk"><option value="">Any marks</option><option value="1">1–2 marks</option><option value="3">3–4 marks</option><option value="5">5–6 marks</option><option value="7">7 or more</option></select></label>'+
+      '<label class="pf-g"><span class="pf-l">Show</span><select id="px-st"><option value="">All questions</option><option value="new">Not tried yet</option><option value="lost">Lost marks</option><option value="full">Full marks</option><option value="star">Starred</option></select></label>'+
+      '<div class="pf-row"><label class="pf-chk"><input type="checkbox" id="px-shuf"> Shuffle</label><button type="button" class="minibtn" id="px-clear">Clear filters</button></div></div></section>'+
+      '<section class="fcl-box px-prog"><span class="fcl-bh">Your progress</span><p class="pp-line" id="px-head"></p><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></section>'+
+      '</aside><div class="fcl-main"><div class="pxtop"><div class="sb-modes" role="group" aria-label="Study mode"></div><input type="search" id="px-q" placeholder="Search questions" aria-label="Search questions" autocomplete="off"></div><div class="px-cnt" id="px-count"></div><div id="px-body"></div></div></div></div>';
     $('px-q').addEventListener('input',function(){F.q=this.value;saveF();V.shown=15;V.order=null;drawList()});
     $('px-ftog').addEventListener('click',function(){V.fopen=!V.fopen;lsSet('csPracFOpen',V.fopen);fsum()});
-    $('px-fsum').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
-      if(b.dataset.a==='fclear'){F.us=[];F.pp='';F.src='exam';F.cmd='';F.mk='';F.st='';F.shuffle=false;saveF();V.shown=15;V.order=null;draw()}
-      else{V.fopen=true;lsSet('csPracFOpen',true);fsum()}});
+    $('px-clear').addEventListener('click',function(){F.us=[];F.pp='';F.src='exam';F.cmd='';F.mk='';F.st='';F.shuffle=false;F.q='';saveF();V.shown=15;V.order=null;draw()});
     $('px-units').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var u=b.dataset.u;
       if(u==='all')F.us=[];else{var k=F.us.indexOf(u);if(k>-1)F.us.splice(k,1);else F.us.push(u)}
       F.cmd='';saveF();V.shown=15;V.order=null;draw()});
     ['src','cmd','mk','st','pp'].forEach(function(k){$('px-'+k).addEventListener('change',function(){F[k]=this.value;saveF();V.shown=15;V.order=null;draw()})});
-    $('px-shuf').addEventListener('click',function(){F.shuffle=!F.shuffle;saveF();V.order=null;V.shown=15;draw()});
-    el.querySelector('.px-modes .seg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;V.mode=b.dataset.m;draw()});
+    $('px-shuf').addEventListener('change',function(){F.shuffle=this.checked;saveF();V.order=null;V.shown=15;draw()});
     $('px-body').addEventListener('click',onClick);
     $('px-body').addEventListener('change',onChange);
     V.ready=true;syncInit();samp();badge();
@@ -137,61 +134,60 @@ function head(){
   var sl=isSL(),all=Q.filter(function(q){return !(sl&&q.h)&&q.k!=='term'});
   var tried=0,got=0,tot=0,full=0;all.forEach(function(q){var r=rec(q.id);if(r&&r[0]!=null){tried++;got+=r[0];tot+=r[1];if(r[0]>=r[1])full++}});
   var last=P.papers.slice(-1)[0];
-  $('px-head').innerHTML='<span>Marked <b>'+tried+'</b></span><span>Score <b>'+(tot?Math.round(100*got/tot)+'%':'–')+'</b></span><span>Last paper <b>'+(last?last[1]+'/'+last[2]:'–')+'</b></span>';
+  $('px-head').innerHTML='<b>'+tried+'</b> of '+all.length+' questions marked'+(tot?' · <b>'+Math.round(100*got/tot)+'%</b> of marks':'')+(last?' · last mini paper <b>'+last[1]+'/'+last[2]+'</b>':'');
 }
 /* collapsible filters: a one-line summary of what is applied */
 V.fopen=!!lsGet('csPracFOpen',false);
 function fsum(){
   var el=$('px-filters');if(!el)return;
-  var parts=[],n=0,lab=function(id){var x=$(id);return x&&x.selectedIndex>=0?x.options[x.selectedIndex].text.replace(/\s*\(\d+\)$/,''):''};
-  if(F.us.length){parts.push(unitsLabel());n++}else parts.push('All units');
-  if(F.pp){parts.push('Paper '+F.pp);n++}
-  if(F.src!=='exam'){parts.push(lab('px-src'));n++}
-  if(F.cmd){parts.push(F.cmd);n++}
-  if(F.mk){parts.push(lab('px-mk')+' marks');n++}
-  if(F.st){parts.push(lab('px-st'));n++}
-  if(F.shuffle){parts.push('Shuffled');n++}
+  var parts=[],lab=function(id){var x=$(id);return x&&x.selectedIndex>=0?x.options[x.selectedIndex].text.replace(/\s*\(\d+\)$/,''):''};
+  if(F.us.length)parts.push(unitsLabel());
+  if(F.pp)parts.push('Paper '+F.pp);
+  if(F.src!=='exam')parts.push(lab('px-src'));
+  if(F.cmd)parts.push(F.cmd);
+  if(F.mk)parts.push(lab('px-mk'));
+  if(F.st)parts.push(lab('px-st'));
+  if(F.shuffle)parts.push('Shuffled');
   el.classList.toggle('open',!!V.fopen);
-  var t=$('px-ftog');t.setAttribute('aria-expanded',String(!!V.fopen));t.innerHTML='Filters'+(n?' <b class="fnum">'+n+'</b>':'')+'<span class="fchev" aria-hidden="true">'+(V.fopen?'▴':'▾')+'</span>';
-  $('px-fsum').innerHTML=V.fopen?'':'<button type="button" class="fsum-t">'+esc(parts.join(' · '))+'</button>'+(n?'<button type="button" class="fsum-x" data-a="fclear">Clear</button>':'');
+  $('px-ftog').setAttribute('aria-expanded',String(!!V.fopen));
+  $('px-fsum').textContent=parts.length?parts.join(' · '):'All questions';
 }
 function draw(){
   head();
-  document.querySelectorAll('.px-modes .seg button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.m===V.mode))});
   var sl=isSL();
-  $('px-units').innerHTML=UNITS.filter(function(u){if(u[0]==='all'||u[0]==='CS'||u[0]==='EX')return true;var l=CS.lines.filter(function(x){return x.id===u[0]})[0];return !(sl&&l&&l.pages.every(function(p){return p.hl}))}).map(function(u){
-    var n=u[0]==='all'?0:pool('u').filter(function(q){return unitsOf(q).indexOf(u[0])>-1}).length;
-    return '<button type="button" class="chip'+(u[0]!=='all'?' th-'+thOf(u[0]):'')+'" data-u="'+u[0]+'" aria-pressed="'+(u[0]==='all'?!F.us.length:F.us.indexOf(u[0])>-1)+'"'+(u[0]!=='all'&&!n?' disabled':'')+'>'+(u[0]!=='all'?'<i></i>':'')+esc(u[1])+(u[0]!=='all'?' <small>'+n+'</small>':'')+'</button>'}).join('');
+  $('px-units').innerHTML=UNITS.filter(function(u){if(u[0]==='all'||u[0]==='CS')return true;if(u[0]==='EX')return false;var l=CS.lines.filter(function(x){return x.id===u[0]})[0];return !(sl&&l&&l.pages.every(function(p){return p.hl}))}).map(function(u){
+    var n=u[0]==='all'?1:pool('u').filter(function(q){return unitsOf(q).indexOf(u[0])>-1}).length;
+    return n?'<button type="button" data-u="'+u[0]+'" aria-pressed="'+(u[0]==='all'?!F.us.length:F.us.indexOf(u[0])>-1)+'">'+esc(u[1])+'</button>':''}).join('');
   var cm={};pool('cmd').forEach(function(q){cm[q.c]=(cm[q.c]||0)+1});
   if(F.cmd&&!cm[F.cmd])F.cmd='';
   $('px-cmd').innerHTML='<option value="">Any</option>'+Object.keys(cm).sort(function(a,b){return cm[b]-cm[a]}).map(function(c){return '<option value="'+esc(c)+'"'+(F.cmd===c?' selected':'')+'>'+esc(c)+' ('+cm[c]+')</option>'}).join('');
   $('px-src').value=F.src;$('px-pp').value=F.pp||'';$('px-mk').value=F.mk||'';$('px-st').value=F.st||'';
   if($('px-q').value!==F.q)$('px-q').value=F.q||'';
-  $('px-shuf').setAttribute('aria-pressed',String(!!F.shuffle));
-  $('px-filters').classList.toggle('paper',V.mode==='paper');fsum();var tt=$('px-title');if(tt)tt.textContent=V.mode==='paper'?'Mini paper':'Question bank';
+  $('px-shuf').checked=!!F.shuffle;
+  $('px-filters').classList.toggle('paper',V.mode==='paper');$('view-practice').classList.toggle('px-papermode',V.mode==='paper');fsum();
   if(V.mode==='paper')drawPaper();else drawList();
 }
 function card(q,n,opt){
   opt=opt||{};
-  var r=rec(q.id),s=status(q.id),h=href(q),th=thOf(q.u);
+  var r=rec(q.id),s=status(q.id),th=thOf(q.u);
   var out='<article class="pq th-'+th+'" data-id="'+q.id+'">'+
-    '<header class="pq-h">'+(n?'<span class="pq-n">'+n+'</span>':'')+'<span class="pq-code">'+esc(codeOf(q))+'</span><span class="pq-src">'+esc(KIND[q.k]||'')+(titleOf(q)&&q.u!=='CS'&&!q.us?' · '+esc(titleOf(q)):'')+'</span>'+(q.h?'<span class="hltag">HL</span>':'')+
-    '<span class="pq-sp"></span>'+(opt.paper?'':'<span class="pq-st st-'+s+'">'+(s==='new'?'Not tried':s==='full'?'Full marks':'Scored '+r[0]+'/'+r[1])+'</span>')+
-    '<button type="button" class="pq-star" data-a="star" aria-pressed="'+starred(q.id)+'" aria-label="Star this question">'+(starred(q.id)?'★':'☆')+'</button></header>'+
-    '<div class="pq-q"><span class="pq-cmd">'+esc(q.c)+'</span> '+q.q+' <span class="pq-mk">['+q.m+']</span></div>'+
+    '<div class="pq-row">'+(n?'<span class="pq-num">'+n+'</span>':'')+'<div class="pq-q">'+q.q+'</div><span class="pq-mk">['+q.m+']</span>'+
+    '<button type="button" class="pq-star" data-a="star" aria-pressed="'+starred(q.id)+'" aria-label="Star this question">'+(starred(q.id)?'★':'☆')+'</button></div>'+
+    '<div class="pq-tags"><span class="pq-cmd">'+esc(q.c)+'</span>'+(q.h?'<span class="pq-tag hl">HL</span>':'')+(q.us?'<span class="pq-tag">'+esc(codeOf(q))+'</span>':'')+
+    (opt.paper?'':'<span class="pq-stat st-'+s+'"'+(s==='new'?' hidden':'')+'>'+(s==='full'?'Full marks':s==='new'?'':'Scored '+r[0]+'/'+r[1])+'</span>')+'</div>'+
     (/Python/.test(q.q)?'<p class="lang-note">Sitting Paper 2 in Java? Answer in Java: the marking points are the same.</p>':'')+
-    '<textarea class="pq-ans" rows="'+(q.m>=6?7:q.m>=3?4:2)+'" placeholder="'+(opt.paper?'Your answer':'Write your answer first (optional), then open the markscheme')+'" aria-label="Your answer">'+esc(V.ans[q.id]||'')+'</textarea>';
-  if(!opt.paper)out+='<div class="pq-act"><button type="button" class="minibtn pri" data-a="ms">Show markscheme</button><button type="button" class="minibtn pq-ai" data-a="ai"'+(SAMPLE?'':' hidden')+'><span aria-hidden="true">✦</span> Mark with Claude</button>'+notesLink(q)+'</div>';
-  out+='<div class="pq-ms"'+(opt.open?'':' hidden')+'>'+ms(q)+(q.st&&q.st.length?'<div class="pq-st"><div class="pq-lab">How to get the marks</div><ol>'+q.st.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ol></div>':'')+(q.tr?'<div class="pq-tr"><span class="pq-trl">Watch out</span> '+q.tr+'</div>':'')+'</div></article>';
+    '<textarea class="pq-ans" rows="'+(q.m>=6?6:3)+'" placeholder="Write your answer" aria-label="Your answer">'+esc(V.ans[q.id]||'')+'</textarea>';
+  if(!opt.paper)out+='<div class="pq-act"><button type="button" class="pq-msb" data-a="ms">Show markscheme</button><button type="button" class="minibtn pq-ai" data-a="ai"'+(SAMPLE?'':' hidden')+'><span aria-hidden="true">✦</span> Mark with Claude</button></div>';
+  out+='<div class="pq-ms"'+(opt.open?'':' hidden')+'>'+ms(q)+(q.st&&q.st.length?'<div class="pq-steps"><div class="pq-lab">How to get the marks</div><ol>'+q.st.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ol></div>':'')+(q.tr?'<div class="pq-tr"><span class="pq-trl">Watch out</span> '+q.tr+'</div>':'')+(opt.paper?'':'<div class="pq-foot">'+notesLink(q)+'</div>')+'</div></article>';
   return out;
 }
 function ms(q){
   var r=rec(q.id),cur=r&&r[0]!=null?r[0]:null,essay=q.k==='essay';
-  return '<div class="pq-lab">'+(essay?'Model response · read it, then judge your own answer against the markband':'Markscheme · tick each point you made (one mark each, up to '+q.m+')')+'</div>'+
+  return '<div class="pq-lab">'+(essay?'Model response · read it, then judge your own answer against the markband':'Markscheme · tick each point you made')+'</div>'+
     '<ul class="pq-pts">'+q.a.map(function(a,i){return '<li>'+(essay?'<span class="pq-dot" aria-hidden="true"></span><span>'+a+'</span>':'<label><input type="checkbox" data-pt="'+i+'"><span>'+a+'</span></label>')+'</li>'}).join('')+'</ul>'+
     (q.ex?'<div class="pq-ex"><div class="pq-lab">Example answer · other correct answers earn the same marks</div><pre class="lang-py">'+esc(q.ex.py)+'</pre><pre class="lang-java">'+esc(q.ex.java)+'</pre></div>':'')+
     (essay?'<p class="pq-band">'+(q.m===12?'HL markbands: 1–3 basic · 4–6 adequate · 7–9 competent · 10–12 proficient.':'SL markbands: 1–2 basic · 3–4 adequate · 5–6 competent.')+' Top band: a clear position, accurate case-study terms, both sides with specific mechanisms, and a justified conclusion.</p>':'')+
-    '<div class="pq-score"><span>Your mark</span><span class="pq-btns">'+Array.apply(null,Array(q.m+1)).map(function(_,i){return '<button type="button" data-mk="'+i+'" aria-pressed="'+(cur===i)+'">'+i+'</button>'}).join('')+'</span><span class="pq-of">/ '+q.m+'</span></div><div class="pq-aiout" aria-live="polite"></div>';
+    (essay?'<div class="pq-score"><span>Your mark</span><span class="pq-btns">'+Array.apply(null,Array(q.m+1)).map(function(_,i){return '<button type="button" data-mk="'+i+'" aria-pressed="'+(cur===i)+'">'+i+'</button>'}).join('')+'</span><span class="pq-of">/ '+q.m+'</span></div>':'<div class="pq-score"><span>Your mark</span><b class="pq-auto">'+(cur==null?'–':cur)+'</b><span class="pq-of">/ '+q.m+'</span></div>')+'<div class="pq-aiout" aria-live="polite"></div>';
 }
 V.ans=lsGet('csPracAns',{});
 var ansT=null;function saveAns(){clearTimeout(ansT);ansT=setTimeout(function(){lsSet('csPracAns',V.ans)},600)}
@@ -204,11 +200,16 @@ function listOrder(list){
 function drawList(){
   $('view-practice').classList.remove('px-focus');
   var list=listOrder(pool());
-  $('px-count').textContent=list.length+' question'+(list.length===1?'':'s');
   var body=$('px-body');if(V.mode!=='bank')return;
   if(!list.length){body.innerHTML='<p class="note">No questions match. Clear the search or pick “Any” in the filters.'+(isSL()?' Some questions are HL only: switch to HL to see them.':'')+'</p>';return}
   var marks=list.reduce(function(s,q){return s+q.m},0);
-  var h=(STOPF?'<div class="px-stop"><span>Questions for <b>'+esc(stopName(STOPF))+'</b></span><button type="button" class="minibtn" data-a="allq">Show all questions</button></div>':'')+'<div class="px-sum"><b>'+list.length+'</b> questions · <b>'+marks+'</b> marks'+(F.us.length?' in '+esc(unitsLabel()):'')+(F.pp?' · Paper '+F.pp:'')+(F.us.length>1&&F.src!=='mix'?' · includes questions that mix these units':'')+'</div><div class="pq-list">'+list.slice(0,V.shown).map(function(q){return card(q)}).join('')+'</div>';
+  $('px-count').innerHTML='<b>'+list.length+'</b> questions · <b>'+marks+'</b> marks'+(F.us.length?' · '+esc(unitsLabel()):'');
+  var shown=list.slice(0,V.shown),groups=[];
+  shown.forEach(function(q){var k=q.us?'m:'+q.us.join('+'):(q.p||q.u),g=groups[groups.length-1];if(!g||g.k!==k){g={k:k,q:q,items:[]};groups.push(g)}g.items.push(q)});
+  var h=(STOPF?'<div class="px-stop"><span>Questions for <b>'+esc(stopName(STOPF))+'</b></span><button type="button" class="minibtn" data-a="allq">Show all questions</button></div>':'')+'<div class="pq-panel">'+groups.map(function(g){
+    var q=g.q,t=q.us?'Mixed topics':(titleOf(q).replace(/^[A-Z]\d(\.\d)?\s+/,'')||(q.u==='CS'?'Case study':q.u==='EX'?'Exam skills':'')),gm=g.items.reduce(function(a,x){return a+x.m},0);
+    return '<section class="pq-grp th-'+thOf(q.u)+'"><header class="pq-gh"><div><span class="pq-gc">'+esc(codeOf(q))+'</span><h3>'+esc(t)+'</h3></div><span class="pq-gm">'+g.items.length+' question'+(g.items.length>1?'s':'')+' · '+gm+' marks</span></header>'+
+      g.items.map(function(x,i){return card(x,i+1)}).join('')+'</section>'}).join('')+'</div>';
   if(list.length>V.shown)h+='<div class="px-more"><button type="button" class="pill" data-a="more">Show '+Math.min(15,list.length-V.shown)+' more · '+(list.length-V.shown)+' left</button></div>';
   body.innerHTML=h;
 }
@@ -267,7 +268,7 @@ function build(target){
   var sum=pick.reduce(function(s,q){return s+q.m},0);
   return {ids:pick.map(function(q){return q.id}),start:Date.now(),end:Date.now()+Math.round(sum*1.5*60)*1000,mins:Math.round(sum*1.5),marks:{},done:false,pp:F.pp,secB:secB};
 }
-function pressMark(id,mk){var c=document.querySelector('.pq[data-id="'+id+'"]');if(!c)return;c.querySelectorAll('.pq-btns button').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.mk===mk))})}
+function pressMark(id,mk){var c=document.querySelector('.pq[data-id="'+id+'"]');if(!c)return;var au=c.querySelector('.pq-auto');if(au)au.textContent=mk;c.querySelectorAll('.pq-btns button').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.mk===mk))})}
 
 /* ---------- events ---------- */
 function onChange(e){
@@ -284,7 +285,7 @@ function pick(q,mk,c,soft){
   if(V.mode==='paper'&&V.paper){V.paper.marks[q.id]=mk;tick();return}
   if(soft)return;
   setScore(q.id,mk);
-  var st=c.querySelector('.pq-st');if(st){var s=status(q.id);st.className='pq-st st-'+s;st.textContent=s==='full'?'Full marks':'Scored '+mk+'/'+q.m}
+  var st=c.querySelector('.pq-stat');if(st){var s=status(q.id);st.className='pq-stat st-'+s;st.hidden=false;st.textContent=s==='full'?'Full marks':'Scored '+mk+'/'+q.m}
   head();
 }
 function onClick(e){
@@ -480,8 +481,8 @@ function studyBar(){
   var fcm=window.csFc&&window.csFc.modes?window.csFc.modes():[],isF=CUR.v==='flashcards',isS=CUR.v==='specimen',cur=isF?'f:'+(window.csFc?window.csFc.mode():''):'q:'+(window.csPrac?window.csPrac.mode():'bank');
   var nq=window.csPrac?window.csPrac.count(isSL()):0,nf=window.csFc&&window.csFc.total?window.csFc.total():0,ns=(window.CS_SPEC_Q||[]).length;
   var qm=window.csPrac?window.csPrac.mode():'bank',fm=window.csFc?window.csFc.mode():'flash';
-  var t=function(k,lab,n,on){return '<button type="button" role="tab" '+k+' aria-selected="'+on+'">'+lab+' <span>'+(n?n.toLocaleString('en'):'')+'</span></button>'};
-  var tabs='<div class="px-tabs" role="tablist" aria-label="Practice">'+t('data-sm="q:'+qm+'"','Exam questions',nq,!isF&&!isS)+t('data-sm="f:'+fm+'"','Flashcards',nf,isF)+t('data-spec="1"','Specimen papers',ns,isS)+'</div>';
+  var t=function(k,lab,n,on,sh){return '<button type="button" role="tab" '+k+' aria-selected="'+on+'"><em class="tl">'+lab+'</em><em class="ts">'+sh+'</em> <span>'+(n?n.toLocaleString('en'):'')+'</span></button>'};
+  var tabs='<div class="px-tabs" role="tablist" aria-label="Practice">'+t('data-sm="q:'+qm+'"','Exam questions',nq,!isF&&!isS,'Questions')+t('data-sm="f:'+fm+'"','Flashcards',nf,isF,'Flashcards')+t('data-spec="1"','Specimen papers',ns,isS,'Specimen')+'</div>';
   document.querySelectorAll('.studybar').forEach(function(el){el.innerHTML=tabs});
   var list=isF?fcm.map(function(m){return ['f',m]}):QMODES.map(function(m){return ['q',m]});
   var mh=list.map(function(x){var g=x[0],m=x[1],k=g+':'+m[0];return '<button type="button" data-sm="'+k+'" aria-pressed="'+(k===cur)+'" title="'+esc(m[2])+'">'+esc(g==='f'&&m[0]==='flash'?'Flip cards':m[1])+'</button>'}).join('');
@@ -493,7 +494,7 @@ document.addEventListener('click',function(e){
   var bt=e.target.closest('.studybar button[data-sm],.sb-modes button[data-sm]');if(!bt)return;
   var k=bt.dataset.sm.split(':');
   if(k[0]==='q'){if(window.csPrac)window.csPrac.setMode(k[1]);if(CUR.v!=='practice')nav('practice');else studyBar()}
-  else{if(window.csFc)window.csFc.start(k[1]);if(CUR.v!=='flashcards')nav('flashcards');else studyBar()}
+  else{if(window.csFc){if(bt.closest('.px-tabs'))window.csFc.openMode(k[1]);else window.csFc.start(k[1])}if(CUR.v!=='flashcards')nav('flashcards');else studyBar()}
 });
 /* "Back to Practice": opening the notes from Practice, Flashcards or the Glossary keeps a way straight back */
 var RET=null,RETNAME={practice:'Practice',flashcards:'Practice',glossary:'Glossary',specimen:'Practice'};
