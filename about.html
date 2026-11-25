@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>About the IB Computer Science notes</title>
+<meta name="description" content="Free, friendly IB Diploma Computer Science notes for SL and HL (first exams 2027): plain-words explanations, flashcards, practice questions and specimen paper walkthroughs. For students and teachers.">
+<link rel="canonical" href="https://d1v4nchik.github.io/dpcomputerscience27/about.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About the IB Computer Science notes">
+<meta property="og:description" content="Free notes, flashcards and exam practice for IB Computer Science, SL and HL. For students and teachers.">
+<meta property="og:url" content="https://d1v4nchik.github.io/dpcomputerscience27/about.html">
+<meta property="og:image" content="https://d1v4nchik.github.io/dpcomputerscience27/assets/img/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15171C">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --ink:#15171C;--ink-2:#4A505C;--ink-3:#6B7280;--paper:#FFFFFF;--paper-2:#F5F6F8;--line:#E3E6EB;
+  --blue:#2C5BDB;--blue-ink:#FFFFFF;--card:#FFFFFF;--shadow:0 1px 2px rgba(21,23,28,.06),0 8px 24px rgba(21,23,28,.06);
+  --A1:#2E5CCB;--A2:#13866B;--A3:#E37B2B;--A4:#B23A86;--B1:#6B4FD8;--B2:#0E7C9B;--B3:#C73E36;--B4:#C99A06;
+  --sans:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --ink:#F1F3F6;--ink-2:#C2C7D0;--ink-3:#9098A5;--paper:#111318;--paper-2:#181B21;--line:#2A2E37;
+  --blue:#5B83F0;--card:#1B1E25;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-.02em}
+.eyebrow{font:600 13px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 18px/1 var(--display)}
+.bars{display:flex;align-items:flex-end;gap:3px;height:22px}
+.bars i{display:block;width:4px;border-radius:2px}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{text-decoration:none;color:var(--ink-2);font-size:15px}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 22px;font:700 16px/1 var(--sans);text-decoration:none;border:1.5px solid transparent;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 18px color-mix(in srgb,var(--blue) 35%,transparent)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--card)}
+.btn-sm{padding:9px 16px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:88px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,68px);margin:18px 0 20px}
+.hero h1 span{color:var(--blue)}
+.lead{font-size:20px;color:var(--ink-2);max-width:34ch;margin:0 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.ticks{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;color:var(--ink-3);font-size:15px;list-style:none;padding:0}
+.ticks li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--A2);margin-right:8px;vertical-align:1px}
+.frame{border-radius:14px;background:var(--card);box-shadow:var(--shadow),0 30px 60px -20px rgba(21,23,28,.25);border:1px solid var(--line);overflow:hidden}
+.frame .chrome{display:flex;gap:6px;padding:11px 14px;border-bottom:1px solid var(--line);background:var(--paper-2)}
+.frame .chrome i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.hero .lines{position:absolute;inset:auto -40px -30px auto;width:620px;opacity:.16;pointer-events:none;z-index:-1}
+
+/* stats */
+.stats{border-block:1px solid var(--line);background:var(--paper-2)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:34px 12px;text-align:center}
+.stat+.stat{border-left:1px solid var(--line)}
+.stat b{display:block;font:800 44px/1 var(--display);letter-spacing:-.02em}
+.stat span{color:var(--ink-3);font-size:15px}
+.stat::after{content:"";display:block;width:36px;height:4px;border-radius:2px;margin:14px auto 0;background:var(--c)}
+.stats-note{text-align:center;color:var(--ink-3);font-size:14px;padding:0 0 26px;margin:-6px 0 0}
+
+/* sections */
+section{padding:96px 0}
+.head{max-width:640px;margin-bottom:44px}
+.head h2{font-size:clamp(30px,4vw,44px);margin:12px 0 14px}
+.head p{color:var(--ink-2);font-size:18px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--c)}
+.card h3{font-size:21px;margin:4px 0 8px}
+.card p{margin:0;color:var(--ink-2);font-size:16px}
+
+/* route */
+.route{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.route::before{content:"";position:absolute;left:12px;right:12px;top:15px;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--A1),var(--A2),var(--A3),var(--B1))}
+.route li{position:relative;padding-top:52px}
+.route li::before{content:"";position:absolute;left:0;top:4px;width:28px;height:28px;border-radius:50%;background:var(--paper);border:6px solid var(--c)}
+.route h3{font-size:22px;margin-bottom:6px}
+.route p{margin:0;color:var(--ink-2);font-size:16px}
+.route .step{font:600 12px/1 var(--mono);letter-spacing:.12em;color:var(--ink-3);display:block;margin-bottom:8px}
+
+/* teachers */
+.teach{background:var(--ink);color:#F1F3F6}
+@media (prefers-color-scheme:dark){.teach{background:#0B0D11;border-block:1px solid var(--line)}}
+.teach .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.teach .eyebrow{color:#9098A5}
+.teach h2{font-size:clamp(30px,4vw,44px);margin:12px 0 16px}
+.teach .head p{color:#C2C7D0}
+.teach ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.teach li{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:18px 20px 18px 22px;border-left:4px solid var(--c)}
+.teach li b{display:block;font-family:var(--display);font-size:19px;margin-bottom:4px}
+.teach li span{color:#C2C7D0;font-size:16px}
+.teach a{color:#9DB7FF}
+.link{font-family:var(--mono);font-size:14px;background:rgba(255,255,255,.08);padding:2px 8px;border-radius:6px;overflow-wrap:anywhere}
+.teach .wrap>*,.hero .wrap>*{min-width:0}
+
+/* offline */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tag{display:inline-block;font:600 11px/1 var(--mono);letter-spacing:.12em;padding:6px 9px;border-radius:999px;background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c);margin-bottom:12px}
+.devices{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px;color:var(--ink-2)}
+.devices b{color:var(--ink);display:inline-block;min-width:110px}
+.warn{margin:16px 0 18px;padding:12px 14px;border-radius:10px;background:color-mix(in srgb,var(--A3) 12%,transparent);font-size:15px;color:var(--ink)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.gallery figure{margin:0}
+.gallery figcaption{font-size:15px;color:var(--ink-3);margin-top:12px}
+.gallery figcaption b{color:var(--ink)}
+
+/* faq */
+.faq{max-width:760px}
+details{border-bottom:1px solid var(--line);padding:6px 0}
+summary{cursor:pointer;list-style:none;font:700 19px/1.4 var(--display);padding:16px 36px 16px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:10px;height:10px;border-right:2px solid var(--ink-3);border-bottom:2px solid var(--ink-3);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{margin:0 0 18px;color:var(--ink-2)}
+
+/* cta band + footer */
+.band{text-align:center;padding:88px 0}
+.band h2{font-size:clamp(32px,4.5vw,52px);margin-bottom:14px}
+.band p{color:var(--ink-2);margin:0 0 28px;font-size:18px}
+footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--ink-3);font-size:14px}
+footer .wrap{display:grid;gap:12px}
+footer a{color:var(--ink-2)}
+
+@media (max-width:900px){
+  .hero .wrap,.teach .wrap{grid-template-columns:1fr;gap:40px}
+  .grid,.gallery{grid-template-columns:1fr 1fr}
+  .route{grid-template-columns:1fr 1fr;row-gap:36px}
+  .route::before{display:none}
+  .nav ul{display:none}
+  .nav .btn{margin-left:auto}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hero{padding:48px 0 40px}
+  .grid,.gallery,.two,.route{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .stat b{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="./about.html">
+      <span class="bars" aria-hidden="true"><i style="height:22px;background:var(--A1)"></i><i style="height:18px;background:var(--A2)"></i><i style="height:14px;background:var(--A3)"></i><i style="height:10px;background:var(--A4)"></i><i style="height:20px;background:var(--B1)"></i><i style="height:16px;background:var(--B2)"></i><i style="height:12px;background:var(--B3)"></i><i style="height:8px;background:var(--B4)"></i></span>
+      IB CS Notes
+    </a>
+    <ul>
+      <li><a href="#inside">What's inside</a></li>
+      <li><a href="#revise">For students</a></li>
+      <li><a href="#teachers">For teachers</a></li>
+      <li><a href="#offline">Offline</a></li>
+      <li><a href="#faq">Questions</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm" href="./">Open the notes</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="lines" viewBox="0 0 620 360" aria-hidden="true" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 40H220L280 100H620" stroke="#2E5CCB"/><path d="M0 80H200L260 140H620" stroke="#13866B"/>
+    <path d="M0 120H180L240 180H620" stroke="#E37B2B"/><path d="M0 160H160L220 220H620" stroke="#B23A86"/>
+    <path d="M0 200H140L200 260H620" stroke="#6B4FD8"/><path d="M0 240H120L180 300H620" stroke="#0E7C9B"/>
+  </svg>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">IB Diploma &middot; First exams 2027</div>
+      <h1>Computer Science, <span>explained in plain words.</span></h1>
+      <p class="lead">Free notes, flashcards and exam practice for IB Computer Science, SL and HL. Understand the idea first, then learn how to write it for marks.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="./">Open the notes</a>
+        <a class="btn btn-ghost" href="#teachers">I'm a teacher</a>
+      </div>
+      <ul class="ticks"><li>Free</li><li>No account</li><li>No ads</li><li>Phones and laptops</li></ul>
+    </div>
+    <a class="frame" href="./" aria-label="Open the notes">
+      <div class="chrome"><i></i><i></i><i></i></div>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/home-dark.png">
+        <img src=".github/screenshots/home.png" alt="The home page of the notes: a search box and a map of every topic" width="1280" height="800" loading="eager">
+      </picture>
+    </a>
+  </div>
+</header>
+
+<div class="stats" id="inside">
+  <div class="wrap">
+    <div class="stat" style="--c:var(--A1)"><b>23</b><span>topic pages</span></div>
+    <div class="stat" style="--c:var(--A3)"><b>1,394</b><span>flashcards</span></div>
+    <div class="stat" style="--c:var(--B1)"><b>546</b><span>practice questions</span></div>
+    <div class="stat" style="--c:var(--B3)"><b>719</b><span>glossary terms</span></div>
+  </div>
+  <p class="stats-note">Totals for HL. SL has 16 topic pages, 907 flashcards, 346 questions and 497 terms.</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What's inside</div>
+      <h2>Everything for the course, in one place.</h2>
+      <p>Every topic explained in everyday language first and exam language second, with ways to test yourself right next to it.</p>
+    </div>
+    <div class="grid">
+      <div class="card" style="--c:var(--A1)"><h3>Notes you can follow</h3><p>Each topic is a coloured line and each page a stop, like a metro map. Every idea has a plain explanation, an everyday example and the exam definition.</p></div>
+      <div class="card" style="--c:var(--A2)"><h3>Quick or in depth</h3><p>Use the short cheat-sheet version to revise, or switch to the full textbook version when something doesn't click.</p></div>
+      <div class="card" style="--c:var(--A3)"><h3>Flashcards and games</h3><p>Learn the key facts with flashcards, write-your-own-answer mode and short tests, or play a quick game for a break.</p></div>
+      <div class="card" style="--c:var(--A4)"><h3>Practice questions</h3><p>Exam-style questions for every topic. Write your answer, then tick off the markscheme points you got.</p></div>
+      <div class="card" style="--c:var(--B1)"><h3>Specimen walkthroughs</h3><p>Every question from the IB specimen Paper 1 and Paper 2, with the answer, how to work it out and how it's marked.</p></div>
+      <div class="card" style="--c:var(--B2)"><h3>Glossary, videos, guides</h3><p>Full-mark definitions, a short video for almost every syllabus point, and guides to the papers, the IA, pseudocode and the case study.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="revise" style="background:var(--paper-2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">For students</div>
+      <h2>A simple way to revise each topic.</h2>
+      <p>Open the notes, choose SL or HL at the top, and pick a topic. Then follow the line.</p>
+    </div>
+    <ol class="route">
+      <li style="--c:var(--A1)"><span class="step">STOP 1</span><h3>Understand it</h3><p>Read the topic. If a part feels hard, switch to the textbook version or watch the short video.</p></li>
+      <li style="--c:var(--A2)"><span class="step">STOP 2</span><h3>Remember it</h3><p>Go through the topic's flashcards in Learn mode until they're all mastered.</p></li>
+      <li style="--c:var(--A3)"><span class="step">STOP 3</span><h3>Use it</h3><p>Answer a few practice questions and mark yourself honestly with the markscheme.</p></li>
+      <li style="--c:var(--B1)"><span class="step">STOP 4</span><h3>Get exam-ready</h3><p>Closer to the exam, work through the specimen papers and try a timed paper.</p></li>
+    </ol>
+    <p style="margin:40px 0 0;color:var(--ink-2)">Your progress saves on your device by itself. Press <kbd style="font:600 13px var(--mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 6px;background:var(--card)">/</kbd> anywhere to search the notes, the glossary and every question.</p>
+  </div>
+</section>
+
+<section class="teach" id="teachers">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">For teachers</div>
+      <h2>Free to use with your classes.</h2>
+      <p>Nothing for students to sign up for, and nothing to install. If you spot anything that doesn't match the subject guide, please <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml">send a correction</a>. It helps every student using the notes.</p>
+    </div>
+    <ul>
+      <li style="--c:var(--A1)"><b>Share one link</b><span>Post <span class="link">d1v4nchik.github.io/dpcomputerscience27</span> on your class page. No accounts or email addresses needed.</span></li>
+      <li style="--c:var(--A2)"><b>Point to a single topic</b><span>Open the topic you're teaching and copy the address. The link opens that exact page.</span></li>
+      <li style="--c:var(--A3)"><b>Set revision homework</b><span>Ask students to master a topic's flashcards, or to answer and self-mark its practice questions.</span></li>
+      <li style="--c:var(--B1)"><b>Teach with it</b><span>The textbook view and diagrams work well on a projector, in light or dark mode.</span></li>
+      <li style="--c:var(--B3)"><b>No data collected</b><span>No accounts, ads or tracking. Each student's progress stays in their own browser.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="offline">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Offline</div>
+      <h2>Revise without internet.</h2>
+      <p>On the bus, on a plane or somewhere with bad wifi. Choose one.</p>
+    </div>
+    <div class="two">
+      <div class="card" style="--c:var(--A2)">
+        <span class="tag">RECOMMENDED</span>
+        <h3>Install it as an app</h3>
+        <p>Keeps every topic on your device, opens offline, and <b>updates itself</b> whenever you're back online.</p>
+        <ul class="devices">
+          <li><b>Laptop</b>In Chrome or Edge, click Install in the address bar.</li>
+          <li><b>iPhone, iPad</b>In Safari, tap Share, then Add to Home Screen.</li>
+          <li><b>Android</b>In Chrome, tap the menu, then Install app.</li>
+        </ul>
+      </div>
+      <div class="card" style="--c:var(--A3)">
+        <span class="tag">FOR LAPTOPS</span>
+        <h3>Download one file</h3>
+        <p>A single file with all the notes. Double-click it to open it in your browser, with no internet needed.</p>
+        <p class="warn"><b>It doesn't update itself.</b> When newer notes come out, it shows a message (if you're online) so you can download it again.</p>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/d1v4nchik/dpcomputerscience27/releases/download/offline/ib-cs-notes-offline.html">Download the file</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">A quick look</div>
+      <h2>Made to be easy on the eyes.</h2>
+    </div>
+    <div class="gallery">
+      <figure><div class="frame"><img src=".github/screenshots/topic.png" alt="A topic page with its stops and diagrams" loading="lazy"></div><figcaption><b>Topic pages.</b> Stops along the line, definitions and diagrams.</figcaption></figure>
+      <figure><div class="frame"><img src=".github/screenshots/flashcards.png" alt="Flashcards in Learn mode" loading="lazy"></div><figcaption><b>Flashcards.</b> Learn, Write, Test and quick games.</figcaption></figure>
+      <figure><div class="frame"><img src=".github/screenshots/practice.png" alt="Practice questions with filters" loading="lazy"></div><figcaption><b>Practice.</b> Pick topics, answer, then self-mark.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--paper-2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Questions</div>
+      <h2>Good to know.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Is it really free?</summary><p>Yes. No payments, no ads and no account. Just open it and study.</p></details>
+      <details><summary>Where is my progress saved?</summary><p>In your browser, on the device you're using. Nobody else can see it, and your laptop and phone keep separate progress.</p></details>
+      <details><summary>Which syllabus does it follow?</summary><p>IB Diploma Computer Science with first exams in 2027, both SL and HL: Theme A (computer fundamentals, networks, databases, machine learning) and Theme B (computational thinking, programming, object-oriented programming, and abstract data types for HL). Code examples come in Python and Java.</p></details>
+      <details><summary>Is this official IB material?</summary><p>No. These are independent study notes, not made by, endorsed by or connected to the International Baccalaureate Organization. "IB" and "International Baccalaureate" are its trademarks. Always check against the official subject guide and your teacher.</p></details>
+      <details><summary>I found a mistake. What do I do?</summary><p>Thank you. Please <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml">send a correction</a> with the topic code (for example A2.1) and what's wrong. Ideas are welcome too: <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=suggestion.yml">make a suggestion</a>. Both need a free GitHub account.</p></details>
+      <details><summary>Can I share it?</summary><p>Please do. Send the link to classmates and teachers. The notes are &copy; d1v4nchik, all rights reserved, so share the link rather than copying, reposting or selling the content.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <h2>Ready to start?</h2>
+    <p>Pick a topic and see how much clearer it gets.</p>
+    <a class="btn btn-primary" href="./">Open the notes</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; d1v4nchik. All rights reserved. Independent study notes, not affiliated with the International Baccalaureate Organization.</div>
+    <div><a href="./">Open the notes</a> &nbsp;&middot;&nbsp; <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml">Send a correction</a> &nbsp;&middot;&nbsp; <a href="https://github.com/d1v4nchik/dpcomputerscience27">Project page</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
