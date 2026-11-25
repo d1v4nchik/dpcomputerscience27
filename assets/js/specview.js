@@ -101,10 +101,13 @@ function render(u){
   if(u){if(u==='p1'||u==='p2')PAPER=u;else S.papers.forEach(function(P){P.groups.forEach(function(g){g.parts.forEach(function(q){if(q.id===u)PAPER=P.id})})})}
   lsSet('csSpecP',PAPER);
   var P=S.papers.filter(function(x){return x.id===PAPER})[0]||S.papers[0];
-  var h='<div class="vhead th-IA"><div class="vh-in"><div class="eyebrow">Exam practice</div><h1>Specimen papers</h1><p>The official IB specimen papers for the 2027 syllabus, every question broken down. Write your own answer first, then open the breakdown: what the command term wants, the route to the answer step by step, a model answer and the real markscheme points to tick off.</p></div></div><div class="vbody spc">'+
+  var h='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Choose what to practise on the side; your progress is saved on this device.</p></div></div>'+
+   '<div class="vbody pxv"><div class="studybar" id="sb-specimen"></div><div class="fcl"><aside class="fcl-side"><div class="fcl-box"><span class="fcl-bh">Specimen papers</span>'+
    '<div class="spc-tabs" role="tablist">'+S.papers.map(function(x){return '<button type="button" role="tab" data-paper="'+x.id+'" aria-selected="'+(x.id===P.id)+'"><b>'+esc(x.name)+'</b><span>'+esc(x.sub)+'</span></button>'}).join('')+'</div>'+
-   '<div class="spc-sum"><div><b>'+esc(P.name)+'</b> · '+esc(P.time)+' · '+P.marks+' marks</div><div class="spc-tot" id="spc-tot"></div><button type="button" class="spc-b ghost sm" data-reset="'+P.id+'">Clear my answers</button></div>'+
-   '<p class="spc-intro">'+P.intro+(P.code?' Questions 1–6 are the Java version and 7–12 the Python version of the same paper: switch language with the Py / Java toggle at the top.':'')+'</p>';
+   '<div class="spc-tot" id="spc-tot"></div>'+
+   '<p class="spc-intro">'+P.intro+'</p>'+
+   '<div class="fcl-foot"><button type="button" class="minibtn" data-reset="'+P.id+'">Clear my answers on '+esc(P.name)+'</button></div></div></aside>'+
+   '<div class="fcl-main spc"><div class="pmh"><div class="pmh-top"><h2>'+esc(P.name)+'</h2><div class="pmh-stats"><span>'+esc(P.time)+'</span><span><b>'+P.marks+'</b> marks</span></div></div></div>';
   var sec='';
   P.groups.forEach(function(g){
     if(g.sec&&g.sec!==sec){sec=g.sec;h+='<h2 class="spc-sec">'+esc(g.sec)+'</h2>'}
@@ -112,7 +115,7 @@ function render(u){
     h+='<section class="spc-g"><h3 class="spc-gh">Question '+qnum(P,g)+'</h3>'+(g.stem?'<div class="spc-stem">'+txt(g.stem)+'</div>':'')+code(g.stemCode)+(g.fig?fig(g.fig):'')+
       g.parts.map(function(q){return partHtml(P,g,q)}).join('')+'</section>';
   });
-  el.innerHTML=h+'</div>';
+  el.innerHTML=h+'</div></div></div>';if(window.csStudyBar)window.csStudyBar();
   P.groups.forEach(function(g){g.parts.forEach(function(q){scoreUi(q)})});tot(P);
   if(u&&u!=='p1'&&u!=='p2'){var t=$('spc-'+u);if(t)setTimeout(function(){t.scrollIntoView({block:'start'});t.classList.add('spc-flash')},60)}
 }

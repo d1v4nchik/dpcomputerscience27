@@ -104,20 +104,18 @@ function render(u){
   if(u&&UNITS.some(function(x){return x[0]===u})){F.us=[u];F.cmd='';saveF();V.shown=15;V.order=null}
   var el=$('view-practice');
   if(!V.ready){
-    el.innerHTML='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Answer exam-style questions and mark them against the markscheme, or learn the terms with flashcards. Pick your topics, choose a study mode, and your progress is saved.</p></div></div>'+
+    el.innerHTML='<div class="vhead plain th-IA"><div class="vh-in"><h1>Practice</h1><p>Exam-style questions with markschemes, flashcards for every term, and the IB specimen papers broken down. Choose what to practise on the side; your progress is saved on this device.</p></div></div>'+
       '<div class="vbody pxv"><div class="studybar" id="sb-practice"></div><div class="fcl"><aside class="fcl-side">'+
       '<div class="px-modes"><span class="seg" role="group" aria-label="Mode"><button type="button" data-m="bank">Question bank</button><button type="button" data-m="paper">Mini paper</button></span></div>'+
       '<div class="px-filters fcl-box" id="px-filters"><span class="fcl-bh">Your questions</span><div class="gl-bar"><input type="search" id="px-q" placeholder="Search questions, e.g. “cache” or “normalise”" aria-label="Search questions" autocomplete="off"><span class="gl-count" id="px-count"></span><button type="button" class="ftog" id="px-ftog" aria-expanded="false" aria-controls="px-fbody">Filters</button></div><div class="fsum" id="px-fsum"></div><div class="fbody" id="px-fbody">'+
       '<div class="chips" id="px-units" role="group" aria-label="Topic"></div>'+
-      '<div class="px-sel"><label><span>Questions</span><select id="px-src"><option value="exam">All exam-style</option><option value="quiz">Test-yourself and bank only</option><option value="model">Model answers from the notes</option><option value="mix">Mixed-topic questions</option><option value="long">Long answers (5+ marks)</option><option value="term">Definitions (glossary)</option><option value="all">Everything incl. definitions</option></select></label>'+
+      '<details class="px-more"><summary>More filters</summary><div class="px-sel"><label><span>Questions</span><select id="px-src"><option value="exam">All exam-style</option><option value="quiz">Test-yourself and bank only</option><option value="model">Model answers from the notes</option><option value="mix">Mixed-topic questions</option><option value="long">Long answers (5+ marks)</option><option value="term">Definitions (glossary)</option><option value="all">Everything incl. definitions</option></select></label>'+
       '<label><span>Paper</span><select id="px-pp"><option value="">Both papers</option><option value="1">Paper 1 · Theme A + case study</option><option value="2">Paper 2 · Theme B</option></select></label>'+
       '<label><span>Command term</span><select id="px-cmd"></select></label>'+
       '<label><span>Marks</span><select id="px-mk"><option value="">Any</option><option value="1">1–2</option><option value="3">3–4</option><option value="5">5–6</option><option value="7">7 or more</option></select></label>'+
       '<label><span>Status</span><select id="px-st"><option value="">Any</option><option value="new">Not tried yet</option><option value="lost">Lost marks</option><option value="full">Full marks</option><option value="star">Starred</option></select></label>'+
-      '<button type="button" class="minibtn" id="px-shuf" aria-pressed="false">Shuffle</button></div></div></div>'+
-      '<section class="fcl-box fcl-modes"><span class="fcl-bh">Study mode</span><div class="sb-modes"></div></section>'+
-      '<section class="fcl-box pxprog"><span class="fcl-bh">Your progress</span><div class="px-head" id="px-head"></div><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></section>'+
-      '</aside><div class="fcl-main"><div id="px-body"></div></div></div></div>';
+      '<button type="button" class="minibtn" id="px-shuf" aria-pressed="false">Shuffle</button></div></details></div><div class="fcl-foot"><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></div></div>'+
+      '</aside><div class="fcl-main"><div class="pmh"><div class="pmh-top"><h2 id="px-title">Question bank</h2><div class="pmh-stats" id="px-head"></div></div><div class="sb-modes" role="group" aria-label="Study mode"></div></div><div id="px-body"></div></div></div></div>';
     $('px-q').addEventListener('input',function(){F.q=this.value;saveF();V.shown=15;V.order=null;drawList()});
     $('px-ftog').addEventListener('click',function(){V.fopen=!V.fopen;lsSet('csPracFOpen',V.fopen);fsum()});
     $('px-fsum').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
@@ -139,7 +137,7 @@ function head(){
   var sl=isSL(),all=Q.filter(function(q){return !(sl&&q.h)&&q.k!=='term'});
   var tried=0,got=0,tot=0,full=0;all.forEach(function(q){var r=rec(q.id);if(r&&r[0]!=null){tried++;got+=r[0];tot+=r[1];if(r[0]>=r[1])full++}});
   var last=P.papers.slice(-1)[0];
-  $('px-head').innerHTML='<div class="stats"><div><b>'+all.length+'</b><span>exam-style questions at '+(sl?'SL':'HL')+'</span></div><div><b>'+tried+'</b><span>answered and marked</span></div><div><b>'+(tot?Math.round(100*got/tot)+'%':'–')+'</b><span>of marks scored so far</span></div><div><b>'+(last?last[1]+'/'+last[2]:'–')+'</b><span>'+(last?'last mini paper':'no mini paper yet')+'</span></div></div>';
+  $('px-head').innerHTML='<span>Marked <b>'+tried+'</b></span><span>Score <b>'+(tot?Math.round(100*got/tot)+'%':'–')+'</b></span><span>Last paper <b>'+(last?last[1]+'/'+last[2]:'–')+'</b></span>';
 }
 /* collapsible filters: a one-line summary of what is applied */
 V.fopen=!!lsGet('csPracFOpen',false);
@@ -170,7 +168,7 @@ function draw(){
   $('px-src').value=F.src;$('px-pp').value=F.pp||'';$('px-mk').value=F.mk||'';$('px-st').value=F.st||'';
   if($('px-q').value!==F.q)$('px-q').value=F.q||'';
   $('px-shuf').setAttribute('aria-pressed',String(!!F.shuffle));
-  $('px-filters').classList.toggle('paper',V.mode==='paper');fsum();
+  $('px-filters').classList.toggle('paper',V.mode==='paper');fsum();var tt=$('px-title');if(tt)tt.textContent=V.mode==='paper'?'Mini paper':'Question bank';
   if(V.mode==='paper')drawPaper();else drawList();
 }
 function card(q,n,opt){
@@ -473,31 +471,32 @@ function parse(h){
 }
 function show(v){
   document.querySelectorAll('.view').forEach(function(el){el.classList.toggle('on',el.id==='view-'+v)});
-  var tab=v==='page'?(SPECIAL_R[CUR.p]||'map'):(v==='flashcards'?'practice':v);
+  var tab=v==='page'?(SPECIAL_R[CUR.p]||'map'):(v==='flashcards'||v==='specimen'?'practice':v);
   document.querySelectorAll('#tabs a').forEach(function(a){a.classList.toggle('on',a.dataset.v===tab)});
 }
 /* one Practice tab: exam questions and flashcards share a "Choose a way to study" bar (as in the BM notes) */
 var QMODES=[['bank','Question bank','Write answers, tick the markscheme'],['paper','Mini paper','Timed, Paper 1 or Paper 2']];
 function studyBar(){
-  var fcm=window.csFc&&window.csFc.modes?window.csFc.modes():[],isF=CUR.v==='flashcards',cur=isF?'f:'+(window.csFc?window.csFc.mode():''):'q:'+(window.csPrac?window.csPrac.mode():'bank');
-  var nq=window.csPrac?window.csPrac.count(isSL()):0,nf=window.csFc&&window.csFc.total?window.csFc.total():0;
+  var fcm=window.csFc&&window.csFc.modes?window.csFc.modes():[],isF=CUR.v==='flashcards',isS=CUR.v==='specimen',cur=isF?'f:'+(window.csFc?window.csFc.mode():''):'q:'+(window.csPrac?window.csPrac.mode():'bank');
+  var nq=window.csPrac?window.csPrac.count(isSL()):0,nf=window.csFc&&window.csFc.total?window.csFc.total():0,ns=(window.CS_SPEC_Q||[]).length;
   var qm=window.csPrac?window.csPrac.mode():'bank',fm=window.csFc?window.csFc.mode():'flash';
-  var tabs='<div class="px-tabs" role="tablist" aria-label="Practice"><button type="button" role="tab" data-sm="q:'+qm+'" aria-selected="'+!isF+'">Exam questions <span>'+nq.toLocaleString('en')+'</span></button>'+
-    '<button type="button" role="tab" data-sm="f:'+fm+'" aria-selected="'+isF+'">Flashcards <span>'+(nf?nf.toLocaleString('en'):'')+'</span></button></div>';
+  var t=function(k,lab,n,on){return '<button type="button" role="tab" '+k+' aria-selected="'+on+'">'+lab+' <span>'+(n?n.toLocaleString('en'):'')+'</span></button>'};
+  var tabs='<div class="px-tabs" role="tablist" aria-label="Practice">'+t('data-sm="q:'+qm+'"','Exam questions',nq,!isF&&!isS)+t('data-sm="f:'+fm+'"','Flashcards',nf,isF)+t('data-spec="1"','Specimen papers',ns,isS)+'</div>';
   document.querySelectorAll('.studybar').forEach(function(el){el.innerHTML=tabs});
   var list=isF?fcm.map(function(m){return ['f',m]}):QMODES.map(function(m){return ['q',m]});
-  var mh=list.map(function(x){var g=x[0],m=x[1],k=g+':'+m[0];return '<button type="button" data-sm="'+k+'" aria-pressed="'+(k===cur)+'"><b>'+esc(g==='f'&&m[0]==='flash'?'Flip cards':m[1])+'</b><span>'+esc(m[2])+'</span></button>'}).join('');
+  var mh=list.map(function(x){var g=x[0],m=x[1],k=g+':'+m[0];return '<button type="button" data-sm="'+k+'" aria-pressed="'+(k===cur)+'" title="'+esc(m[2])+'">'+esc(g==='f'&&m[0]==='flash'?'Flip cards':m[1])+'</button>'}).join('');
   document.querySelectorAll('.sb-modes').forEach(function(el){el.innerHTML=mh});
 }
 window.csStudyBar=studyBar;
 document.addEventListener('click',function(e){
+  if(e.target.closest('.studybar button[data-spec]')){nav('specimen');return}
   var bt=e.target.closest('.studybar button[data-sm],.sb-modes button[data-sm]');if(!bt)return;
   var k=bt.dataset.sm.split(':');
   if(k[0]==='q'){if(window.csPrac)window.csPrac.setMode(k[1]);if(CUR.v!=='practice')nav('practice');else studyBar()}
   else{if(window.csFc)window.csFc.start(k[1]);if(CUR.v!=='flashcards')nav('flashcards');else studyBar()}
 });
 /* "Back to Practice": opening the notes from Practice, Flashcards or the Glossary keeps a way straight back */
-var RET=null,RETNAME={practice:'Practice',flashcards:'Practice',glossary:'Glossary',specimen:'Specimen papers'};
+var RET=null,RETNAME={practice:'Practice',flashcards:'Practice',glossary:'Glossary',specimen:'Practice'};
 function retPill(){
   var b=$('retpill');
   if(!b){b=document.createElement('button');b.type='button';b.id='retpill';b.className='retpill';document.body.appendChild(b);
@@ -512,7 +511,7 @@ function go(r,noScroll){
   else RET=null;
   CUR=r;retPill();
   if(r.v==='page'){mountPage(r.p,r.s);show('page');if(FIND.pending&&!WAITING){var f=FIND.pending;FIND.pending=null;setTimeout(function(){if(f.hide)hideAnswer(f.hide);if(f.q)runFind(f)},40)}}
-  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='flashcards'||r.v==='practice')setTimeout(studyBar,0);if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);if(r.v==='specimen'&&window.csSpec)window.csSpec.render(r.u);}
+  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='flashcards'||r.v==='practice'||r.v==='specimen')setTimeout(studyBar,0);if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);if(r.v==='specimen'&&window.csSpec)window.csSpec.render(r.u);}
   if(!noScroll&&!(r.v==='page'&&r.s)&&!(r.v==='specimen'&&/-/.test(r.u||'')))window.scrollTo(0,0);
   var t=r.v==='page'?(CS.meta[r.p]||{}).title:({map:'Home',flashcards:'Flashcards',practice:'Practice',glossary:'Glossary',resources:'Resources',specimen:'Specimen papers'})[r.v];
   document.title=window.CS_STATIC?(r.v==='map'?'IB Computer Science notes 2027 · SL and HL':(t?t+' · ':'')+'IB Computer Science notes'):(t?t+' · ':'')+'IB CS Cheat Sheet';

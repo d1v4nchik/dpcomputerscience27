@@ -1278,3 +1278,56 @@ body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 :root[data-theme="dark"] .fcl #fc-stage{box-shadow:4px 4px 0 color-mix(in srgb,var(--ink) 35%,transparent);border-color:color-mix(in srgb,var(--ink) 55%,transparent)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fcl #fc-stage{box-shadow:4px 4px 0 color-mix(in srgb,var(--ink) 35%,transparent);border-color:color-mix(in srgb,var(--ink) 55%,transparent)}}
 @media (max-width:560px){.studybar .px-tabs button{font-size:15.5px;padding:9px 13px 8px}}
+
+/* ---------- Practice cleanup: quieter panels, one header per panel, modes as a pill switch ---------- */
+.fcl-box,:root[data-theme="dark"] .fcl-box{border:1px solid var(--hair);box-shadow:0 1px 2px rgba(0,0,0,.04);border-radius:18px;padding:18px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fcl-box{border:1px solid var(--hair);box-shadow:none}}
+.fcl #fc-stage,:root[data-theme="dark"] .fcl #fc-stage{border:1px solid var(--hair);box-shadow:0 1px 2px rgba(0,0,0,.04);border-radius:18px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fcl #fc-stage{border:1px solid var(--hair);box-shadow:none}}
+.studybar{margin:0 0 22px}
+.px-tabs{border-bottom:1px solid var(--hair);gap:4px}
+.studybar .px-tabs button{border:0;border-bottom:3px solid transparent;border-radius:0;background:none;color:var(--muted);padding:10px 14px 11px;margin-bottom:-1px;font-size:17px}
+.studybar .px-tabs button:hover{color:var(--ink);background:none}
+.studybar .px-tabs button[aria-selected="true"]{background:none;color:var(--ink);border-bottom-color:var(--ink)}
+.studybar .px-tabs button span{background:color-mix(in srgb,var(--ink) 7%,transparent);color:var(--muted);font-size:11.5px}
+.studybar .px-tabs button[aria-selected="true"] span{background:var(--ink);color:var(--bg)}
+/* main panel header: title, quiet stats, then the mode switch */
+.pmh{display:flex;flex-direction:column;gap:12px;margin:0 0 16px}
+.pmh-top{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px 18px}
+.pmh h2{margin:0;font:800 26px/1.1 var(--f-disp);letter-spacing:-.015em}
+.pmh-stats{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px;color:var(--muted)}
+.pmh-stats b{color:var(--ink);font-family:var(--f-mono);font-weight:700}
+.pmh .sb-modes{display:inline-flex;flex-wrap:wrap;gap:2px;padding:3px;border-radius:999px;background:color-mix(in srgb,var(--ink) 6%,var(--card));align-self:flex-start;max-width:100%}
+.pmh .sb-modes button{flex:none;display:block;border:0;background:none;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:700;color:var(--muted)}
+.pmh .sb-modes button:hover{color:var(--ink)}
+.pmh .sb-modes button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+#view-flashcards .pmh{margin-bottom:12px}
+/* side panel: search, topics, then "More filters" folded away */
+.fcl #px-count{display:none}
+.fcl .px-filters .chips{gap:6px}
+.px-more{border-top:1px solid var(--hair);padding-top:10px}
+.px-more>summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--ink);list-style:none;display:flex;align-items:center;gap:6px}
+.px-more>summary::-webkit-details-marker{display:none}
+.px-more>summary::after{content:"▾";font-size:11px;color:var(--muted);transition:transform .2s}
+.px-more[open]>summary::after{transform:rotate(180deg)}
+.px-more[open]>summary{margin-bottom:10px}
+.fcl .fcl-foot{padding-top:10px}
+.fcl .fcx-sync{font-size:12px}
+/* specimen inside Practice */
+.fcl-main.spc{max-width:none;gap:16px}
+.fcl .spc-tabs{grid-template-columns:1fr;gap:8px}
+.fcl .spc-tabs button{padding:10px 14px;border-radius:12px}
+.fcl .spc-tabs button b{font-size:17px}
+.fcl .spc-tot{min-width:0;font-size:13.5px;color:var(--muted);flex-wrap:wrap}
+.fcl .spc-intro{font-size:13.5px;line-height:1.55}
+.fcl-main.spc .pmh{margin:0}
+/* question cards: calmer */
+.fcl .pq{border-left-width:4px;border-radius:16px}
+.fcl .pq textarea{min-height:64px}
+@media (max-width:999px){.fcl-box{padding:14px}.pmh h2{font-size:22px}.pmh .sb-modes{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;align-self:stretch}.pmh .sb-modes::-webkit-scrollbar{display:none}}
+.fcl .px-modes{display:none}
+.px-more>summary{justify-content:flex-start;text-align:left;padding:0;background:none;border:0}
+.fcl .px-more>summary{display:flex!important;justify-content:flex-start!important;width:auto;margin-left:0}
+@media (max-width:999px){.fcl .spc-tabs{grid-template-columns:1fr 1fr}.fcl .spc-tabs button span,.fcl .spc-intro{display:none}}
+.fcl .px-more{display:block}.fcl .px-more>summary{justify-content:flex-start!important;margin:0!important}.fcl .px-more[open]>summary{margin-bottom:10px!important}
+@media (max-width:560px){.studybar .px-tabs button{font-size:14px;padding:9px 8px 10px;gap:6px}.studybar .px-tabs button span{padding:1px 6px;font-size:10.5px}}
