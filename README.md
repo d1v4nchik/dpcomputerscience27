@@ -5,10 +5,10 @@
 <p align="center">
   <a href="https://d1v4nchik.github.io/dpcomputerscience27/"><img src="https://img.shields.io/badge/Open_the_notes-2C5BDB?style=for-the-badge" alt="Open the notes" height="40"></a>
   &nbsp;
-  <a href="#study-without-internet"><img src="https://img.shields.io/badge/Use_it_offline-15171C?style=for-the-badge" alt="Use it offline" height="40"></a>
+  <a href="#for-teachers"><img src="https://img.shields.io/badge/For_teachers-15171C?style=for-the-badge" alt="For teachers" height="40"></a>
 </p>
 
-<p align="center"><sub>Free &nbsp;&middot;&nbsp; No sign-up &nbsp;&middot;&nbsp; No ads &nbsp;&middot;&nbsp; Works on phones and laptops</sub></p>
+<p align="center"><sub>Free &nbsp;&middot;&nbsp; No sign-up &nbsp;&middot;&nbsp; No ads &nbsp;&middot;&nbsp; Works on phones, tablets and laptops</sub></p>
 
 <br>
 
@@ -21,6 +21,10 @@
 
 <br>
 
+Clear, friendly revision notes for the IB Diploma Computer Science course (first exams in 2027). Every topic is explained in everyday language first and exam language second, so you understand the idea before you learn how to write it down for marks. When you're ready, test yourself with flashcards, practice questions and real specimen papers, all in one place.
+
+You don't need to download anything or make an account. Just [open the notes](https://d1v4nchik.github.io/dpcomputerscience27/) and start.
+
 ## Getting started
 
 <table>
@@ -28,45 +32,72 @@
     <td width="33%" valign="top">
       <sub>STEP 1</sub><br>
       <b><a href="https://d1v4nchik.github.io/dpcomputerscience27/">Open the notes</a></b><br>
-      It's a normal website. Nothing to install and no account.
+      It's a normal website, so it works on school laptops and your phone.
     </td>
     <td width="33%" valign="top">
       <sub>STEP 2</sub><br>
       <b>Choose SL or HL</b><br>
-      Use the switch at the top. Pick Python or Java for code too.
+      Use the switch at the top. If you're SL, the HL-only parts stay out of your way.
     </td>
     <td width="33%" valign="top">
       <sub>STEP 3</sub><br>
       <b>Pick a topic</b><br>
-      Read the notes, then test yourself in Practice. Progress saves by itself.
+      Read the notes, then try the practice questions. Your progress saves by itself.
     </td>
   </tr>
 </table>
 
-Press <kbd>/</kbd> on any page to search for a word, a topic or a whole exam question.
+Stuck on a word? Press <kbd>/</kbd> on any page to search the notes, the glossary and every question.
 
 ## What's inside
 
 <p align="center"><img src=".github/stats.svg" alt="23 topic pages, 1,394 flashcards, 546 practice questions, 719 glossary terms" width="100%"></p>
 
-<p align="center"><sub>Totals for HL. SL shows 16 topic pages, 907 flashcards, 346 questions and 497 terms.</sub></p>
+<p align="center"><sub>Totals for HL. SL has 16 topic pages, 907 flashcards, 346 questions and 497 terms.</sub></p>
 
 <table>
   <tr>
-    <td width="50%" valign="top"><b>Notes as a map</b><br>Each topic is a coloured line and each page is a stop. Every idea has an exam definition, a plain explanation and an everyday example.</td>
-    <td width="50%" valign="top"><b>Short or long</b><br>Switch between quick cheat-sheet points and full textbook-style explanations.</td>
+    <td width="50%" valign="top"><b>Notes you can actually follow</b><br>Each topic is a coloured line and each page is a stop, like a metro map. Every idea comes with a plain explanation, an everyday example and the exam definition.</td>
+    <td width="50%" valign="top"><b>Quick or in depth</b><br>Use the short cheat-sheet version for revision, or switch to the full textbook version when something doesn't click.</td>
   </tr>
   <tr>
-    <td valign="top"><b>Flashcards and games</b><br>Learn, Write and Test modes, plus four quick games. Cards explain why the answer is right.</td>
-    <td valign="top"><b>Exam practice</b><br>Write an answer, open the markscheme and tick off what you got, or sit a timed paper.</td>
+    <td valign="top"><b>Flashcards and games</b><br>Learn the key facts with flashcards, write-your-own-answer mode and short tests, or play a quick game when you need a break.</td>
+    <td valign="top"><b>Practice questions</b><br>Exam-style questions for every topic. Write your answer, then check it against the markscheme and tick off the points you got.</td>
   </tr>
   <tr>
-    <td valign="top"><b>Glossary</b><br>Every key term with a full-mark definition. Underlined words in the notes open their meaning.</td>
-    <td valign="top"><b>Videos and guides</b><br>A short video for almost every syllabus point, plus guides to the papers, the IA, pseudocode and the case study.</td>
+    <td valign="top"><b>Specimen paper walkthroughs</b><br>Every question from the IB specimen Paper 1 and Paper 2, with the answer, how to work it out and how it's marked.</td>
+    <td valign="top"><b>Glossary</b><br>Every key term with a definition that would get full marks. Underlined words in the notes show their meaning when you tap them.</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Videos</b><br>A short video for almost every part of the syllabus, for when reading isn't enough.</td>
+    <td valign="top"><b>Guides for the rest of the course</b><br>How each exam paper works, what the command terms want, planning your IA, pseudocode, and the 2027 case study.</td>
   </tr>
 </table>
 
+## How to revise with it
+
+1. **Understand it.** Read the topic in the notes. If a part feels hard, switch to the textbook version or watch the short video.
+2. **Remember it.** Open the flashcards for that topic and go through them in Learn mode until they're all mastered.
+3. **Use it.** Answer a few practice questions for the topic and mark yourself honestly with the markscheme.
+4. **Get exam-ready.** Closer to the exam, work through the specimen papers and try a timed paper.
+
+Your progress is saved on your device, so you can come back to exactly where you stopped.
+
+<h2 id="for-teachers">For teachers</h2>
+
+These notes are free to use with your classes. A few ways teachers use them:
+
+- **Share one link.** Post <a href="https://d1v4nchik.github.io/dpcomputerscience27/">d1v4nchik.github.io/dpcomputerscience27/</a> in your class page. Students don't need an account or an email address.
+- **Point to a single topic.** Open the topic you're teaching and copy the address from the address bar. The link opens that exact page.
+- **Set revision homework.** Ask students to master the flashcards for a topic, or to answer and self-mark the practice questions for it.
+- **Use it in class.** The textbook version and the diagrams work well on a projector, and there's a light and a dark mode.
+- **No data collected.** There are no accounts, ads or tracking. Each student's progress stays in their own browser.
+
+If you spot anything that doesn't match the subject guide, please <a href="https://github.com/d1v4nchik/dpcomputerscience27/issues/new?template=correction.yml">send a correction</a>. It really helps every student using the notes.
+
 <h2 id="study-without-internet">Study without internet</h2>
+
+Revising on the bus, on a plane or somewhere with bad wifi? Choose one of these.
 
 <table>
   <tr>
@@ -108,6 +139,12 @@ Press <kbd>/</kbd> on any page to search for a word, a topic or a whole exam que
 </p>
 
 ## Questions
+
+<details>
+<summary><b>Do I need a GitHub account?</b></summary>
+<br>
+No. This page is just where the notes are stored. To study, <a href="https://d1v4nchik.github.io/dpcomputerscience27/">open the notes</a>. You only need a free GitHub account if you want to send a correction.
+</details>
 
 <details>
 <summary><b>Is it really free?</b></summary>
