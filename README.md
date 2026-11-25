@@ -131,3 +131,7 @@ Want to help edit the notes directly? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 > [!NOTE]
 > These are independent study notes. They are not affiliated with, endorsed by or connected to the International Baccalaureate Organization. "IB" and "International Baccalaureate" are trademarks of the International Baccalaureate Organization. Always check against the official subject guide and your teacher.
+
+## Sharing
+
+© d1v4nchik. All rights reserved. You're very welcome to share the [link to the notes](https://d1v4nchik.github.io/dpcomputerscience27/) with classmates and teachers, but please don't copy, repost or sell the content itself.
