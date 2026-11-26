@@ -233,7 +233,7 @@ function drawPaper(){
       '<div class="seg px-pp" role="group" aria-label="Which paper"><button type="button" data-pp="" aria-pressed="'+(!F.pp)+'">Any topics</button><button type="button" data-pp="1" aria-pressed="'+(F.pp==='1')+'">Paper 1</button><button type="button" data-pp="2" aria-pressed="'+(F.pp==='2')+'">Paper 2</button></div>'+
       '<p>'+intro+(F.us.length?' Units: <b>'+esc(unitsLabel())+'</b>.':'')+' Timed at exam pace (about 1.5 minutes a mark). Markschemes stay hidden until you finish, then you mark each answer and the total is saved.</p>'+
       '<div class="px-len" role="radiogroup" aria-label="Length">'+[[12,'Quick','18 min'],[20,'Standard','30 min'],[30,'Long','45 min'],[full,'Full paper length',isSL()?'1 h 15 min':'2 h']].map(function(x){return '<label class="wdir'+(cur===x[0]?' on':'')+'"><input type="radio" name="pxlen" value="'+x[0]+'"'+(cur===x[0]?' checked':'')+'><b>'+x[1]+'</b><span>'+x[0]+' marks · '+x[2]+'</span></label>'}).join('')+'</div>'+
-      '<p class="px-avail">'+avail.length+' questions ('+am+' marks) match your filters.'+(am<12?' Widen the filters to build a paper.':'')+'</p>'+
+      '<p class="px-avail">'+(am<12?'Only '+avail.length+' questions ('+am+' marks) match your filters. Widen the filters to build a paper.':'Pick a length to start, or press Start for the one highlighted. '+avail.length+' questions ('+am+' marks) match your filters.')+'</p>'+
       '<div><button type="button" class="pill pri" data-a="start"'+(am<12?' disabled':'')+'>Start the paper</button></div>'+
       (P.papers.length?'<div class="px-hist"><h3>Your last papers</h3>'+P.papers.slice(-6).reverse().map(function(p){var d=new Date(p[0]);return '<div><span>'+d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})+'</span><b>'+p[1]+' / '+p[2]+'</b><span>'+Math.round(100*p[1]/p[2])+'% · '+p[3]+' min</span></div>'}).join('')+'</div>':'')+'</div>';
     return;
@@ -277,7 +277,9 @@ function pressMark(id,mk){var c=document.querySelector('.pq[data-id="'+id+'"]');
 /* ---------- events ---------- */
 function onChange(e){
   var t=e.target;
-  if(t.name==='pxlen'){var o={marks:+t.value};lsSet('csPracPaper',o);document.querySelectorAll('.px-len .wdir').forEach(function(l){l.classList.toggle('on',l.querySelector('input').checked)});return}
+  if(t.name==='pxlen'){var o={marks:+t.value};lsSet('csPracPaper',o);document.querySelectorAll('.px-len .wdir').forEach(function(l){l.classList.toggle('on',l.querySelector('input').checked)});
+    /* picking a length starts the paper straight away */
+    var sb=document.querySelector('#px-body [data-a="start"]');if(sb&&!sb.disabled)sb.click();return}
   if(t.dataset.pt!=null){
     var c=t.closest('.pq'),q=BYID[c.dataset.id],n=c.querySelectorAll('input[data-pt]:checked').length;
     if(q.k!=="essay"){var mk=Math.min(n,q.m);pick(q,mk,c,false)}

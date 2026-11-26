@@ -1518,3 +1518,8 @@ body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 .pf-seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
 :root[data-theme="dark"] .pf-seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pf-seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}}
+/* primary buttons inside Practice use ink (these views have no line colour of their own) */
+:is(#view-practice,#view-flashcards,#view-specimen) .pill.pri{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+:is(#view-practice,#view-flashcards,#view-specimen) .pill.pri:disabled{opacity:.4;cursor:not-allowed}
+.px-len .wdir{cursor:pointer}
+.px-len .wdir:hover{border-color:var(--ink)}
