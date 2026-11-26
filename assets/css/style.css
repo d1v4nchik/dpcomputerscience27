@@ -1502,3 +1502,13 @@ body[data-tb="on"] .secs>section:has(> .tb) .exdef{display:none!important}
 @media (min-width:1000px){.pxv .fcl-side{position:static;max-height:none;overflow:visible;padding:0}}
 @media (max-width:999px){.pq-grp{padding:12px 14px 4px;border-radius:16px;border-left-width:5px}}
 @media (max-width:560px){.studybar{min-height:44px}.studybar .px-tabs button{font-size:15px;padding:10px 4px 9px}}
+
+/* Flashcard focus: picking a study mode clears everything else away until you press Back (or Esc) */
+#view-flashcards.fc-focus .vhead,#view-flashcards.fc-focus .studybar,#view-flashcards.fc-focus .fcl-side,#view-flashcards.fc-focus .pmh{display:none!important}
+#view-flashcards.fc-focus .fcl{display:block!important}
+#view-flashcards.fc-focus .vbody.pxv{max-width:980px;padding-top:8px}
+#view-flashcards.fc-focus #fc-focusbar{display:flex!important}
+#view-flashcards.fc-focus #fc-focusbar .fb-back{display:inline-flex!important}
+#view-flashcards.fc-focus #fc-stage{animation:fcin .18s ease-out}
+@keyframes fcin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){#view-flashcards.fc-focus #fc-stage{animation:none}}

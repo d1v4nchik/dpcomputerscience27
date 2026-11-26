@@ -514,7 +514,7 @@ function go(r,noScroll){
   else RET=null;
   CUR=r;retPill();
   if(r.v==='page'){mountPage(r.p,r.s);show('page');if(FIND.pending&&!WAITING){var f=FIND.pending;FIND.pending=null;setTimeout(function(){if(f.hide)hideAnswer(f.hide);if(f.q)runFind(f)},40)}}
-  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);if(r.v==='specimen'&&window.csSpec)window.csSpec.render(r.u);if(PXV[r.v])studyBar();}
+  else{FIND.pending=null;show(r.v);if(r.v==='map')renderHome();if(r.v==='glossary')renderGloss();if(r.v==='resources')renderRes();if(r.v==='flashcards'&&window.csFc)window.csFc.init();if(r.v==='practice'&&window.csPrac)window.csPrac.render(r.u);if(r.v==='specimen'&&window.csSpec)window.csSpec.render(r.u);if(PXV[r.v]){studyBar();if(!window.csFc)setTimeout(studyBar,0)}}
   if(PXV[r.v]&&PXV[PREV]&&!(r.v==='specimen'&&/-/.test(r.u||''))){var tb=document.querySelector('.view.on .studybar');if(tb){var y=tb.getBoundingClientRect().top+window.scrollY-(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--topbar-h'))||112)-8;window.scrollTo(0,Math.min(window.scrollY,Math.max(0,y)))}}
   else if(!noScroll&&!(r.v==='page'&&r.s)&&!(r.v==='specimen'&&/-/.test(r.u||'')))window.scrollTo(0,0);
   var t=r.v==='page'?(CS.meta[r.p]||{}).title:({map:'Home',flashcards:'Flashcards',practice:'Practice',glossary:'Glossary',resources:'Resources',specimen:'Specimen papers'})[r.v];
@@ -1166,7 +1166,7 @@ function focus(on){
     bar.innerHTML='<button type="button" class="pill fb-back" id="fc-leave">← Back to Practice</button><b>'+esc(mm[1])+'</b><span>'+n+' card'+(n===1?'':'s')+(S.topics.length?' · '+S.topics.length+' topic'+(S.topics.length>1?'s':''):' · whole course')+'</span>';
     $('fc-leave').onclick=function(){focus(false)};
     var top=v.getBoundingClientRect().top+window.scrollY-((parseInt(getComputedStyle(document.documentElement).getPropertyValue('--tbh'))||0));if(window.scrollY>top)window.scrollTo(0,top);
-  }else{bar.innerHTML='';var mo=$('fc-modes');if(mo)mo.scrollIntoView({block:'center'})}
+  }else{bar.innerHTML='';var vv=$('view-flashcards');if(vv){var yy=vv.getBoundingClientRect().top+window.scrollY;if(window.scrollY>yy)window.scrollTo(0,yy)}}
 }
 function resetMode(){var st=$('fc-stage');if(!st)return;M={};keyH=null;var fn=MODEFN[S.mode]||MODEFN.flash;fn(st)}
 var keyH=null;
