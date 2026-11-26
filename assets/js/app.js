@@ -67,6 +67,9 @@ function samp(){try{if(window.claude&&window.claude.use)window.claude.use('sampl
 /* ---------- filters ---------- */
 var F=lsGet('csPracF',{u:'all',src:'exam',cmd:'',mk:'',st:'',q:'',shuffle:false});
 if(!Array.isArray(F.us))F.us=F.u&&F.u!=='all'?[F.u]:[];if(F.pp==null)F.pp='';
+/* older saved filters: fold the retired question-type choices into the simpler ones */
+if(F.src==='long'){F.mk='L'}if(['exam','term','all'].indexOf(F.src)<0)F.src='exam';if(F.mk==='5'||F.mk==='7')F.mk='L';
+var SRCN={exam:'Exam questions',term:'Definitions',all:'Exam questions + definitions'};
 function unitsLabel(){return F.us.map(unitName).join(' + ')}
 function unitOk(q){return !F.us.length||unitsOf(q).every(function(u){return F.us.indexOf(u)>-1})}
 var V={ready:false,mode:'bank',shown:15,order:null,paper:null};
@@ -80,7 +83,7 @@ function srcOk(q,src){
   if(src==='long')return q.k==='essay'||q.m>=5;
   return true;
 }
-function mkOk(m,f){if(!f)return true;if(f==='1')return m<=2;if(f==='3')return m>=3&&m<=4;if(f==='5')return m>=5&&m<=6;return m>=7}
+function mkOk(m,f){if(!f)return true;if(f==='1')return m<=2;if(f==='3')return m>=3&&m<=4;return m>=5}
 var STOPF=null;   /* "Practice this stop": only the questions that stop teaches */
 function pool(ignore){
   var sl=isSL(),ql=(F.q||'').trim().toLowerCase();
@@ -109,9 +112,9 @@ function render(u){
       '<section class="fcl-box px-filters" id="px-filters"><button type="button" class="fcl-dtog" id="px-ftog" aria-expanded="false" aria-controls="px-fbody"><span class="fcl-bh">Filters</span><span class="fcl-dsum" id="px-fsum">All questions</span><i aria-hidden="true">▾</i></button>'+
       '<div class="fbody" id="px-fbody"><div class="pf-g"><span class="pf-l">Unit</span><div class="pf-units" id="px-units" role="group" aria-label="Unit"></div></div>'+
       '<label class="pf-g"><span class="pf-l">Paper</span><select id="px-pp"><option value="">Both papers</option><option value="1">Paper 1 · Theme A + case study</option><option value="2">Paper 2 · Theme B</option></select></label>'+
-      '<label class="pf-g"><span class="pf-l">Question type</span><select id="px-src"><option value="exam">All exam-style</option><option value="quiz">Test-yourself and bank only</option><option value="model">Model answers from the notes</option><option value="mix">Mixed-topic questions</option><option value="long">Long answers (5+ marks)</option><option value="term">Definitions (glossary)</option><option value="all">Everything incl. definitions</option></select></label>'+
+      '<div class="pf-g"><span class="pf-l">Include</span><div class="pf-seg" id="px-src" role="group" aria-label="Include"><button type="button" data-src="exam">Exam questions</button><button type="button" data-src="term">Definitions</button><button type="button" data-src="all">Both</button></div></div>'+
       '<label class="pf-g"><span class="pf-l">Command term</span><select id="px-cmd"></select></label>'+
-      '<label class="pf-g"><span class="pf-l">Marks</span><select id="px-mk"><option value="">Any marks</option><option value="1">1–2 marks</option><option value="3">3–4 marks</option><option value="5">5–6 marks</option><option value="7">7 or more</option></select></label>'+
+      '<label class="pf-g"><span class="pf-l">Length</span><select id="px-mk"><option value="">Any length</option><option value="1">Short · 1–2 marks</option><option value="3">Medium · 3–4 marks</option><option value="L">Long answers · 5+ marks</option></select></label>'+
       '<label class="pf-g"><span class="pf-l">Show</span><select id="px-st"><option value="">All questions</option><option value="new">Not tried yet</option><option value="lost">Lost marks</option><option value="full">Full marks</option><option value="star">Starred</option></select></label>'+
       '<div class="pf-row"><label class="pf-chk"><input type="checkbox" id="px-shuf"> Shuffle</label><button type="button" class="minibtn" id="px-clear">Clear filters</button></div></div></section>'+
       '<section class="fcl-box px-prog"><span class="fcl-bh">Your progress</span><p class="pp-line" id="px-head"></p><span class="fcx-sync px-sync" id="px-sync"><i></i><span>Scores saved on this device</span></span></section>'+
@@ -122,7 +125,8 @@ function render(u){
     $('px-units').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var u=b.dataset.u;
       if(u==='all')F.us=[];else{var k=F.us.indexOf(u);if(k>-1)F.us.splice(k,1);else F.us.push(u)}
       F.cmd='';saveF();V.shown=15;V.order=null;draw()});
-    ['src','cmd','mk','st','pp'].forEach(function(k){$('px-'+k).addEventListener('change',function(){F[k]=this.value;saveF();V.shown=15;V.order=null;draw()})});
+    $('px-src').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;F.src=b.dataset.src;saveF();V.shown=15;V.order=null;draw()});
+    ['cmd','mk','st','pp'].forEach(function(k){$('px-'+k).addEventListener('change',function(){F[k]=this.value;saveF();V.shown=15;V.order=null;draw()})});
     $('px-shuf').addEventListener('change',function(){F.shuffle=this.checked;saveF();V.order=null;V.shown=15;draw()});
     $('px-body').addEventListener('click',onClick);
     $('px-body').addEventListener('change',onChange);
@@ -143,7 +147,7 @@ function fsum(){
   var parts=[],lab=function(id){var x=$(id);return x&&x.selectedIndex>=0?x.options[x.selectedIndex].text.replace(/\s*\(\d+\)$/,''):''};
   if(F.us.length)parts.push(unitsLabel());
   if(F.pp)parts.push('Paper '+F.pp);
-  if(F.src!=='exam')parts.push(lab('px-src'));
+  if(F.src!=='exam')parts.push(SRCN[F.src]);
   if(F.cmd)parts.push(F.cmd);
   if(F.mk)parts.push(lab('px-mk'));
   if(F.st)parts.push(lab('px-st'));
@@ -161,7 +165,7 @@ function draw(){
   var cm={};pool('cmd').forEach(function(q){cm[q.c]=(cm[q.c]||0)+1});
   if(F.cmd&&!cm[F.cmd])F.cmd='';
   $('px-cmd').innerHTML='<option value="">Any</option>'+Object.keys(cm).sort(function(a,b){return cm[b]-cm[a]}).map(function(c){return '<option value="'+esc(c)+'"'+(F.cmd===c?' selected':'')+'>'+esc(c)+' ('+cm[c]+')</option>'}).join('');
-  $('px-src').value=F.src;$('px-pp').value=F.pp||'';$('px-mk').value=F.mk||'';$('px-st').value=F.st||'';
+  $('px-src').querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.src===F.src))});$('px-pp').value=F.pp||'';$('px-mk').value=F.mk||'';$('px-st').value=F.st||'';
   if($('px-q').value!==F.q)$('px-q').value=F.q||'';
   $('px-shuf').checked=!!F.shuffle;
   $('px-filters').classList.toggle('paper',V.mode==='paper');$('view-practice').classList.toggle('px-papermode',V.mode==='paper');fsum();
